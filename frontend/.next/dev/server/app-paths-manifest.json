@@ -1,0 +1,12 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/about-us/page": "app/about-us/page.js",
+  "/about/page": "app/about/page.js",
+  "/api/youtube-videos/route": "app/api/youtube-videos/route.js",
+  "/blogs/page": "app/blogs/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/location/page": "app/location/page.js",
+  "/page": "app/page.js",
+  "/services/[slug]/page": "app/services/[slug]/page.js",
+  "/video-gallery/page": "app/video-gallery/page.js"
+}
