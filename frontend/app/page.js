@@ -56,7 +56,6 @@ export default function HomePage() {
   const revealRootRef = useRef(null);
   const ytPlayerRef = useRef(null);
   const [heroVideoPlaying, setHeroVideoPlaying] = useState(true);
-  const [growthVideoPlaying, setGrowthVideoPlaying] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -261,63 +260,24 @@ export default function HomePage() {
 
       {/* Plant. Water. Grow. Section */}
       <section className="plant-water-grow-section">
-        <svg className="growth-circuit" viewBox="0 0 560 420" fill="none" aria-hidden="true">
-          <path d="M0 300 C 60 300, 90 300, 130 260 L 200 190" stroke="#8DC540" strokeOpacity="0.35" strokeWidth="1.2" />
-          <path d="M0 420 L 40 380 C 90 330, 150 330, 220 330 L 420 330" stroke="#8DC540" strokeOpacity="0.5" strokeWidth="1.2" />
-          <path d="M60 420 L 100 380 L 170 380" stroke="#8DC540" strokeOpacity="0.25" strokeWidth="1.2" />
-          <circle cx="200" cy="190" r="3.5" fill="#8DC540" fillOpacity="0.6" />
-          <circle cx="220" cy="330" r="4.5" fill="#B8E986" />
-        </svg>
-        <div className="plant-water-grow-container">
+        <div className="plant-water-grow-inner">
           <div className="growth-copy">
             <div className="growth-badge reveal reveal-from-top">Growth Starts Here</div>
             <h2 className="plant-water-grow-title reveal reveal-from-bottom">
-              Plant. Water.<br /><span className="growth-highlight">Grow.</span>
+              Plant. Water. <span className="growth-highlight">Grow.</span>
             </h2>
             <p className="plant-water-grow-subtitle reveal reveal-from-bottom">
               At Open Arms Initiative, we plant seeds of hope, water them with truth and love, and trust God to grow them in His time.
             </p>
           </div>
           <div className="growth-media reveal reveal-scale-in">
-            <div className="growth-video-card">
-              <div className="growth-video-titlebar">
-                <span className="growth-video-avatar">
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#ffffff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20.5s-6.5-4-9-8.2C1.2 8.8 3 5.5 6.2 5.5c1.9 0 3.2 1 3.8 2.1.6-1.1 1.9-2.1 3.8-2.1 3.2 0 5 3.3 3.2 6.8-2.5 4.2-9 8.2-9 8.2Z"/></svg>
-                </span>
-                <div className="growth-video-titletext">
-                  <p className="growth-video-title">🌞 Open Arms Initiative - Transforming Lives Through Mental Health &amp; Foster Care Support 🌞</p>
-                </div>
-                <span className="growth-video-menu" aria-hidden="true">⋮</span>
-              </div>
-              <div className="growth-video-stage">
-                {growthVideoPlaying ? (
-                  <iframe
-                    className="growth-video-iframe"
-                    src={`https://www.youtube.com/embed/${GROWTH_VIDEO_ID}?autoplay=1&rel=0&modestbranding=1`}
-                    title="Open Arms Initiative - Transforming Lives Through Mental Health & Foster Care Support"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                ) : (
-                  <button
-                    type="button"
-                    className="growth-video-poster"
-                    onClick={() => setGrowthVideoPlaying(true)}
-                    aria-label="Play video: Open Arms Initiative - Transforming Lives Through Mental Health & Foster Care Support"
-                    style={{ backgroundImage: `url(https://img.youtube.com/vi/${GROWTH_VIDEO_ID}/maxresdefault.jpg)` }}
-                  >
-                    <span className="growth-video-playbtn" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" width="26" height="26" fill="#ffffff"><path d="M8 5v14l11-7Z"/></svg>
-                    </span>
-                    <span className="growth-video-watch">
-                      Watch on
-                      <svg viewBox="0 0 28 20" width="22" height="16" aria-hidden="true"><rect width="28" height="20" rx="5" fill="#FF0000"/><path d="M11 6.2 19 10l-8 3.8Z" fill="#ffffff"/></svg>
-                      YouTube
-                    </span>
-                  </button>
-                )}
-              </div>
-            </div>
+            <iframe
+              className="growth-video-plain-iframe"
+              src={`https://www.youtube.com/embed/${GROWTH_VIDEO_ID}?autoplay=1&mute=1&rel=0&modestbranding=1`}
+              title="Open Arms Initiative - Transforming Lives Through Mental Health & Foster Care Support"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
           </div>
         </div>
       </section>

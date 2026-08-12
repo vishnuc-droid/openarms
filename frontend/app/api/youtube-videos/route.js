@@ -1,10 +1,6 @@
 const CHANNEL_ID = 'UC71KnbvtzVAk9AZ4J3dVo2A';
 const FEED_URL = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`;
 
-function extractAll(pattern, xml) {
-  return [...xml.matchAll(pattern)].map((m) => m[1]);
-}
-
 function decodeEntities(str) {
   return str
     .replace(/&amp;/g, '&')
@@ -31,12 +27,12 @@ export async function GET() {
         videoId,
         title,
         published,
-        thumbnail: `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`,
+        thumbnail: `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`,
       };
     }).filter((v) => v.videoId);
 
-    return Response.json({ videos: videos.slice(0, 18) });
+    return Response.json({ videos, channelAvatar: '/api/channel-avatar' });
   } catch (err) {
-    return Response.json({ videos: [], error: 'Unable to load videos right now.' }, { status: 200 });
+    return Response.json({ videos: [], channelAvatar: null, error: 'Unable to load videos right now.' }, { status: 200 });
   }
 }

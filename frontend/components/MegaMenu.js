@@ -28,7 +28,7 @@ export default function MegaMenu({ menu, categories, activeCategory, onSelectCat
           <div>
             {menu.links.map((link) => (
               <Link
-                href={`/services/${link.slug}`}
+                href={link.href || `/services/${link.slug}`}
                 key={link.slug}
                 onClick={onClose}
               >

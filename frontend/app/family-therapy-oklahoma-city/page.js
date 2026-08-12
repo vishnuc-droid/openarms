@@ -1,0 +1,48 @@
+import Link from 'next/link';
+
+export const metadata = {
+  title: 'Family Therapy Oklahoma City | Open Arms Initiative',
+  description: 'Find compassionate family therapy in Oklahoma City. Open Arms Initiative helps families improve communication, navigate conflict, and build stronger relationships.',
+};
+
+const challenges = [
+  ['Communication Breakdowns', 'Improve listening, understanding, and respect at home.'],
+  ['Conflicts & Arguments', 'Work through recurring disagreements in healthier, more constructive ways.'],
+  ['Blended Family Adjustments', 'Build trust, understanding, and connection in blended or stepfamilies.'],
+  ['Stress, Anxiety & Overwhelm', 'Learn healthier ways to support one another during difficult seasons.'],
+  ['Parent-Child Challenges', 'Strengthen connection, improve communication, and navigate behavioral concerns.'],
+  ['Life Transitions', 'Find support through separation, loss, relocation, changing roles, and other major family changes.'],
+];
+
+const faqs = [
+  ['How do I know if my family needs counseling?', 'Family counseling may help when communication feels difficult, arguments keep repeating, relationships feel strained, or your family is navigating a major life change. You do not need to wait for a crisis to seek support.'],
+  ['What happens during family counseling?', 'Your therapist will take time to understand your family’s concerns, relationships, communication patterns, and goals. Sessions provide a supportive place to talk openly, identify recurring patterns, and develop healthier ways of relating to one another.'],
+  ['Does everyone in the family need to attend therapy?', 'Not always. Participation depends on your family’s needs, circumstances, and goals. Your therapist can help determine who should be involved in different parts of the counseling process.'],
+  ['Can family therapy help with parent-child conflict?', 'Yes. Family therapy can help parents and children better understand one another, improve communication, strengthen boundaries, and address recurring conflict in a supportive environment.'],
+  ['Do you offer family therapy in Oklahoma City?', 'Yes. Open Arms Initiative provides Family Therapy in Oklahoma City for families experiencing communication difficulties, conflict, parent-child concerns, life transitions, and other family relationship challenges.'],
+  ['Is family counseling only for serious family problems?', 'No. Families seek counseling for many reasons. Some are facing significant challenges, while others simply want to communicate better, strengthen their relationships, or address concerns before they become more difficult.'],
+];
+
+export default function FamilyTherapyPage() {
+  return <main className="family-page">
+    <section className="family-hero-outer"><div className="family-hero-bg"><img src="/family.jpg" alt="Family spending time together outdoors" /><div className="family-hero-content">
+      <p className="family-kicker">Healing Starts When Your Family Feels Heard</p>
+      <h1>Family Counseling<br />in Oklahoma City</h1><i className="family-line" />
+      <p className="family-lead">Every family faces challenges. You don’t have to face them alone. We help families heal, communicate, and build stronger, healthier relationships.</p>
+      <div className="family-actions"><Link href="/contact" className="family-btn family-btn-solid">Request an Appointment</Link><a href="#approach" className="family-btn family-btn-outline">Learn Our Approach</a></div>
+      <div className="family-trust">{['Compassionate Care','Safe & Confidential','Experienced Therapists','In-Person & Online Sessions'].map((item) => <div key={item}><span>♡</span>{item}</div>)}</div>
+      <img className="family-hero-photo-mobile" src="/fam4.jpg" alt="Family spending time together outdoors" />
+    </div><div className="family-hero-badge"><em>Stronger</em>Families.<br />Brighter<br />Tomorrows. ♡</div></div></section>
+
+    <section className="family-section family-challenges"><div className="family-container"><p className="family-kicker center">WE HELP FAMILIES NAVIGATE</p><h2 className="family-title center">Challenges Families Commonly Face</h2><div className="family-challenge-grid">{challenges.map(([title, text], i) => <article key={title}><span className="family-icon">{['◌','✦','⌂','☁','♧','↔'][i]}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
+
+    <section id="approach" className="family-section"><div className="family-container family-container-wide family-approach"><img src="/family1.jpg" alt="A peaceful, welcoming space" /><div className="family-approach-copy"><p className="family-kicker">COUNSELING FOR FAMILY ISSUES</p><h2 className="family-title">Support That Brings Your Family Closer</h2><p>Sometimes the hardest part is not knowing how to talk to the people you love most.</p><p>At Open Arms Initiative, our Family Therapy in Oklahoma City gives families a supportive place to slow down, understand what is happening beneath the conflict, and begin rebuilding connection.</p><p>Together, we can work toward:</p><ul>{['Stronger communication','Healing past hurts','Greater trust and connection','Healthier boundaries','More constructive conflict resolution','A calmer, more supportive home'].map(x => <li key={x}>{x}</li>)}</ul><p>Family counseling is not about deciding who is right or wrong. It is about helping your family understand one another and find a healthier way forward.</p></div></div></section>
+
+    <section className="family-statement"><div className="family-container"><h2>“You don’t have to have it all figured out to take the first step.”</h2><p>We’re here to walk with your family through the difficult conversations, the uncertainty, and the changes that can feel overwhelming.</p><p>Sometimes the first step toward healing is simply knowing you do not have to handle everything alone.</p></div></section>
+    <section className="family-section"><div className="family-container family-support-grid">{[['A Safe Space for Every Voice','Every family member deserves to feel heard. We create a respectful, non-judgmental environment where family members can speak openly, understand each other more clearly, and begin rebuilding trust.'],['Evidence-Based Support','Our therapists use professional, evidence-informed approaches while tailoring counseling to your family’s relationships, experiences, and goals. There is no one-size-fits-all family.'],['Tools for Lasting Change','Counseling is not only about what happens during the session. We help families develop practical tools for healthier communication, stronger relationships, and more effective problem-solving at home.']].map(([title,text]) => <article key={title}><span>♡</span><h3>{title}</h3><p>{text}</p></article>)}</div></section>
+    <section className="family-growth"><div className="family-container"><div><h2>Healing happens together.<br />Growth lasts a lifetime.</h2><p>Your family may be going through a difficult chapter, but that chapter does not have to define what comes next.</p></div><Link href="/contact" className="family-btn family-btn-light">Book Your Appointment Today</Link></div></section>
+    <section className="family-section"><div className="family-container"><p className="family-kicker center">WHAT TO EXPECT</p><h2 className="family-title center">What to Expect</h2><div className="family-steps">{[['1. Connect','Reach out to schedule an appointment that works for your family.'],['2. Understand','We listen, learn, and understand your family’s unique experiences and concerns.'],['3. Create a Plan','Together, we develop a personalized approach focused on healing, communication, and growth.'],['4. Grow Together','We support your family as you build healthier patterns, stronger connections, and greater understanding.']].map(([title,text]) => <article key={title}><span>✦</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
+    <section className="family-section"><div className="family-container family-container-wide"><div className="family-faq-card"><img className="family-faq-leaf" src="/family2.jpg" alt="" aria-hidden="true" /><div className="family-faq"><aside><h2>It’s okay to have questions before asking for help. ♡</h2><p>We’re here to provide answers, guidance, and support so you can feel more comfortable taking the next step.</p></aside><div>{faqs.map(([q,a]) => <details key={q}><summary>{q}<b>+</b></summary><p>{a}</p></details>)}</div></div><p className="family-faq-more">✦ Still have questions? We’re happy to help. <Link href="/contact">Contact Us</Link></p></div></div></section>
+    <section className="family-final"><div className="family-container"><div><h2>Hope. Healing. A Stronger Family.</h2><p>Your family does not need to be perfect to become stronger. With support, understanding, and the willingness to take one step forward, healthier relationships can begin to grow.</p></div><Link href="/contact" className="family-btn family-btn-light">Request an Appointment</Link></div></section>
+  </main>;
+}
