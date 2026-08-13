@@ -4695,7 +4695,7 @@ footer a:hover {
 
 /* ══ MEET YOUR TRAINER ══ */
 .jj-myt {
-  background: url('/Jamie/ChatGPT Image Aug 13, 2026, 12_53_29 PM.png') center center / cover no-repeat;
+  background: url('/Jamie/jamie-botanical-bg.png') center center / cover no-repeat;
   padding: 5.5rem 1.5rem;
   position: relative;
 }
@@ -5017,7 +5017,10 @@ footer a:hover {
     max-width: 100%;
   }
   .jj-hero-photo-col {
-    display: none;
+    display: flex;
+  }
+  .jj-arch-bg {
+    height: 340px;
   }
   .jj-topics-wave-top,
   .jj-topics-wave-bottom {
