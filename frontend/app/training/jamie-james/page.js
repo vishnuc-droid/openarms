@@ -1,7 +1,101 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+
+
+const ALL_VIDEOS = [
+  { id: 'Hy-mRWM6zi0', title: 'Why Strong Leaders Feel Empty? High-Functioning Burnout' },
+  { id: 'cdCBtTdeMxk', title: 'You Were Never Called to Carry Everyone: Leadership Burnout and Boundaries' },
+  { id: 'RjPN-cDn4n0', title: "Leadership Boundaries Are Not Selfish — They're Stewardship" },
+  { id: 'ABTYwSKfa3U', title: 'You Can Be Successful and Still Be Falling Apart' },
+  { id: 'vTBbwdZAusI', title: "Depression Isn't Just Sadness" },
+  { id: 'q2hwT6fpyO8', title: 'What Labels Are You Still Carrying?' },
+  { id: '9-OiqitupIU', title: 'How to Lead Without Losing Yourself: Stay Rooted in Christ' },
+  { id: 'mFIWUEuHgv8', title: 'Why Do I Keep Thinking Negative Thoughts?' },
+  { id: 'RbPCvAmW3e8', title: 'Why Am I So Anxious?' },
+];
+
+function VideoModal({ id, title, onClose }) {
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', onKey);
+    document.body.style.overflow = 'hidden';
+    return () => { document.removeEventListener('keydown', onKey); document.body.style.overflow = ''; };
+  }, [onClose]);
+  return (
+    <div className="jj-modal-overlay" onClick={onClose}>
+      <div className="jj-modal-box" onClick={(e) => e.stopPropagation()}>
+        <button className="jj-modal-close" onClick={onClose} aria-label="Close">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <div className="jj-modal-embed">
+          <iframe src={`https://www.youtube.com/embed/${id}?autoplay=1&controls=1`} title={title} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+        </div>
+        <p className="jj-modal-title">{title}</p>
+      </div>
+    </div>
+  );
+}
+
+function VideoCard({ v, onOpen }) {
+  const [hovered, setHovered] = useState(false);
+  return (
+    <div
+      className="jj-vstack-row"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      onClick={() => onOpen(v)}
+      style={{ cursor: 'pointer' }}
+    >
+      <div className="jj-vstack-thumb-wrap">
+        {hovered ? (
+          <iframe
+            src={`https://www.youtube.com/embed/${v.id}?autoplay=1&mute=1&controls=0`}
+            title={v.title}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            className="jj-vstack-iframe"
+          />
+        ) : (
+          <>
+            <img src={`https://img.youtube.com/vi/${v.id}/mqdefault.jpg`} alt={v.title} className="jj-vstack-thumb" />
+            <div className="jj-vstack-play">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="#fff"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+          </>
+        )}
+      </div>
+      <div className="jj-vstack-body">
+        <p className="jj-vstack-title">{v.title}</p>
+      </div>
+    </div>
+  );
+}
+
+function VideoSection() {
+  const [modal, setModal] = useState(null);
+  return (
+    <>
+      {modal && <VideoModal id={modal.id} title={modal.title} onClose={() => setModal(null)} />}
+      <section className="jj-videos">
+        <div className="jj-videos-stack-section">
+          <div className="jj-inner">
+            <div className="jj-videos-stack-header">
+              <p className="jj-videos-stack-label">Watch Jamie</p>
+              <h2 className="jj-videos-stack-title">Hear It Directly from Jamie</h2>
+            </div>
+            <div className="jj-videos-stack">
+              {ALL_VIDEOS.map((v) => (
+                <VideoCard key={v.id} v={v} onOpen={setModal} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
 
 export default function JamieJamesPage() {
   const revealRootRef = useRef(null);
@@ -55,7 +149,7 @@ export default function JamieJamesPage() {
       icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="32" height="32"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>,
     },
     {
-      title: 'Faith & Ministry',
+      title: 'Faith, Ministry & Mental Health',
       desc: 'Equipping ministry leaders with trauma awareness, mental health literacy, and compassionate care practices.',
       href: '/services/churches-faith-based-training',
       icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="32" height="32"><path d="M12 2v4M8 6l4-4 4 4M5 10h14M5 10v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V10M9 21v-6h6v6"/></svg>,
@@ -239,30 +333,16 @@ export default function JamieJamesPage() {
               The Person Leading Your Training<br />Also Runs Two Organizations<br /><em>Like Yours</em>
             </h2>
             <p className="jj-myt-body">
-              Jamie James isn&apos;t just a speaker who teaches about organizational health — she leads it every day. As a Licensed Professional Counselor and the founder of both Open Arms Initiative and Open Arms Foster Care, she brings the rare perspective of someone who has built systems, led teams under pressure, navigated crises, and kept culture intact.
+              Jamie James isn&apos;t just a consultant who read about burnout and trauma-informed leadership — she's dealt with both directly. As a Licensed Professional Counselor, she founded Open Arms Initiative. As an organizational leader, she also founded and runs Open Arms Foster Care, a licensed therapeutic foster care agency operating in Oklahoma City, Tulsa, and Lawton — one of the more demanding corners of the child welfare system, where trauma-informed practice is a daily requirement, not a talking point.
+
             </p>
             <p className="jj-myt-body">
-              When Jamie trains your team, she isn&apos;t teaching theory. She&apos;s sharing what she has actually lived — the clinical knowledge and the operational reality of running mission-driven organizations.
+That's the perspective she brings into every training, workshop, and speaking engagement: a clinician's understanding of how trauma and stress actually show up in behavior, combined with a leader's understanding of what it actually takes to keep people functioning under pressure. If your organization is dealing with burnout, difficult conversations, or a team that's quietly struggling, she's not describing a problem she read about — she's describing one she's managed.
             </p>
-            <div className="jj-myt-stats">
-              <div className="jj-myt-stat">
-                <span className="jj-myt-stat-num">2</span>
-                <span className="jj-myt-stat-label">Organizations Founded &amp; Led</span>
-              </div>
-              <div className="jj-myt-stat-divider" />
-              <div className="jj-myt-stat">
-                <span className="jj-myt-stat-num">LPC</span>
-                <span className="jj-myt-stat-label">Licensed Professional Counselor</span>
-              </div>
-              <div className="jj-myt-stat-divider" />
-              <div className="jj-myt-stat">
-                <span className="jj-myt-stat-num">3</span>
-                <span className="jj-myt-stat-label">Oklahoma Cities Served</span>
-              </div>
-            </div>
+          
             <Link href="/contact" className="jj-btn jj-btn-dark">
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              Request Training Info
+              Ask About Jamie's Availability
             </Link>
           </div>
         </div>
@@ -395,16 +475,15 @@ export default function JamieJamesPage() {
               <p className="jj-section-tag">SPEAKING ENGAGEMENTS</p>
               <h2 className="jj-speaker-title">Bringing Clarity to the<br />Conversations That Matter Most</h2>
               <p className="jj-speaker-body">
-                Jamie speaks at conferences, staff development days, leadership retreats, and organizational events — delivering talks that are grounded in clinical expertise, shaped by real-world leadership, and designed to create lasting impact.
-              </p>
+Jamie James speaks from operating experience, not just clinical theory. She leads two organizations built around the exact pressures she speaks about — burnout, trauma-informed leadership, and sustaining people through high-stress, high-stakes work.              </p>
               <ul className="jj-speaker-topics">
                 {[
-                  'Leadership burnout and sustainable boundaries',
-                  'Trauma-informed leadership for managers and directors',
-                  'Building organizational resilience and culture',
-                  'Compassion fatigue prevention for helping professionals',
-                  'Difficult conversations for leaders',
-                  'Staying grounded while leading under pressure',
+                  'Corporate/business leadership groups and HR/people-ops gatherings',
+                  'School district in-service days and educator professional-development events',
+                  'Church and ministry leadership retreats and conferences',
+                  'Foster care and child welfare conferences or agency events',
+                  'Nonprofit leadership gatherings and community coalitions',
+                  'Behavioral-health professional associations and clinical conferences',
                 ].map((topic, i) => (
                   <li key={i}>
                     <span className="jj-speaker-dot" />
@@ -431,6 +510,9 @@ export default function JamieJamesPage() {
           </div>
         </div>
       </section>
+
+      {/* ══ VIDEO AUTHORITY ══ */}
+      <VideoSection />
 
       {/* ══ CTA BANNER ══ */}
       <section className="jj-cta">
