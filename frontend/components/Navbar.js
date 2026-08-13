@@ -12,12 +12,14 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
   const [mobileSubmenu, setMobileSubmenu] = useState(null);
+  const [mobileServiceCategory, setMobileServiceCategory] = useState(null);
   const pathname = usePathname();
   const isHome = pathname === '/';
 
   const closeMobileNav = () => {
     setMenuOpen(false);
     setMobileSubmenu(null);
+    setMobileServiceCategory(null);
   };
 
   const closeServicesMenu = () => {
@@ -102,9 +104,31 @@ export default function Navbar() {
               <span className={`mobile-nav-chevron${mobileSubmenu === 'services' ? ' open' : ''}`}>▾</span>
             </button>
             {mobileSubmenu === 'services' && (
-              <div className="mobile-submenu">
+              <div className="mobile-submenu mobile-submenu-services">
                 {Object.entries(serviceCategories).map(([name, cat]) => (
-                  <Link key={name} href={`/services/${cat.links[0].slug}`} onClick={closeMobileNav}>{name}</Link>
+                  <div key={name} className="mobile-service-category">
+                    <button
+                      type="button"
+                      className="mobile-service-category-toggle"
+                      onClick={() => setMobileServiceCategory(mobileServiceCategory === name ? null : name)}
+                    >
+                      {name}
+                      <span className={`mobile-nav-chevron${mobileServiceCategory === name ? ' open' : ''}`}>▾</span>
+                    </button>
+                    {mobileServiceCategory === name && (
+                      <div className="mobile-service-links">
+                        {cat.links.map((link) => (
+                          <Link
+                            key={link.slug}
+                            href={link.href || `/services/${link.slug}`}
+                            onClick={closeMobileNav}
+                          >
+                            {link.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 ))}
               </div>
             )}
