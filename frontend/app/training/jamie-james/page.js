@@ -25,22 +25,46 @@ export default function JamieJamesPage() {
 
   const trainingAreas = [
     {
-      title: 'Churches & Faith-Based Training',
-      desc: 'Equipping ministry leaders with trauma awareness and mental health crisis response tools.',
-      href: '/services/churches-faith-based-training',
-      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="32" height="32"><path d="M12 2v4M8 6l4-4 4 4M5 10h14M5 10v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V10M9 21v-6h6v6"/></svg>,
+      title: 'Leadership & Workplace Wellness',
+      desc: 'Equipping leaders and teams with trauma-informed tools, healthy boundaries, and sustainable wellness practices.',
+      href: '/services/corporate-business-training',
+      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="32" height="32"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>,
     },
     {
-      title: 'School Staff & Educator Training',
-      desc: 'Practical trauma-informed classroom strategies for teachers and school administrators.',
+      title: 'Trauma & Mental Health',
+      desc: 'Building organizational capacity to recognize, respond to, and support those affected by trauma.',
+      href: '/services/trauma-informed-care-training',
+      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="32" height="32"><path d="M12 20.5s-6.5-4-9-8.2C1.2 8.8 3 5.5 6.2 5.5c1.9 0 3.2 1 3.8 2.1.6-1.1 1.9-2.1 3.8-2.1 3.2 0 5 3.3 3.2 6.8-2.5 4.2-9 8.2-9 8.2Z"/></svg>,
+    },
+    {
+      title: 'Foster Care, Adoption & Child Welfare',
+      desc: 'Specialized training for agencies, foster parents, and child welfare professionals rooted in clinical and lived experience.',
+      href: '/services/trauma-informed-care-training',
+      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="32" height="32"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>,
+    },
+    {
+      title: 'Parenting & Family',
+      desc: 'Practical, compassionate guidance for parents navigating trauma, big emotions, and family dynamics.',
+      href: '/services/trauma-informed-care-training',
+      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="32" height="32"><circle cx="9" cy="7" r="3"/><circle cx="15" cy="7" r="3"/><path d="M3 20c0-4 2.7-7 6-7h6c3.3 0 6 3 6 7"/></svg>,
+    },
+    {
+      title: 'Schools & Youth Organizations',
+      desc: 'Trauma-informed classroom strategies and youth mental health tools for teachers and school administrators.',
       href: '/services/school-staff-educator-training',
       icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="32" height="32"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>,
     },
     {
-      title: 'Corporate & Business Training',
-      desc: 'Workplace mental health workshops and empathetic leadership training for organizations.',
-      href: '/services/corporate-business-training',
-      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="32" height="32"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>,
+      title: 'Faith & Ministry',
+      desc: 'Equipping ministry leaders with trauma awareness, mental health literacy, and compassionate care practices.',
+      href: '/services/churches-faith-based-training',
+      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="32" height="32"><path d="M12 2v4M8 6l4-4 4 4M5 10h14M5 10v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V10M9 21v-6h6v6"/></svg>,
+    },
+    {
+      title: 'Clinical Training & Professional Development',
+      desc: 'Advanced training for counselors, social workers, and mental health professionals seeking continuing education.',
+      href: '/services/trauma-informed-care-training',
+      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="32" height="32"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>,
     },
   ];
 
@@ -169,15 +193,11 @@ export default function JamieJamesPage() {
 
         </div>
 
-        {/* wave band with embedded quote at bottom of hero */}
+        {/* wave band at bottom of hero */}
         <div className="jj-hero-wave-section">
           <svg className="jj-hero-wave" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
             <path d="M0 60 Q220 10 440 55 Q680 105 920 55 Q1160 5 1440 50 L1440 160 L0 160Z" />
           </svg>
-          <div className="jj-hero-quote">
-            <span className="jj-hero-quote-mark">&ldquo;</span>
-            <p>When we understand trauma,<br />we create space for healing and growth.</p>
-          </div>
         </div>
 
       </section>
@@ -207,6 +227,47 @@ export default function JamieJamesPage() {
         </div>
       </section>
 
+      {/* ══ MEET YOUR TRAINER ══ */}
+      <section className="jj-myt">
+        <div className="jj-inner">
+          <div className="jj-myt-inner reveal reveal-from-bottom">
+            <div className="jj-myt-badge">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#3a6e2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+              Meet Your Trainer
+            </div>
+            <h2 className="jj-myt-headline">
+              The Person Leading Your Training<br />Also Runs Two Organizations<br /><em>Like Yours</em>
+            </h2>
+            <p className="jj-myt-body">
+              Jamie James isn&apos;t just a speaker who teaches about organizational health — she leads it every day. As a Licensed Professional Counselor and the founder of both Open Arms Initiative and Open Arms Foster Care, she brings the rare perspective of someone who has built systems, led teams under pressure, navigated crises, and kept culture intact.
+            </p>
+            <p className="jj-myt-body">
+              When Jamie trains your team, she isn&apos;t teaching theory. She&apos;s sharing what she has actually lived — the clinical knowledge and the operational reality of running mission-driven organizations.
+            </p>
+            <div className="jj-myt-stats">
+              <div className="jj-myt-stat">
+                <span className="jj-myt-stat-num">2</span>
+                <span className="jj-myt-stat-label">Organizations Founded &amp; Led</span>
+              </div>
+              <div className="jj-myt-stat-divider" />
+              <div className="jj-myt-stat">
+                <span className="jj-myt-stat-num">LPC</span>
+                <span className="jj-myt-stat-label">Licensed Professional Counselor</span>
+              </div>
+              <div className="jj-myt-stat-divider" />
+              <div className="jj-myt-stat">
+                <span className="jj-myt-stat-num">3</span>
+                <span className="jj-myt-stat-label">Oklahoma Cities Served</span>
+              </div>
+            </div>
+            <Link href="/contact" className="jj-btn jj-btn-dark">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Request Training Info
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ══ WHO IS JAMIE ══ */}
       <section className="jj-bio">
         <div className="jj-inner">
@@ -224,13 +285,13 @@ export default function JamieJamesPage() {
               <p className="jj-section-tag">MEET JAMIE</p>
               <h2 className="jj-bio-title">Founder. Counselor.<br />Advocate. Speaker.</h2>
               <p className="jj-bio-desc">
-                Jamie James is the Founder &amp; President of Open Arms Initiative. With <strong>15+ years of experience</strong> in counseling, non-profit leadership, foster care advocacy, and speaking, Jamie equips teams and organizations to better understand the people they serve — and themselves.
+                Jamie James is a Licensed Professional Counselor (LPC) and the President &amp; Founder of Open Arms Initiative — a mental health and wellness organization equipping teams, families, and communities with trauma-informed tools. She also founded and leads Open Arms Foster Care, a licensed therapeutic foster care agency serving families in Oklahoma City, Tulsa, and Lawton.
               </p>
               <ul className="jj-bio-list">
                 <li><span className="jj-check"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Licensed Professional Counselor (LPC)</li>
                 <li><span className="jj-check"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Faith-informed, trauma-sensitive approach</li>
-                <li><span className="jj-check"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Founder of Open Arms Foster Care</li>
-                <li><span className="jj-check"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Trusted speaker for organizations &amp; churches</li>
+                <li><span className="jj-check"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Founder &amp; President, Open Arms Initiative</li>
+                <li><span className="jj-check"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Founder, Open Arms Foster Care (OKC · Tulsa · Lawton)</li>
               </ul>
             </div>
 
@@ -322,6 +383,51 @@ export default function JamieJamesPage() {
               <div className="jj-review-line" />
               <footer className="jj-review-name">— Michael T., School Principal</footer>
             </blockquote>
+          </div>
+        </div>
+      </section>
+
+      {/* ══ SPEAKER POSITIONING ══ */}
+      <section className="jj-speaker">
+        <div className="jj-inner">
+          <div className="jj-speaker-grid">
+            <div className="jj-speaker-copy reveal reveal-from-left">
+              <p className="jj-section-tag">SPEAKING ENGAGEMENTS</p>
+              <h2 className="jj-speaker-title">Bringing Clarity to the<br />Conversations That Matter Most</h2>
+              <p className="jj-speaker-body">
+                Jamie speaks at conferences, staff development days, leadership retreats, and organizational events — delivering talks that are grounded in clinical expertise, shaped by real-world leadership, and designed to create lasting impact.
+              </p>
+              <ul className="jj-speaker-topics">
+                {[
+                  'Leadership burnout and sustainable boundaries',
+                  'Trauma-informed leadership for managers and directors',
+                  'Building organizational resilience and culture',
+                  'Compassion fatigue prevention for helping professionals',
+                  'Difficult conversations for leaders',
+                  'Staying grounded while leading under pressure',
+                ].map((topic, i) => (
+                  <li key={i}>
+                    <span className="jj-speaker-dot" />
+                    {topic}
+                  </li>
+                ))}
+              </ul>
+              <div className="jj-speaker-events">
+                <span className="jj-speaker-event-tag">Conferences</span>
+                <span className="jj-speaker-event-tag">Staff Development Days</span>
+                <span className="jj-speaker-event-tag">Leadership Retreats</span>
+                <span className="jj-speaker-event-tag">Workshops &amp; Trainings</span>
+              </div>
+              <Link href="/contact" className="jj-btn jj-btn-dark" style={{marginTop:'1.5rem', display:'inline-flex'}}>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                Ask About Jamie&apos;s Availability
+              </Link>
+            </div>
+            <div className="jj-speaker-photo-col reveal reveal-from-right">
+              <div className="jj-speaker-photo-wrap">
+                <img src="/Jamie/image (18).png" alt="Jamie James speaking" className="jj-speaker-photo" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
