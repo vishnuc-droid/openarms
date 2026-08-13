@@ -21,6 +21,7 @@ export const serviceCategories = {
   'Speaking & Training Engagements': {
     heading: 'Speaking & Training Engagements',
     links: [
+      { name: 'Jamie James, LPC', slug: 'jamie-james', href: '/training/jamie-james' },
       { name: 'Churches & Faith-Based Training', slug: 'churches-faith-based-training' },
       { name: 'Corporate & Business Training', slug: 'corporate-business-training' },
       { name: 'School Staff & Educator Training', slug: 'school-staff-educator-training' },
