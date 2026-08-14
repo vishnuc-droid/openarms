@@ -38,7 +38,7 @@ export default async function ServiceDetailPage({ params }) {
     .slice(0, 3);
 
   return (
-    <main style={{ maxWidth: '1200px', margin: '0 auto', padding: '3rem 1.5rem' }}>
+    <main className="service-detail-main">
       <nav style={{ marginBottom: '2rem', fontSize: '0.95rem', color: '#64748b' }}>
         <Link href="/" style={{ color: '#052E26', textDecoration: 'none' }}>Home</Link>
         {' / '}
@@ -47,10 +47,10 @@ export default async function ServiceDetailPage({ params }) {
         <span>{service.title}</span>
       </nav>
 
-      <section style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3.5rem', alignItems: 'center', marginBottom: '4rem' }}>
+      <section className="service-detail-grid">
         <div>
           <span className="services-kicker">{service.category}</span>
-          <h1 style={{ fontSize: '3rem', margin: '0.5rem 0 1rem', color: '#052E26', lineHeight: '1.2' }}>
+          <h1 className="service-detail-title">
             {service.title}
           </h1>
           <p style={{ fontSize: '1.2rem', color: '#4a5568', lineHeight: '1.7', marginBottom: '2rem' }}>
@@ -66,7 +66,7 @@ export default async function ServiceDetailPage({ params }) {
         </div>
       </section>
 
-      <section style={{ background: '#f8faf9', padding: '3rem', borderRadius: '16px', border: '1px solid #e2e8f0', marginBottom: '4rem' }}>
+      <section className="service-detail-overview">
         <h2 style={{ fontSize: '2rem', color: '#052E26', marginBottom: '1.5rem' }}>Overview & Clinical Approach</h2>
         <p style={{ fontSize: '1.1rem', color: '#334155', lineHeight: '1.8', marginBottom: '2.5rem' }}>
           {service.details}
@@ -103,7 +103,7 @@ export default async function ServiceDetailPage({ params }) {
         </section>
       )}
 
-      <section style={{ background: '#052E26', color: '#fff', padding: '3.5rem 2.5rem', borderRadius: '16px', textAlign: 'center' }}>
+      <section className="service-detail-cta">
         <h2 style={{ fontSize: '2.2rem', color: '#fff', marginBottom: '1rem' }}>Get Started with Open Arms</h2>
         <p style={{ fontSize: '1.1rem', color: '#e2e8f0', maxWidth: '600px', margin: '0 auto 2rem' }}>
           Take the first step toward compassionate, trauma-informed care for you and your family.

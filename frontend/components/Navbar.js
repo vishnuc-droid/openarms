@@ -28,7 +28,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={isHome ? 'reference-header home-hero-header' : 'reference-header'}
+      className={isHome ? 'reference-header home-hero-header' : 'reference-header desktop-pill-header'}
       onMouseLeave={closeServicesMenu}
     >
       <div className="top-nav">
