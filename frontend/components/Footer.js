@@ -18,7 +18,7 @@ export default function Footer() {
           <h3>Services</h3>
           <div className="footer-services-grid">
             {allServices.map((s) => (
-              <Link key={s.slug} href={`/services/${s.slug}`}>{s.title}</Link>
+              <Link key={s.slug} href={s.slug === 'corporate-business-training' ? '/corporate-business-training' : `/services/${s.slug}`}>{s.title}</Link>
             ))}
           </div>
         </div>
