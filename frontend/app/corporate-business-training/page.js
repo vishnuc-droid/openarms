@@ -256,7 +256,7 @@ export default function CorporateBusinessTrainingPage() {
           <div className="oah-hero-photo-col reveal reveal-from-right">
             <div className="oah-hero-blob">
               <Image
-                src="/Training/hero-banner.jpg"
+                src="/Training/hero-banner.webp"
                 alt="Leadership team working together during a workplace wellness training session"
                 className="oah-hero-blob-img"
                 width={1600}
