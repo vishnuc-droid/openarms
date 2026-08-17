@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 /* ─── FAQ DATA ─────────────────────────────────────────────────────────── */
 const FAQ_ITEMS = [
@@ -254,10 +255,13 @@ export default function CorporateBusinessTrainingPage() {
           {/* RIGHT — blob-shaped photo with floating name card */}
           <div className="oah-hero-photo-col reveal reveal-from-right">
             <div className="oah-hero-blob">
-              <img
-                src="/Training/people-working-tech-brand-together (1).jpg"
+              <Image
+                src="/Training/hero-banner.jpg"
                 alt="Leadership team working together during a workplace wellness training session"
                 className="oah-hero-blob-img"
+                width={1600}
+                height={1066}
+                priority
               />
             </div>
           </div>
@@ -385,10 +389,12 @@ export default function CorporateBusinessTrainingPage() {
 
           <div className="oab-burnout-photo-col reveal reveal-from-right">
             <div className="oab-burnout-blob">
-              <img
-                src="/Training/people-working-tech-brand-together.jpg"
+              <Image
+                src="/Training/burnout-section.jpg"
                 alt="Leadership team discussing culture, burnout, and turnover during a collaborative session"
                 className="oab-burnout-blob-img"
+                width={1200}
+                height={800}
               />
             </div>
           </div>
