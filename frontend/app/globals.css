@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 @import 'tailwindcss';
 
 :root {
@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, p {
 }
 
 h1, h2, h3 {
-  font-family: 'Plus Jakarta Sans', 'Playfair Display', Georgia, serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 /* Plant Water Grow Section */
@@ -3894,7 +3894,7 @@ footer a:hover {
 
 /* ── Base ── */
 .jj-page {
-  background: #faf8f3;
+  background: #ffffff;
   color: #1a2e1a;
   font-family: 'DM Sans', Arial, sans-serif;
 }
@@ -3917,7 +3917,7 @@ footer a:hover {
 }
 
 .jj-section-title {
-  font-family: 'Plus Jakarta Sans', 'Playfair Display', Georgia, serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(1.75rem, 3.5vw, 2.3rem);
   font-weight: 700;
   color: #1a2e1a;
@@ -3980,7 +3980,7 @@ footer a:hover {
 /* ══ HERO ══ */
 .jj-hero {
   position: relative;
-  background: #f4efe0;
+  background: #ffffff;
   overflow: visible;
   padding: 4rem 1.5rem 0;
 }
@@ -4028,7 +4028,7 @@ footer a:hover {
 }
 
 .jj-hero-headline {
-  font-family: 'Plus Jakarta Sans', 'Playfair Display', Georgia, serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(2.4rem, 4.6vw, 3.6rem);
   font-weight: 800;
   color: #1a2e1a;
@@ -4316,7 +4316,7 @@ footer a:hover {
 }
 
 .jj-bio-title {
-  font-family: 'Plus Jakarta Sans', 'Playfair Display', Georgia, serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(1.8rem, 3.5vw, 2.5rem);
   font-weight: 700;
   color: #1a2e1a;
@@ -4508,7 +4508,7 @@ footer a:hover {
 }
 
 .jj-why-title {
-  font-family: 'Plus Jakarta Sans', 'Playfair Display', Georgia, serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(1.8rem, 3.5vw, 2.5rem);
   font-weight: 700;
   color: #1a2e1a;
@@ -4678,7 +4678,7 @@ footer a:hover {
 }
 
 .jj-cta-title {
-  font-family: 'Plus Jakarta Sans', 'Playfair Display', Georgia, serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(1.4rem, 2.8vw, 2rem);
   font-weight: 700;
   color: #ffffff;
@@ -4724,7 +4724,7 @@ footer a:hover {
 }
 
 .jj-myt-headline {
-  font-family: 'Plus Jakarta Sans', 'Playfair Display', Georgia, serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(1.5rem, 2.8vw, 2.4rem);
   font-weight: 800;
   color: #052E26;
@@ -4773,7 +4773,7 @@ footer a:hover {
 }
 
 .jj-myt-stat-num {
-  font-family: 'Plus Jakarta Sans', Georgia, serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1.9rem;
   font-weight: 900;
   color: #3a6e2a;
@@ -4814,7 +4814,7 @@ footer a:hover {
 }
 
 .jj-speaker-title {
-  font-family: 'Plus Jakarta Sans', 'Playfair Display', Georgia, serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(1.55rem, 3vw, 2.4rem);
   font-weight: 800;
   color: #052E26;
@@ -5078,7 +5078,7 @@ footer a:hover {
 }
 
 .jj-videos-stack-title {
-  font-family: 'Plus Jakarta Sans', Georgia, serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(1.4rem, 2.5vw, 2rem);
   font-weight: 800;
   color: #e8f5d8;
@@ -5393,6 +5393,8 @@ footer a:hover {
   .jj-cred {
     padding: 1rem 1.5rem;
     min-width: unset;
+    justify-content: center;
+    text-align: center;
   }
   .jj-why-title {
     font-size: 1.6rem;
@@ -5488,5 +5490,1271 @@ footer a:hover {
   }
   .jj-modal-box {
     border-radius: 12px;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   CBT — Corporate Business Training page  (visual identity distinct from Hub)
+   Palette: #093129 dark-forest · #052E26 deep-green · #8DC540 lime
+            #EDFFE1 mint-bg · #faf8f3 cream
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* ── OAH Hero — full-width half-circle photo bleeds right ── */
+.oah-hero {
+  position: relative;
+  background: #FBFBF6;
+  overflow: hidden;
+  width: 100%;
+}
+.oah-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  padding: 64px 0 64px clamp(32px, 7vw, 120px);
+  min-height: 90vh;
+}
+.oah-hero-copy {
+  padding-right: 40px;
+  position: relative;
+  z-index: 1;
+}
+.oah-hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #EDFFE1;
+  color: #4c8a1f;
+  border: 1px solid rgba(141,197,64,0.35);
+  font-size: 12.5px;
+  font-weight: 700;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  padding: 8px 16px 8px 14px;
+  border-radius: 30px;
+  margin-bottom: 24px;
+}
+.oah-hero-headline {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  color: #052E26;
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
+  line-height: 1.12;
+  margin: 0 0 20px;
+  max-width: 700px;
+}
+.oah-hero-desc {
+  color: #58685f;
+  font-size: 15.5px;
+  line-height: 1.65;
+  max-width: 760px;
+  margin-bottom: 32px;
+}
+.oah-hero-ctas {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+/* decorative background SVGs */
+.oah-hero-deco-ring {
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  width: 320px;
+  height: 320px;
+  pointer-events: none;
+  z-index: 0;
+}
+.oah-hero-deco-dots {
+  position: absolute;
+  bottom: 48px;
+  left: clamp(32px, 6vw, 100px);
+  width: 140px;
+  height: 140px;
+  pointer-events: none;
+  z-index: 0;
+}
+/* trust stat strip below CTAs */
+.oah-hero-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(9,49,41,0.1);
+  position: relative;
+  z-index: 1;
+}
+.oah-hero-stat {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.oah-hero-stat-icon {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #EDFFE1;
+  border: 1px solid rgba(141,197,64,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.oah-stat-val {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #052E26;
+  margin: 0 0 2px;
+}
+.oah-stat-label {
+  font-size: 12.5px;
+  color: #7a8f84;
+  margin: 0;
+}
+.oah-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 22px;
+  border-radius: 8px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14.5px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.oah-btn-primary {
+  background: #8DC540;
+  color: #052E26;
+  border: 1.5px solid #8DC540;
+}
+.oah-btn-primary:hover {
+  background: #7ab233;
+  border-color: #7ab233;
+}
+.oah-btn-outline {
+  background: transparent;
+  color: #052E26;
+  border: 1.5px solid #c9d6c5;
+}
+.oah-btn-outline:hover {
+  background: #EDFFE1;
+  border-color: #8DC540;
+}
+/* Photo col — bleeds to viewport right edge */
+.oah-hero-photo-col {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  align-self: stretch;
+  overflow: hidden;
+}
+.oah-hero-blob {
+  position: relative;
+  width: 100%;
+  min-height: 580px;
+  border-radius: 999px 0 0 999px;
+  overflow: hidden;
+  background: #d4e8c4;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  will-change: transform;
+}
+.oah-hero-blob-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  image-rendering: high-quality;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+@media (max-width: 900px) {
+  .oah-hero-inner {
+    grid-template-columns: 1fr;
+    padding: 48px 24px 0;
+    min-height: auto;
+  }
+  .oah-hero-copy {
+    padding-right: 0;
+  }
+  .oah-hero-blob {
+    min-height: 380px;
+    border-radius: 999px 0 0 999px;
+  }
+}
+@media (max-width: 600px) {
+  .oah-hero-inner {
+    padding: 36px 16px 0;
+  }
+  .oah-hero-headline {
+    font-size: 1.75rem;
+  }
+  .oah-hero-blob {
+    min-height: 260px;
+    border-radius: 50% 0 0 50%;
+  }
+}
+
+/* ── OAH help cards ── */
+.oah-help-card h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-weight: 700;
+}
+.oah-help-card p {
+  font-family: 'DM Sans', sans-serif !important;
+}
+
+/* ── OAH help section container + bg image ── */
+.oah-help {
+  position: relative;
+  overflow: hidden;
+}
+.oah-help-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.oah-help-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.oah-help-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.88);
+}
+.oah-help > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── OAH help section ("What This Training Helps") ── */
+.oah-help-headline {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: #052E26;
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+.oah-help-desc {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 1.05rem;
+  color: #334155;
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+.oah-help-rule {
+  width: 56px;
+  height: 3px;
+  background: #8DC540;
+  border-radius: 4px;
+  margin-bottom: 22px;
+}
+
+/* ── OAB burnout section fonts ── */
+.oab-burnout-headline {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: #052E26;
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+.oab-burnout-desc {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 1.02rem;
+  color: #4a5a42;
+  line-height: 1.8;
+  margin: 0 0 24px;
+}
+.oab-burnout-row h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #052E26;
+  margin: 0 0 4px;
+}
+.oab-burnout-row p {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.95rem;
+  color: #58685f;
+  line-height: 1.7;
+  margin: 0;
+}
+.oab-burnout-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #3a6e2a;
+  background: #EDFFE1;
+  border: 1px solid rgba(141,197,64,0.3);
+  padding: 6px 14px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+
+/* ── OAB burnout section layout ── */
+.oab-burnout {
+  position: relative;
+  background: #FBFBF6;
+  overflow: hidden;
+  padding: 70px 0 0;
+}
+.oab-burnout-dots {
+  position: absolute;
+  top: 24px;
+  right: 26%;
+  width: 110px;
+  opacity: 0.7;
+  z-index: 1;
+  pointer-events: none;
+}
+.oab-burnout-leaf {
+  position: absolute;
+  left: -40px;
+  bottom: 70px;
+  width: 220px;
+  opacity: 0.9;
+  z-index: 5;
+  pointer-events: none;
+}
+.oab-burnout-inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 0.95fr 1.2fr;
+  align-items: stretch;
+  gap: 0;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.oab-burnout-copy {
+  padding: 20px 60px 100px 80px;
+}
+.oab-burnout-rule {
+  width: 56px;
+  height: 3px;
+  background: #8DC540;
+  border-radius: 4px;
+  margin-bottom: 22px;
+}
+.oab-burnout-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+.oab-burnout-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: #F6F8F1;
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+.oab-burnout-row-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #EDFFE1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+.oab-burnout-quote {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: #052E26;
+  border-radius: 14px;
+  padding: 22px 24px;
+}
+.oab-burnout-quote-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #0e4638;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+.oab-burnout-quote p {
+  color: #eaf4e2;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+.oab-burnout-photo-col {
+  position: relative;
+  min-height: 700px;
+}
+.oab-burnout-blob {
+  position: absolute;
+  top: 0;
+  left: -6%;
+  right: 0;
+  bottom: 0;
+  clip-path: url(#oab-blob-clip);
+  overflow: hidden;
+  background: #0e2418;
+}
+.oab-burnout-blob-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+}
+.oab-burnout-wave-wrap {
+  position: relative;
+  z-index: 4;
+  margin-top: -140px;
+}
+.oab-burnout-wave {
+  display: block;
+  width: 100%;
+  height: 190px;
+}
+
+/* ── CBT hero: old jj-hero overrides (unused now) ── */
+.cbt-page .jj-hero {
+  background: #ffffff;
+}
+.cbt-page .jj-hero-wave-section .jj-hero-wave path {
+  fill: #faf8f3;
+}
+
+/* Circle instead of arch */
+.cbt-page .jj-arch-bg {
+  border-radius: 50%;
+  height: 480px;
+  width: 480px;
+  margin: 0 auto;
+  background: #e8f0e4;
+}
+.cbt-page .jj-photo-arch {
+  max-width: 480px;
+  margin-bottom: -40px;
+}
+.cbt-page .jj-arch-photo {
+  object-position: center center;
+  border-radius: 50%;
+}
+/* Hide the leaf and wave SVGs — don't suit circle shape */
+.cbt-page .jj-arch-leaf,
+.cbt-page .jj-arch-wave {
+  display: none;
+}
+/* Namecard: bottom-left of the circle */
+.cbt-page .jj-arch-namecard {
+  left: -16px;
+  bottom: 28px;
+  transform: none;
+}
+
+/* ── Prose sections ── */
+.cbt-prose-section {
+  padding: 5rem 1.5rem;
+  background: #faf8f3;
+}
+.cbt-prose-section--dark {
+  background: #093129;
+}
+.cbt-prose-section--dark .cbt-prose-h2 {
+  color: #fff;
+}
+.cbt-prose-section--dark .cbt-prose-block p {
+  color: #9fc4b0;
+}
+.cbt-prose-section--dark .jj-section-tag {
+  color: #8DC540;
+}
+.cbt-prose-block {
+  max-width: 780px;
+  margin: 0 auto;
+}
+.cbt-prose-h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: #052E26;
+  line-height: 1.18;
+  margin-bottom: 1.5rem;
+}
+.cbt-prose-block p {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 1.05rem;
+  color: #334155;
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+.cbt-prose-block p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Audience section — dark band ── */
+.cbt-audience-section {
+  padding: 5rem 1.5rem;
+  background: #093129;
+}
+.cbt-audience-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.cbt-audience-inner .jj-section-tag {
+  color: #8DC540;
+}
+.cbt-audience-inner .cbt-prose-h2 {
+  color: #fff;
+  margin-bottom: 2.5rem;
+}
+.cbt-audience-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.cbt-audience-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1.5rem 1.25rem;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(141,197,64,0.18);
+  border-radius: 14px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.cbt-audience-card:hover {
+  background: rgba(141,197,64,0.1);
+  border-color: rgba(141,197,64,0.4);
+}
+.cbt-audience-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(141,197,64,0.15);
+  color: #8DC540;
+  flex-shrink: 0;
+}
+.cbt-audience-label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+}
+.cbt-audience-sub {
+  font-size: 0.84rem;
+  color: #7aaD8a;
+  line-height: 1.45;
+}
+
+/* ── Featured Programs section ── */
+.cbt-programs-section {
+  padding: 5.5rem 1.5rem;
+  background: #093129;
+}
+.cbt-programs-header {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+.cbt-programs-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+.cbt-programs-sub {
+  font-size: 1.05rem;
+  color: #9fc4b0;
+  line-height: 1.6;
+}
+.cbt-programs-section .jj-section-tag {
+  color: #8DC540;
+}
+.cbt-programs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+/* Card: white, green left accent bar, number badge top-right */
+.cbt-program-card {
+  background: #fff;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-left: 4px solid #8DC540;
+  border-radius: 0 14px 14px 0;
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  transition: box-shadow 0.22s ease, transform 0.22s ease;
+  position: relative;
+}
+.cbt-program-card:hover {
+  box-shadow: 0 10px 36px rgba(0,0,0,0.28);
+  transform: translateY(-3px);
+}
+/* Number badge top-right */
+.cbt-program-num {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  font-size: 2.8rem;
+  font-weight: 800;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #EDFFE1;
+  line-height: 1;
+  user-select: none;
+}
+.cbt-program-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background: #052E26;
+  color: #8DC540;
+  margin-bottom: 0.9rem;
+  flex-shrink: 0;
+}
+.cbt-program-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #052E26;
+  margin-bottom: 0.45rem;
+  line-height: 1.3;
+  padding-right: 2.8rem;
+}
+.cbt-program-desc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 1.1rem;
+}
+.cbt-program-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-bottom: 1.5rem;
+  border-top: 1px solid #e8ede9;
+  padding-top: 1rem;
+}
+.cbt-program-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.cbt-program-field-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8DC540;
+}
+.cbt-program-field-val {
+  font-size: 0.87rem;
+  color: #475569;
+  line-height: 1.5;
+}
+.cbt-program-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  margin-top: auto;
+  background: #093129;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  transition: background 0.18s ease;
+}
+.cbt-program-link:hover {
+  background: #052E26;
+}
+
+/* ── Grouped topics — horizontal pill rows under sub-labels ── */
+.cbt-topic-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+.cbt-topic-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.cbt-topic-group-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #fff;
+  opacity: 0.55;
+}
+.cbt-topic-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.cbt-topic-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 0.75rem;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(141,197,64,0.22);
+  border-radius: 999px;
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: #d4ecd9;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  cursor: default;
+}
+.cbt-topic-chip:hover {
+  background: rgba(141,197,64,0.15);
+  border-color: rgba(141,197,64,0.5);
+  color: #fff;
+}
+.cbt-topic-chip-icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: #8DC540;
+  opacity: 0.8;
+}
+
+/* ── MYT video embed ── */
+.cbt-myt-video {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cbt-myt-video-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.cbt-myt-video-thumb {
+  position: relative;
+  display: block;
+  max-width: 440px;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(5,46,38,0.15);
+}
+.cbt-myt-video-thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.cbt-myt-video-play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(5,46,38,0.45);
+  transition: background 0.18s ease;
+}
+.cbt-myt-video-thumb:hover .cbt-myt-video-play {
+  background: rgba(5,46,38,0.6);
+}
+.cbt-myt-video-play svg {
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+}
+.cbt-myt-video-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.65rem 0.9rem;
+  background: rgba(5,46,38,0.82);
+  color: #c8e0a8;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+/* ── FAQ — two-column: dark left panel + accordion right ── */
+.cbt-faq-section {
+  padding: 5rem 0;
+  background: #fff;
+  overflow: hidden;
+}
+.cbt-faq-inner {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  min-height: 480px;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 32px rgba(9,49,41,0.08);
+}
+/* Left dark panel */
+.cbt-faq-header {
+  background: #093129;
+  padding: 4rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.cbt-faq-header .jj-section-tag {
+  color: #8DC540;
+}
+.cbt-faq-header .cbt-prose-h2 {
+  color: #fff;
+  margin-bottom: 0;
+}
+.cbt-faq-header-sub {
+  font-size: 0.95rem;
+  color: #7aaD8a;
+  line-height: 1.6;
+}
+/* Right accordion panel */
+.cbt-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: #fff;
+  border-left: none;
+}
+.cbt-faq-item {
+  border-bottom: 1px solid #e8ede9;
+}
+.cbt-faq-item:last-child {
+  border-bottom: none;
+}
+.cbt-faq-q {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.35rem 2rem;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.97rem;
+  font-weight: 600;
+  color: #052E26;
+  line-height: 1.4;
+  transition: background 0.15s ease;
+}
+.cbt-faq-q:hover {
+  background: #f4fbef;
+}
+.cbt-faq-q--open {
+  background: #f4fbef;
+  color: #093129;
+}
+.cbt-faq-chevron {
+  flex-shrink: 0;
+  transition: transform 0.22s ease;
+  color: #8DC540;
+}
+.cbt-faq-q--open .cbt-faq-chevron {
+  transform: rotate(180deg);
+}
+.cbt-faq-a {
+  padding: 0 2rem 1.25rem;
+  animation: cbtFadeIn 0.18s ease;
+}
+.cbt-faq-a p {
+  font-size: 0.94rem;
+  color: #475569;
+  line-height: 1.8;
+  margin: 0;
+}
+@keyframes cbtFadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Mobile sticky CTA ── */
+.cbt-sticky-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  padding: 0.85rem 1.25rem calc(0.85rem + env(safe-area-inset-bottom, 0px));
+  background: rgba(5,46,38,0.97);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.cbt-sticky-bar--visible {
+  transform: translateY(0);
+}
+.cbt-sticky-btn {
+  width: 100%;
+  justify-content: center;
+}
+
+/* ── CBT responsive ── */
+@media (max-width: 1024px) {
+  .cbt-faq-inner {
+    grid-template-columns: 280px 1fr;
+  }
+}
+@media (max-width: 900px) {
+  .cbt-audience-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cbt-programs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+  }
+  .cbt-myt-video-thumb {
+    max-width: 100%;
+  }
+  .cbt-faq-inner {
+    grid-template-columns: 1fr;
+  }
+  .cbt-faq-header {
+    padding: 2.5rem 1.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .cbt-prose-section {
+    padding: 3.5rem 1rem;
+  }
+  .cbt-audience-section {
+    padding: 3.5rem 1rem;
+  }
+  .cbt-programs-section {
+    padding: 3.5rem 1rem;
+  }
+  .cbt-audience-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  .cbt-audience-card {
+    align-items: center;
+    text-align: center;
+  }
+  .cbt-prose-h2 {
+    font-size: 1.4rem;
+  }
+  .cbt-faq-q {
+    font-size: 0.91rem;
+    padding: 1.1rem 1.25rem;
+  }
+  .cbt-faq-a {
+    padding: 0 1.25rem 1rem;
+  }
+  .cbt-program-card {
+    padding: 1.5rem 1.25rem;
+  }
+  .cbt-program-num {
+    font-size: 1.8rem;
+    top: 1rem;
+    right: 1rem;
+  }
+  /* Show sticky bar only on mobile */
+  .cbt-sticky-bar {
+    display: block;
+  }
+}
+@media (min-width: 601px) {
+  .cbt-sticky-bar {
+    display: none !important;
+  }
+}
+
+/* ════════════════════════════════════════════
+   CORPORATE PAGE — COMPREHENSIVE MOBILE CSS
+   ════════════════════════════════════════════ */
+
+/* ── Tablet (max 1100px) ── */
+@media (max-width: 1100px) {
+  /* OAH Hero */
+  .oah-hero-inner {
+    grid-template-columns: 1fr;
+    padding: 52px 24px 0;
+    min-height: auto;
+  }
+  .oah-hero-copy {
+    padding-right: 0;
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .oah-hero-pill {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .oah-hero-headline {
+    max-width: 100%;
+  }
+  .oah-hero-desc {
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .oah-hero-ctas {
+    justify-content: center;
+  }
+  .oah-hero-photo-col {
+    margin-top: 36px;
+    overflow: visible;
+  }
+  .oah-hero-blob {
+    min-height: 420px;
+    border-radius: 24px 24px 0 0;
+    box-shadow: none;
+  }
+  .oah-hero-deco-ring,
+  .oah-hero-deco-dots {
+    display: none;
+  }
+
+  /* OAB burnout */
+  .oab-burnout-inner {
+    grid-template-columns: 1fr;
+  }
+  .oab-burnout-copy {
+    padding: 24px 32px 40px;
+  }
+  .oab-burnout-photo-col {
+    min-height: 400px;
+  }
+  .oab-burnout-blob {
+    left: 0;
+    clip-path: none;
+    border-radius: 0;
+  }
+  .oab-burnout-wave-wrap {
+    margin-top: 20px;
+  }
+  .oab-burnout-wave {
+    height: 80px;
+  }
+  .oab-burnout-leaf {
+    display: none;
+  }
+
+  /* CBT/OAH programs */
+  .cbt-programs-grid,
+  .oah-programs-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ── Mobile (max 768px) ── */
+@media (max-width: 768px) {
+  /* OAH Hero */
+  .oah-hero-inner {
+    padding: 40px 20px 0;
+  }
+  .oah-hero-headline {
+    font-size: clamp(1.8rem, 6vw, 2.4rem);
+  }
+  .oah-hero-blob {
+    min-height: 320px;
+  }
+  .oah-btn {
+    font-size: 13.5px;
+    padding: 11px 18px;
+  }
+
+  /* Credentials bar */
+  .jj-cred-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .jj-cred-divider {
+    width: 100%;
+    height: 1px;
+    margin: 0;
+  }
+  .jj-cred {
+    padding: 1rem 1.5rem;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* OAB burnout */
+  .oab-burnout {
+    padding: 48px 0 0;
+  }
+  .oab-burnout-copy {
+    padding: 20px 20px 32px;
+  }
+  .oab-burnout-headline {
+    font-size: 1.5rem !important;
+  }
+  .oab-burnout-photo-col {
+    min-height: 280px;
+  }
+  .oab-burnout-dots {
+    display: none;
+  }
+
+  /* Audience section */
+  .cbt-audience-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  /* Programs */
+  .cbt-programs-grid,
+  .oah-programs-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+  .cbt-programs-header,
+  .oah-programs-header {
+    text-align: center;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Topics */
+  .cbt-topic-groups {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .cbt-topic-chips {
+    flex-direction: column;
+  }
+
+  /* FAQ */
+  .cbt-faq-inner {
+    grid-template-columns: 1fr;
+  }
+  .cbt-faq-header {
+    padding: 2rem 1.25rem;
+    text-align: center;
+  }
+  .cbt-faq-header .jj-btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Why cards */
+  .jj-why-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* MYT section */
+  .jj-myt-headline {
+    font-size: 1.4rem;
+  }
+  .cbt-myt-video-thumb {
+    max-width: 100%;
+  }
+
+  /* CTA */
+  .jj-cta-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  .jj-cta-title {
+    font-size: 1.4rem;
+  }
+}
+
+/* ── Small mobile (max 480px) ── */
+@media (max-width: 480px) {
+  .oah-hero-inner {
+    padding: 32px 16px 0;
+  }
+  .oah-hero-headline {
+    font-size: 1.65rem;
+  }
+  .oah-hero-blob {
+    min-height: 260px;
+    border-radius: 16px 16px 0 0;
+  }
+  .oah-hero-ctas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .oah-btn {
+    justify-content: center;
+  }
+
+  .oab-burnout-copy {
+    padding: 16px 16px 28px;
+  }
+  .oab-burnout-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .oab-burnout-quote {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .oab-burnout-photo-col {
+    min-height: 220px;
+  }
+
+  .cbt-audience-grid {
+    grid-template-columns: 1fr;
+  }
+  .cbt-program-card {
+    padding: 1.25rem 1rem;
+  }
+  .cbt-programs-header h2,
+  .oah-programs-header h2 {
+    font-size: 1.4rem;
+  }
+  .cbt-topic-group-label {
+    font-size: 0.85rem;
+  }
+  .cbt-faq-q {
+    font-size: 0.88rem;
+    padding: 1rem;
+  }
+  .cbt-faq-a {
+    padding: 0 1rem 0.875rem;
+  }
+  .jj-why-card {
+    padding: 1.5rem 1.25rem;
   }
 }
