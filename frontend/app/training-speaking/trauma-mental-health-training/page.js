@@ -747,6 +747,10 @@ Community and nonprofit teams rarely walk in with the exact same mix of roles, e
           .tmh2-hero{ padding:80px 0 40px; min-height:auto; }
           .tmh2-hero-inner{ gap:32px; }
           .tmh2-hero-h1{ font-size:clamp(1.8rem, 7vw, 2.4rem); }
+          .tmh2-copy-dots{ display:none; }
+          .tmh2-jamie-video{ flex-direction:column; max-width:100%; }
+          .tmh2-jamie-video img{ width:100%; height:160px; }
+          .tmh2-jamie-video-play{ left:50%; top:80px; }
           .tmh2-hero-ctas{ flex-direction:column; }
           .tmh2-hero-ctas .tmh2-btn{ width:100%; justify-content:center; }
           .tmh2-who-grid{ grid-template-columns:repeat(2,1fr); }
