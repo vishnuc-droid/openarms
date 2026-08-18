@@ -566,11 +566,11 @@ export default function CorporateBusinessTrainingPage() {
         </div>
       </section>
 
-      {/* ══ MORE TOPICS — dark forest background, horizontal pill chips ══ */}
-      <section className="jj-topics" style={{background:'#093129'}}>
+      {/* ══ MORE TOPICS ══ */}
+      <section className="jj-topics" style={{background:'#fff'}}>
         <div className="jj-inner jj-topics-content">
           <div className="reveal reveal-from-bottom">
-            <h2 className="cbt-prose-h2" style={{color:'#fff', marginBottom:'2.5rem'}}>More Training We Cover</h2>
+            <h2 className="cbt-prose-h2" style={{color:'#093129', marginBottom:'2.5rem'}}>More Training We Cover</h2>
           </div>
           <div className="cbt-topic-groups reveal-stagger">
             {TOPIC_GROUPS.map((group, gi) => (
@@ -1172,17 +1172,7 @@ export default function CorporateBusinessTrainingPage() {
           background:rgba(255,255,255,0.06);
         }
         .oah-program-card::before{
-          content:attr(data-num);
-          position:absolute;
-          top:-10px;
-          right:-6px;
-          font-family:'Inter', sans-serif;
-          font-weight:800;
-          font-size:90px;
-          line-height:1;
-          color:rgba(255,255,255,0.035);
-          letter-spacing:-0.04em;
-          pointer-events:none;
+          content:none;
         }
         .oah-program-icon{
           width:52px;height:52px;
