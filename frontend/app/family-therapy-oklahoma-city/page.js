@@ -60,7 +60,7 @@ export default function FamilyTherapyPage() {
   return <main className="family-page">
     <ScrollReveal />
     <section className="family-hero-outer"><div className="family-hero-bg"><img className="family-hero-img-desktop" src="/Openarms Banner 3.jpg" alt="Family spending time together outdoors" /><img className="family-hero-img-mobile" src="/fam9.jpg" alt="Family spending time together outdoors" /><div className="family-hero-content reveal reveal-from-bottom">
-      <p className="family-kicker">Healing Starts When Your Family Feels Heard</p>
+      <p className="family-kicker">HEAL TOGETHER. GROW TOGETHER.</p>
       <h1>Family Counseling<br />in Oklahoma City</h1><i className="family-line" />
       <p className="family-lead">Every family faces challenges. You don’t have to face them alone. We help families heal, communicate, and build stronger, healthier relationships.</p>
       <div className="family-actions"><Link href="/contact" className="family-btn family-btn-solid">Request an Appointment</Link><a href="#approach" className="family-btn family-btn-outline">Learn Our Approach</a></div>
