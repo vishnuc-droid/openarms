@@ -23,7 +23,7 @@ export const serviceCategories = {
     links: [
       { name: 'Jamie James, LPC', slug: 'jamie-james', href: '/training/jamie-james' },
       { name: 'Churches & Faith-Based Training', slug: 'churches-faith-based-training' },
-      { name: 'Corporate & Business Training', slug: 'corporate-business-training' },
+      { name: 'Corporate & Business Training', slug: 'corporate-business-training', href: '/corporate-business-training' },
       { name: 'School Staff & Educator Training', slug: 'school-staff-educator-training' },
     ],
     sideTitle: 'Info',
