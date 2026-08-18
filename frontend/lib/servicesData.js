@@ -25,6 +25,7 @@ export const serviceCategories = {
       { name: 'Churches & Faith-Based Training', slug: 'churches-faith-based-training' },
       { name: 'Corporate & Business Training', slug: 'corporate-business-training', href: '/corporate-business-training' },
       { name: 'School Staff & Educator Training', slug: 'school-staff-educator-training' },
+      { name: 'Trauma & Mental Health Training', slug: 'trauma-mental-health-training', href: '/training-speaking/trauma-mental-health-training' },
     ],
     sideTitle: 'Info',
     sideLinks: [

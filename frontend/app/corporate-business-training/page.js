@@ -8,11 +8,11 @@ import Image from 'next/image';
 const FAQ_ITEMS = [
   {
     q: 'Can this training be customized for our organization?',
-    a: "Yes — sessions are built around your team's specific situation rather than a fixed curriculum. The first conversation is always about what's actually happening on your team, what's already been tried, and what you want people to be able to do differently.",
+    a: "Yes. Sessions are built around your team's specific situation rather than a fixed curriculum. The first conversation is always about what's actually happening on your team, what's already been tried, and what you want people to be able to do differently.",
   },
   {
     q: 'Who is this training designed for?',
-    a: 'Anyone responsible for leading people through stress — HR directors, executives, department leaders, and managers, in businesses, nonprofits, and other organizations.',
+    a: 'Anyone responsible for leading people through stress: HR directors, executives, department leaders, and managers, in businesses, nonprofits, and other organizations.',
   },
   {
     q: 'How is this different from a generic corporate wellness workshop?',
@@ -20,7 +20,7 @@ const FAQ_ITEMS = [
   },
   {
     q: 'Is virtual training available?',
-    a: "Formats are confirmed when you reach out — tell us what would work best for your team.",
+    a: "Formats are confirmed when you reach out, so tell us what would work best for your team.",
   },
   {
     q: 'Does Jamie travel outside Oklahoma City?',
@@ -56,7 +56,7 @@ const PROGRAMS = [
       </svg>
     ),
     name: 'Difficult Conversations & Conflict',
-    desc: 'Practical frameworks for having the conversations managers avoid — and why they avoid them.',
+    desc: 'Practical frameworks for having the conversations managers avoid, and why they avoid them.',
     tags: ['Dept. Leaders', 'Managers', 'Supervisors'],
     outcome: 'Address problems directly without escalating or shutting people down.',
   },
@@ -67,7 +67,7 @@ const PROGRAMS = [
       </svg>
     ),
     name: 'Trauma-Informed Leadership',
-    desc: 'Understanding how trauma shows up in team behavior — and how trauma-aware leadership changes outcomes.',
+    desc: 'Understanding how trauma shows up in team behavior, and how trauma-aware leadership changes outcomes.',
     tags: ['All Levels', 'High-Stress Teams'],
     outcome: 'Respond to behavior rather than reacting to it.',
   },
@@ -81,7 +81,7 @@ const PROGRAMS = [
       </svg>
     ),
     name: 'Organizational Mental Health Foundations',
-    desc: 'Building a workplace where mental health is addressed openly — not avoided until someone leaves.',
+    desc: 'Building a workplace where mental health is addressed openly, not avoided until someone leaves.',
     tags: ['HR Directors', 'Nonprofit Leaders'],
     outcome: 'Talk about mental health before a crisis requires it.',
   },
@@ -229,7 +229,7 @@ export default function CorporateBusinessTrainingPage() {
             </h1>
 
             <p className="oah-hero-desc">
-              When good leaders are running on empty, communication gets shorter, problems get ignored, and your best people start quietly looking elsewhere. This training helps managers and leadership teams recognize those patterns early — and build healthier ways to lead under pressure.
+              When good leaders are running on empty, communication gets shorter, problems get ignored, and your best people start quietly looking elsewhere. This training helps managers and leadership teams recognize those patterns early and build healthier ways to lead under pressure.
             </p>
 
             <div className="oah-hero-ctas">
@@ -362,7 +362,7 @@ export default function CorporateBusinessTrainingPage() {
                 </span>
                 <div>
                   <h3>Turnover Is a Signal</h3>
-                  <p>High turnover doesn&apos;t just hurt your team — it shows that something deeper is off in the culture.</p>
+                  <p>High turnover doesn&apos;t just hurt your team, it shows that something deeper is off in the culture.</p>
                 </div>
               </div>
 
@@ -382,7 +382,7 @@ export default function CorporateBusinessTrainingPage() {
                 <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#EDFFE1" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22c4-3 6-6 6-10a6 6 0 0 0-12 0c0 4 2 7 6 10z"/><path d="M12 12V6"/></svg>
               </span>
               <p>
-                Real leadership creates the kind of culture where people feel safe, supported, and seen — where they don&apos;t just survive, they thrive and stay.
+                Real leadership creates the kind of culture where people feel safe, supported, and seen: where they don&apos;t just survive, they thrive and stay.
               </p>
             </div>
           </div>
@@ -471,7 +471,7 @@ export default function CorporateBusinessTrainingPage() {
             <div className="oah-help-rule" />
 
             <p className="oah-help-desc">
-              Most organizations don&apos;t have a wellness problem — they have a leadership capacity problem that shows up as a wellness problem. When leaders don&apos;t have tools for managing their own stress, they can&apos;t accurately read what&apos;s happening in their teams. When managers avoid difficult conversations, small problems compound into ones that are much harder to unwind. And when culture sends the signal that struggling is a weakness, people hide what&apos;s happening until it becomes a crisis.
+              Most organizations don&apos;t have a wellness problem. They have a leadership capacity problem that shows up as a wellness problem. When leaders don&apos;t have tools for managing their own stress, they can&apos;t accurately read what&apos;s happening in their teams. When managers avoid difficult conversations, small problems compound into ones that are much harder to unwind. And when culture sends the signal that struggling is a weakness, people hide what&apos;s happening until it becomes a crisis.
             </p>
             <p className="oah-help-desc">
               This training doesn&apos;t address those problems through awareness campaigns or generic wellness programming. It addresses them by giving your leadership the specific skills they&apos;re missing: how to recognize burnout in themselves and others before it becomes visible in turnover, how to approach the conversations they&apos;ve been avoiding, and how to build a culture where people don&apos;t have to choose between honesty and self-protection.
@@ -537,7 +537,7 @@ export default function CorporateBusinessTrainingPage() {
 
               <h2 className="oah-programs-title">Four programs, <span>one purpose</span></h2>
             </div>
-            <p className="oah-programs-sub">Each program addresses a specific leadership or culture challenge — not a generic topic list.</p>
+            <p className="oah-programs-sub">Each program addresses a specific leadership or culture challenge, not a generic topic list.</p>
           </div>
 
           <div className="oah-programs-grid reveal-stagger">
@@ -566,11 +566,11 @@ export default function CorporateBusinessTrainingPage() {
         </div>
       </section>
 
-      {/* ══ MORE TOPICS — dark forest background, horizontal pill chips ══ */}
-      <section className="jj-topics" style={{background:'#093129'}}>
+      {/* ══ MORE TOPICS ══ */}
+      <section className="jj-topics" style={{background:'#fff'}}>
         <div className="jj-inner jj-topics-content">
           <div className="reveal reveal-from-bottom">
-            <h2 className="cbt-prose-h2" style={{color:'#fff', marginBottom:'2.5rem'}}>More Training We Cover</h2>
+            <h2 className="cbt-prose-h2" style={{color:'#093129', marginBottom:'2.5rem'}}>More Training We Cover</h2>
           </div>
           <div className="cbt-topic-groups reveal-stagger">
             {TOPIC_GROUPS.map((group, gi) => (
@@ -600,7 +600,7 @@ export default function CorporateBusinessTrainingPage() {
             <p className="jj-section-tag">CUSTOM TRAINING</p>
             <h2 className="cbt-prose-h2">Every Session Starts With Your Organization</h2>
             <p>
-              Every organization that lands on this page is dealing with some version of the same problem, but rarely the exact same version. That&apos;s why the first conversation isn&apos;t about picking a package — it&apos;s about what&apos;s actually happening on your team, what&apos;s already been tried, and what you want people to be able to do differently by the end of the session. Reach out and we&apos;ll talk through timing, format, and group size together.
+              Every organization that lands on this page is dealing with some version of the same problem, but rarely the exact same version. That&apos;s why the first conversation isn&apos;t about picking a package. It&apos;s about what&apos;s actually happening on your team, what&apos;s already been tried, and what you want people to be able to do differently by the end of the session. Reach out and we&apos;ll talk through timing, format, and group size together.
             </p>
             <Link href="/contact?training=leadership-workplace-wellness" className="jj-btn jj-btn-dark" style={{marginTop:'1.5rem', display:'inline-flex'}}>
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -636,16 +636,16 @@ export default function CorporateBusinessTrainingPage() {
             </div>
 
             <h2 className="oah-jamie-headline">
-              She&apos;s Not Describing a Problem She Read About — She&apos;s Describing
+              She&apos;s Not Describing a Problem She Read About. She&apos;s Describing
               <span className="accent">One She&apos;s Managed</span>
             </h2>
 
             <p className="oah-jamie-body">
-              Jamie James is a Licensed Professional Counselor and the founder of two active organizations — Open Arms Initiative and Open Arms Foster Care. Foster care is one of the more demanding environments in the child welfare system, where the stakes are high, resources are stretched, and staff burnout is a genuine operational risk. She manages that reality every day while also running a separate counseling and training organization.
+              Jamie James is a Licensed Professional Counselor and the founder of two active organizations: Open Arms Initiative and Open Arms Foster Care. Foster care is one of the more demanding environments in the child welfare system, where the stakes are high, resources are stretched, and staff burnout is a genuine operational risk. She manages that reality every day while also running a separate counseling and training organization.
             </p>
 
             <p className="oah-jamie-body">
-              That&apos;s the perspective she brings into this training: a clinician&apos;s understanding of how burnout and stress actually show up in behavior, paired with a leader&apos;s understanding of what it actually takes to hold a team together under sustained pressure. When she talks about a manager who&apos;s avoiding a conversation, or a leadership team that&apos;s stopped functioning well together, she&apos;s not illustrating a concept — she&apos;s describing a pattern she&apos;s navigated firsthand.
+              That&apos;s the perspective she brings into this training: a clinician&apos;s understanding of how burnout and stress actually show up in behavior, paired with a leader&apos;s understanding of what it actually takes to hold a team together under sustained pressure. When she talks about a manager who&apos;s avoiding a conversation, or a leadership team that&apos;s stopped functioning well together, she&apos;s not illustrating a concept. She&apos;s describing a pattern she&apos;s navigated firsthand.
             </p>
 
             <div className="oah-jamie-video-label">
@@ -653,7 +653,7 @@ export default function CorporateBusinessTrainingPage() {
               WATCH JAMIE ON LEADERSHIP BURNOUT
             </div>
             <a href="https://www.youtube.com/watch?v=Hy-mRWM6zi0" target="_blank" rel="noopener noreferrer" className="oah-jamie-video-thumb" aria-label="Watch: Why Strong Leaders Feel Empty? High-Functioning Burnout">
-              <img src="https://img.youtube.com/vi/Hy-mRWM6zi0/mqdefault.jpg" alt="Why Strong Leaders Feel Empty? High-Functioning Burnout — Jamie James" className="oah-jamie-video-photo" />
+              <img src="https://img.youtube.com/vi/Hy-mRWM6zi0/mqdefault.jpg" alt="Why Strong Leaders Feel Empty? High-Functioning Burnout, Jamie James" className="oah-jamie-video-photo" />
               <span className="oah-jamie-video-play"><svg viewBox="0 0 24 24" width="15" height="15" fill="#fff"><polygon points="5,3 19,12 5,21"/></svg></span>
               <div className="oah-jamie-video-info">
                 <p className="oah-jamie-video-title">Why Strong Leaders Feel Empty?</p>
@@ -723,22 +723,22 @@ export default function CorporateBusinessTrainingPage() {
               {
                 icon: <svg viewBox="0 0 24 24" fill="none" stroke="#3a6e2a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="34" height="34"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><polyline points="9 12 11 14 15 10"/></svg>,
                 title: 'Led by a Licensed Clinician',
-                desc: "A licensed professional counselor with clinical training in how stress and trauma actually affect behavior — not just leadership theory.",
+                desc: "A licensed professional counselor with clinical training in how stress and trauma actually affect behavior, not just leadership theory.",
               },
               {
                 icon: <svg viewBox="0 0 24 24" fill="none" stroke="#3a6e2a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="34" height="34"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>,
                 title: 'Built for Your Specific Situation',
-                desc: "Sessions are shaped around what's actually happening in your organization — not a fixed curriculum delivered the same way to every room.",
+                desc: "Sessions are shaped around what's actually happening in your organization, not a fixed curriculum delivered the same way to every room.",
               },
               {
                 icon: <svg viewBox="0 0 24 24" fill="none" stroke="#3a6e2a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="34" height="34"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>,
                 title: 'Organizational Leadership Experience',
-                desc: "Jamie runs two organizations — she understands the constraints, dynamics, and pressures leaders are managing when she walks into a room.",
+                desc: "Jamie runs two organizations, so she understands the constraints, dynamics, and pressures leaders are managing when she walks into a room.",
               },
               {
                 icon: <svg viewBox="0 0 24 24" fill="none" stroke="#3a6e2a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="34" height="34"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>,
                 title: 'Practical Tools, Not Just Concepts',
-                desc: "Leaders leave with specific frameworks they can use — not just a better understanding of why the problem exists.",
+                desc: "Leaders leave with specific frameworks they can use, not just a better understanding of why the problem exists.",
               },
             ].map((c, i) => (
               <div key={i} className="jj-why-card reveal reveal-from-bottom">
@@ -1172,17 +1172,7 @@ export default function CorporateBusinessTrainingPage() {
           background:rgba(255,255,255,0.06);
         }
         .oah-program-card::before{
-          content:attr(data-num);
-          position:absolute;
-          top:-10px;
-          right:-6px;
-          font-family:'Inter', sans-serif;
-          font-weight:800;
-          font-size:90px;
-          line-height:1;
-          color:rgba(255,255,255,0.035);
-          letter-spacing:-0.04em;
-          pointer-events:none;
+          content:none;
         }
         .oah-program-icon{
           width:52px;height:52px;

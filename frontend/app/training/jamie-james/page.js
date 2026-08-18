@@ -7,7 +7,7 @@ import Link from 'next/link';
 const ALL_VIDEOS = [
   { id: 'Hy-mRWM6zi0', title: 'Why Strong Leaders Feel Empty? High-Functioning Burnout' },
   { id: 'cdCBtTdeMxk', title: 'You Were Never Called to Carry Everyone: Leadership Burnout and Boundaries' },
-  { id: 'RjPN-cDn4n0', title: "Leadership Boundaries Are Not Selfish — They're Stewardship" },
+  { id: 'RjPN-cDn4n0', title: "Leadership Boundaries Are Not Selfish, They're Stewardship" },
   { id: 'ABTYwSKfa3U', title: 'You Can Be Successful and Still Be Falling Apart' },
   { id: 'vTBbwdZAusI', title: "Depression Isn't Just Sadness" },
   { id: 'q2hwT6fpyO8', title: 'What Labels Are You Still Carrying?' },
@@ -333,11 +333,11 @@ export default function JamieJamesPage() {
               The Person Leading Your Training<br />Also Runs Two Organizations<br /><em>Like Yours</em>
             </h2>
             <p className="jj-myt-body">
-              Jamie James isn&apos;t just a consultant who read about burnout and trauma-informed leadership — she's dealt with both directly. As a Licensed Professional Counselor, she founded Open Arms Initiative. As an organizational leader, she also founded and runs Open Arms Foster Care, a licensed therapeutic foster care agency operating in Oklahoma City, Tulsa, and Lawton — one of the more demanding corners of the child welfare system, where trauma-informed practice is a daily requirement, not a talking point.
+              Jamie James isn&apos;t just a consultant who read about burnout and trauma-informed leadership; she's dealt with both directly. As a Licensed Professional Counselor, she founded Open Arms Initiative. As an organizational leader, she also founded and runs Open Arms Foster Care, a licensed therapeutic foster care agency operating in Oklahoma City, Tulsa, and Lawton, one of the more demanding corners of the child welfare system, where trauma-informed practice is a daily requirement, not a talking point.
 
             </p>
             <p className="jj-myt-body">
-That's the perspective she brings into every training, workshop, and speaking engagement: a clinician's understanding of how trauma and stress actually show up in behavior, combined with a leader's understanding of what it actually takes to keep people functioning under pressure. If your organization is dealing with burnout, difficult conversations, or a team that's quietly struggling, she's not describing a problem she read about — she's describing one she's managed.
+That's the perspective she brings into every training, workshop, and speaking engagement: a clinician's understanding of how trauma and stress actually show up in behavior, combined with a leader's understanding of what it actually takes to keep people functioning under pressure. If your organization is dealing with burnout, difficult conversations, or a team that's quietly struggling, she's not describing a problem she read about. She's describing one she's managed.
             </p>
           
             <Link href="/contact" className="jj-btn jj-btn-dark">
@@ -365,7 +365,7 @@ That's the perspective she brings into every training, workshop, and speaking en
               <p className="jj-section-tag">MEET JAMIE</p>
               <h2 className="jj-bio-title">Founder. Counselor.<br />Advocate. Speaker.</h2>
               <p className="jj-bio-desc">
-                Jamie James is a Licensed Professional Counselor (LPC) and the President &amp; Founder of Open Arms Initiative — a mental health and wellness organization equipping teams, families, and communities with trauma-informed tools. She also founded and leads Open Arms Foster Care, a licensed therapeutic foster care agency serving families in Oklahoma City, Tulsa, and Lawton.
+                Jamie James is a Licensed Professional Counselor (LPC) and the President &amp; Founder of Open Arms Initiative, a mental health and wellness organization equipping teams, families, and communities with trauma-informed tools. She also founded and leads Open Arms Foster Care, a licensed therapeutic foster care agency serving families in Oklahoma City, Tulsa, and Lawton.
               </p>
               <ul className="jj-bio-list">
                 <li><span className="jj-check"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Licensed Professional Counselor (LPC)</li>
@@ -475,7 +475,7 @@ That's the perspective she brings into every training, workshop, and speaking en
               <p className="jj-section-tag">SPEAKING ENGAGEMENTS</p>
               <h2 className="jj-speaker-title">Bringing Clarity to the<br />Conversations That Matter Most</h2>
               <p className="jj-speaker-body">
-Jamie James speaks from operating experience, not just clinical theory. She leads two organizations built around the exact pressures she speaks about — burnout, trauma-informed leadership, and sustaining people through high-stress, high-stakes work.              </p>
+Jamie James speaks from operating experience, not just clinical theory. She leads two organizations built around the exact pressures she speaks about: burnout, trauma-informed leadership, and sustaining people through high-stress, high-stakes work.              </p>
               <ul className="jj-speaker-topics">
                 {[
                   'Corporate/business leadership groups and HR/people-ops gatherings',
