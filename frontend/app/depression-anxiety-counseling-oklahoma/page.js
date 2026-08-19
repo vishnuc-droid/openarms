@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 
-export const metadata = { title: 'Depression Counseling Oklahoma | Open Arms Initiative', description: 'Find compassionate depression counseling in Oklahoma. Open Arms Initiative provides support for depression, anxiety, stress, and emotional well-being.' };
+export const metadata = { title: 'Depression Counseling Oklahoma | Open Arms Initiative', description: 'Find compassionate depression counseling in Oklahoma. Open Arms Initiative provides support for depression, anxiety, stress, and emotional well-being.', alternates: { canonical: 'https://www.openarmsinitiative.com/depression-anxiety-counseling-oklahoma/' } };
 
 const trustIcons = [
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20.5s-6.5-4-9-8.2C1.2 8.8 3 5.5 6.2 5.5c1.9 0 3.2 1 3.8 2.1.6-1.1 1.9-2.1 3.8-2.1 3.2 0 5 3.3 3.2 6.8-2.5 4.2-9 8.2-9 8.2Z" /></svg>,
