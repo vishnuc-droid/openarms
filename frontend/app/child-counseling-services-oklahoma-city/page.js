@@ -58,7 +58,7 @@ const feelings = [
   ['Big Emotions', 'Some children experience emotions that feel bigger than their ability to understand or communicate them. Counseling can help them recognize feelings and develop healthier ways to express them.'],
   ['Changes in Behavior', 'Increased irritability, withdrawal, emotional outbursts, or noticeable changes in behavior may be ways a child communicates that something feels difficult.'],
   ['School Challenges', 'Academic pressure, changing routines, social difficulties, bullying, or problems adjusting at school can affect a child’s emotional well-being.'],
-  ['Friendship & Social Concerns', 'Friendships can become an important source of belonging—and stress—as children grow. Counseling can provide space to explore social challenges and healthy relationships.'],
+  ['Friendship & Social Concerns', 'Friendships can become an important source of belonging, and stress, as children grow. Counseling can provide space to explore social challenges and healthy relationships.'],
   ['Family Changes', 'Divorce, separation, blended families, relocation, loss, foster care, adoption, or other changes at home can bring emotions children may struggle to understand.'],
   ['Growing Up', 'Adolescence can bring changing identities, responsibilities, relationships, expectations, and emotions. Having a trusted space outside the immediate family can help teens process those experiences.'],
 ];
