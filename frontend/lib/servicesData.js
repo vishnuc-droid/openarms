@@ -2,14 +2,14 @@ export const serviceCategories = {
   'Counseling & Therapy': {
     heading: 'Counseling & Therapy Services',
     links: [
-      { name: 'Child & Adolescent Counseling', slug: 'child-adolescent-counseling', href: '/child-counseling-oklahoma-city/' },
-      { name: 'Individual Counseling', slug: 'individual-counseling' },
-      { name: 'Adult Counseling', slug: 'adult-counseling' },
+      { name: 'Child & Adolescent Counseling', slug: 'child-adolescent-counseling', href: '/child-counseling-services-oklahoma-city/' },
+      { name: 'Adult & Individual Counseling', slug: 'adult-counseling' },
       { name: 'Marriage & Couples Therapy', slug: 'marriage-couples-therapy', href: '/marriage-counseling-oklahoma-city/' },
       { name: 'Foster Care & Adoption Counseling', slug: 'foster-care-adoption-counseling' },
       { name: 'Grief and Loss Counseling', slug: 'grief-loss-counseling', href: '/grief-counseling-oklahoma-city/' },
       { name: 'Family Counseling', slug: 'family-counseling', href: '/family-therapy-oklahoma-city/' },
       { name: 'Depression & Anxiety Counseling', slug: 'depression-anxiety-counseling', href: '/depression-anxiety-counseling-oklahoma/' },
+      { name: 'Family Support', slug: 'family-support', href: '/family-support-services-oklahoma-city/' },
     ],
     sideTitle: 'Trusted Team',
     sideLinks: [
@@ -78,22 +78,8 @@ export const allServices = [
     image: '/images/5th.jpg',
   },
   {
-    slug: 'individual-counseling',
-    title: 'Individual Counseling',
-    category: 'Counseling & Therapy',
-    summary: 'One-on-one sessions tailored to help adults navigate life transitions, reduce stress, resolve anxiety, and achieve personal growth.',
-    benefits: [
-      'Personalized treatment plans',
-      'Confidential and supportive environment',
-      'Tools for anxiety and depression management',
-      'Improved self-esteem and decision-making',
-    ],
-    details: 'Individual counseling offers a focused environment to address personal mental health goals. Our experienced counselors work alongside you to identify underlying triggers, develop effective coping mechanisms, and foster lasting self-growth.',
-    image: '/images/6th.jpg',
-  },
-  {
     slug: 'adult-counseling',
-    title: 'Adult Counseling',
+    title: 'Adult & Individual Counseling',
     category: 'Counseling & Therapy',
     summary: 'Comprehensive therapy designed for adults dealing with life pressure, relationship issues, burnout, and mental health challenges.',
     benefits: [

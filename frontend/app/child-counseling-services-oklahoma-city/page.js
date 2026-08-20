@@ -1,14 +1,14 @@
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 
-export const metadata = { title: 'Child Counseling Services Oklahoma City | Open Arms', description: 'Compassionate child counseling services in Oklahoma City for children and teens facing emotional, behavioral, family, school, and life challenges.', alternates: { canonical: 'https://www.openarmsinitiative.com/child-counseling-oklahoma-city/' } };
+export const metadata = { title: 'Child Counseling Services Oklahoma City | Open Arms', description: 'Compassionate child counseling services in Oklahoma City for children and teens facing emotional, behavioral, family, school, and life challenges.', alternates: { canonical: 'https://www.openarmsinitiative.com/child-counseling-services-oklahoma-city/' } };
 
 const SCHEMA_BREADCRUMB = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Child & Adolescent Counseling', item: 'https://www.openarmsinitiative.com/child-counseling-oklahoma-city/' },
+    { '@type': 'ListItem', position: 2, name: 'Child & Adolescent Counseling', item: 'https://www.openarmsinitiative.com/child-counseling-services-oklahoma-city/' },
   ],
 };
 
