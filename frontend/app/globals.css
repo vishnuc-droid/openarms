@@ -4039,7 +4039,7 @@ footer a:hover {
 .jj-hero-headline {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(2.4rem, 4.6vw, 3.6rem);
-  font-weight: 800;
+  font-weight: 700;
   color: #1a2e1a;
   line-height: 1.08;
   margin: 0 0 0.9rem;
@@ -4213,7 +4213,7 @@ footer a:hover {
 }
 
 .jj-arch-namecard-name {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 0.88rem;
   font-weight: 700;
   color: #1a2e1a;
@@ -4735,7 +4735,7 @@ footer a:hover {
 .jj-myt-headline {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(1.5rem, 2.8vw, 2.4rem);
-  font-weight: 800;
+  font-weight: 700;
   color: #052E26;
   line-height: 1.2;
   margin: 0 0 1.25rem;
@@ -4744,7 +4744,7 @@ footer a:hover {
 .jj-myt-headline em {
   font-style: italic;
   color: #5a7a3a;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .jj-myt-body {
@@ -4782,7 +4782,7 @@ footer a:hover {
 }
 
 .jj-myt-stat-num {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 1.9rem;
   font-weight: 900;
   color: #3a6e2a;
@@ -4825,7 +4825,7 @@ footer a:hover {
 .jj-speaker-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(1.55rem, 3vw, 2.4rem);
-  font-weight: 800;
+  font-weight: 700;
   color: #052E26;
   line-height: 1.2;
   margin: 0.5rem 0 1.25rem;
@@ -5089,7 +5089,7 @@ footer a:hover {
 .jj-videos-stack-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(1.4rem, 2.5vw, 2rem);
-  font-weight: 800;
+  font-weight: 700;
   color: #e8f5d8;
   margin: 0;
   line-height: 1.2;
