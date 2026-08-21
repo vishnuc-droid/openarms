@@ -18,23 +18,6 @@ export const serviceCategories = {
     ],
     image: '/images/first.png',
   },
-  'Speaking & Training Engagements': {
-    heading: 'Speaking & Training Engagements',
-    links: [
-      { name: 'Jamie James, LPC', slug: 'jamie-james', href: '/training/jamie-james' },
-      { name: 'Churches & Faith-Based Training', slug: 'churches-faith-based-training' },
-      { name: 'Corporate & Business Training', slug: 'corporate-business-training', href: '/corporate-business-training' },
-      { name: 'School Staff & Educator Training', slug: 'school-staff-educator-training' },
-      { name: 'Trauma & Mental Health Training', slug: 'trauma-mental-health-training', href: '/training-speaking/trauma-mental-health-training' },
-    ],
-    sideTitle: 'Info',
-    sideLinks: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Location', href: '/location' },
-      { name: 'FAQ', href: '/faq' },
-    ],
-    image: '/images/second.png',
-  },
   'Clinical Training & Workshops': {
     heading: 'Clinical Training & Workshops',
     links: [
@@ -60,6 +43,24 @@ export const serviceCategories = {
     ],
     image: '/images/4th.png',
   },
+};
+
+export const trainingSpeakingMenu = {
+  heading: 'Training & Speaking',
+  links: [
+    { name: 'Trauma & Mental Health Training', slug: 'trauma-mental-health-training', href: '/training-speaking/trauma-mental-health-training' },
+    { name: 'Jamie James, LPC', slug: 'jamie-james', href: '/training/jamie-james' },
+    { name: 'Churches & Faith-Based Training', slug: 'churches-faith-based-training', href: '/services/churches-faith-based-training' },
+    { name: 'Corporate & Business Training', slug: 'corporate-business-training', href: '/corporate-business-training' },
+    { name: 'School Staff & Educator Training', slug: 'school-staff-educator-training', href: '/services/school-staff-educator-training' },
+  ],
+  sideTitle: 'Info',
+  sideLinks: [
+    { name: 'About Us', href: '/about-us' },
+    { name: 'Location', href: '/location' },
+    { name: 'FAQ', href: '/faq' },
+  ],
+  image: '/images/second.png',
 };
 
 export const allServices = [

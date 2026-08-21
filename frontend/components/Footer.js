@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="footer-top">
         <div className="footer-brand-col">
           <Link className="footer-logo" href="/" aria-label="Open Arms Initiative home">
-            <img src="/images/logo.svg" alt="Open Arms Initiative" />
+            <img src="/images/logo-full.png" alt="Open Arms Initiative" />
           </Link>
           <p className="footer-address">
             1101 Sovereign Row Unit A<br />Oklahoma City, OK 73108
@@ -27,6 +27,8 @@ export default function Footer() {
           <h3>Quick Links</h3>
           <Link href="/">Home</Link>
           <Link href="/about-us">About Us</Link>
+          <Link href="/training-speaking/trauma-mental-health-training">Training &amp; Speaking</Link>
+          <Link href="/foster-care">Foster Care</Link>
           <Link href="/location">Locations</Link>
           <Link href="/blogs">Blog</Link>
           <Link href="/contact">Contact</Link>
