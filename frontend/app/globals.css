@@ -747,7 +747,7 @@ h1, h2, h3 {
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  background: #052E26;
+  background: #072B3A;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -819,7 +819,7 @@ h1, h2, h3 {
   flex-wrap: wrap;
   gap: 10px;
   margin: 0 0 18px;
-  color: #0E9CB8;
+  color: #0170ED;
   font: 700 14px/1 'DM Sans', Arial, sans-serif;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -843,7 +843,11 @@ h1, h2, h3 {
 }
 
 .hero-accent-heading-highlight {
-  color: #00AFF7;
+  background: linear-gradient(135deg, #00AFF7 0%, #0170ED 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #0170ED;
   white-space: nowrap;
 }
 
@@ -858,7 +862,7 @@ h1, h2, h3 {
 .hero-divider-line {
   flex: 1;
   height: 1px;
-  background: rgba(41, 196, 224, 0.6);
+  background: rgba(1, 112, 237, 0.5);
 }
 
 .reference-hero-text {
@@ -874,14 +878,14 @@ h1, h2, h3 {
   align-items: center;
   gap: 12px;
   padding: 16px 28px;
-  background: rgb(0, 168, 246);
+  background: linear-gradient(135deg, #00AFF7 0%, #0170ED 100%);
   color: #ffffff;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   border-radius: 999px;
-  border: 1px solid rgb(0, 168, 246);
+  border: 1px solid #0170ED;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -905,7 +909,7 @@ h1, h2, h3 {
   width: 150%;
   height: 200%;
   border-radius: 50%;
-  background-color: rgb(0, 168, 246);
+  background-color: #0170ED;
   transform: translateX(-50%) scaleY(1) scaleX(1.3);
   transition: all 0.5s 0.05s cubic-bezier(0.55, 0, 0.1, 1);
   z-index: -1;
@@ -913,7 +917,7 @@ h1, h2, h3 {
 
 .reference-hero-button::before {
   top: 100%;
-  background-color: rgba(0, 168, 246, 0.35);
+  background-color: rgba(1, 112, 237, 0.35);
 }
 
 .reference-hero-button::after {
@@ -922,7 +926,7 @@ h1, h2, h3 {
 
 .reference-hero-button:hover {
   color: #ffffff;
-  border-color: rgb(0, 168, 246);
+  border-color: #0170ED;
 }
 
 .reference-hero-button:hover::before,
@@ -953,7 +957,7 @@ h1, h2, h3 {
   font-weight: 700;
   letter-spacing: 0.02em;
   border-radius: 999px;
-  border: 1.5px solid rgb(0, 168, 246);
+  border: 1.5px solid #0170ED;
   transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
@@ -962,7 +966,7 @@ h1, h2, h3 {
 }
 
 .reference-hero-button-secondary:hover {
-  background: rgb(0, 168, 246);
+  background: #0170ED;
   color: #ffffff;
   transform: translateY(-2px);
 }
@@ -1059,7 +1063,7 @@ h1, h2, h3 {
 .services-section {
   position: relative;
   padding: 70px 25px 80px;
-  background: linear-gradient(180deg, #eef8e6 0%, #ffffff 65%);
+  background: linear-gradient(180deg, var(--oa-blue-pale) 0%, #ffffff 65%);
 }
 
 .services-inner {
@@ -1424,7 +1428,7 @@ h1, h2, h3 {
 
 /* Our Mission Section - Exact match for user screenshot */
 .mission-section-outer {
-  background: linear-gradient(135deg, #E4F8FC 0%, #D3EFF6 100%);
+  background: linear-gradient(135deg, var(--oa-blue-light) 0%, #D3EFF6 100%);
   padding: 80px 0;
 }
 
@@ -1447,8 +1451,8 @@ h1, h2, h3 {
 .mission-badge {
   display: inline-block;
   align-self: flex-start;
-  background-color: #052E262B;
-  color: #052E26;
+  background-color: rgba(1, 112, 237, 0.14);
+  color: #0170ED;
   padding: 8px 16px;
   border-radius: 4px;
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -1514,17 +1518,16 @@ h1, h2, h3 {
   justify-content: center;
   align-self: flex-start;
   padding: 14px 32px;
-  background-color: rgb(0, 168, 246);
+  background: linear-gradient(135deg, #00AFF7 0%, #0170ED 100%);
   color: #ffffff;
   font-family: 'DM Sans', sans-serif;
   font-size: 16px;
   font-weight: 600;
   border-radius: 30px;
-  transition: background 0.2s ease;
+  transition: filter 0.2s ease;
 }
 
 .mission-button:hover {
-  background-color: rgb(0, 168, 246);
   filter: brightness(1.1);
 }
 
@@ -1549,7 +1552,7 @@ h1, h2, h3 {
   height: 560px;
   right: -220px;
   top: -220px;
-  background: radial-gradient(circle at 40% 40%, rgba(41, 196, 224, 0.12), rgba(41, 196, 224, 0) 70%);
+  background: radial-gradient(circle at 40% 40%, rgba(1, 112, 237, 0.12), rgba(1, 112, 237, 0) 70%);
 }
 
 .why-choose-container {
@@ -2009,8 +2012,8 @@ footer a:hover {
 
 .care-badge {
   display: inline-block;
-  background: #e8ede8;
-  color: #3d4546;
+  background: rgba(1, 112, 237, 0.12);
+  color: #0170ED;
   font-family: 'DM Sans', sans-serif;
   font-size: 14px;
   font-weight: 600;
@@ -2295,7 +2298,7 @@ footer a:hover {
   flex-direction: column;
   justify-content: center;
   padding: 48px 40px;
-  background: radial-gradient(circle at 85% 10%, rgba(0, 175, 247, 0.25) 0%, rgba(0, 175, 247, 0) 45%), linear-gradient(160deg, #00aff7 0%, #0170ed 100%);
+  background: radial-gradient(circle at 85% 10%, rgba(0, 175, 247, 0.25) 0%, rgba(0, 175, 247, 0) 45%), linear-gradient(160deg, #00AFF7 0%, #0170ED 100%);
   color: #ffffff;
 }
 
@@ -2423,7 +2426,7 @@ footer a:hover {
   font-size: 18px;
   font-weight: 400;
   line-height: 1;
-  background: linear-gradient(135deg, #00aff7, #0170ed);
+  background: linear-gradient(135deg, #00AFF7, #0170ED);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2947,7 +2950,7 @@ footer a:hover {
     justify-content: center;
     gap: 8px;
     padding: 13px 20px;
-    background: rgb(0, 168, 246);
+    background: linear-gradient(135deg, #00AFF7 0%, #0170ED 100%);
     color: #ffffff;
     font-size: 15px;
     font-weight: 700;
@@ -2973,7 +2976,7 @@ footer a:hover {
   }
   .hero-mobile-cta-btn::before {
     top: 100%;
-    background-color: rgba(0, 168, 246, 0.35);
+    background-color: rgba(1, 112, 237, 0.35);
   }
   .hero-mobile-cta-btn::after {
     top: 180%;
@@ -2981,7 +2984,7 @@ footer a:hover {
   .hero-mobile-cta-btn:hover,
   .hero-mobile-cta-btn:active {
     color: #ffffff;
-    border-color: rgb(0, 168, 246);
+    border-color: #0170ED;
   }
   .hero-mobile-cta-btn:hover::before,
   .hero-mobile-cta-btn:hover::after,
@@ -2992,11 +2995,11 @@ footer a:hover {
   }
   .hero-mobile-cta-btn.secondary {
     background: #ffffff;
-    color: rgb(0, 168, 246);
-    border: 1.5px solid rgb(0, 168, 246);
+    color: #0170ED;
+    border: 1.5px solid #0170ED;
   }
   .hero-mobile-cta-btn.secondary:hover {
-    background: rgb(0, 168, 246);
+    background: #0170ED;
     color: #ffffff;
   }
   .service-grid {
@@ -7114,10 +7117,10 @@ footer a:hover {
    ============================================================ */
 :root {
   --oa-blue-deep: #072B3A;
-  --oa-blue-dark: #0E9CB8;
-  --oa-blue: #29C4E0;
-  --oa-blue-light: #E4F8FC;
-  --oa-blue-pale: #F3FBFD;
+  --oa-blue-dark: #0170ED;
+  --oa-blue: #00AFF7;
+  --oa-blue-light: #E6F2FD;
+  --oa-blue-pale: #F0F7FE;
   --oa-ink: #0B2531;
 }
 
@@ -7134,12 +7137,12 @@ footer a:hover {
 /* Homepage-only override: How We Can Help section keeps the blue palette
    instead of the shared .services-section green wash used on /faq and /services/[slug] */
 #services.services-section {
-  background: linear-gradient(180deg, #F3FBFD 0%, #ffffff 65%);
+  background: linear-gradient(180deg, var(--oa-blue-pale) 0%, #ffffff 65%);
 }
 
 #services.services-section .services-kicker {
-  background: #E4F8FC;
-  color: #0E9CB8;
+  background: var(--oa-blue-light);
+  color: #0170ED;
 }
 
 #services.services-section h2 {
@@ -7292,9 +7295,10 @@ footer a:hover {
 
 /* What to Expect at Open Arms */
 .expect-section {
-  background-color: rgb(7, 115, 230);
+  background-color: #0170ED;
   background-image: radial-gradient(120% 160% at 15% 0%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 55%),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.06) 0%, rgba(0, 0, 0, 0) 40%);
+    linear-gradient(180deg, rgba(0, 0, 0, 0.06) 0%, rgba(0, 0, 0, 0) 40%),
+    linear-gradient(135deg, #00AFF7 0%, #0170ED 100%);
   padding: 80px 24px;
 }
 
@@ -7401,7 +7405,7 @@ footer a:hover {
   gap: 10px;
   padding: 16px 28px;
   background: #ffffff;
-  color: rgb(0, 168, 246);
+  color: #0170ED;
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 15px;
   font-weight: 700;
@@ -7465,8 +7469,8 @@ footer a:hover {
 
 .help-card {
   position: relative;
-  background: #E4F8FC;
-  border: 1px solid rgba(14, 156, 184, 0.14);
+  background: var(--oa-blue-light);
+  border: 1px solid rgba(1, 112, 237, 0.14);
   border-radius: 14px;
   padding: 28px 24px;
   display: flex;
@@ -7485,7 +7489,7 @@ footer a:hover {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #0E9CB8 0%, rgb(0, 163, 245) 100%);
+  background: linear-gradient(90deg, #0170ED 0%, #00AFF7 100%);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.35s ease;
@@ -7495,7 +7499,7 @@ footer a:hover {
   background: #ffffff;
   transform: translateY(-8px);
   box-shadow: 0 22px 40px rgba(7, 43, 58, 0.12);
-  border-color: rgba(0, 163, 245, 0.3);
+  border-color: rgba(1, 112, 237, 0.3);
 }
 
 .help-card:hover::before {
@@ -7517,7 +7521,7 @@ footer a:hover {
 
 .help-card:hover .help-card-icon {
   transform: scale(1.08) rotate(-4deg);
-  background: linear-gradient(135deg, rgb(0, 163, 245) 0%, #0E9CB8 100%);
+  background: linear-gradient(135deg, #00AFF7 0%, #0170ED 100%);
   color: #ffffff;
 }
 
@@ -7627,7 +7631,7 @@ footer a:hover {
 }
 
 .reviews-stars {
-  color: #F5B400;
+  color: #0170ED;
   font-size: 20px;
   letter-spacing: 2px;
 }
@@ -7676,7 +7680,7 @@ footer a:hover {
   border-radius: 50%;
   background: #ffffff;
   color: var(--oa-blue-dark);
-  border: 1px solid rgba(14, 156, 184, 0.2);
+  border: 1px solid rgba(1, 112, 237, 0.2);
   box-shadow: 0 8px 20px rgba(7, 43, 58, 0.1);
   cursor: pointer;
   transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
@@ -7703,7 +7707,7 @@ footer a:hover {
 .review-quote-mark {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 44px;
-  color: #E9A23B;
+  color: #0170ED;
   line-height: 1;
   display: block;
   margin-bottom: 6px;
@@ -7755,14 +7759,14 @@ footer a:hover {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #0E9CB8 0%, rgb(0, 163, 245) 100%);
+  background: linear-gradient(90deg, #0170ED 0%, #00AFF7 100%);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.35s ease;
 }
 
 .why-choose-card:hover {
-  border-color: rgba(0, 163, 245, 0.3);
+  border-color: rgba(1, 112, 237, 0.3);
   background: #ffffff;
   transform: translateY(-8px);
   box-shadow: 0 22px 40px rgba(7, 43, 58, 0.12);
@@ -7779,7 +7783,7 @@ footer a:hover {
   height: 52px;
   border-radius: 14px;
   background: #ffffff;
-  color: rgb(0, 163, 245);
+  color: #0170ED;
   margin-bottom: 20px;
   box-shadow: 0 4px 14px rgba(7, 43, 58, 0.08);
   transition: transform 0.35s ease, background 0.35s ease;
@@ -7787,7 +7791,7 @@ footer a:hover {
 
 .why-choose-card:hover .icon-box {
   transform: scale(1.08) rotate(-4deg);
-  background: linear-gradient(135deg, rgb(0, 163, 245) 0%, #0E9CB8 100%);
+  background: linear-gradient(135deg, #00AFF7 0%, #0170ED 100%);
   color: #ffffff;
 }
 
@@ -8032,7 +8036,7 @@ footer a:hover {
 
 /* Foster Care / Training / Pro Bono teaser row */
 .teaser-row-section {
-  background: #ffffff;
+  background: linear-gradient(180deg, #ffffff 0%, var(--oa-blue-pale) 100%);
   padding: 60px 24px;
 }
 
@@ -8070,9 +8074,9 @@ footer a:hover {
   color: #ffffff;
 }
 
-.teaser-card-icon.foster { background: #1F9E6E; }
-.teaser-card-icon.training { background: #7A5FD1; }
-.teaser-card-icon.probono { background: #E0637A; }
+.teaser-card-icon.foster { background: linear-gradient(135deg, #00AFF7 0%, #0170ED 100%); }
+.teaser-card-icon.training { background: #0170ED; }
+.teaser-card-icon.probono { background: linear-gradient(135deg, #0170ED 0%, #00AFF7 100%); }
 
 .teaser-card h3 {
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -8112,7 +8116,7 @@ footer a:hover {
   margin: 0 auto;
   padding: 40px 48px;
   border-radius: 22px;
-  background: radial-gradient(circle at 88% 12%, rgba(0, 163, 245, 0.28) 0%, rgba(0, 163, 245, 0) 45%), linear-gradient(100deg, #072B3A 0%, #0E9CB8 100%);
+  background: radial-gradient(circle at 88% 12%, rgba(0, 175, 247, 0.28) 0%, rgba(0, 175, 247, 0) 45%), linear-gradient(100deg, #072B3A 0%, #0170ED 100%);
   display: flex;
   align-items: center;
   justify-content: space-between;
