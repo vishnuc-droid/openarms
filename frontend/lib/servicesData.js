@@ -89,7 +89,7 @@ export const allServices = [
       'Emotional healing from past experiences',
       'Actionable mental health toolkits',
     ],
-    details: 'Adult counseling focuses on the complex challenges faced in adulthood—from career burnout and caregiver fatigue to deep-seated relational patterns. We provide evidence-based therapeutic care to help you restore emotional balance.',
+    details: 'Adult counseling focuses on the complex challenges faced in adulthood, from career burnout and caregiver fatigue to deep-seated relational patterns. We provide evidence-based therapeutic care to help you restore emotional balance.',
     image: '/images/7th.jpg',
   },
   {

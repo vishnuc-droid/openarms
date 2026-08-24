@@ -1,7 +1,7 @@
 export const metadata = {
   title: 'Corporate Mental Health Training for Leadership Teams | Open Arms Initiative',
   description:
-    'Burnout, turnover, and quiet conflict don\'t resolve themselves. Jamie James, LPC leads practical leadership and workplace mental health training for teams in Oklahoma City and beyond — built around your organization, not a fixed curriculum.',
+    'Burnout, turnover, and quiet conflict don\'t resolve themselves. Jamie James, LPC leads practical leadership and workplace mental health training for teams in Oklahoma City and beyond, built around your organization, not a fixed curriculum.',
   alternates: {
     canonical: 'https://www.openarmsinitiative.com/corporate-business-training/',
   },
@@ -47,7 +47,7 @@ const SCHEMA_FAQ = {
       name: 'Can this training be customized for our organization?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes — sessions are built around your team\'s specific situation rather than a fixed curriculum.',
+        text: 'Yes, sessions are built around your team\'s specific situation rather than a fixed curriculum.',
       },
     },
     {
@@ -55,7 +55,7 @@ const SCHEMA_FAQ = {
       name: 'Who is this training designed for?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Anyone responsible for leading people through stress — HR directors, executives, department leaders, and managers, in businesses, nonprofits, and other organizations.',
+        text: 'Anyone responsible for leading people through stress, HR directors, executives, department leaders, and managers, in businesses, nonprofits, and other organizations.',
       },
     },
     {

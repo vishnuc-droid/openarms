@@ -121,7 +121,7 @@ export default function FamilySupportPage() { return <main className="fs-page">
     <div className="reveal reveal-from-left">
       <p className="fs-kicker">SUPPORT FOR FAMILIES. STRENGTH FOR WHAT COMES NEXT.</p>
       <h1>Family Support Services<br />in Oklahoma City</h1>
-      <p className="fs-lead">Because Sometimes Your Family Needs More Than Advice&mdash;You Need Someone to Help You Find the Way Forward</p>
+      <p className="fs-lead">Because Sometimes Your Family Needs More Than Advice, You Need Someone to Help You Find the Way Forward</p>
       <p>Families carry a lot. Parenting responsibilities. Changing relationships. Financial pressures. School concerns. Unexpected transitions. Questions about where to turn when someone you love needs additional support.</p>
       <p>And when several challenges happen at once, even knowing where to begin can feel overwhelming.</p>
       <p>Open Arms Initiative provides compassionate <strong>Family Support Services in Oklahoma City</strong> designed to help families feel informed, supported, and more connected to the resources they may need.</p>
@@ -175,7 +175,7 @@ export default function FamilySupportPage() { return <main className="fs-page">
     <p>Some families may benefit from therapeutic services in addition to broader family support.</p>
     <p>If communication has become difficult, relationships feel strained, or your household is navigating significant emotional challenges, our <Link href="/family-therapy-oklahoma-city/">Family Counseling</Link> services may provide a more appropriate therapeutic environment.</p>
     <p>If your child or teenager is experiencing emotional or behavioral concerns, you can also explore our <Link href="/child-counseling-services-oklahoma-city/">Child &amp; Adolescent Counseling</Link> services.</p>
-    <p><strong>Our goal is to help you understand the available options&mdash;not make you figure out the entire path by yourself.</strong></p>
+    <p><strong>Our goal is to help you understand the available options, not make you figure out the entire path by yourself.</strong></p>
     <Link href="/services" className="fs-link-arrow">View Our Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h13.5M13 6l6 6-6 6" /></svg></Link>
   </div></div></section>
 
@@ -193,7 +193,7 @@ export default function FamilySupportPage() { return <main className="fs-page">
     <div>
       <h2>You Don&rsquo;t Need to Know Exactly What Kind of Help You Need Before You Ask for It</h2>
       <p>Sometimes the hardest part is knowing where to begin. So begin with a conversation.</p>
-      <p>Tell us what&apos;s happening. Tell us what you&apos;re worried about. Tell us what your family needs right now&mdash;even if you&apos;re not sure how to describe it.</p>
+      <p>Tell us what&apos;s happening. Tell us what you&apos;re worried about. Tell us what your family needs right now, even if you&apos;re not sure how to describe it.</p>
       <h3>Your Family Deserves to Feel Supported.</h3>
       <p>Open Arms Initiative is here to help you explore the next step.</p>
     </div>

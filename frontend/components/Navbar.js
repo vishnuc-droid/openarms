@@ -45,7 +45,6 @@ export default function Navbar() {
 
         <nav className={menuOpen ? 'reference-links open' : 'reference-links'}>
           <Link href="/about-us" onClick={() => setMenuOpen(false)}>
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="7" r="2.6"/><circle cx="5" cy="9" r="2.1"/><circle cx="19" cy="9" r="2.1"/><path d="M12 12c-3 0-5.2 1.8-5.2 4.6V19h10.4v-2.4C17.2 13.8 15 12 12 12Z"/><path d="M5 12.4c-2 .3-3.2 1.7-3.2 3.7V18h3.6M19 12.4c2 .3 3.2 1.7 3.2 3.7V18h-3.6"/></svg>
             About Us
           </Link>
           <div
@@ -53,7 +52,6 @@ export default function Navbar() {
             onMouseEnter={() => { setTrainingMenuOpen(false); setActiveMenu((prev) => prev || serviceCategoryNames[0]); }}
           >
             <button type="button" className="nav-services-trigger">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 20.5s-6.5-4-9-8.2C1.2 8.8 3 5.5 6.2 5.5c1.9 0 3.2 1 3.8 2.1.6-1.1 1.9-2.1 3.8-2.1 3.2 0 5 3.3 3.2 6.8-2.5 4.2-9 8.2-9 8.2Z"/></svg>
               Services<span className="nav-arrow">▾</span>
             </button>
           </div>
@@ -62,20 +60,16 @@ export default function Navbar() {
             onMouseEnter={() => { setActiveMenu(null); setTrainingMenuOpen(true); }}
           >
             <button type="button" className="nav-services-trigger">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="7" r="2.6"/><circle cx="5" cy="9" r="2.1"/><circle cx="19" cy="9" r="2.1"/><path d="M12 12c-3 0-5.2 1.8-5.2 4.6V19h10.4v-2.4C17.2 13.8 15 12 12 12Z"/><path d="M5 12.4c-2 .3-3.2 1.7-3.2 3.7V18h3.6M19 12.4c2 .3 3.2 1.7 3.2 3.7V18h-3.6"/></svg>
               Training &amp; Speaking<span className="nav-arrow">▾</span>
             </button>
           </div>
           <Link href="/foster-care" onClick={() => setMenuOpen(false)}>
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9h12v-9"/><path d="M10 19v-5h4v5"/></svg>
             Foster Care
           </Link>
           <Link href="/blogs" onClick={() => setMenuOpen(false)}>
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M21 12a7 7 0 0 1-7 7H7l-4 3 1-4.5A7 7 0 1 1 21 12Z"/></svg>
             Blog
           </Link>
           <Link href="/contact" onClick={() => setMenuOpen(false)}>
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 5h16v13H7l-3 3Z"/></svg>
             Contact Us
           </Link>
         </nav>
@@ -170,11 +164,9 @@ export default function Navbar() {
           <span>(405) 920-8934</span>
         </a>
         <Link className="reference-cta" href="/contact">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M3 9h18"/><path d="M8 2v4M16 2v4"/></svg>
           Book an Appointment
         </Link>
         <Link className="reference-cta-donate-small" href="/contact" aria-label="Donate">
-          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 20.3s-7-4.4-9.5-9C1 8 2.8 4.5 6.2 4.5c2 0 3.4 1.1 4 2.3.6-1.2 2-2.3 4-2.3 3.4 0 5.2 3.5 3.7 6.8-2.5 4.6-9.5 9-9.5 9Z"/></svg>
           Donate
         </Link>
       </div>

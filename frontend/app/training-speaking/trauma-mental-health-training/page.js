@@ -259,7 +259,7 @@ export default function TraumaMentalHealthTrainingPage() {
             <h1 className="tmh2-hero-h1">Trauma &amp; Mental Health Training for <span className="tmh2-hero-h1-accent">Nonprofits and Community Organizations</span></h1>
             <p className="tmh2-hero-tagline">Real-world training for real-world impact.</p>
             <p className="tmh2-hero-desc">
-              <span className="tmh2-desc-short">This training gives community and nonprofit teams a foundational, practical understanding of trauma and mental health — the kind that applies across roles, not just one department.</span>
+              <span className="tmh2-desc-short">This training gives community and nonprofit teams a foundational, practical understanding of trauma and mental health, the kind that applies across roles, not just one department.</span>
               <span className="tmh2-desc-full"> A case worker doesn&apos;t know how to respond when a client shuts down mid-conversation. A volunteer takes a teenager&apos;s outburst personally instead of recognizing it as a stress response. A program director realizes half her staff are running on empathy fumes and nobody&apos;s talked about it out loud. This training gives community and nonprofit teams a foundational, practical understanding of trauma and mental health, the kind of training that applies across roles, not just one department.</span>
             </p>
 
@@ -514,7 +514,7 @@ export default function TraumaMentalHealthTrainingPage() {
                 <div className="tmh2-jamie-tag"><span><IconHeart width="16" height="16" /></span>Respect for the Work You Do</div>
               </div>
               <a href="https://www.youtube.com/watch?v=cdCBtTdeMxk" target="_blank" rel="noopener noreferrer" className="tmh2-jamie-video">
-                <img src="https://img.youtube.com/vi/cdCBtTdeMxk/mqdefault.jpg" alt="You Were Never Called to Carry Everyone — Jamie James" />
+                <img src="https://img.youtube.com/vi/cdCBtTdeMxk/mqdefault.jpg" alt="You Were Never Called to Carry Everyone, Jamie James" />
                 <span className="tmh2-jamie-video-play"><svg viewBox="0 0 24 24" width="14" height="14" fill="#093129"><polygon points="5,3 19,12 5,21" /></svg></span>
                 <div>
                   <p className="tmh2-jamie-video-title">You Were Never Called to Carry Everyone</p>

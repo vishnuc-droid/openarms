@@ -455,13 +455,13 @@ That's the perspective she brings into every training, workshop, and speaking en
               <span className="jj-review-qmark">&ldquo;</span>
               <p className="jj-review-text">Jamie&apos;s training was one of the best investments we&apos;ve made. Our team left every session feeling more confident and empowered to create real change.</p>
               <div className="jj-review-line" />
-              <footer className="jj-review-name">— Erica L., HR Director</footer>
+              <footer className="jj-review-name">Erica L., HR Director</footer>
             </blockquote>
             <blockquote className="jj-review-card reveal reveal-from-right">
               <span className="jj-review-qmark">&ldquo;</span>
               <p className="jj-review-text">Our staff is better equipped and has tools they can use in real time. The training and follow-up support make all the difference.</p>
               <div className="jj-review-line" />
-              <footer className="jj-review-name">— Michael T., School Principal</footer>
+              <footer className="jj-review-name">Michael T., School Principal</footer>
             </blockquote>
           </div>
         </div>

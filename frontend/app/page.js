@@ -132,27 +132,27 @@ const teamMembers = [
 const clientReviews = [
   {
     quote: 'Open Arms has incredible vision with an amazing foundation for what their company represents. An amazing staff and people you want on your side and to just walk with through life!',
-    author: '— Kamryn B.',
+    author: 'Kamryn B.',
   },
   {
     quote: 'The owner & staff are caring, supportive, and dedicated to helping both the children and foster families succeed. You can tell they genuinely care and truly make a difference.',
-    author: '— Jency M.',
+    author: 'Jency M.',
   },
   {
     quote: 'Open Arms Initiative is a wonderful organization. The dedication and support you will receive from their team is unmatched. They are exactly who you want in your corner.',
-    author: '— Stephanie V.',
+    author: 'Stephanie V.',
   },
   {
     quote: 'This was a great training for someone who recently moved to a new role which comes with a lot of stress. Recently had the conversation with my supervisor about this topic. This was a full circle moment for me!',
-    author: '— Benard K. B.',
+    author: 'Benard K. B.',
   },
   {
     quote: 'I loved the content! The way she dived deeper into the why, of how things happen and how burnout occurs. Giving solutions on how you can prevent, and on what steps you can take if you are already in that season.',
-    author: '— Kevin C.',
+    author: 'Kevin C.',
   },
   {
     quote: 'Jamie was outstanding. Her insight, detail, and wisdom was refreshing! Would 100% love to go deeper and hear more!',
-    author: '— JM C.',
+    author: 'JM C.',
   },
 ];
 
@@ -162,7 +162,7 @@ const faqs = [
   ['What types of counseling does Open Arms Initiative offer?', 'We provide individual, child and adolescent, family, and couples counseling, along with specialized support for trauma, anxiety, depression, and grief.'],
   ['Do you work with children and teenagers?', 'Yes, our counselors work with children, teens, and adults.'],
   ['Do you provide family counseling?', 'Yes, we offer family counseling to help improve communication and work through conflict or major transitions together.'],
-  ['How long is a counseling session?', 'Standard sessions are 50–55 minutes, with 30-minute and 90-minute options available.'],
+  ['How long is a counseling session?', 'Standard sessions are 50 to 55 minutes, with 30-minute and 90-minute options available.'],
   ['How often will I meet with my counselor?', 'Weekly sessions are typically recommended when starting out.'],
   ['Do you accept insurance?', 'Yes. We currently accept Humana, Aetna, Oklahoma Complete Health, and SoonerCare, as well as private pay. Coverage varies by plan, so we’ll verify your specific benefits before your first session.'],
   ['Do you accept SoonerCare?', 'Yes, we accept SoonerCare.'],
@@ -474,7 +474,7 @@ export default function HomePage() {
               </li>
               <li>
                 <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg>
-                Mon&ndash;Fri, 8:30 AM&ndash;5:00 PM
+                Mon to Fri, 8:30 AM to 5:00 PM
               </li>
               <li>
                 <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="8.5" cy="8" r="2.8"/><path d="M2.5 19c0-3 2.7-5.2 6-5.2s6 2.2 6 5.2"/><circle cx="17" cy="8.5" r="2.2"/><path d="M15.8 13.9c2.6.3 4.7 2.3 4.7 5"/></svg>
@@ -581,7 +581,7 @@ export default function HomePage() {
             </span>
             <h2 className="faq-new-title">
               Got a question?<br /><span className="faq-title-accent">Get your answer</span>
-              <svg className="faq-title-underline" viewBox="0 0 220 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8c30-10 60-10 90 0s90 10 126-2" fill="none" stroke="rgb(0, 163, 245)" strokeWidth="3" strokeLinecap="round"/></svg>
+              <svg className="faq-title-underline" viewBox="0 0 220 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8c30-10 60-10 90 0s90 10 126-2" fill="none" stroke="#00aff7" strokeWidth="3" strokeLinecap="round"/></svg>
             </h2>
             <p className="faq-new-desc">
               Quick answers to questions you may have. Can't find what you're looking for? Get in touch with us.

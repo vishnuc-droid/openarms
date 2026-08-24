@@ -94,7 +94,7 @@ const SCHEMA_COURSE = {
   '@context': 'https://schema.org',
   '@type': 'Course',
   name: 'Trauma & Mental Health Training for Nonprofits and Community Organizations',
-  description: 'Foundational, practical training in trauma and mental health for community and nonprofit teams — covering recognizing warning signs, understanding trauma-driven behavior, grief support, staff resilience, and communication skills.',
+  description: 'Foundational, practical training in trauma and mental health for community and nonprofit teams, covering recognizing warning signs, understanding trauma-driven behavior, grief support, staff resilience, and communication skills.',
   provider: {
     '@type': 'Organization',
     name: 'Open Arms Initiative',

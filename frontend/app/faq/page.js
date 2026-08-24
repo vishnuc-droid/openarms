@@ -11,7 +11,7 @@ const faqCategories = [
     items: [
       {
         q: 'How long does the counseling process usually last?',
-        a: 'Your counseling journey is unique. Some individuals benefit from 6–8 targeted sessions, while others continue working on evolving long-term goals. We establish goals and evaluate progress together during your initial sessions.',
+        a: 'Your counseling journey is unique. Some individuals benefit from 6 to 8 targeted sessions, while others continue working on evolving long-term goals. We establish goals and evaluate progress together during your initial sessions.',
       },
       {
         q: 'How frequently should I attend counseling sessions?',
@@ -19,7 +19,7 @@ const faqCategories = [
       },
       {
         q: 'What is the typical length of a counseling session?',
-        a: 'Standard individual counseling sessions are 50–55 minutes. Extended 90-minute family or intake sessions are also available upon request.',
+        a: 'Standard individual counseling sessions are 50 to 55 minutes. Extended 90-minute family or intake sessions are also available upon request.',
       },
       {
         q: 'Can I switch counselors if it is not the right fit?',
