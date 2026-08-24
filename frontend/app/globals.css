@@ -769,14 +769,14 @@ h1, h2, h3 {
 .reference-hero-copy {
   position: relative;
   z-index: 2;
-  width: min(1280px, calc(100% - 4rem));
-  margin: auto;
-  padding: 90px 0;
+  width: 100%;
+  margin: 0;
+  padding: 90px 4vw;
   color: #052E26;
 }
 
 .reference-hero-copy > * {
-  max-width: 560px;
+  max-width: min(760px, 52vw);
 }
 
 .reference-hero .hero-overline {
@@ -800,19 +800,24 @@ h1, h2, h3 {
 
 .hero-accent-heading {
   margin: 0;
-  max-width: 780px;
+  max-width: min(900px, 55vw);
   padding-left: 0;
   border-left: none;
-  font: 700 clamp(2.2rem, 4vw, 3.6rem)/1.15 'Playfair Display', Georgia, serif;
+  font: 700 clamp(2.2rem, 4.4vw, 4rem)/1.15 'Plus Jakarta Sans', 'DM Sans', Arial, sans-serif;
   color: #072B3A;
   letter-spacing: -0.5px;
+}
+
+.hero-accent-heading-highlight {
+  color: #0E9CB8;
+  white-space: nowrap;
 }
 
 .hero-divider {
   display: flex;
   align-items: center;
   gap: 14px;
-  max-width: 420px;
+  max-width: min(700px, 52vw);
   margin: 26px 0;
 }
 
@@ -828,7 +833,7 @@ h1, h2, h3 {
   font-size: 18px;
   font-weight: 500;
   line-height: 1.55;
-  max-width: 480px;
+  max-width: min(700px, 52vw);
 }
 
 .reference-hero-button {
@@ -2992,7 +2997,7 @@ footer a:hover {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.85) 55%, rgba(255, 255, 255, 0.55) 100%);
   }
   .reference-hero-copy {
-    padding: 110px 0 60px;
+    padding: 110px 20px 60px;
   }
   .reference-hero .hero-overline {
     gap: 8px;
@@ -7057,7 +7062,7 @@ footer a:hover {
   color: #072B3A;
   opacity: 0.75;
   margin: -4px 0 18px;
-  max-width: 480px;
+  max-width: min(700px, 52vw);
 }
 
 /* Homepage-only override: How We Can Help section keeps the blue palette
