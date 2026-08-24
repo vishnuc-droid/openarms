@@ -788,17 +788,29 @@ h1, h2, h3 {
 }
 
 #home .reference-hero-copy {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 110px 40px 90px 16px;
+  max-width: 100%;
+  margin: 0;
+  padding: 150px 4vw 90px;
   display: grid;
-  grid-template-columns: minmax(0, 560px) 1fr;
-  column-gap: 40px;
+  grid-template-columns: 1fr 0.95fr;
+  gap: 40px;
 }
 
 #home .reference-hero-copy > * {
   grid-column: 1;
   max-width: 100%;
+}
+
+#home .reference-hero-copy > .hero-divider {
+  max-width: min(500px, 52vw);
+}
+
+#home .reference-hero-copy > .reference-hero-text {
+  max-width: min(720px, 42vw);
+}
+
+#home .reference-hero-copy > .hero-trust-line {
+  max-width: min(720px, 42vw);
 }
 
 .reference-hero .hero-overline {
@@ -821,7 +833,7 @@ h1, h2, h3 {
 }
 
 .hero-accent-heading {
-  margin: 0;
+  margin: 16px 0 0;
   max-width: min(900px, 55vw);
   padding-left: 0;
   border-left: none;
@@ -831,7 +843,7 @@ h1, h2, h3 {
 }
 
 .hero-accent-heading-highlight {
-  color: #0E9CB8;
+  color: #00AFF7;
   white-space: nowrap;
 }
 
@@ -840,7 +852,7 @@ h1, h2, h3 {
   align-items: center;
   gap: 14px;
   max-width: min(700px, 52vw);
-  margin: 26px 0;
+  margin: 14px 0;
 }
 
 .hero-divider-line {
@@ -850,12 +862,11 @@ h1, h2, h3 {
 }
 
 .reference-hero-text {
-  margin: 0 0 32px;
   color: #445043;
   font-size: 18px;
   font-weight: 500;
   line-height: 1.55;
-  max-width: min(700px, 52vw);
+  max-width: min(100px, 12vw);
 }
 
 .reference-hero-button {
@@ -2906,6 +2917,11 @@ footer a:hover {
   #home .reference-hero-copy > * {
     max-width: 100%;
   }
+  #home .reference-hero-copy > .hero-divider,
+  #home .reference-hero-copy > .reference-hero-text,
+  #home .reference-hero-copy > .hero-trust-line {
+    max-width: 100%;
+  }
   .hero-feature-row {
     flex-direction: column;
     gap: 16px;
@@ -3039,6 +3055,11 @@ footer a:hover {
     padding: 110px 20px 60px;
   }
   #home .reference-hero-copy > * {
+    max-width: 100%;
+  }
+  #home .reference-hero-copy > .hero-divider,
+  #home .reference-hero-copy > .reference-hero-text,
+  #home .reference-hero-copy > .hero-trust-line {
     max-width: 100%;
   }
   .reference-hero .hero-overline {
