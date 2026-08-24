@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
+import FamilyTherapyRequestForm from '@/components/FamilyTherapyRequestForm';
 
 export const metadata = {
   title: 'Family Therapy Oklahoma City | Open Arms Initiative',
@@ -59,12 +60,12 @@ const faqs = [
 export default function FamilyTherapyPage() {
   return <main className="family-page">
     <ScrollReveal />
-    <section className="family-hero-outer"><div className="family-hero-bg"><img className="family-hero-img-desktop" src="/Openarms Banner 3.jpg" alt="Family spending time together outdoors" /><img className="family-hero-img-mobile" src="/fam9.jpg" alt="Family spending time together outdoors" /><div className="family-hero-content reveal reveal-from-bottom">
+    <section className="family-hero-split"><div className="family-hero-split-inner"><div className="family-hero-split-copy reveal reveal-from-left">
       <p className="family-kicker">HEAL TOGETHER. GROW TOGETHER.</p>
       <h1>Family Counseling<br />in Oklahoma City</h1><i className="family-line" />
       <p className="family-lead">Every family faces challenges. You don’t have to face them alone. We help families heal, communicate, and build stronger, healthier relationships.</p>
-      <div className="family-actions"><Link href="/contact" className="family-btn family-btn-solid">Request an Appointment</Link><a href="#approach" className="family-btn family-btn-outline">Learn Our Approach</a></div>
-    </div></div></section>
+      <div className="family-actions"><Link href="/contact" className="family-btn family-req-btn-primary">Request an Appointment</Link><a href="#approach" className="family-btn family-req-btn-outline">Learn Our Approach</a></div>
+    </div><div className="family-hero-form-card reveal reveal-from-right"><div className="family-hero-form-body"><h3>Request an Appointment</h3><span className="family-hero-form-underline" /><p className="family-hero-form-sub">Tell us a bit about your family and we&rsquo;ll help you find the right support.</p><FamilyTherapyRequestForm /></div><div className="family-hero-form-photo"><img src="/nh10.jpg" alt="Family spending time together outdoors" /></div></div></div></section>
 
     <section className="family-trust-section"><div className="family-container"><div className="family-trust">{[['Compassionate Care'],['Safe & Confidential'],['Experienced Therapists'],['In-Person & Online','Sessions']].map((lines, i) => <div key={lines.join(' ')}><span>{trustIcons[i]}</span>{lines[0]}{lines[1] && <><br />{lines[1]}</>}</div>)}</div></div></section>
 
