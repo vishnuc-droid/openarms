@@ -10,23 +10,23 @@ export const metadata = {
 };
 
 const stepIcons = [
-  <img src="/icon10.png" alt="" aria-hidden="true" />,
-  <img src="/icon11.png" alt="" aria-hidden="true" />,
-  <img src="/icon12.png" alt="" aria-hidden="true" />,
-  <img src="/icon13.png" alt="" aria-hidden="true" />,
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 4.5h3.2l1.6 4-2 1.6a11 11 0 0 0 5.6 5.6l1.6-2 4 1.6v3.2a1.6 1.6 0 0 1-1.7 1.6A15.5 15.5 0 0 1 3 6.2a1.6 1.6 0 0 1 1.5-1.7Z" /></svg>,
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12a8 8 0 1 1 3 6.2L4 19l.9-3A7.9 7.9 0 0 1 4 12Z" /><path d="M8.5 10.5h7M8.5 14h4.5" /></svg>,
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="3.5" y="4.5" width="17" height="16" rx="2.2" /><path d="M3.5 9.5h17" /><path d="m8.3 14.3 2 2 4.3-4.3" strokeDasharray="1.3 2" /></svg>,
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M3 12h15.5" /><path d="m13.5 6 6 6-6 6" /></svg>,
 ];
 
 const trustIcons = [
-  <img src="/3.png" alt="" aria-hidden="true" />,
-  <img src="/2.png" alt="" aria-hidden="true" />,
-  <img src="/4.png" alt="" aria-hidden="true" />,
-  <img src="/icon%201%20copy.png" alt="" aria-hidden="true" />,
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20.5s-6.5-4-9-8.2C1.2 8.8 3 5.5 6.2 5.5c1.9 0 3.2 1 3.8 2.1.6-1.1 1.9-2.1 3.8-2.1 3.2 0 5 3.3 3.2 6.8-2.5 4.2-9 8.2-9 8.2Z" /></svg>,
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3.5 19 6v6c0 4.5-3 7.5-7 8.5-4-1-7-4-7-8.5V6l7-2.5Z" /><path d="m9.3 12 1.9 1.9 3.6-3.9" /></svg>,
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="9" cy="7.5" r="3" /><path d="M2.8 19.5c.6-3.8 2.8-5.8 6.2-5.8s5.6 2 6.2 5.8" /><path d="M16 4.3c1.3.3 2.3 1.5 2.3 3s-1 2.7-2.3 3" strokeDasharray="1.4 1.8" /><path d="M17 14c2 .4 3.4 2 3.9 4.8" strokeDasharray="1.4 1.8" /></svg>,
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.4" /><path d="m3 8 9 6 9-6" /></svg>,
 ];
 
 const supportIcons = [
-  <img src="/icon5.png" alt="" aria-hidden="true" />,
-  <img src="/icon6.png" alt="" aria-hidden="true" />,
-  <img src="/icon8.png" alt="" aria-hidden="true" />,
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5c0 4.7-4 8.5-9 8.5a9.5 9.5 0 0 1-3.2-.55L4 21l1.4-3.9A8.4 8.4 0 0 1 3 11.5C3 6.8 7 3 12 3s9 3.8 9 8.5Z" /><path d="m8.5 11.7 2.2 2.2 4.8-4.8" /></svg>,
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M20.5 12A8.5 8.5 0 1 1 12 3.5" /><path d="M20.5 12 17 8.5m3.5 3.5L17 15.5" /><path d="M12 8v4l2.5 1.5" strokeDasharray="1.4 2" /></svg>,
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M4 21c0-4.4 2.4-6.7 5.2-7.3M20 21c0-4.4-2.4-6.7-5.2-7.3" /><circle cx="9.2" cy="8" r="3" /><circle cx="14.8" cy="8" r="3" strokeDasharray="1.3 2" /></svg>,
 ];
 
 const challengeIcons = [

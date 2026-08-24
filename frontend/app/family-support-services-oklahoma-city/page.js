@@ -127,7 +127,7 @@ export default function FamilySupportPage() { return <main className="fs-page">
       <p>Open Arms Initiative provides compassionate <strong>Family Support Services in Oklahoma City</strong> designed to help families feel informed, supported, and more connected to the resources they may need.</p>
       <div className="fs-actions"><Link href="/contact" className="fs-btn fs-solid">Connect With Open Arms</Link><a href="#needs" className="fs-btn fs-outline">Explore Family Support</a></div>
     </div>
-    <div className="fs-hero-media reveal reveal-from-right"><img src="/fam12.jpg" alt="Family finding support and guidance together in Oklahoma City" /></div>
+    <div className="fs-hero-media reveal reveal-from-right"><img src="/nh3.jpg" alt="Family finding support and guidance together in Oklahoma City" /></div>
   </div></section>
 
   <section className="fs-trust-section"><div className="fs-container fs-trust">{['Family-Centered', 'Compassionate Guidance', 'Community Focused', 'Practical Support'].map((x, i) => <div key={x}><span>{trustIcons[i]}</span><p>{x}</p></div>)}</div></section>
@@ -163,7 +163,7 @@ export default function FamilySupportPage() { return <main className="fs-page">
   <p className="fs-understand-close reveal reveal-from-bottom"><strong>The goal isn&apos;t to tell your family what it should look like. It&apos;s to help your family find support that makes sense for where you are now.</strong></p>
   </div></section>
 
-  <section className="fs-statement"><div className="fs-container reveal reveal-scale-in"><div><h2>&ldquo;You&rsquo;ve been doing everything you can for your family. Asking for support can be part of caring for them, too.&rdquo;</h2><Link href="/contact" className="fs-btn fs-light">Connect With Open Arms</Link></div><img src="/n1.jpg" alt="Hands offering comfort and support to a family member" /><aside>You don&apos;t need every answer today.<br /><br />You don&apos;t need to know which service you need before reaching out.<br /><br />Tell us what&apos;s happening. We can begin there.</aside></div></section>
+  <section className="fs-statement"><div className="fs-container reveal reveal-scale-in"><div><h2>&ldquo;You&rsquo;ve been doing everything you can for your family. Asking for support can be part of caring for them, too.&rdquo;</h2><Link href="/contact" className="fs-btn fs-light">Connect With Open Arms</Link></div><img src="/nh4.jpg" alt="Hands offering comfort and support to a family member" /><aside>You don&apos;t need every answer today.<br /><br />You don&apos;t need to know which service you need before reaching out.<br /><br />Tell us what&apos;s happening. We can begin there.</aside></div></section>
 
   <section className="fs-section fs-kinds-section"><div className="fs-container">
     <h2 className="fs-center reveal reveal-from-bottom">More Than One Kind of Support</h2><i className="fs-line-center" />

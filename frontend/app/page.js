@@ -222,14 +222,14 @@ export default function HomePage() {
               Book an Appointment
               <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
-            <a className="reference-hero-button-secondary" href="tel:14059208934">
+            <a className="reference-hero-button-secondary" href="tel:+14059208934">
               <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .7 3a2 2 0 0 1-.4 2.1L8 10.3a16 16 0 0 0 6 6l1.5-1.4a2 2 0 0 1 2.1-.4c1 .4 2 .6 3 .7a2 2 0 0 1 1.7 2z"/></svg>
               Call Us
             </a>
           </div>
           <div className="hero-mobile-cta">
             <Link href="/contact" className="hero-mobile-cta-btn">Book an Appointment</Link>
-            <a href="tel:14059208934" className="hero-mobile-cta-btn secondary">
+            <a href="tel:+14059208934" className="hero-mobile-cta-btn secondary">
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .7 3a2 2 0 0 1-.4 2.1L8 10.3a16 16 0 0 0 6 6l1.5-1.4a2 2 0 0 1 2.1-.4c1 .4 2 .6 3 .7a2 2 0 0 1 1.7 2z"/></svg>
               Call Us
             </a>
@@ -490,7 +490,7 @@ export default function HomePage() {
               >
                 Get Directions
               </a>
-              <a href="tel:14059208934" className="location-band-btn secondary">Call Our Office</a>
+              <a href="tel:+14059208934" className="location-band-btn secondary">Call Our Office</a>
             </div>
           </div>
           <div className="location-band-map reveal reveal-from-right">
