@@ -87,7 +87,7 @@ export default function FAQPage() {
     .filter(Boolean);
 
   return (
-    <main style={{ maxWidth: '1100px', margin: '0 auto', padding: '3rem 1.5rem' }}>
+    <main style={{ maxWidth: '1100px', margin: '0 auto', padding: '8rem 1.5rem 3rem' }}>
       <section className="section-intro" style={{ textAlign: 'center', marginBottom: '3rem' }}>
         <span className="services-kicker">Help Center</span>
         <h1 style={{ fontSize: '3rem', margin: '0.5rem 0 1rem', color: '#052E26' }}>

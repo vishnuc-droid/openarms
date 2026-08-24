@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import MegaMenu from './MegaMenu';
 import { serviceCategories, trainingSpeakingMenu } from '@/lib/servicesData';
@@ -14,9 +13,6 @@ export default function Navbar() {
   const [trainingMenuOpen, setTrainingMenuOpen] = useState(false);
   const [mobileSubmenu, setMobileSubmenu] = useState(null);
   const [mobileServiceCategory, setMobileServiceCategory] = useState(null);
-  const pathname = usePathname();
-  const isHome = pathname === '/';
-
   const closeMobileNav = () => {
     setMenuOpen(false);
     setMobileSubmenu(null);
@@ -30,7 +26,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={isHome ? 'reference-header home-hero-header' : 'reference-header desktop-pill-header'}
+      className="reference-header home-hero-header"
       onMouseLeave={closeServicesMenu}
     >
       <div className="top-nav">

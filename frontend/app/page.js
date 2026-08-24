@@ -406,6 +406,7 @@ export default function HomePage() {
         <div className="why-choose-container">
           <div className="why-choose-header">
             <div className="reveal reveal-from-left">
+              <span className="care-badge">Why Open Arms</span>
               <h2 className="why-choose-title">
                 Why Families Choose<br />
                 Open Arms
@@ -569,43 +570,38 @@ export default function HomePage() {
 
       {/* Help Center / FAQ Section */}
       <section id="faq" className="faq-new-section">
-        <div className="faq-diagonal-lines" aria-hidden="true"></div>
-        <div className="faq-paint-stroke" aria-hidden="true"></div>
-        <div className="hero-dot-grid faq-dot-grid" aria-hidden="true"></div>
-        <div className="faq-new-container">
-          <div className="faq-new-left reveal reveal-from-left">
+        <div className="faq-new-container reveal reveal-from-bottom">
+          <div className="faq-new-left">
+            <div className="faq-new-left-watermark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.4 2 4.8 5.6 4.2c2.2-.4 4.2.6 6.4 3 2.2-2.4 4.2-3.4 6.4-3 3.6.6 5.2 4.2 3.6 7.5C19.5 16.4 12 21 12 21Z"/></svg>
+            </div>
             <span className="care-badge faq-badge">
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12a7 7 0 0 1-7 7H7l-4 3 1-4.5A7 7 0 1 1 21 12Z"/><path d="M12 8v.01M12 11.5c0-.9.6-1.3 1.1-1.7.5-.4.9-.8.9-1.5A2 2 0 0 0 12 6.3a2 2 0 0 0-2 1.7"/></svg>
               Frequently Asked Questions
             </span>
             <h2 className="faq-new-title">
               Got a question?<br /><span className="faq-title-accent">Get your answer</span>
-              <svg className="faq-title-underline" viewBox="0 0 220 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8c30-10 60-10 90 0s90 10 126-2" fill="none" stroke="#29C4E0" strokeWidth="3" strokeLinecap="round"/></svg>
+              <svg className="faq-title-underline" viewBox="0 0 220 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8c30-10 60-10 90 0s90 10 126-2" fill="none" stroke="rgb(0, 163, 245)" strokeWidth="3" strokeLinecap="round"/></svg>
             </h2>
             <p className="faq-new-desc">
               Quick answers to questions you may have. Can't find what you're looking for? Get in touch with us.
             </p>
           </div>
-          <div className="faq-new-panel">
-            <div className="faq-new-right reveal-stagger">
-              {faqs.map(([question, answer], index) => (
-                <article key={question} className={`faq-new-item reveal reveal-from-right`}>
-                  <button
-                    className={`faq-new-btn${openFaq === index ? ' open' : ''}`}
-                    onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
-                  >
-                    <span className="faq-new-btn-label">
-                      <span className="faq-q-icon">?</span>
-                      <span>{question}</span>
-                    </span>
-                    <span className="faq-chevron">{openFaq === index ? '▲' : '▼'}</span>
-                  </button>
-                  {openFaq === index && (
-                    <div className="faq-new-answer"><p>{answer}</p></div>
-                  )}
-                </article>
-              ))}
-            </div>
+          <div className="faq-new-right reveal-stagger">
+            {faqs.map(([question, answer], index) => (
+              <article key={question} className="faq-new-item reveal reveal-from-right">
+                <button
+                  className={`faq-new-btn${openFaq === index ? ' open' : ''}`}
+                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
+                >
+                  <span>{question}</span>
+                  <span className="faq-chevron">{openFaq === index ? '−' : '+'}</span>
+                </button>
+                {openFaq === index && (
+                  <div className="faq-new-answer"><p>{answer}</p></div>
+                )}
+              </article>
+            ))}
           </div>
         </div>
       </section>

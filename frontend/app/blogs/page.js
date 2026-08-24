@@ -5,7 +5,7 @@ export default function BlogsPage() {
     <main style={{ background: '#ffffff' }}>
       <section style={{
         background: '#052E26',
-        padding: '80px 24px',
+        padding: '130px 24px 80px',
         textAlign: 'center',
         color: '#ffffff',
       }}>

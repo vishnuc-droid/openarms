@@ -43,7 +43,7 @@ export default function VideoGalleryPage() {
     <main style={{ background: '#ffffff' }}>
       <section style={{
         background: '#F4F9F0',
-        padding: '80px 24px 60px',
+        padding: '130px 24px 60px',
       }}>
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>
           <span style={{
