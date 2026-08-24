@@ -212,7 +212,7 @@ export default function HomePage() {
           <h1 className="hero-accent-heading">Mental Health Counseling for Children, Adults &amp; Families <span className="hero-accent-heading-highlight">in Oklahoma City</span></h1>
           <div className="hero-divider" aria-hidden="true">
             <span className="hero-divider-line"></span>
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#29C4E0" strokeWidth="1.6"><path d="M12 21c-4-1-8-5-8-10a8 8 0 0 1 8-8c5 0 9 4 9 9 0 5-4.5 9-9 9Z"/><path d="M12 21c0-6 2-13 8-16"/></svg>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#0170ED" strokeWidth="1.6"><path d="M12 21c-4-1-8-5-8-10a8 8 0 0 1 8-8c5 0 9 4 9 9 0 5-4.5 9-9 9Z"/><path d="M12 21c0-6 2-13 8-16"/></svg>
             <span className="hero-divider-line"></span>
           </div>
           <p className="reference-hero-text">Whether you're working through anxiety, trauma, grief, or a hard season as a family, our licensed, trauma-informed counselors are here to help, right here in Oklahoma City.</p>
@@ -432,7 +432,7 @@ export default function HomePage() {
             <span className="care-badge">Our Team</span>
             <h2 className="team-connect-title">
               Care Starts With People You Can Trust
-              <svg className="team-connect-underline" viewBox="0 0 220 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8c30-10 60-10 90 0s90 10 126-2" fill="none" stroke="#29C4E0" strokeWidth="3" strokeLinecap="round"/></svg>
+              <svg className="team-connect-underline" viewBox="0 0 220 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8c30-10 60-10 90 0s90 10 126-2" fill="none" stroke="#0170ED" strokeWidth="3" strokeLinecap="round"/></svg>
             </h2>
             <p>Behind every session is a real person who's chosen this work, not a call center, not an algorithm.</p>
             <Link href="/about-us" className="team-connect-link">
@@ -546,7 +546,7 @@ export default function HomePage() {
                 <h2 className="mission-title">
                   Transforming Families,<br />Empowering Communities
                 </h2>
-                <svg className="mission-title-underline" viewBox="0 0 220 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8c30-10 60-10 90 0s90 10 126-2" fill="none" stroke="#29C4E0" strokeWidth="3" strokeLinecap="round"/></svg>
+                <svg className="mission-title-underline" viewBox="0 0 220 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8c30-10 60-10 90 0s90 10 126-2" fill="none" stroke="#0170ED" strokeWidth="3" strokeLinecap="round"/></svg>
                 <p>
                   Open Arms Initiative started with a simple belief: every child deserves a stable, loving home, and every family deserves real support to get there.
                 </p>
@@ -581,7 +581,7 @@ export default function HomePage() {
             </span>
             <h2 className="faq-new-title">
               Got a question?<br /><span className="faq-title-accent">Get your answer</span>
-              <svg className="faq-title-underline" viewBox="0 0 220 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8c30-10 60-10 90 0s90 10 126-2" fill="none" stroke="#00aff7" strokeWidth="3" strokeLinecap="round"/></svg>
+              <svg className="faq-title-underline" viewBox="0 0 220 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8c30-10 60-10 90 0s90 10 126-2" fill="none" stroke="#0170ED" strokeWidth="3" strokeLinecap="round"/></svg>
             </h2>
             <p className="faq-new-desc">
               Quick answers to questions you may have. Can't find what you're looking for? Get in touch with us.
