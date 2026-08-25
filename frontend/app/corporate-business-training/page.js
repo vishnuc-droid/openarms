@@ -204,12 +204,12 @@ export default function CorporateBusinessTrainingPage() {
       <section className="oah-hero" ref={heroRef}>
         {/* decorative background elements */}
         <svg className="oah-hero-deco-ring" viewBox="0 0 200 200" fill="none" aria-hidden="true">
-          <circle cx="100" cy="100" r="90" stroke="#8DC540" strokeWidth="1" strokeDasharray="6 8" opacity="0.25"/>
-          <circle cx="100" cy="100" r="65" stroke="#093129" strokeWidth="0.8" opacity="0.1"/>
+          <circle cx="100" cy="100" r="90" stroke="#00AFF7" strokeWidth="1" strokeDasharray="6 8" opacity="0.25"/>
+          <circle cx="100" cy="100" r="65" stroke="#072B3A" strokeWidth="0.8" opacity="0.1"/>
         </svg>
         <svg className="oah-hero-deco-dots" viewBox="0 0 120 120" fill="none" aria-hidden="true">
           {[0,1,2,3,4].map(row => [0,1,2,3,4].map(col => (
-            <circle key={`${row}-${col}`} cx={col*24+12} cy={row*24+12} r="2.2" fill="#8DC540" opacity="0.18"/>
+            <circle key={`${row}-${col}`} cx={col*24+12} cy={row*24+12} r="2.2" fill="#00AFF7" opacity="0.18"/>
           )))}
         </svg>
         <div className="oah-hero-inner">
@@ -217,7 +217,7 @@ export default function CorporateBusinessTrainingPage() {
           {/* LEFT copy */}
           <div className="oah-hero-copy reveal reveal-from-left">
             <div className="oah-hero-pill">
-              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#5a7a3a" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#2d5987" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="2" y="7" width="20" height="14" rx="2"/>
                 <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
               </svg>
@@ -273,22 +273,22 @@ export default function CorporateBusinessTrainingPage() {
       <section className="jj-cred-section" style={{background:'#fff'}}>
         <div className="jj-cred-bar reveal reveal-from-bottom">
           <div className="jj-cred">
-            <span className="jj-cred-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#8DC540" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><polyline points="9 12 11 14 15 10"/></svg></span>
+            <span className="jj-cred-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#00AFF7" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><polyline points="9 12 11 14 15 10"/></svg></span>
             <span>Licensed Professional Counselor</span>
           </div>
           <div className="jj-cred-divider" aria-hidden="true" />
           <div className="jj-cred">
-            <span className="jj-cred-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#8DC540" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></span>
+            <span className="jj-cred-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#00AFF7" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></span>
             <span>Founder &amp; President, Open Arms Initiative</span>
           </div>
           <div className="jj-cred-divider" aria-hidden="true" />
           <div className="jj-cred">
-            <span className="jj-cred-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#8DC540" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></span>
+            <span className="jj-cred-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#00AFF7" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></span>
             <span>Organizational Leader &amp; Clinician</span>
           </div>
           <div className="jj-cred-divider" aria-hidden="true" />
           <div className="jj-cred">
-            <span className="jj-cred-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#8DC540" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            <span className="jj-cred-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#00AFF7" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
             <span>Oklahoma City &amp; Beyond</span>
           </div>
         </div>
@@ -299,19 +299,19 @@ export default function CorporateBusinessTrainingPage() {
         <div className="oab-burnout-dots" aria-hidden="true">
           <svg viewBox="0 0 80 80" fill="none">
             {[0,1,2,3,4].map(row => [0,1,2,3,4].map(col => (
-              <circle key={`d-${row}-${col}`} cx={col*16+8} cy={row*16+8} r="2" fill="#c9d6be" />
+              <circle key={`d-${row}-${col}`} cx={col*16+8} cy={row*16+8} r="2" fill="#b0c9e5" />
             )))}
           </svg>
         </div>
 
         <svg className="oab-burnout-leaf" viewBox="0 0 300 300" fill="none" aria-hidden="true">
-          <path d="M20 280 C 40 220, 30 160, 70 120 C 100 90, 150 90, 170 60" stroke="#c9e3ae" strokeWidth="2" fill="none" opacity="0.8"/>
-          <path d="M170 60 C 160 40, 140 30, 150 10" stroke="#c9e3ae" strokeWidth="2" fill="none" opacity="0.8"/>
-          <ellipse cx="150" cy="20" rx="14" ry="7" fill="#d7ecc0" transform="rotate(40 150 20)"/>
-          <ellipse cx="120" cy="55" rx="16" ry="8" fill="#d7ecc0" transform="rotate(20 120 55)"/>
-          <ellipse cx="90" cy="95" rx="18" ry="9" fill="#cfe8b3" transform="rotate(-10 90 95)"/>
-          <ellipse cx="60" cy="150" rx="20" ry="10" fill="#cfe8b3" transform="rotate(-30 60 150)"/>
-          <ellipse cx="35" cy="210" rx="20" ry="10" fill="#d7ecc0" transform="rotate(-55 35 210)"/>
+          <path d="M20 280 C 40 220, 30 160, 70 120 C 100 90, 150 90, 170 60" stroke="#adc8e4" strokeWidth="2" fill="none" opacity="0.8"/>
+          <path d="M170 60 C 160 40, 140 30, 150 10" stroke="#adc8e4" strokeWidth="2" fill="none" opacity="0.8"/>
+          <ellipse cx="150" cy="20" rx="14" ry="7" fill="#c0d5ec" transform="rotate(40 150 20)"/>
+          <ellipse cx="120" cy="55" rx="16" ry="8" fill="#c0d5ec" transform="rotate(20 120 55)"/>
+          <ellipse cx="90" cy="95" rx="18" ry="9" fill="#b3cde8" transform="rotate(-10 90 95)"/>
+          <ellipse cx="60" cy="150" rx="20" ry="10" fill="#b3cde8" transform="rotate(-30 60 150)"/>
+          <ellipse cx="35" cy="210" rx="20" ry="10" fill="#c0d5ec" transform="rotate(-55 35 210)"/>
         </svg>
 
         <svg width="0" height="0" style={{position:'absolute'}} aria-hidden="true">
@@ -332,7 +332,7 @@ export default function CorporateBusinessTrainingPage() {
 
           <div className="oab-burnout-copy reveal reveal-from-left">
             <div className="oab-burnout-pill">
-              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#3a6e2a" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#224b76" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
               </svg>
               LEADERSHIP &amp; WELLNESS
@@ -348,7 +348,7 @@ export default function CorporateBusinessTrainingPage() {
             <div className="oab-burnout-rows">
               <div className="oab-burnout-row">
                 <span className="oab-burnout-row-icon">
-                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#052E26" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#0170ED" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                 </span>
                 <div>
                   <h3>Burnout Is a Symptom</h3>
@@ -358,7 +358,7 @@ export default function CorporateBusinessTrainingPage() {
 
               <div className="oab-burnout-row">
                 <span className="oab-burnout-row-icon">
-                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#052E26" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#0170ED" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
                 </span>
                 <div>
                   <h3>Turnover Is a Signal</h3>
@@ -368,7 +368,7 @@ export default function CorporateBusinessTrainingPage() {
 
               <div className="oab-burnout-row">
                 <span className="oab-burnout-row-icon">
-                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#052E26" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#0170ED" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                 </span>
                 <div>
                   <h3>Silence Is the Biggest Risk</h3>
@@ -379,7 +379,7 @@ export default function CorporateBusinessTrainingPage() {
 
             <div className="oab-burnout-quote">
               <span className="oab-burnout-quote-icon">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#EDFFE1" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22c4-3 6-6 6-10a6 6 0 0 0-12 0c0 4 2 7 6 10z"/><path d="M12 12V6"/></svg>
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#E6F2FD" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22c4-3 6-6 6-10a6 6 0 0 0-12 0c0 4 2 7 6 10z"/><path d="M12 12V6"/></svg>
               </span>
               <p>
                 Real leadership creates the kind of culture where people feel safe, supported, and seen: where they don&apos;t just survive, they thrive and stay.
@@ -403,8 +403,8 @@ export default function CorporateBusinessTrainingPage() {
 
         <div className="oab-burnout-wave-wrap">
           <svg className="oab-burnout-wave" viewBox="0 0 1600 190" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M0 90 Q200 40 420 95 Q640 150 860 100 Q1080 50 1300 95 Q1450 120 1600 90 L1600 190 L0 190Z" fill="#EDFFE1" />
-            <path d="M0 130 Q220 90 440 130 Q660 170 880 130 Q1100 90 1320 130 Q1460 155 1600 130 L1600 190 L0 190Z" fill="#dcf0c8" opacity="0.7"/>
+            <path d="M0 90 Q200 40 420 95 Q640 150 860 100 Q1080 50 1300 95 Q1450 120 1600 90 L1600 190 L0 190Z" fill="#E6F2FD" />
+            <path d="M0 130 Q220 90 440 130 Q660 170 880 130 Q1100 90 1320 130 Q1460 155 1600 130 L1600 190 L0 190Z" fill="#c8dbf0" opacity="0.7"/>
           </svg>
         </div>
       </section>
@@ -460,7 +460,7 @@ export default function CorporateBusinessTrainingPage() {
 
           <div className="oah-help-copy reveal reveal-from-left">
             <div className="oah-help-pill">
-              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#3a6e2a" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#224b76" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M11 20A7 7 0 0 1 4 13V6a1 1 0 0 1 1-1h7a7 7 0 0 1 7 7 7 7 0 0 1-7 7z"/>
                 <path d="M4 13c0 7 7 7 7 7"/>
               </svg>
@@ -481,7 +481,7 @@ export default function CorporateBusinessTrainingPage() {
           <div className="oah-help-cards reveal reveal-from-right">
             <div className="oah-help-card">
               <span className="oah-help-card-icon">
-                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#3a6e2a" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#224b76" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
               </span>
               <h3>Stronger Leadership Capacity</h3>
               <div className="oah-help-card-rule" />
@@ -490,7 +490,7 @@ export default function CorporateBusinessTrainingPage() {
 
             <div className="oah-help-card">
               <span className="oah-help-card-icon">
-                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#3a6e2a" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.6z"/></svg>
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#224b76" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.6z"/></svg>
               </span>
               <h3>Healthier, More Engaged Teams</h3>
               <div className="oah-help-card-rule" />
@@ -499,7 +499,7 @@ export default function CorporateBusinessTrainingPage() {
 
             <div className="oah-help-card">
               <span className="oah-help-card-icon">
-                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#3a6e2a" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#224b76" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
               </span>
               <h3>Reduced Turnover &amp; Burnout</h3>
               <div className="oah-help-card-rule" />
@@ -508,7 +508,7 @@ export default function CorporateBusinessTrainingPage() {
 
             <div className="oah-help-card">
               <span className="oah-help-card-icon">
-                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#3a6e2a" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4.5 8-11.8A8 8 0 0 0 12 2a8 8 0 0 0-8 8.2C4 17.5 12 22 12 22z"/><polyline points="9 12 11 14 15 10"/></svg>
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#224b76" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4.5 8-11.8A8 8 0 0 0 12 2a8 8 0 0 0-8 8.2C4 17.5 12 22 12 22z"/><polyline points="9 12 11 14 15 10"/></svg>
               </span>
               <h3>A Culture of Trust &amp; Honesty</h3>
               <div className="oah-help-card-rule" />
@@ -528,7 +528,7 @@ export default function CorporateBusinessTrainingPage() {
             <div>
 
               <div className="oah-help-pill">
-              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#3a6e2a" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#224b76" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M11 20A7 7 0 0 1 4 13V6a1 1 0 0 1 1-1h7a7 7 0 0 1 7 7 7 7 0 0 1-7 7z"/>
                 <path d="M4 13c0 7 7 7 7 7"/>
               </svg>
@@ -570,7 +570,7 @@ export default function CorporateBusinessTrainingPage() {
       <section className="jj-topics" style={{background:'#fff'}}>
         <div className="jj-inner jj-topics-content">
           <div className="reveal reveal-from-bottom">
-            <h2 className="cbt-prose-h2" style={{color:'#093129', marginBottom:'2.5rem'}}>More Training We Cover</h2>
+            <h2 className="cbt-prose-h2" style={{color:'#072B3A', marginBottom:'2.5rem'}}>More Training We Cover</h2>
           </div>
           <div className="cbt-topic-groups reveal-stagger">
             {TOPIC_GROUPS.map((group, gi) => (
@@ -589,7 +589,7 @@ export default function CorporateBusinessTrainingPage() {
           </div>
         </div>
         <svg className="jj-topics-wave-bottom" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M0 60 L0 25 Q180 0 360 35 Q540 60 720 20 Q900 0 1080 35 Q1260 60 1440 25 L1440 60Z" fill="#faf8f3"/>
+          <path d="M0 60 L0 25 Q180 0 360 35 Q540 60 720 20 Q900 0 1080 35 Q1260 60 1440 25 L1440 60Z" fill="#f2f6fb"/>
         </svg>
       </section>
 
@@ -619,19 +619,19 @@ export default function CorporateBusinessTrainingPage() {
       <section className="oah-jamie">
         <svg className="oah-jamie-dots" viewBox="0 0 130 90" fill="none" aria-hidden="true">
           {[0,1,2,3,4].map(row => [0,1,2,3,4,5,6,7].map(col => (
-            <circle key={`jd-${row}-${col}`} cx={col*16+8} cy={row*16+8} r="2" fill="#c9d6be" />
+            <circle key={`jd-${row}-${col}`} cx={col*16+8} cy={row*16+8} r="2" fill="#b0c9e5" />
           )))}
         </svg>
 
         <svg className="oah-jamie-wave" viewBox="0 0 1600 90" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M0 40 Q300 0 600 45 Q900 90 1200 40 Q1400 10 1600 35 L1600 90 L0 90Z" fill="#EDFFE1" opacity="0.6"/>
+          <path d="M0 40 Q300 0 600 45 Q900 90 1200 40 Q1400 10 1600 35 L1600 90 L0 90Z" fill="#E6F2FD" opacity="0.6"/>
         </svg>
 
         <div className="oah-jamie-inner">
 
           <div className="oah-jamie-copy reveal reveal-from-left">
             <div className="oah-jamie-pill">
-              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#3a6e2a" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#224b76" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
               WHY JAMIE LEADS THIS TRAINING
             </div>
 
@@ -649,7 +649,7 @@ export default function CorporateBusinessTrainingPage() {
             </p>
 
             <div className="oah-jamie-video-label">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#3a6e2a" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="16" height="12" rx="2"/><path d="M22 8l-4 3 4 3V8z"/></svg>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#224b76" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="16" height="12" rx="2"/><path d="M22 8l-4 3 4 3V8z"/></svg>
               WATCH JAMIE ON LEADERSHIP BURNOUT
             </div>
             <a href="https://www.youtube.com/watch?v=Hy-mRWM6zi0" target="_blank" rel="noopener noreferrer" className="oah-jamie-video-thumb" aria-label="Watch: Why Strong Leaders Feel Empty? High-Functioning Burnout">
@@ -680,7 +680,7 @@ export default function CorporateBusinessTrainingPage() {
 
             <div className="oah-jamie-floatcard">
               <div className="oah-jamie-floatcard-icon">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#3a6e2a" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M11 20A7 7 0 0 1 4 13V6a1 1 0 0 1 1-1h7a7 7 0 0 1 7 7 7 7 0 0 1-7 7z"/><path d="M4 13c0 7 7 7 7 7"/></svg>
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#224b76" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M11 20A7 7 0 0 1 4 13V6a1 1 0 0 1 1-1h7a7 7 0 0 1 7 7 7 7 0 0 1-7 7z"/><path d="M4 13c0 7 7 7 7 7"/></svg>
               </div>
               <div>
                 <p className="oah-jamie-floatcard-title">Clinician. Leader. Advocate.</p>
@@ -712,7 +712,7 @@ export default function CorporateBusinessTrainingPage() {
       </section>
 
       {/* ══ WHY ORGANIZATIONS CHOOSE — cream ══ */}
-      <section className="jj-why" style={{background:'#faf8f3'}}>
+      <section className="jj-why" style={{background:'#f2f6fb'}}>
         <div className="jj-inner">
           <div className="jj-why-header reveal reveal-from-bottom">
             <h2 className="jj-why-title">Why Organizations Choose Open Arms Initiative</h2>
@@ -721,22 +721,22 @@ export default function CorporateBusinessTrainingPage() {
           <div className="jj-why-cards reveal-stagger">
             {[
               {
-                icon: <svg viewBox="0 0 24 24" fill="none" stroke="#3a6e2a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="34" height="34"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><polyline points="9 12 11 14 15 10"/></svg>,
+                icon: <svg viewBox="0 0 24 24" fill="none" stroke="#224b76" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="34" height="34"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><polyline points="9 12 11 14 15 10"/></svg>,
                 title: 'Led by a Licensed Clinician',
                 desc: "A licensed professional counselor with clinical training in how stress and trauma actually affect behavior, not just leadership theory.",
               },
               {
-                icon: <svg viewBox="0 0 24 24" fill="none" stroke="#3a6e2a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="34" height="34"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>,
+                icon: <svg viewBox="0 0 24 24" fill="none" stroke="#224b76" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="34" height="34"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>,
                 title: 'Built for Your Specific Situation',
                 desc: "Sessions are shaped around what's actually happening in your organization, not a fixed curriculum delivered the same way to every room.",
               },
               {
-                icon: <svg viewBox="0 0 24 24" fill="none" stroke="#3a6e2a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="34" height="34"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>,
+                icon: <svg viewBox="0 0 24 24" fill="none" stroke="#224b76" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="34" height="34"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>,
                 title: 'Organizational Leadership Experience',
                 desc: "Jamie runs two organizations, so she understands the constraints, dynamics, and pressures leaders are managing when she walks into a room.",
               },
               {
-                icon: <svg viewBox="0 0 24 24" fill="none" stroke="#3a6e2a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="34" height="34"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>,
+                icon: <svg viewBox="0 0 24 24" fill="none" stroke="#224b76" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="34" height="34"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>,
                 title: 'Practical Tools, Not Just Concepts',
                 desc: "Leaders leave with specific frameworks they can use, not just a better understanding of why the problem exists.",
               },
@@ -837,9 +837,9 @@ export default function CorporateBusinessTrainingPage() {
           display:inline-flex;
           align-items:center;
           gap:8px;
-          background:#EDFFE1;
-          color:#3a6e2a;
-          border:1px solid rgba(141,197,64,0.35);
+          background:#E6F2FD;
+          color:#224b76;
+          border:1px solid rgba(0,175,247,0.35);
           font-size:11.5px;
           font-weight:700;
           letter-spacing:0.04em;
@@ -850,7 +850,7 @@ export default function CorporateBusinessTrainingPage() {
         .oab-burnout-headline{
           font-family:'Plus Jakarta Sans', sans-serif;
           font-weight:600;
-          color:#052E26;
+          color:#072B3A;
           font-size:34px;
           line-height:1.2;
           margin:0 0 18px;
@@ -859,12 +859,12 @@ export default function CorporateBusinessTrainingPage() {
         .oab-burnout-rule{
           width:56px;
           height:3px;
-          background:#8DC540;
+          background:#00AFF7;
           border-radius:4px;
           margin-bottom:22px;
         }
         .oab-burnout-desc{
-          color:#586a60;
+          color:#5B6B60;
           font-size:14.5px;
           line-height:1.7;
           max-width:480px;
@@ -887,7 +887,7 @@ export default function CorporateBusinessTrainingPage() {
         .oab-burnout-row-icon{
           width:48px;height:48px;
           border-radius:50%;
-          background:#EDFFE1;
+          background:#E6F2FD;
           display:flex;align-items:center;justify-content:center;
           flex:none;
         }
@@ -895,12 +895,12 @@ export default function CorporateBusinessTrainingPage() {
           font-family:'Plus Jakarta Sans', sans-serif;
           font-size:15.5px;
           font-weight:700;
-          color:#052E26;
+          color:#0170ED;
           margin:0 0 4px;
         }
         .oab-burnout-row p{
           font-size:13px;
-          color:#5f7168;
+          color:#34669c;
           line-height:1.5;
           margin:0;
         }
@@ -908,19 +908,19 @@ export default function CorporateBusinessTrainingPage() {
           display:flex;
           align-items:flex-start;
           gap:16px;
-          background:#052E26;
+          background:linear-gradient(135deg, #00AFF7 0%, #0170ED 100%);
           border-radius:14px;
           padding:22px 24px;
         }
         .oab-burnout-quote-icon{
           width:44px;height:44px;
           border-radius:50%;
-          background:#0e4638;
+          background:transparent;
           display:flex;align-items:center;justify-content:center;
           flex:none;
         }
         .oab-burnout-quote p{
-          color:#eaf4e2;
+          color:#e1ebf5;
           font-size:14px;
           line-height:1.6;
           margin:0;
@@ -937,7 +937,7 @@ export default function CorporateBusinessTrainingPage() {
           bottom:0;
           clip-path: url(#oab-blob-clip);
           overflow:hidden;
-          background:#0e2418;
+          background:#0d1926;
         }
         .oab-burnout-blob-img{
           width:100%;
@@ -1005,9 +1005,9 @@ export default function CorporateBusinessTrainingPage() {
           display:inline-flex;
           align-items:center;
           gap:8px;
-          background:#EDFFE1;
-          color:#3a6e2a;
-          border:1px solid rgba(141,197,64,0.35);
+          background:#E6F2FD;
+          color:#224b76;
+          border:1px solid rgba(0,175,247,0.35);
           font-size:11.5px;
           font-weight:700;
           letter-spacing:0.04em;
@@ -1015,10 +1015,13 @@ export default function CorporateBusinessTrainingPage() {
           border-radius:30px;
           margin-bottom:22px;
         }
+        .oah-programs-header .oah-help-pill{
+          background:#ffffff;
+        }
         .oah-help-headline{
           font-family:'Plus Jakarta Sans', sans-serif;
           font-weight:600;
-          color:#052E26;
+          color:#072B3A;
           font-size:32px;
           line-height:1.2;
           margin:0 0 18px;
@@ -1027,12 +1030,12 @@ export default function CorporateBusinessTrainingPage() {
         .oah-help-rule{
           width:56px;
           height:3px;
-          background:#8DC540;
+          background:#00AFF7;
           border-radius:4px;
           margin-bottom:24px;
         }
         .oah-help-desc{
-          color:#3d4a44;
+          color:#224265;
           font-size:14.5px;
           line-height:1.7;
           max-width:480px;
@@ -1052,7 +1055,7 @@ export default function CorporateBusinessTrainingPage() {
         .oah-help-card-icon{
           width:56px;height:56px;
           border-radius:50%;
-          background:#EDFFE1;
+          background:#E6F2FD;
           display:flex;align-items:center;justify-content:center;
           margin:0 auto 16px;
         }
@@ -1060,20 +1063,20 @@ export default function CorporateBusinessTrainingPage() {
           font-family:'Plus Jakarta Sans', sans-serif;
           font-size:16px;
           font-weight:700;
-          color:#052E26;
+          color:#0170ED;
           margin:0 0 10px;
           line-height:1.3;
         }
         .oah-help-card-rule{
           width:28px;
           height:2px;
-          background:#8DC540;
+          background:#00AFF7;
           border-radius:4px;
           margin:0 auto 12px;
         }
         .oah-help-card p{
           font-size:13px;
-          color:#5f7168;
+          color:#34669c;
           line-height:1.55;
           margin:0;
         }
@@ -1087,7 +1090,7 @@ export default function CorporateBusinessTrainingPage() {
 
         .oah-programs{
           position:relative;
-          background:#052E26;
+          background:linear-gradient(135deg, #F0F7FE 0%, #E6F2FD 100%);
           padding:100px 0;
           overflow:hidden;
         }
@@ -1097,7 +1100,7 @@ export default function CorporateBusinessTrainingPage() {
           right:-100px;
           width:600px;
           height:600px;
-          background:radial-gradient(circle, rgba(141,197,64,0.15) 0%, transparent 70%);
+          background:radial-gradient(circle, rgba(0,175,247,0.15) 0%, transparent 70%);
           pointer-events:none;
         }
         .oah-programs-inner{
@@ -1119,7 +1122,7 @@ export default function CorporateBusinessTrainingPage() {
           display:inline-flex;
           align-items:center;
           gap:8px;
-          color:#8DC540;
+          color:#0170ED;
           font-size:12px;
           font-weight:700;
           letter-spacing:0.12em;
@@ -1130,22 +1133,22 @@ export default function CorporateBusinessTrainingPage() {
           content:'';
           width:24px;
           height:2px;
-          background:#8DC540;
+          background:#0170ED;
         }
         .oah-programs-title{
           font-family:'Inter', sans-serif;
           font-weight:800;
-          color:#fff;
+          color:#072B3A;
           font-size:38px;
           line-height:1.1;
           letter-spacing:-0.02em;
           max-width:520px;
         }
         .oah-programs-title span{
-          color:#8DC540;
+          color:#0170ED;
         }
         .oah-programs-sub{
-          color:rgba(255,255,255,0.55);
+          color:#5B6B60;
           font-size:14.5px;
           line-height:1.6;
           max-width:280px;
@@ -1157,19 +1160,20 @@ export default function CorporateBusinessTrainingPage() {
         }
         .oah-program-card{
           position:relative;
-          background:rgba(255,255,255,0.04);
-          border:1px solid rgba(255,255,255,0.08);
+          background:#ffffff;
+          border:1px solid rgba(0,175,247,0.15);
           border-radius:20px;
           padding:32px 26px;
           display:flex;
           flex-direction:column;
           overflow:hidden;
-          transition:transform .3s cubic-bezier(.2,.8,.2,1), border-color .3s ease, background .3s ease;
+          box-shadow:0 4px 20px rgba(1,112,237,0.06);
+          transition:transform .3s cubic-bezier(.2,.8,.2,1), border-color .3s ease, box-shadow .3s ease;
         }
         .oah-program-card:hover{
           transform:translateY(-6px);
-          border-color:rgba(141,197,64,0.5);
-          background:rgba(255,255,255,0.06);
+          border-color:rgba(0,175,247,0.4);
+          box-shadow:0 12px 32px rgba(1,112,237,0.14);
         }
         .oah-program-card::before{
           content:none;
@@ -1177,18 +1181,18 @@ export default function CorporateBusinessTrainingPage() {
         .oah-program-icon{
           width:52px;height:52px;
           border-radius:14px;
-          background:linear-gradient(135deg, #8DC540, #6ba82f);
+          background:linear-gradient(135deg, #00AFF7, #0170ED);
           display:flex;align-items:center;justify-content:center;
           margin-bottom:24px;
           position:relative;
           z-index:1;
-          box-shadow:0 8px 20px rgba(141,197,64,0.25);
-          color:#052E26;
+          box-shadow:0 8px 20px rgba(1,112,237,0.25);
+          color:#ffffff;
         }
         .oah-program-name{
           font-size:18px;
           font-weight:700;
-          color:#fff;
+          color:#072B3A;
           line-height:1.3;
           margin:0 0 12px;
           position:relative;
@@ -1197,7 +1201,7 @@ export default function CorporateBusinessTrainingPage() {
         }
         .oah-program-desc{
           font-size:13.5px;
-          color:rgba(255,255,255,0.55);
+          color:#5B6B60;
           line-height:1.65;
           margin:0 0 22px;
           position:relative;
@@ -1214,18 +1218,18 @@ export default function CorporateBusinessTrainingPage() {
         .oah-program-tag{
           font-size:10.5px;
           font-weight:600;
-          color:#c9e3ae;
-          background:rgba(141,197,64,0.12);
-          border:1px solid rgba(141,197,64,0.25);
+          color:#0170ED;
+          background:rgba(0,175,247,0.1);
+          border:1px solid rgba(0,175,247,0.25);
           padding:5px 10px;
           border-radius:20px;
         }
         .oah-program-outcome{
           font-size:12.5px;
-          color:rgba(255,255,255,0.75);
+          color:#5B6B60;
           line-height:1.55;
           padding-top:18px;
-          border-top:1px solid rgba(255,255,255,0.08);
+          border-top:1px solid #e8ede9;
           margin-bottom:20px;
           margin-top:auto;
           position:relative;
@@ -1233,7 +1237,7 @@ export default function CorporateBusinessTrainingPage() {
         }
         .oah-program-outcome strong{
           display:block;
-          color:#8DC540;
+          color:#072B3A;
           font-size:10px;
           font-weight:700;
           letter-spacing:0.08em;
@@ -1247,25 +1251,25 @@ export default function CorporateBusinessTrainingPage() {
           width:100%;
           font-size:13.5px;
           font-weight:700;
-          color:#fff;
+          color:#072B3A;
           text-decoration:none;
           padding:12px 16px;
           border-radius:10px;
-          background:rgba(255,255,255,0.06);
-          transition:background .2s ease;
+          background:#F0F7FE;
+          transition:background .2s ease, color .2s ease;
           position:relative;
           z-index:1;
         }
         .oah-program-link:hover{
-          background:#8DC540;
-          color:#052E26;
+          background:linear-gradient(135deg, #00AFF7 0%, #0170ED 100%);
+          color:#ffffff;
         }
         .oah-program-link:hover svg{
-          stroke:#052E26;
+          stroke:#ffffff;
           transform:translateX(3px);
         }
         .oah-program-link svg{
-          stroke:#8DC540;
+          stroke:#072B3A;
           transition:transform .2s ease, stroke .2s ease;
         }
         @media(max-width:1100px){
@@ -1313,9 +1317,9 @@ export default function CorporateBusinessTrainingPage() {
           display:inline-flex;
           align-items:center;
           gap:8px;
-          background:#EDFFE1;
-          color:#3a6e2a;
-          border:1px solid rgba(141,197,64,0.35);
+          background:#E6F2FD;
+          color:#224b76;
+          border:1px solid rgba(0,175,247,0.35);
           font-size:11.5px;
           font-weight:700;
           letter-spacing:0.05em;
@@ -1326,7 +1330,7 @@ export default function CorporateBusinessTrainingPage() {
         .oah-jamie-headline{
           font-family:'Plus Jakarta Sans', sans-serif;
           font-weight:700;
-          color:#052E26;
+          color:#0170ED;
           font-size:33px;
           line-height:1.28;
           margin:0 0 22px;
@@ -1334,7 +1338,7 @@ export default function CorporateBusinessTrainingPage() {
         .oah-jamie-headline .accent{
           display:block;
           font-style:italic;
-          color:#3a6e2a;
+          color:#224b76;
           position:relative;
           width:fit-content;
         }
@@ -1343,11 +1347,11 @@ export default function CorporateBusinessTrainingPage() {
           position:absolute;
           left:0; right:0; bottom:-6px;
           height:2px;
-          background:#8DC540;
+          background:#00AFF7;
           opacity:0.6;
         }
         .oah-jamie-body{
-          color:#4a5750;
+          color:#284f79;
           font-size:14.5px;
           line-height:1.75;
           margin-bottom:16px;
@@ -1360,7 +1364,7 @@ export default function CorporateBusinessTrainingPage() {
           font-size:12px;
           font-weight:700;
           letter-spacing:0.05em;
-          color:#052E26;
+          color:#0170ED;
           margin:26px 0 12px;
         }
         .oah-jamie-video-thumb{
@@ -1368,7 +1372,7 @@ export default function CorporateBusinessTrainingPage() {
           display:flex;
           align-items:center;
           gap:20px;
-          background:linear-gradient(120deg, #14351f, #0a2015);
+          background:linear-gradient(120deg, #122437, #0a1520);
           border-radius:14px;
           padding:18px;
           max-width:520px;
@@ -1382,7 +1386,7 @@ export default function CorporateBusinessTrainingPage() {
           border-radius:10px;
           object-fit:cover;
           flex:none;
-          background:linear-gradient(140deg,#3a5540,#1a2e1c);
+          background:linear-gradient(140deg,#24466b,#122336);
         }
         .oah-jamie-video-play{
           position:absolute;
@@ -1405,7 +1409,7 @@ export default function CorporateBusinessTrainingPage() {
         }
         .oah-jamie-video-sub{
           font-size:12px;
-          color:#a8c99a;
+          color:#8bb0d8;
           line-height:1.4;
           margin:0 0 8px;
         }
@@ -1422,12 +1426,12 @@ export default function CorporateBusinessTrainingPage() {
           display:inline-flex;
           align-items:center;
           gap:10px;
-          background:#052E26;
+          background:linear-gradient(135deg, #00AFF7 0%, #0170ED 100%);
           color:#fff;
           font-size:14px;
           font-weight:600;
           padding:14px 24px;
-          border-radius:8px;
+          border-radius:999px;
           margin-top:24px;
           text-decoration:none;
         }
@@ -1442,7 +1446,7 @@ export default function CorporateBusinessTrainingPage() {
         .oah-jamie-arch-ring{
           position:absolute;
           inset:-14px;
-          border:1px solid rgba(141,197,64,0.3);
+          border:1px solid rgba(0,175,247,0.3);
           border-radius:220px 220px 40px 40px;
           z-index:0;
         }
@@ -1454,7 +1458,7 @@ export default function CorporateBusinessTrainingPage() {
           border-radius:220px 220px 40px 40px;
           overflow:hidden;
           z-index:1;
-          background:linear-gradient(150deg,#cbb89a,#8a7458 60%,#5c4c38);
+          background:linear-gradient(150deg,#8cb1d9,#396faa 60%,#25496f);
         }
         .oah-jamie-arch-placeholder{
           position:absolute;inset:0;
@@ -1468,7 +1472,7 @@ export default function CorporateBusinessTrainingPage() {
           bottom:70px;
           background:#fff;
           border-radius:16px;
-          box-shadow:0 20px 45px rgba(9,49,41,0.15);
+          box-shadow:0 20px 45px rgba(7,43,58,0.15);
           padding:16px 22px 16px 16px;
           display:flex;
           align-items:center;
@@ -1479,20 +1483,20 @@ export default function CorporateBusinessTrainingPage() {
         .oah-jamie-floatcard-icon{
           width:52px;height:52px;
           border-radius:50%;
-          background:#EDFFE1;
+          background:#E6F2FD;
           display:flex;align-items:center;justify-content:center;
           flex:none;
         }
         .oah-jamie-floatcard-title{
           font-size:14px;
           font-weight:700;
-          color:#052E26;
+          color:#0170ED;
           margin:0 0 4px;
           line-height:1.3;
         }
         .oah-jamie-floatcard-sub{
           font-size:12px;
-          color:#5f7168;
+          color:#34669c;
           line-height:1.4;
           margin:0;
         }
@@ -1502,11 +1506,11 @@ export default function CorporateBusinessTrainingPage() {
           bottom:-10px;
           width:82px;height:82px;
           border-radius:50%;
-          background:#3a6e2a;
+          background:#224b76;
           border:4px solid #fff;
           display:flex;align-items:center;justify-content:center;
           z-index:4;
-          box-shadow:0 10px 24px rgba(9,49,41,0.25);
+          box-shadow:0 10px 24px rgba(7,43,58,0.25);
         }
         @media(max-width:1100px){
           .oah-jamie-inner{ grid-template-columns:1fr; padding:0 32px; }

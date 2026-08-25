@@ -622,7 +622,7 @@ export default function TraumaMentalHealthTrainingPage() {
           font-family:'DM Sans', Arial, sans-serif;
         }
         .tmh2-page h1,.tmh2-page h2,.tmh2-page h3,.tmh2-page h4,.tmh2-page h5{
-          font-family:'Plus Jakarta Sans', 'DM Sans', Arial, sans-serif; font-weight:700; color:var(--green-dark); margin:0;
+          font-family:'Plus Jakarta Sans', 'DM Sans', Arial, sans-serif; font-weight:700; color:#072B3A; margin:0;
         }
         .tmh2-wrap{ max-width:1180px; margin:0 auto; padding:0 32px; }
         .tmh2-section{ padding:56px 0; }
@@ -632,13 +632,13 @@ export default function TraumaMentalHealthTrainingPage() {
 
         .tmh2-btn{
           display:inline-flex; align-items:center; gap:8px;
-          font-weight:700; font-size:14.5px; padding:12px 22px; border-radius:8px;
+          font-weight:700; font-size:14.5px; padding:12px 22px; border-radius:999px;
           text-decoration:none; transition:opacity .2s ease, background .2s ease;
           border:none; cursor:pointer;
         }
-        .tmh2-btn-primary{ background:linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%); color:#fff; border-radius:8px; }
+        .tmh2-btn-primary{ background:linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%); color:#fff; border-radius:999px; }
         .tmh2-btn-primary:hover{ filter:brightness(1.08); }
-        .tmh2-btn-outline{ background:transparent; color:var(--green-dark); border:1.5px solid #c9d6c5; border-radius:8px; }
+        .tmh2-btn-outline{ background:transparent; color:var(--green-dark); border:1.5px solid #c9d6c5; border-radius:999px; }
         .tmh2-btn-outline:hover{ background:var(--tint); border-color:var(--green); }
         .tmh2-btn-dark{ background:var(--green-dark); color:var(--cream); }
         .tmh2-btn-dark:hover{ opacity:.9; }
@@ -716,7 +716,7 @@ export default function TraumaMentalHealthTrainingPage() {
 
         /* CREDENTIALS */
         .tmh2-cred-bar{ display:flex; flex-wrap:wrap; justify-content:center; gap:0; background:var(--white); border:1px solid var(--line); border-radius:20px; box-shadow:0 6px 24px rgba(9,49,41,.06); overflow:hidden; }
-        .tmh2-cred{ flex:1; min-width:220px; display:flex; align-items:center; gap:16px; padding:30px 32px; font-weight:600; font-size:16px; color:var(--green-dark); border-right:1px solid var(--line); }
+        .tmh2-cred{ flex:1; min-width:220px; display:flex; align-items:center; gap:16px; padding:30px 32px; font-weight:600; font-size:16px; color:#072B3A; border-right:1px solid var(--line); }
         .tmh2-cred:last-child{ border-right:none; }
         .tmh2-cred-icon{ width:54px; height:54px; border-radius:14px; background:var(--tint); color:var(--green); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
 
@@ -750,7 +750,7 @@ export default function TraumaMentalHealthTrainingPage() {
           transition:background .22s ease, color .22s ease;
         }
         .tmh2-who-card:hover .tmh2-who-icon{ background:var(--green); color:var(--white); }
-        .tmh2-who-card h4{ font-size:16px; font-weight:700; margin-bottom:8px; color:var(--green-dark); line-height:1.35; }
+        .tmh2-who-card h4{ font-size:16px; font-weight:700; margin-bottom:8px; color:#072B3A; line-height:1.35; }
         .tmh2-who-card p{ font-size:13.5px; color:var(--muted); margin:0; line-height:1.65; }
 
         /* HELPS SECTION BG */
@@ -759,7 +759,7 @@ export default function TraumaMentalHealthTrainingPage() {
         .tmh2-helps-overlay{ position:absolute; inset:0; background:rgba(255,255,255,0.72); z-index:0; }
 
         /* HELPS GRID */
-        .tmh2-helps-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+        .tmh2-helps-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin-top:16px; }
         .tmh2-helps-card{ background:var(--tint); border-radius:14px; padding:26px 20px; text-align:center; }
         .tmh2-helps-icon{ width:48px; height:48px; border-radius:50%; background:var(--white); color:var(--green); display:flex; align-items:center; justify-content:center; margin:0 auto 16px; }
         .tmh2-helps-card h4{ font-size:16px; margin-bottom:8px; }
@@ -777,13 +777,13 @@ export default function TraumaMentalHealthTrainingPage() {
         .tmh2-flagship-cta{ flex-shrink:0; }
 
         /* PROGRAMS */
-        .tmh2-programs-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:16px; }
+        .tmh2-programs-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:16px; margin-top:16px; }
         .tmh2-program-card{ border-radius:14px; overflow:hidden; background:#fff; box-shadow:0 2px 12px rgba(0,0,0,0.07); display:flex; flex-direction:column; }
         .tmh2-prog-photo-wrap{ position:relative; width:100%; aspect-ratio:4/3; overflow:hidden; border-radius:14px 14px 0 0; }
         .tmh2-prog-photo{ display:block; }
         .tmh2-prog-icon-badge{ position:absolute; bottom:10px; left:10px; width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,0.92); color:var(--green); display:flex; align-items:center; justify-content:center; box-shadow:0 1px 6px rgba(0,0,0,0.15); }
         .tmh2-prog-body{ padding:16px 16px 20px; }
-        .tmh2-program-card h4{ font-size:15px; font-weight:700; margin-bottom:6px; line-height:1.3; color:var(--green-dark); }
+        .tmh2-program-card h4{ font-size:15px; font-weight:700; margin-bottom:6px; line-height:1.3; color:#072B3A; }
         .tmh2-program-desc{ font-size:13.5px; color:var(--muted); line-height:1.55; }
 
         /* TOPICS */
