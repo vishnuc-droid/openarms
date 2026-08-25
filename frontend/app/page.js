@@ -8,6 +8,7 @@ const GROWTH_VIDEO_ID = 'TAKbCOIbNF0';
 const howWeCanHelp = [
   {
     slug: 'adult-counseling',
+    href: '/adult-counseling-oklahoma-city/',
     title: 'Individual Counseling',
     summary: 'When anxiety, low mood, stress, or just feeling stuck starts affecting daily life, one-on-one counseling gives you space to work through it with someone trained to help.',
     icon: (

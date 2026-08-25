@@ -10,7 +10,7 @@ const serviceColumns = [
     { name: 'Pro Bono Therapy Services', href: '/services/pro-bono-therapy' },
   ],
   [
-    { name: 'Adult & Individual Counseling', href: '/services/adult-counseling' },
+    { name: 'Adult & Individual Counseling', href: '/adult-counseling-oklahoma-city/' },
     { name: 'Grief and Loss Counseling', href: '/grief-counseling-oklahoma-city/' },
     { name: 'Churches & Faith-Based Training', href: '/services/churches-faith-based-training' },
     { name: 'Trauma-Informed Care Training', href: '/services/trauma-informed-care-training' },
