@@ -1078,8 +1078,8 @@ h1, h2, h3 {
 .services-kicker {
   display: inline-block;
   padding: 8px 16px;
-  background: #EDFFE1;
-  color: #052E26;
+  background: #E6F2FD;
+  color: #0170ED;
   font-size: 15px;
   font-weight: 600;
   border-radius: 4px;
@@ -4105,7 +4105,7 @@ footer a:hover {
 /* ── Base ── */
 .jj-page {
   background: #ffffff;
-  color: #1a2e1a;
+  color: #ffffff;
   font-family: var(--font-dm-sans), Arial, sans-serif;
 }
 
@@ -4122,7 +4122,7 @@ footer a:hover {
   font-weight: 700;
   letter-spacing: 0.13em;
   text-transform: uppercase;
-  color: #5a7a3a;
+  color: #29588c;
   margin: 0 0 0.5rem;
 }
 
@@ -4130,7 +4130,7 @@ footer a:hover {
   font-family: var(--font-plus-jakarta-sans), sans-serif;
   font-size: clamp(1.75rem, 3.5vw, 2.3rem);
   font-weight: 700;
-  color: #1a2e1a;
+  color: #ffffff;
   margin: 0 0 1.5rem;
   line-height: 1.2;
 }
@@ -4156,35 +4156,35 @@ footer a:hover {
 }
 
 .jj-btn-dark {
-  background: #1a3a20;
+  background: #132941;
   color: #ffffff;
 }
 
 .jj-btn-dark:hover {
-  background: #2a5030;
+  background: #1b3c5f;
   box-shadow: 0 6px 20px rgba(26, 58, 32, 0.28);
 }
 
 .jj-btn-outline {
   background: transparent;
-  color: #1a3a20;
-  border: 1.5px solid #1a3a20;
+  color: #132941;
+  border: 1.5px solid #132941;
 }
 
 .jj-btn-outline:hover {
-  background: #1a3a20;
+  background: #132941;
   color: #ffffff;
 }
 
 .jj-btn-accent {
-  background: #8DC540;
-  color: #1a2e1a;
+  background: linear-gradient(135deg, #00AFF7 0%, #0170ED 100%);
+  color: #ffffff;
   font-weight: 700;
 }
 
 .jj-btn-accent:hover {
-  background: #79b030;
-  box-shadow: 0 6px 20px rgba(141, 197, 64, 0.35);
+  filter: brightness(1.08);
+  box-shadow: 0 6px 20px rgba(1, 112, 237, 0.35);
 }
 
 /* ══ HERO ══ */
@@ -4229,8 +4229,8 @@ footer a:hover {
   gap: 0.4rem;
   font-size: 0.78rem;
   font-weight: 600;
-  color: #4a6a2a;
-  border: 1.5px solid #a8c87a;
+  color: #214973;
+  border: 1.5px solid #6d9fd5;
   border-radius: 30px;
   padding: 0.35rem 1rem;
   margin-bottom: 1.1rem;
@@ -4241,14 +4241,14 @@ footer a:hover {
   font-family: var(--font-plus-jakarta-sans), sans-serif;
   font-size: clamp(2.4rem, 4.6vw, 3.6rem);
   font-weight: 700;
-  color: #1a2e1a;
+  color: #ffffff;
   line-height: 1.08;
   margin: 0 0 0.9rem;
 }
 
 .jj-hero-desc {
   font-size: 1.02rem;
-  color: #4a5a42;
+  color: #234d79;
   line-height: 1.7;
   max-width: 480px;
   margin: 0.25rem 0 1.5rem;
@@ -4265,7 +4265,7 @@ footer a:hover {
 .jj-hero-divider-line {
   flex: 1;
   height: 1px;
-  background: #c8d8a8;
+  background: #9dbfe3;
   max-width: 60px;
 }
 
@@ -4278,7 +4278,7 @@ footer a:hover {
 
 /* Credential bar — single authoritative definition */
 .jj-cred-section {
-  background: #cfe0ab;
+  background: #a6c4e5;
   padding: 2rem 1.5rem 2.5rem;
 }
 
@@ -4308,7 +4308,7 @@ footer a:hover {
   text-align: left;
   font-size: 1rem;
   font-weight: 600;
-  color: #1a2e1a;
+  color: #ffffff;
   line-height: 1.4;
 }
 
@@ -4319,7 +4319,7 @@ footer a:hover {
   width: 56px;
   height: 56px;
   border-radius: 14px;
-  background: #eef5df;
+  background: #deeaf6;
   flex-shrink: 0;
 }
 
@@ -4350,7 +4350,7 @@ footer a:hover {
 
 .jj-arch-bg {
   position: relative;
-  background: #dfc99a;
+  background: #98bbe1;
   border-radius: 220px 220px 0 0;
   overflow: hidden;
   height: 620px;
@@ -4417,14 +4417,14 @@ footer a:hover {
   font-family: var(--font-dm-sans), sans-serif;
   font-size: 0.88rem;
   font-weight: 700;
-  color: #1a2e1a;
+  color: #ffffff;
   margin: 0;
   line-height: 1.2;
 }
 
 .jj-arch-namecard-sub {
   font-size: 0.72rem;
-  color: #6a8a5a;
+  color: #3370b1;
   margin: 0;
   line-height: 1.2;
 }
@@ -4448,7 +4448,7 @@ footer a:hover {
 }
 
 .jj-hero-wave-section .jj-hero-wave path {
-  fill: #cfe0ab;
+  fill: #a6c4e5;
 }
 
 .jj-hero-quote {
@@ -4465,7 +4465,7 @@ footer a:hover {
 .jj-hero-quote-mark {
   font-family: var(--font-playfair-display), Georgia, serif;
   font-size: 2.6rem;
-  color: #b98a4e;
+  color: #0170ED;
   line-height: 1;
 }
 
@@ -4473,7 +4473,7 @@ footer a:hover {
   font-family: var(--font-playfair-display), Georgia, serif;
   font-style: italic;
   font-size: 1.15rem;
-  color: #2c3a24;
+  color: #152e49;
   line-height: 1.5;
   margin: 0.4rem 0 0;
 }
@@ -4507,7 +4507,7 @@ footer a:hover {
   max-width: 420px;
   border-radius: 16px;
   overflow: hidden;
-  background: #cfe0ab;
+  background: #a6c4e5;
   aspect-ratio: 3 / 4;
 }
 
@@ -4529,7 +4529,7 @@ footer a:hover {
   font-family: var(--font-plus-jakarta-sans), sans-serif;
   font-size: clamp(1.8rem, 3.5vw, 2.5rem);
   font-weight: 700;
-  color: #1a2e1a;
+  color: #ffffff;
   margin: 0.25rem 0 1.25rem;
   line-height: 1.15;
   text-align: left;
@@ -4537,7 +4537,7 @@ footer a:hover {
 
 .jj-bio-desc {
   font-size: 1rem;
-  color: #4a5a42;
+  color: #234d79;
   line-height: 1.8;
   margin: 0 0 1.5rem;
 }
@@ -4556,14 +4556,14 @@ footer a:hover {
   align-items: center;
   gap: 0.7rem;
   font-size: 0.97rem;
-  color: #3a4e36;
+  color: #1e4166;
   font-weight: 500;
 }
 
 /* ══ TRAINING AREAS ══ */
 .jj-trains {
   padding: 5rem 1.5rem;
-  background: #faf8f3;
+  background: #F0F7FE;
 }
 
 .jj-trains-grid {
@@ -4582,7 +4582,7 @@ footer a:hover {
   border-radius: 16px;
   padding: 2rem 1.75rem;
   text-decoration: none;
-  color: #1a2e1a;
+  color: #ffffff;
   line-height: 1.4;
   transition: box-shadow 0.2s, transform 0.18s, border-color 0.2s;
 }
@@ -4590,7 +4590,7 @@ footer a:hover {
 .jj-train-card:hover {
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
   transform: translateY(-3px);
-  border-color: #8DC540;
+  border-color: #00AFF7;
 }
 
 .jj-train-icon {
@@ -4600,28 +4600,28 @@ footer a:hover {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: #eef5df;
-  color: #5a8a2a;
+  background: #deeaf6;
+  color: #28588b;
   flex-shrink: 0;
 }
 
 .jj-train-title {
   font-size: 1rem;
   font-weight: 700;
-  color: #1a2e1a;
+  color: #ffffff;
   line-height: 1.35;
 }
 
 .jj-train-desc {
   font-size: 0.88rem;
-  color: #6a7a62;
+  color: #326cab;
   line-height: 1.65;
   margin-top: -0.25rem;
 }
 
 /* ══ POPULAR TOPICS ══ */
 .jj-topics {
-  background: #cfe0ab;
+  background: #a6c4e5;
   padding: 0;
   position: relative;
 }
@@ -4667,7 +4667,7 @@ footer a:hover {
 
 .jj-topic-card:hover {
   background: #ffffff;
-  border-color: #8DC540;
+  border-color: #00AFF7;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
   transform: translateY(-2px);
 }
@@ -4679,22 +4679,22 @@ footer a:hover {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: #eef5df;
-  color: #5a8a2a;
+  background: #deeaf6;
+  color: #28588b;
   flex-shrink: 0;
 }
 
 .jj-topic-card-label {
   font-size: 0.97rem;
   font-weight: 600;
-  color: #1a2e1a;
+  color: #ffffff;
   line-height: 1.35;
 }
 
 /* ══ WHY ORGANIZATIONS ══ */
 .jj-why {
   padding: 5rem 1.5rem;
-  background: #faf8f3;
+  background: #F0F7FE;
 }
 
 .jj-why-header {
@@ -4714,21 +4714,21 @@ footer a:hover {
   display: block;
   width: 48px;
   height: 1.5px;
-  background: #8DC540;
+  background: #00AFF7;
 }
 
 .jj-why-title {
   font-family: var(--font-plus-jakarta-sans), sans-serif;
   font-size: clamp(1.8rem, 3.5vw, 2.5rem);
   font-weight: 700;
-  color: #1a2e1a;
+  color: #ffffff;
   margin: 0 0 0.6rem;
   line-height: 1.15;
 }
 
 .jj-why-sub {
   font-size: 1rem;
-  color: #6a7a62;
+  color: #326cab;
   margin: 0;
 }
 
@@ -4751,7 +4751,7 @@ footer a:hover {
 .jj-why-card-num {
   font-size: 0.75rem;
   font-weight: 700;
-  color: #8DC540;
+  color: #00AFF7;
   letter-spacing: 0.08em;
 }
 
@@ -4762,21 +4762,21 @@ footer a:hover {
   width: 58px;
   height: 58px;
   border-radius: 50%;
-  background: #eef5df;
+  background: #deeaf6;
   margin-bottom: 0.25rem;
 }
 
 .jj-why-card-title {
   font-size: 1rem;
   font-weight: 700;
-  color: #1a2e1a;
+  color: #ffffff;
   margin: 0;
   line-height: 1.3;
 }
 
 .jj-why-card-desc {
   font-size: 0.88rem;
-  color: #6a7a62;
+  color: #326cab;
   line-height: 1.65;
   margin: 0;
 }
@@ -4794,7 +4794,7 @@ footer a:hover {
 }
 
 .jj-review-card {
-  background: #faf8f3;
+  background: #F0F7FE;
   border: 1px solid #e8e4da;
   border-radius: 20px;
   padding: 2.5rem;
@@ -4807,7 +4807,7 @@ footer a:hover {
 .jj-review-qmark {
   font-family: var(--font-playfair-display), Georgia, serif;
   font-size: 4rem;
-  color: #8DC540;
+  color: #00AFF7;
   line-height: 1;
 }
 
@@ -4815,7 +4815,7 @@ footer a:hover {
   font-family: var(--font-playfair-display), Georgia, serif;
   font-style: italic;
   font-size: 1.05rem;
-  color: #3a4e36;
+  color: #1e4166;
   line-height: 1.75;
   margin: 0;
   flex: 1;
@@ -4824,13 +4824,13 @@ footer a:hover {
 .jj-review-line {
   width: 48px;
   height: 2px;
-  background: #8DC540;
+  background: #00AFF7;
 }
 
 .jj-review-name {
   font-size: 0.88rem;
   font-weight: 700;
-  color: #8DC540;
+  color: #00AFF7;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
@@ -4843,7 +4843,7 @@ footer a:hover {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: #8DC540;
+  background: #00AFF7;
   flex-shrink: 0;
   margin-top: 1px;
 }
@@ -4858,7 +4858,7 @@ footer a:hover {
 
 .jj-quote p {
   font-size: 0.96rem;
-  color: #3a4e36;
+  color: #1e4166;
   line-height: 1.7;
   margin: 0 0 0.65rem;
   padding-left: 0.4rem;
@@ -4867,13 +4867,13 @@ footer a:hover {
 .jj-quote footer {
   font-size: 0.8rem;
   font-weight: 700;
-  color: #8DC540;
+  color: #00AFF7;
   letter-spacing: 0.02em;
 }
 
 /* ══ CTA BANNER ══ */
 .jj-cta {
-  background: linear-gradient(135deg, #052E26 0%, #0a4a3a 100%);
+  background: linear-gradient(135deg, #0170ED 0%, #0170ED 100%);
   padding: 4.5rem 1.5rem;
 }
 
@@ -4898,7 +4898,7 @@ footer a:hover {
 
 .jj-cta-sub {
   font-size: 0.98rem;
-  color: #a8d890;
+  color: #8bb3dd;
   margin: 0;
   max-width: 460px;
   line-height: 1.6;
@@ -4922,8 +4922,8 @@ footer a:hover {
   align-items: center;
   gap: 0.5rem;
   background: #ffffff;
-  border: 1.5px solid #c8dfa8;
-  color: #3a6e2a;
+  border: 1.5px solid #a3c2e4;
+  color: #224b76;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -4937,20 +4937,20 @@ footer a:hover {
   font-family: var(--font-plus-jakarta-sans), sans-serif;
   font-size: clamp(1.5rem, 2.8vw, 2.4rem);
   font-weight: 700;
-  color: #052E26;
+  color: #0170ED;
   line-height: 1.2;
   margin: 0 0 1.25rem;
 }
 
 .jj-myt-headline em {
   font-style: italic;
-  color: #5a7a3a;
+  color: #29588c;
   font-weight: 700;
 }
 
 .jj-myt-body {
   font-size: 0.98rem;
-  color: #3d4d3a;
+  color: #1e4269;
   line-height: 1.75;
   margin: 0 0 0.85rem;
 }
@@ -4960,7 +4960,7 @@ footer a:hover {
   align-items: center;
   gap: 0;
   background: #ffffff;
-  border: 1.5px solid #c8dfa8;
+  border: 1.5px solid #a3c2e4;
   border-radius: 14px;
   padding: 1.25rem 1.5rem;
   margin: 1.25rem 0 1.75rem;
@@ -4986,14 +4986,14 @@ footer a:hover {
   font-family: var(--font-dm-sans), sans-serif;
   font-size: 1.9rem;
   font-weight: 900;
-  color: #3a6e2a;
+  color: #224b76;
   line-height: 1;
 }
 
 .jj-myt-stat-label {
   font-size: 0.72rem;
   font-weight: 600;
-  color: #5a7a3a;
+  color: #29588c;
   text-align: center;
   letter-spacing: 0.02em;
   max-width: 110px;
@@ -5003,14 +5003,14 @@ footer a:hover {
 .jj-myt-stat-divider {
   width: 1px;
   height: 50px;
-  background: #c8dfa8;
+  background: #a3c2e4;
   flex-shrink: 0;
   margin: 0 0.75rem;
 }
 
 /* ══ SPEAKER POSITIONING ══ */
 .jj-speaker {
-  background: #faf8f3;
+  background: #F0F7FE;
   padding: 5.5rem 1.5rem;
 }
 
@@ -5027,14 +5027,14 @@ footer a:hover {
   font-family: var(--font-plus-jakarta-sans), sans-serif;
   font-size: clamp(1.55rem, 3vw, 2.4rem);
   font-weight: 700;
-  color: #052E26;
+  color: #0170ED;
   line-height: 1.2;
   margin: 0.5rem 0 1.25rem;
 }
 
 .jj-speaker-body {
   font-size: 1rem;
-  color: #3d4d3a;
+  color: #1e4269;
   line-height: 1.75;
   margin: 0 0 1.5rem;
 }
@@ -5053,7 +5053,7 @@ footer a:hover {
   align-items: center;
   gap: 0.75rem;
   font-size: 0.97rem;
-  color: #2d3d2a;
+  color: #173350;
   font-weight: 500;
 }
 
@@ -5061,7 +5061,7 @@ footer a:hover {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #8DC540;
+  background: #00AFF7;
   flex-shrink: 0;
 }
 
@@ -5073,14 +5073,14 @@ footer a:hover {
 }
 
 .jj-speaker-event-tag {
-  background: #e6f2d5;
-  color: #3a6e2a;
+  background: #d4e3f3;
+  color: #224b76;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   padding: 0.3rem 0.85rem;
   border-radius: 99px;
-  border: 1px solid #c8dfa8;
+  border: 1px solid #a3c2e4;
 }
 
 .jj-speaker-photo-col {
@@ -5106,7 +5106,7 @@ footer a:hover {
 
 /* ══ VIDEO AUTHORITY ══ */
 .jj-videos {
-  background: #0a1a0a;
+  background: #08121c;
 }
 
 /* ── Video Hero (100vh) ── */
@@ -5115,7 +5115,7 @@ footer a:hover {
   display: flex;
   align-items: center;
   padding: 3rem 1.5rem;
-  background: linear-gradient(135deg, #052E26 0%, #0d1f0d 100%);
+  background: linear-gradient(135deg, #0170ED 0%, #072B3A 100%);
 }
 
 .jj-vhero-inner {
@@ -5155,7 +5155,7 @@ footer a:hover {
 .jj-vhero-now-playing {
   font-size: 1rem;
   font-weight: 600;
-  color: #e8f5d8;
+  color: #d8e6f5;
   line-height: 1.45;
   margin: 0;
 }
@@ -5173,7 +5173,7 @@ footer a:hover {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #8DC540;
+  color: #00AFF7;
   margin: 0 0 0.25rem;
 }
 
@@ -5185,7 +5185,7 @@ footer a:hover {
   max-height: calc(70vh - 2rem);
   padding-right: 4px;
   scrollbar-width: thin;
-  scrollbar-color: #3a6e2a transparent;
+  scrollbar-color: #224b76 transparent;
 }
 
 .jj-vhero-thumb {
@@ -5203,13 +5203,13 @@ footer a:hover {
 }
 
 .jj-vhero-thumb:hover {
-  background: rgba(141,197,64,0.12);
-  border-color: rgba(141,197,64,0.3);
+  background: rgba(0, 175, 247,0.12);
+  border-color: rgba(0, 175, 247,0.3);
 }
 
 .jj-vhero-thumb-active {
-  background: rgba(141,197,64,0.18);
-  border-color: #8DC540;
+  background: rgba(0, 175, 247,0.18);
+  border-color: #00AFF7;
 }
 
 .jj-vhero-thumb-img-wrap {
@@ -5245,14 +5245,14 @@ footer a:hover {
   top: 0;
   bottom: 0;
   width: 3px;
-  background: #8DC540;
+  background: #00AFF7;
   border-radius: 2px 0 0 2px;
 }
 
 .jj-vhero-thumb-title {
   font-size: 0.75rem;
   font-weight: 500;
-  color: #c8e0a8;
+  color: #a4c3e4;
   line-height: 1.4;
   margin: 0;
   display: -webkit-box;
@@ -5263,13 +5263,13 @@ footer a:hover {
 }
 
 .jj-vhero-thumb-active .jj-vhero-thumb-title {
-  color: #e8f5d8;
+  color: #d8e6f5;
   font-weight: 700;
 }
 
 /* ── All videos grid below ── */
 .jj-videos-stack-section {
-  background: #0d1a0d;
+  background: #09131e;
   padding: 4rem 1.5rem;
 }
 
@@ -5283,7 +5283,7 @@ footer a:hover {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #8DC540;
+  color: #00AFF7;
   margin: 0 0 0.5rem;
 }
 
@@ -5291,7 +5291,7 @@ footer a:hover {
   font-family: var(--font-plus-jakarta-sans), sans-serif;
   font-size: clamp(1.4rem, 2.5vw, 2rem);
   font-weight: 700;
-  color: #e8f5d8;
+  color: #d8e6f5;
   margin: 0;
   line-height: 1.2;
 }
@@ -5319,8 +5319,8 @@ footer a:hover {
 }
 
 .jj-vstack-row:hover {
-  border-color: #8DC540;
-  background: rgba(141,197,64,0.08);
+  border-color: #00AFF7;
+  background: rgba(0, 175, 247,0.08);
   transform: translateY(-3px);
 }
 
@@ -5357,7 +5357,7 @@ footer a:hover {
 }
 
 .jj-vstack-row:hover .jj-vstack-play {
-  background: rgba(141,197,64,0.65);
+  background: rgba(0, 175, 247,0.65);
 }
 
 .jj-vstack-play svg {
@@ -5379,7 +5379,7 @@ footer a:hover {
 .jj-vstack-title {
   font-size: 0.85rem;
   font-weight: 600;
-  color: #d8efc0;
+  color: #c0d7ef;
   line-height: 1.45;
   margin: 0;
 }
@@ -5404,7 +5404,7 @@ footer a:hover {
   position: relative;
   width: 100%;
   max-width: 900px;
-  background: #0a1a0a;
+  background: #08121c;
   border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 30px 80px rgba(0,0,0,0.6);
@@ -5450,7 +5450,7 @@ footer a:hover {
   padding: 1rem 1.5rem;
   font-size: 0.92rem;
   font-weight: 600;
-  color: #c8e0a8;
+  color: #a4c3e4;
   margin: 0;
   line-height: 1.45;
 }
@@ -5705,8 +5705,8 @@ footer a:hover {
 
 /* ══════════════════════════════════════════════════════════════════════════
    CBT — Corporate Business Training page  (visual identity distinct from Hub)
-   Palette: #093129 dark-forest · #052E26 deep-green · #8DC540 lime
-            #EDFFE1 mint-bg · #faf8f3 cream
+   Palette: #072B3A dark-forest · #0170ED deep-green · #00AFF7 lime
+            #E6F2FD mint-bg · #F0F7FE cream
    ══════════════════════════════════════════════════════════════════════════ */
 
 /* ── OAH Hero — full-width half-circle photo bleeds right ── */
@@ -5734,9 +5734,9 @@ footer a:hover {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #EDFFE1;
-  color: #4c8a1f;
-  border: 1px solid rgba(141,197,64,0.35);
+  background: #E6F2FD;
+  color: #1f538a;
+  border: 1px solid rgba(0, 175, 247,0.35);
   font-size: 12.5px;
   font-weight: 700;
   font-family: var(--font-plus-jakarta-sans), sans-serif;
@@ -5747,7 +5747,7 @@ footer a:hover {
 .oah-hero-headline {
   font-family: var(--font-plus-jakarta-sans), sans-serif;
   font-weight: 700;
-  color: #052E26;
+  color: #0170ED;
   font-size: clamp(2.4rem, 4vw, 3.6rem);
   line-height: 1.12;
   margin: 0 0 20px;
@@ -5805,8 +5805,8 @@ footer a:hover {
   width: 42px;
   height: 42px;
   border-radius: 10px;
-  background: #EDFFE1;
-  border: 1px solid rgba(141,197,64,0.3);
+  background: #E6F2FD;
+  border: 1px solid rgba(0, 175, 247,0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5815,12 +5815,12 @@ footer a:hover {
   font-family: var(--font-plus-jakarta-sans), sans-serif;
   font-weight: 700;
   font-size: 14px;
-  color: #052E26;
+  color: #0170ED;
   margin: 0 0 2px;
 }
 .oah-stat-label {
   font-size: 12.5px;
-  color: #7a8f84;
+  color: #4182c8;
   margin: 0;
 }
 .oah-btn {
@@ -5837,22 +5837,22 @@ footer a:hover {
   cursor: pointer;
 }
 .oah-btn-primary {
-  background: #8DC540;
-  color: #052E26;
-  border: 1.5px solid #8DC540;
+  background: #00AFF7;
+  color: #0170ED;
+  border: 1.5px solid #00AFF7;
 }
 .oah-btn-primary:hover {
-  background: #7ab233;
-  border-color: #7ab233;
+  background: #3370b2;
+  border-color: #3370b2;
 }
 .oah-btn-outline {
   background: transparent;
-  color: #052E26;
-  border: 1.5px solid #c9d6c5;
+  color: #0170ED;
+  border: 1.5px solid #b2cde9;
 }
 .oah-btn-outline:hover {
-  background: #EDFFE1;
-  border-color: #8DC540;
+  background: #E6F2FD;
+  border-color: #00AFF7;
 }
 /* Photo col — bleeds to viewport right edge */
 .oah-hero-photo-col {
@@ -5868,7 +5868,7 @@ footer a:hover {
   min-height: 580px;
   border-radius: 999px 0 0 999px;
   overflow: hidden;
-  background: #d4e8c4;
+  background: #bfd5ed;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transform: translateZ(0);
@@ -5954,7 +5954,7 @@ footer a:hover {
   font-family: var(--font-plus-jakarta-sans), sans-serif !important;
   font-weight: 700;
   font-size: clamp(1.6rem, 3vw, 2.2rem);
-  color: #052E26;
+  color: #0170ED;
   line-height: 1.2;
   margin: 0 0 16px;
 }
@@ -5968,7 +5968,7 @@ footer a:hover {
 .oah-help-rule {
   width: 56px;
   height: 3px;
-  background: #8DC540;
+  background: #00AFF7;
   border-radius: 4px;
   margin-bottom: 22px;
 }
@@ -5978,14 +5978,14 @@ footer a:hover {
   font-family: var(--font-plus-jakarta-sans), sans-serif !important;
   font-weight: 700;
   font-size: clamp(1.6rem, 3vw, 2.2rem);
-  color: #052E26;
+  color: #0170ED;
   line-height: 1.2;
   margin: 0 0 16px;
 }
 .oab-burnout-desc {
   font-family: var(--font-dm-sans), sans-serif !important;
   font-size: 1.02rem;
-  color: #4a5a42;
+  color: #234d79;
   line-height: 1.8;
   margin: 0 0 24px;
 }
@@ -5993,7 +5993,7 @@ footer a:hover {
   font-family: var(--font-plus-jakarta-sans), sans-serif !important;
   font-weight: 700;
   font-size: 1rem;
-  color: #052E26;
+  color: #0170ED;
   margin: 0 0 4px;
 }
 .oab-burnout-row p {
@@ -6010,9 +6010,9 @@ footer a:hover {
   font-family: var(--font-plus-jakarta-sans), sans-serif;
   font-size: 11.5px;
   font-weight: 700;
-  color: #3a6e2a;
-  background: #EDFFE1;
-  border: 1px solid rgba(141,197,64,0.3);
+  color: #224b76;
+  background: #E6F2FD;
+  border: 1px solid rgba(0, 175, 247,0.3);
   padding: 6px 14px;
   border-radius: 30px;
   margin-bottom: 20px;
@@ -6059,7 +6059,7 @@ footer a:hover {
 .oab-burnout-rule {
   width: 56px;
   height: 3px;
-  background: #8DC540;
+  background: #00AFF7;
   border-radius: 4px;
   margin-bottom: 22px;
 }
@@ -6081,7 +6081,7 @@ footer a:hover {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #EDFFE1;
+  background: #E6F2FD;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6091,7 +6091,7 @@ footer a:hover {
   display: flex;
   align-items: flex-start;
   gap: 16px;
-  background: #052E26;
+  background: #0170ED;
   border-radius: 14px;
   padding: 22px 24px;
 }
@@ -6099,14 +6099,14 @@ footer a:hover {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #0e4638;
+  background: #0e2946;
   display: flex;
   align-items: center;
   justify-content: center;
   flex: none;
 }
 .oab-burnout-quote p {
-  color: #eaf4e2;
+  color: #e0ebf6;
   font-size: 14px;
   line-height: 1.6;
   margin: 0;
@@ -6123,7 +6123,7 @@ footer a:hover {
   bottom: 0;
   clip-path: url(#oab-blob-clip);
   overflow: hidden;
-  background: #0e2418;
+  background: #0b1927;
 }
 .oab-burnout-blob-img {
   width: 100%;
@@ -6148,7 +6148,7 @@ footer a:hover {
   background: #ffffff;
 }
 .cbt-page .jj-hero-wave-section .jj-hero-wave path {
-  fill: #faf8f3;
+  fill: #F0F7FE;
 }
 
 /* Circle instead of arch */
@@ -6157,7 +6157,7 @@ footer a:hover {
   height: 480px;
   width: 480px;
   margin: 0 auto;
-  background: #e8f0e4;
+  background: #deeaf6;
 }
 .cbt-page .jj-photo-arch {
   max-width: 480px;
@@ -6182,19 +6182,19 @@ footer a:hover {
 /* ── Prose sections ── */
 .cbt-prose-section {
   padding: 5rem 1.5rem;
-  background: #faf8f3;
+  background: #F0F7FE;
 }
 .cbt-prose-section--dark {
-  background: #093129;
+  background: #072B3A;
 }
 .cbt-prose-section--dark .cbt-prose-h2 {
   color: #fff;
 }
 .cbt-prose-section--dark .cbt-prose-block p {
-  color: #9fc4b0;
+  color: #87b0dc;
 }
 .cbt-prose-section--dark .jj-section-tag {
-  color: #8DC540;
+  color: #00AFF7;
 }
 .cbt-prose-block {
   max-width: 780px;
@@ -6204,7 +6204,7 @@ footer a:hover {
   font-family: var(--font-plus-jakarta-sans), sans-serif;
   font-size: clamp(1.6rem, 3vw, 2.2rem);
   font-weight: 700;
-  color: #052E26;
+  color: #0170ED;
   line-height: 1.18;
   margin-bottom: 1.5rem;
 }
@@ -6222,14 +6222,14 @@ footer a:hover {
 /* ── Audience section — dark band ── */
 .cbt-audience-section {
   padding: 5rem 1.5rem;
-  background: #093129;
+  background: #072B3A;
 }
 .cbt-audience-inner {
   max-width: 960px;
   margin: 0 auto;
 }
 .cbt-audience-inner .jj-section-tag {
-  color: #8DC540;
+  color: #00AFF7;
 }
 .cbt-audience-inner .cbt-prose-h2 {
   color: #fff;
@@ -6247,13 +6247,13 @@ footer a:hover {
   gap: 0.75rem;
   padding: 1.5rem 1.25rem;
   background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(141,197,64,0.18);
+  border: 1px solid rgba(0, 175, 247,0.18);
   border-radius: 14px;
   transition: background 0.2s ease, border-color 0.2s ease;
 }
 .cbt-audience-card:hover {
-  background: rgba(141,197,64,0.1);
-  border-color: rgba(141,197,64,0.4);
+  background: rgba(0, 175, 247,0.1);
+  border-color: rgba(0, 175, 247,0.4);
 }
 .cbt-audience-icon {
   display: flex;
@@ -6262,8 +6262,8 @@ footer a:hover {
   width: 48px;
   height: 48px;
   border-radius: 10px;
-  background: rgba(141,197,64,0.15);
-  color: #8DC540;
+  background: rgba(0, 175, 247,0.15);
+  color: #00AFF7;
   flex-shrink: 0;
 }
 .cbt-audience-label {
@@ -6274,14 +6274,14 @@ footer a:hover {
 }
 .cbt-audience-sub {
   font-size: 0.84rem;
-  color: #7aaD8a;
+  color: #9fc9f5;
   line-height: 1.45;
 }
 
 /* ── Featured Programs section ── */
 .cbt-programs-section {
   padding: 5.5rem 1.5rem;
-  background: #093129;
+  background: #072B3A;
 }
 .cbt-programs-header {
   max-width: 700px;
@@ -6297,11 +6297,11 @@ footer a:hover {
 }
 .cbt-programs-sub {
   font-size: 1.05rem;
-  color: #9fc4b0;
+  color: #87b0dc;
   line-height: 1.6;
 }
 .cbt-programs-section .jj-section-tag {
-  color: #8DC540;
+  color: #00AFF7;
 }
 .cbt-programs-grid {
   display: grid;
@@ -6314,7 +6314,7 @@ footer a:hover {
 .cbt-program-card {
   background: #fff;
   border: 1px solid rgba(255,255,255,0.08);
-  border-left: 4px solid #8DC540;
+  border-left: 4px solid #00AFF7;
   border-radius: 0 14px 14px 0;
   padding: 1.75rem 1.5rem;
   display: flex;
@@ -6336,7 +6336,7 @@ footer a:hover {
   font-size: 2.8rem;
   font-weight: 800;
   font-family: var(--font-plus-jakarta-sans), sans-serif;
-  color: #EDFFE1;
+  color: #E6F2FD;
   line-height: 1;
   user-select: none;
 }
@@ -6347,8 +6347,8 @@ footer a:hover {
   width: 46px;
   height: 46px;
   border-radius: 10px;
-  background: #052E26;
-  color: #8DC540;
+  background: #0170ED;
+  color: #00AFF7;
   margin-bottom: 0.9rem;
   flex-shrink: 0;
 }
@@ -6356,7 +6356,7 @@ footer a:hover {
   font-family: var(--font-plus-jakarta-sans), sans-serif;
   font-size: 1.05rem;
   font-weight: 700;
-  color: #052E26;
+  color: #0170ED;
   margin-bottom: 0.45rem;
   line-height: 1.3;
   padding-right: 2.8rem;
@@ -6386,7 +6386,7 @@ footer a:hover {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #8DC540;
+  color: #00AFF7;
 }
 .cbt-program-field-val {
   font-size: 0.87rem;
@@ -6402,14 +6402,14 @@ footer a:hover {
   color: #fff;
   text-decoration: none;
   margin-top: auto;
-  background: #093129;
+  background: #072B3A;
   border-radius: 8px;
   padding: 0.5rem 1rem;
   width: fit-content;
   transition: background 0.18s ease;
 }
 .cbt-program-link:hover {
-  background: #052E26;
+  background: #0170ED;
 }
 
 /* ── Grouped topics — horizontal pill rows under sub-labels ── */
@@ -6428,7 +6428,7 @@ footer a:hover {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #093129;
+  color: #072B3A;
   opacity: 0.5;
 }
 .cbt-topic-chips {
@@ -6441,25 +6441,25 @@ footer a:hover {
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem 0.5rem 0.75rem;
-  background: #f0f8e8;
+  background: #e8f0f8;
   border: 1px solid rgba(9,49,41,0.15);
   border-radius: 999px;
   font-size: 0.86rem;
   font-weight: 500;
-  color: #093129;
+  color: #072B3A;
   transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
   cursor: default;
 }
 .cbt-topic-chip:hover {
-  background: #dff2c4;
-  border-color: #8DC540;
-  color: #052E26;
+  background: #c4daf2;
+  border-color: #00AFF7;
+  color: #0170ED;
 }
 .cbt-topic-chip-icon {
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  color: #8DC540;
+  color: #00AFF7;
   opacity: 0.9;
 }
 
@@ -6514,7 +6514,7 @@ footer a:hover {
   right: 0;
   padding: 0.65rem 0.9rem;
   background: rgba(7,43,58,0.82);
-  color: #c8e0a8;
+  color: #a4c3e4;
   font-size: 0.8rem;
   font-weight: 500;
   line-height: 1.35;
@@ -6538,7 +6538,7 @@ footer a:hover {
 }
 /* Left dark panel */
 .cbt-faq-header {
-  background: #093129;
+  background: #072B3A;
   padding: 4rem 2.5rem;
   display: flex;
   flex-direction: column;
@@ -6557,7 +6557,7 @@ footer a:hover {
 }
 .cbt-faq-header-sub {
   font-size: 0.95rem;
-  color: #7aaD8a;
+  color: #9fc9f5;
   line-height: 1.6;
 }
 /* Right accordion panel */
@@ -6587,16 +6587,16 @@ footer a:hover {
   cursor: pointer;
   font-size: 0.97rem;
   font-weight: 600;
-  color: #052E26;
+  color: #072B3A;
   line-height: 1.4;
   transition: background 0.15s ease;
 }
 .cbt-faq-q:hover {
-  background: #f4fbef;
+  background: #F0F7FE;
 }
 .cbt-faq-q--open {
-  background: #f4fbef;
-  color: #093129;
+  background: #F0F7FE;
+  color: #072B3A;
 }
 .cbt-faq-chevron {
   flex-shrink: 0;
