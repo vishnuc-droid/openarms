@@ -695,7 +695,7 @@ export default function TraumaMentalHealthTrainingPage() {
         }
 
         .tmh2-hero-form{ display:flex; flex-direction:column; gap:13px; }
-        .tmh2-form-label{ font-size:13px; font-weight:700; color:var(--green-dark); margin-bottom:-7px; }
+        .tmh2-form-label{ font-size:13px; font-weight:700; color:#5B6B60; margin-bottom:-7px; }
         .tmh2-form-input-wrap{ display:flex; align-items:center; gap:10px; border:1.5px solid var(--line); border-radius:9px; padding:10px 13px; color:var(--muted); }
         .tmh2-form-input-wrap:focus-within{ border-color:var(--green); }
         .tmh2-form-input-wrap svg{ flex-shrink:0; }
