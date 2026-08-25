@@ -3,7 +3,7 @@ export const serviceCategories = {
     heading: 'Counseling & Therapy Services',
     links: [
       { name: 'Child & Adolescent Counseling', slug: 'child-adolescent-counseling', href: '/child-counseling-services-oklahoma-city/' },
-      { name: 'Adult & Individual Counseling', slug: 'adult-counseling' },
+      { name: 'Adult & Individual Counseling', slug: 'adult-counseling', href: '/adult-counseling-oklahoma-city/' },
       { name: 'Marriage & Couples Therapy', slug: 'marriage-couples-therapy', href: '/marriage-counseling-oklahoma-city/' },
       { name: 'Foster Care & Adoption Counseling', slug: 'foster-care-adoption-counseling' },
       { name: 'Grief and Loss Counseling', slug: 'grief-loss-counseling', href: '/grief-counseling-oklahoma-city/' },
