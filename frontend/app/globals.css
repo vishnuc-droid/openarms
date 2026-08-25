@@ -7450,7 +7450,8 @@ footer a:hover {
   background-color: #0170ED;
   background-image: radial-gradient(120% 160% at 15% 0%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 55%),
     linear-gradient(180deg, rgba(0, 0, 0, 0.06) 0%, rgba(0, 0, 0, 0) 40%),
-    linear-gradient(135deg, #00AFF7 0%, #0170ED 100%);
+    radial-gradient(circle at 88% 12%, rgba(0, 175, 247, 0.28) 0%, rgba(0, 175, 247, 0) 45%),
+    linear-gradient(100deg, #072B3A 0%, #0170ED 100%);
   padding: 80px 24px;
 }
 
