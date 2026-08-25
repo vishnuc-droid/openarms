@@ -5,6 +5,19 @@ import Link from 'next/link';
 
 function Arrow() { return <span aria-hidden="true">→</span>; }
 
+const PHONE_PATTERN = /\+1 \(\d{3}\) \d{3}-\d{4}/g;
+
+function linkifyPhoneNumbers(text) {
+  const parts = text.split(PHONE_PATTERN);
+  const matches = text.match(PHONE_PATTERN) || [];
+  return parts.flatMap((part, index) => {
+    const match = matches[index];
+    if (!match) return [part];
+    const tel = `tel:${match.replace(/[^\d+]/g, '')}`;
+    return [part, <a key={index} href={tel}>{match}</a>];
+  });
+}
+
 const faqCategories = [
   {
     category: 'Counseling & Therapy',
@@ -57,7 +70,7 @@ const faqCategories = [
       },
       {
         q: 'How do I book my first counseling appointment?',
-        a: 'You can submit an appointment request through our Contact page or call our office directly at (405) 555-0199.',
+        a: 'You can submit an appointment request through our Contact page or call our office directly at +1 (405) 920-8934.',
       },
     ],
   },
@@ -155,7 +168,7 @@ export default function FAQPage() {
                       {item.q}
                       <span>{isOpen ? '−' : '+'}</span>
                     </button>
-                    {isOpen && <p style={{ marginTop: '0.75rem', lineHeight: '1.6', color: '#334155' }}>{item.a}</p>}
+                    {isOpen && <p style={{ marginTop: '0.75rem', lineHeight: '1.6', color: '#334155' }}>{linkifyPhoneNumbers(item.a)}</p>}
                   </article>
                 );
               })}
