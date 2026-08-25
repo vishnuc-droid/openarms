@@ -613,7 +613,7 @@ export default function HomePage() {
           <p>Whether you're just starting to look for support or you've been thinking about it for a while, reaching out is the hardest part, and we're glad to help with what comes next.</p>
           <div className="final-cta-buttons">
             <Link href="/contact" className="final-cta-btn primary">Book an Appointment</Link>
-            <Link href="/contact" className="final-cta-btn secondary">Call Us</Link>
+            <a href="tel:+14059208934" className="final-cta-btn secondary">Call Us</a>
           </div>
         </div>
       </section>

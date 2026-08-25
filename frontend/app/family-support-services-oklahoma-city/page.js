@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
+import FamilySupportRequestForm from '@/components/FamilySupportRequestForm';
 
 export const metadata = { title: 'Family Support Services Oklahoma City | Open Arms', description: 'Find compassionate family support services in Oklahoma City. Open Arms Initiative helps families access guidance, education, resources, and appropriate support.', alternates: { canonical: 'https://www.openarmsinitiative.com/family-support-services-oklahoma-city/' } };
 
@@ -49,9 +50,9 @@ const needsIcons = [
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="6.5" r="2.6" /><circle cx="5.5" cy="9.5" r="2.1" /><circle cx="18.5" cy="9.5" r="2.1" /><path d="M8.2 20c.5-3.4 1.9-5 3.8-5s3.3 1.6 3.8 5" strokeDasharray="1.3 1.8" /><path d="M2.5 19c.4-2.4 1.4-3.6 3-3.9M21.5 19c-.4-2.4-1.4-3.6-3-3.9" /></svg>,
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M4 11.5 12 4l8 7.5" /><path d="M6 10v9.5h12V10" /><path d="M10 19.5v-5h4v5" strokeDasharray="1.2 1.6" /></svg>,
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M4 21c0-4.4 2.4-6.7 5.2-7.3M20 21c0-4.4-2.4-6.7-5.2-7.3" /><circle cx="9.2" cy="8" r="3" /><circle cx="14.8" cy="8" r="3" strokeDasharray="1.3 2" /></svg>,
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M4 11.5A7.5 7.5 0 1 1 11.5 19L4 21l2-4.5" /></svg>,
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M12 21s-1.5-3.4-1.5-8.3C10.5 6.8 12 3 12 3s1.5 3.8 1.5 9.7C13.5 17.6 12 21 12 21Z" /><path d="M4.5 12c1.6-.5 5.5-1 7.5 1M19.5 12c-1.6-.5-5.5-1-7.5 1" strokeDasharray="1.2 1.6" /></svg>,
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3.2s5.5 6.7 5.5 11a5.5 5.5 0 0 1-11 0c0-4.3 5.5-11 5.5-11Z" /><path d="M9.3 15.2a2.7 2.7 0 0 0 2.7 2.7" strokeDasharray="1.3 1.8" /></svg>,
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M8.5 12.3c-1.9-1.7-3-3-3-4.6a2.9 2.9 0 0 1 5.2-1.8A2.9 2.9 0 0 1 16 7.7c0 .7-.2 1.3-.5 1.9" /><path d="M12 12.5s-3.6 2.9-3.6 5.5a3.6 3.6 0 0 0 7.2 0c0-1-.3-1.9-.8-2.7" strokeDasharray="1.2 1.6" /></svg>,
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M12 21.2s6.5-5.3 6.5-11A6.5 6.5 0 0 0 5.5 10.2c0 5.7 6.5 11 6.5 11Z" /><circle cx="12" cy="10.2" r="2.4" strokeDasharray="1.2 1.6" /></svg>,
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M12 21v-7.5" /><path d="M12 13.5C12 9 9 7 6 6.3c-.3 3.6 1.2 6.6 6 7.2Z" /><path d="M12 13.5c0-4.8 3-7 6-7.7.4 4.1-1.3 7.3-6 7.7Z" strokeDasharray="1.2 1.6" /></svg>,
 ];
 
 const kindsIcons = [
@@ -117,8 +118,8 @@ export default function FamilySupportPage() { return <main className="fs-page">
   <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_FAQ) }} />
   <ScrollReveal />
 
-  <section className="fs-hero"><div className="fs-container fs-hero-grid">
-    <div className="reveal reveal-from-left">
+  <section className="fs-hero"><div className="fs-hero-split-inner">
+    <div className="fs-hero-copy reveal reveal-from-left">
       <p className="fs-kicker">SUPPORT FOR FAMILIES. STRENGTH FOR WHAT COMES NEXT.</p>
       <h1>Family Support Services<br />in Oklahoma City</h1>
       <p className="fs-lead">Because Sometimes Your Family Needs More Than Advice, You Need Someone to Help You Find the Way Forward</p>
@@ -127,34 +128,37 @@ export default function FamilySupportPage() { return <main className="fs-page">
       <p>Open Arms Initiative provides compassionate <strong>Family Support Services in Oklahoma City</strong> designed to help families feel informed, supported, and more connected to the resources they may need.</p>
       <div className="fs-actions"><Link href="/contact" className="fs-btn fs-solid">Connect With Open Arms</Link><a href="#needs" className="fs-btn fs-outline">Explore Family Support</a></div>
     </div>
-    <div className="fs-hero-media reveal reveal-from-right"><img src="/nh3.jpg" alt="Family finding support and guidance together in Oklahoma City" /></div>
+    <div className="fs-hero-form-card reveal reveal-from-right"><div className="fs-hero-form-body"><h3>Request an Appointment</h3><span className="fs-hero-form-underline" /><p className="fs-hero-form-sub">Tell us a bit about your family and we&rsquo;ll help you find the right support.</p><FamilySupportRequestForm /></div><div className="fs-hero-form-photo"><img src="/n11.jpg" alt="Family finding support and guidance together in Oklahoma City" /></div></div>
   </div></section>
 
   <section className="fs-trust-section"><div className="fs-container fs-trust">{['Family-Centered', 'Compassionate Guidance', 'Community Focused', 'Practical Support'].map((x, i) => <div key={x}><span>{trustIcons[i]}</span><p>{x}</p></div>)}</div></section>
 
-  <section className="fs-section"><div className="fs-container fs-alone reveal reveal-from-bottom">
+  <section className="fs-section"><div className="fs-container"><div className="fs-alone reveal reveal-from-bottom">
+    <span className="fs-alone-badge"><img src="/ng.png" alt="" /></span>
+    <i className="fs-alone-divider" />
     <h2>You Shouldn&rsquo;t Have to Figure Everything Out Alone</h2>
+    <i className="fs-alone-leaf"><span className="fs-alone-leaf-dot" /></i>
     <p>Sometimes families know they need help but don&apos;t know what kind of help they need.</p>
     <p>You may be asking:</p>
     <ul className="fs-quote-list">
-      <li>&ldquo;Who do I call?&rdquo;</li>
-      <li>&ldquo;Where can we find support?&rdquo;</li>
-      <li>&ldquo;What resources are available for our family?&rdquo;</li>
-      <li>&ldquo;What should we do next?&rdquo;</li>
+      <li><span className="fs-quote-icon">?</span>&ldquo;Who do I call?&rdquo;</li>
+      <li><span className="fs-quote-icon">?</span>&ldquo;Where can we find support?&rdquo;</li>
+      <li><span className="fs-quote-icon">?</span>&ldquo;What resources are available for our family?&rdquo;</li>
+      <li><span className="fs-quote-icon">?</span>&ldquo;What should we do next?&rdquo;</li>
     </ul>
     <p>Those questions can feel even harder when you&apos;re already worried about your child, your relationships, or your family&apos;s future.</p>
     <p>Open Arms Initiative exists to help families feel less alone while navigating those questions.</p>
     <p><strong>You don&apos;t need to arrive knowing exactly what you need. We can start with what your family is facing right now.</strong></p>
-  </div></section>
+  </div></div></section>
 
   <section id="needs" className="fs-section fs-needs-section"><div className="fs-container">
     <div className="fs-needs-head reveal reveal-from-bottom"><h2>Every Family&rsquo;s Needs<br />Look <em>Different</em></h2><i className="fs-line" /></div>
     <div className="fs-needs-grid reveal-stagger">{needs.map(([h, p], i) => <article className="reveal reveal-from-bottom fs-need-card" key={h}><span className="fs-need-icon">{needsIcons[i]}</span><h3>{h}</h3><p>{p}</p></article>)}</div>
   </div></section>
 
-  <section className="fs-section"><div className="fs-container"><div className="fs-understand">
+  <section className="fs-section fs-understand-section"><div className="fs-container"><div className="fs-understand">
     <div className="reveal reveal-from-left"><h2>Support Starts With Understanding What Your Family Needs</h2><p>There is no single solution that works for every household.</p><p>That&apos;s why meaningful family support begins with listening.</p><p>At Open Arms Initiative, we take time to understand the challenges you&apos;re facing and help identify appropriate next steps based on the services and resources available.</p></div>
-    <div className="fs-understand-media reveal reveal-from-bottom"><img src="/n2.jpg" alt="Notebook and coffee representing thoughtful, careful family support planning" /></div>
+    <div className="fs-understand-media reveal reveal-from-bottom"><img src="/nh3.jpg" alt="Family finding support and guidance together in Oklahoma City" /></div>
     <div className="reveal reveal-from-right">
       <p className="fs-kicker-label">SUPPORT MAY INCLUDE:</p>
       <div className="fs-check-grid">{supportList.map(x => <span key={x}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12.5 9 18 20 6" /></svg>{x}</span>)}</div>
@@ -176,7 +180,6 @@ export default function FamilySupportPage() { return <main className="fs-page">
     <p>If communication has become difficult, relationships feel strained, or your household is navigating significant emotional challenges, our <Link href="/family-therapy-oklahoma-city/">Family Counseling</Link> services may provide a more appropriate therapeutic environment.</p>
     <p>If your child or teenager is experiencing emotional or behavioral concerns, you can also explore our <Link href="/child-counseling-services-oklahoma-city/">Child &amp; Adolescent Counseling</Link> services.</p>
     <p><strong>Our goal is to help you understand the available options, not make you figure out the entire path by yourself.</strong></p>
-    <Link href="/services" className="fs-link-arrow">View Our Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h13.5M13 6l6 6-6 6" /></svg></Link>
   </div></div></section>
 
   <section className="fs-section fs-pillars-section"><div className="fs-container">
@@ -197,6 +200,6 @@ export default function FamilySupportPage() { return <main className="fs-page">
       <h3>Your Family Deserves to Feel Supported.</h3>
       <p>Open Arms Initiative is here to help you explore the next step.</p>
     </div>
-    <Link href="/contact" className="fs-btn fs-solid">Connect With Open Arms</Link>
+    <Link href="/contact" className="fs-btn fs-light">Connect With Open Arms</Link>
   </div></section>
 </main>}
