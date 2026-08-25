@@ -216,7 +216,7 @@ export default function JamieJamesPage() {
 
             {/* top pill */}
             <div className="jj-hero-pill">
-              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#5a7a3a" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20.5s-6.5-4-9-8.2C1.2 8.8 3 5.5 6.2 5.5c1.9 0 3.2 1 3.8 2.1.6-1.1 1.9-2.1 3.8-2.1 3.2 0 5 3.3 3.2 6.8-2.5 4.2-9 8.2-9 8.2Z"/></svg>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#2d5987" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20.5s-6.5-4-9-8.2C1.2 8.8 3 5.5 6.2 5.5c1.9 0 3.2 1 3.8 2.1.6-1.1 1.9-2.1 3.8-2.1 3.2 0 5 3.3 3.2 6.8-2.5 4.2-9 8.2-9 8.2Z"/></svg>
               Compassionate Guidance. Lasting Change.
             </div>
 
@@ -266,15 +266,15 @@ export default function JamieJamesPage() {
 
                 {/* wave at bottom of arch */}
                 <svg className="jj-arch-wave" viewBox="0 0 400 55" preserveAspectRatio="none" aria-hidden="true">
-                  <path d="M0 35 Q60 8 120 28 Q180 48 240 22 Q300 0 360 18 Q390 28 400 20 L400 55 L0 55Z" fill="#8DC540" opacity="0.4"/>
-                  <path d="M0 45 Q80 18 160 38 Q240 56 320 34 Q375 18 400 35 L400 55 L0 55Z" fill="#1a3a20" opacity="0.25"/>
+                  <path d="M0 35 Q60 8 120 28 Q180 48 240 22 Q300 0 360 18 Q390 28 400 20 L400 55 L0 55Z" fill="#00AFF7" opacity="0.4"/>
+                  <path d="M0 45 Q80 18 160 38 Q240 56 320 34 Q375 18 400 35 L400 55 L0 55Z" fill="#122336" opacity="0.25"/>
                 </svg>
               </div>
 
               {/* floating name card */}
               <div className="jj-arch-namecard">
                 <span className="jj-arch-namecard-icon">
-                  <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#ffffff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s-6.5-4-9-8.2C1.2 8.8 3 5.5 6.2 5.5c1.9 0 3.2 1 3.8 2.1.6-1.1 1.9-2.1 3.8-2.1 3.2 0 5 3.3 3.2 6.8C14.5 17 12 22 12 22Z"/></svg>
+                  <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#5B6B60" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s-6.5-4-9-8.2C1.2 8.8 3 5.5 6.2 5.5c1.9 0 3.2 1 3.8 2.1.6-1.1 1.9-2.1 3.8-2.1 3.2 0 5 3.3 3.2 6.8C14.5 17 12 22 12 22Z"/></svg>
                 </span>
                 <div>
                   <p className="jj-arch-namecard-name">Jamie James, LPC</p>
@@ -300,22 +300,22 @@ export default function JamieJamesPage() {
       <section className="jj-cred-section">
         <div className="jj-cred-bar reveal reveal-from-bottom">
           <div className="jj-cred">
-            <span className="jj-cred-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#8DC540" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><polyline points="9 12 11 14 15 10"/></svg></span>
+            <span className="jj-cred-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#00AFF7" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><polyline points="9 12 11 14 15 10"/></svg></span>
             <span>Licensed Professional Counselor</span>
           </div>
           <div className="jj-cred-divider" aria-hidden="true" />
           <div className="jj-cred">
-            <span className="jj-cred-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#8DC540" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></span>
+            <span className="jj-cred-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#00AFF7" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></span>
             <span>Founder &amp; President</span>
           </div>
           <div className="jj-cred-divider" aria-hidden="true" />
           <div className="jj-cred">
-            <span className="jj-cred-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#8DC540" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20.5s-6.5-4-9-8.2C1.2 8.8 3 5.5 6.2 5.5c1.9 0 3.2 1 3.8 2.1.6-1.1 1.9-2.1 3.8-2.1 3.2 0 5 3.3 3.2 6.8-2.5 4.2-9 8.2-9 8.2Z"/></svg></span>
+            <span className="jj-cred-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#00AFF7" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20.5s-6.5-4-9-8.2C1.2 8.8 3 5.5 6.2 5.5c1.9 0 3.2 1 3.8 2.1.6-1.1 1.9-2.1 3.8-2.1 3.2 0 5 3.3 3.2 6.8-2.5 4.2-9 8.2-9 8.2Z"/></svg></span>
             <span>Open Arms Initiative</span>
           </div>
           <div className="jj-cred-divider" aria-hidden="true" />
           <div className="jj-cred">
-            <span className="jj-cred-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#8DC540" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
+            <span className="jj-cred-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#00AFF7" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
             <span>Open Arms Foster Care</span>
           </div>
         </div>
@@ -326,7 +326,7 @@ export default function JamieJamesPage() {
         <div className="jj-inner">
           <div className="jj-myt-inner reveal reveal-from-bottom">
             <div className="jj-myt-badge">
-              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#3a6e2a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#224b76" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
               Meet Your Trainer
             </div>
             <h2 className="jj-myt-headline">
@@ -402,10 +402,10 @@ That's the perspective she brings into every training, workshop, and speaking en
       <section className="jj-topics">
         {/* top wave */}
         <svg className="jj-topics-wave-top" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M0 0 L0 40 Q180 80 360 30 Q540 0 720 40 Q900 70 1080 25 Q1260 0 1440 35 L1440 0Z" fill="#faf8f3"/>
+          <path d="M0 0 L0 40 Q180 80 360 30 Q540 0 720 40 Q900 70 1080 25 Q1260 0 1440 35 L1440 0Z" fill="#f2f6fb"/>
         </svg>
         <div className="jj-inner jj-topics-content">
-          <p className="jj-section-tag reveal reveal-from-bottom" style={{color:'#3a6e2a', fontSize:'1.5rem', letterSpacing:'0.02em', textTransform:'none', marginBottom:'0.75rem'}}>Popular Training Topics</p>
+          <p className="jj-section-tag reveal reveal-from-bottom" style={{color:'#224b76', fontSize:'1.5rem', letterSpacing:'0.02em', textTransform:'none', marginBottom:'0.75rem'}}>Popular Training Topics</p>
           <div className="jj-topics-grid reveal-stagger">
             {popularTopics.map((t, i) => (
               <Link key={i} href={t.href} className="jj-topic-card reveal reveal-from-bottom">
@@ -417,7 +417,7 @@ That's the perspective she brings into every training, workshop, and speaking en
         </div>
         {/* bottom wave */}
         <svg className="jj-topics-wave-bottom" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M0 60 L0 25 Q180 0 360 35 Q540 60 720 20 Q900 0 1080 35 Q1260 60 1440 25 L1440 60Z" fill="#faf8f3"/>
+          <path d="M0 60 L0 25 Q180 0 360 35 Q540 60 720 20 Q900 0 1080 35 Q1260 60 1440 25 L1440 60Z" fill="#f2f6fb"/>
         </svg>
       </section>
 
@@ -431,10 +431,10 @@ That's the perspective she brings into every training, workshop, and speaking en
           </div>
           <div className="jj-why-cards reveal-stagger">
             {[
-              { num:'', icon: <svg viewBox="0 0 24 24" fill="none" stroke="#3a6e2a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="34" height="34"><path d="M12 20.5s-6.5-4-9-8.2C1.2 8.8 3 5.5 6.2 5.5c1.9 0 3.2 1 3.8 2.1.6-1.1 1.9-2.1 3.8-2.1 3.2 0 5 3.3 3.2 6.8-2.5 4.2-9 8.2-9 8.2Z"/></svg>, title:'Practical, Compassionate Approach', desc:'Accessible, relatable training that leads to real-world impact.' },
-              { num:'', icon: <svg viewBox="0 0 24 24" fill="none" stroke="#3a6e2a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="34" height="34"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>, title:'Customized for Your Audience', desc:'Every session is tailored to your goals, context, and challenges.' },
-              { num:'', icon: <svg viewBox="0 0 24 24" fill="none" stroke="#3a6e2a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="34" height="34"><circle cx="9" cy="7" r="3"/><circle cx="15" cy="7" r="3"/><path d="M3 20c0-4 2.7-7 6-7h6c3.3 0 6 3 6 7"/></svg>, title:'Real-World Leadership Perspective', desc:'Grounded in leadership, clinical experience, and frontline service.' },
-              { num:'', icon: <svg viewBox="0 0 24 24" fill="none" stroke="#3a6e2a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="34" height="34"><path d="M12 2v4M8 6l4-4 4 4M5 10h14M5 10v10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V10M9 21v-6h6v6"/></svg>, title:'Faith-Sensitive or Professional Options', desc:'Faith-integrated or secular formats that respect your setting.' },
+              { num:'', icon: <svg viewBox="0 0 24 24" fill="none" stroke="#224b76" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="34" height="34"><path d="M12 20.5s-6.5-4-9-8.2C1.2 8.8 3 5.5 6.2 5.5c1.9 0 3.2 1 3.8 2.1.6-1.1 1.9-2.1 3.8-2.1 3.2 0 5 3.3 3.2 6.8-2.5 4.2-9 8.2-9 8.2Z"/></svg>, title:'Practical, Compassionate Approach', desc:'Accessible, relatable training that leads to real-world impact.' },
+              { num:'', icon: <svg viewBox="0 0 24 24" fill="none" stroke="#224b76" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="34" height="34"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>, title:'Customized for Your Audience', desc:'Every session is tailored to your goals, context, and challenges.' },
+              { num:'', icon: <svg viewBox="0 0 24 24" fill="none" stroke="#224b76" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="34" height="34"><circle cx="9" cy="7" r="3"/><circle cx="15" cy="7" r="3"/><path d="M3 20c0-4 2.7-7 6-7h6c3.3 0 6 3 6 7"/></svg>, title:'Real-World Leadership Perspective', desc:'Grounded in leadership, clinical experience, and frontline service.' },
+              { num:'', icon: <svg viewBox="0 0 24 24" fill="none" stroke="#224b76" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="34" height="34"><path d="M12 2v4M8 6l4-4 4 4M5 10h14M5 10v10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V10M9 21v-6h6v6"/></svg>, title:'Faith-Sensitive or Professional Options', desc:'Faith-integrated or secular formats that respect your setting.' },
             ].map((c, i) => (
               <div key={i} className="jj-why-card reveal reveal-from-bottom">
                 <span className="jj-why-card-num">{c.num}</span>

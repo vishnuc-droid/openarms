@@ -4200,7 +4200,7 @@ footer a:hover {
 /* ── Base ── */
 .jj-page {
   background: #ffffff;
-  color: #ffffff;
+  color: #072B3A;
   font-family: var(--font-dm-sans), Arial, sans-serif;
 }
 
@@ -4225,7 +4225,7 @@ footer a:hover {
   font-family: var(--font-plus-jakarta-sans), sans-serif;
   font-size: clamp(1.75rem, 3.5vw, 2.3rem);
   font-weight: 700;
-  color: #ffffff;
+  color: #072B3A;
   margin: 0 0 1.5rem;
   line-height: 1.2;
 }
@@ -4336,7 +4336,7 @@ footer a:hover {
   font-family: var(--font-plus-jakarta-sans), sans-serif;
   font-size: clamp(2.4rem, 4.6vw, 3.6rem);
   font-weight: 700;
-  color: #ffffff;
+  color: #072B3A;
   line-height: 1.08;
   margin: 0 0 0.9rem;
 }
@@ -4512,14 +4512,14 @@ footer a:hover {
   font-family: var(--font-dm-sans), sans-serif;
   font-size: 0.88rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #072B3A;
   margin: 0;
   line-height: 1.2;
 }
 
 .jj-arch-namecard-sub {
   font-size: 0.72rem;
-  color: #3370b1;
+  color: #5B6B60;
   margin: 0;
   line-height: 1.2;
 }
@@ -4624,7 +4624,7 @@ footer a:hover {
   font-family: var(--font-plus-jakarta-sans), sans-serif;
   font-size: clamp(1.8rem, 3.5vw, 2.5rem);
   font-weight: 700;
-  color: #ffffff;
+  color: #072B3A;
   margin: 0.25rem 0 1.25rem;
   line-height: 1.15;
   text-align: left;
@@ -4677,7 +4677,7 @@ footer a:hover {
   border-radius: 16px;
   padding: 2rem 1.75rem;
   text-decoration: none;
-  color: #ffffff;
+  color: #072B3A;
   line-height: 1.4;
   transition: box-shadow 0.2s, transform 0.18s, border-color 0.2s;
 }
@@ -4703,13 +4703,13 @@ footer a:hover {
 .jj-train-title {
   font-size: 1rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #072B3A;
   line-height: 1.35;
 }
 
 .jj-train-desc {
   font-size: 0.88rem;
-  color: #326cab;
+  color: #5B6B60;
   line-height: 1.65;
   margin-top: -0.25rem;
 }
@@ -4782,7 +4782,7 @@ footer a:hover {
 .jj-topic-card-label {
   font-size: 0.97rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #072B3A;
   line-height: 1.35;
 }
 
@@ -4968,7 +4968,7 @@ footer a:hover {
 
 /* ══ CTA BANNER ══ */
 .jj-cta {
-  background: linear-gradient(135deg, #0170ED 0%, #0170ED 100%);
+  background: radial-gradient(circle at 88% 12%, rgba(0,175,247,.28) 0%, rgba(0,175,247,0) 45%), linear-gradient(100deg, #072B3A 0%, #0170ED 100%);
   padding: 4.5rem 1.5rem;
 }
 
@@ -4993,7 +4993,7 @@ footer a:hover {
 
 .jj-cta-sub {
   font-size: 0.98rem;
-  color: #8bb3dd;
+  color: #ffffff;
   margin: 0;
   max-width: 460px;
   line-height: 1.6;
@@ -6279,7 +6279,7 @@ footer a:hover {
   background: #F0F7FE;
 }
 .cbt-prose-section--dark {
-  background: linear-gradient(135deg, #00AFF7 0%, #0170ED 100%);
+  background: radial-gradient(circle at 88% 12%, rgba(0,175,247,.28) 0%, rgba(0,175,247,0) 45%), linear-gradient(100deg, #072B3A 0%, #0170ED 100%);
 }
 .cbt-prose-section--dark .cbt-prose-h2 {
   color: #fff;
@@ -6316,7 +6316,7 @@ footer a:hover {
 /* ── Audience section — dark band ── */
 .cbt-audience-section {
   padding: 5rem 1.5rem;
-  background: linear-gradient(135deg, #00AFF7 0%, #0170ED 100%);
+  background: radial-gradient(circle at 88% 12%, rgba(0,175,247,.28) 0%, rgba(0,175,247,0) 45%), linear-gradient(100deg, #072B3A 0%, #0170ED 100%);
 }
 .cbt-audience-inner {
   max-width: 960px;
@@ -7625,7 +7625,8 @@ footer a:hover {
   background-color: #0170ED;
   background-image: radial-gradient(120% 160% at 15% 0%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 55%),
     linear-gradient(180deg, rgba(0, 0, 0, 0.06) 0%, rgba(0, 0, 0, 0) 40%),
-    linear-gradient(135deg, #00AFF7 0%, #0170ED 100%);
+    radial-gradient(circle at 88% 12%, rgba(0, 175, 247, 0.28) 0%, rgba(0, 175, 247, 0) 45%),
+    linear-gradient(100deg, #072B3A 0%, #0170ED 100%);
   padding: 80px 24px;
 }
 
