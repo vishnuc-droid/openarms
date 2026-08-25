@@ -245,12 +245,12 @@ export default function TraumaMentalHealthTrainingPage() {
           <div className="tmh2-hero-copy reveal reveal-from-left">
             <svg className="tmh2-copy-dots" viewBox="0 0 90 70" fill="none" aria-hidden="true">
               {[0, 1, 2, 3].map((row) => [0, 1, 2, 3, 4].map((col) => (
-                <circle key={`${row}-${col}`} cx={col * 16 + 8} cy={row * 16 + 8} r="2.4" fill="#8DC540" opacity="0.3" />
+                <circle key={`${row}-${col}`} cx={col * 16 + 8} cy={row * 16 + 8} r="2.4" fill="#00AFF7" opacity="0.3" />
               )))}
             </svg>
             <svg className="tmh2-copy-dots-tl" viewBox="0 0 90 70" fill="none" aria-hidden="true">
               {[0, 1, 2, 3].map((row) => [0, 1, 2, 3, 4].map((col) => (
-                <circle key={`${row}-${col}`} cx={col * 16 + 8} cy={row * 16 + 8} r="2.4" fill="#8DC540" opacity="0.25" />
+                <circle key={`${row}-${col}`} cx={col * 16 + 8} cy={row * 16 + 8} r="2.4" fill="#00AFF7" opacity="0.25" />
               )))}
             </svg>
             <div className="tmh2-pill">
@@ -515,7 +515,7 @@ export default function TraumaMentalHealthTrainingPage() {
               </div>
               <a href="https://www.youtube.com/watch?v=cdCBtTdeMxk" target="_blank" rel="noopener noreferrer" className="tmh2-jamie-video">
                 <img src="https://img.youtube.com/vi/cdCBtTdeMxk/mqdefault.jpg" alt="You Were Never Called to Carry Everyone, Jamie James" />
-                <span className="tmh2-jamie-video-play"><svg viewBox="0 0 24 24" width="14" height="14" fill="#093129"><polygon points="5,3 19,12 5,21" /></svg></span>
+                <span className="tmh2-jamie-video-play"><svg viewBox="0 0 24 24" width="14" height="14" fill="#0170ED"><polygon points="5,3 19,12 5,21" /></svg></span>
                 <div>
                   <p className="tmh2-jamie-video-title">You Were Never Called to Carry Everyone</p>
                   <p className="tmh2-jamie-video-sub">Sustainability in Helping-Profession Work</p>
@@ -616,7 +616,7 @@ export default function TraumaMentalHealthTrainingPage() {
 
       <style>{`
         .tmh2-page{
-          --green:#8DC540; --green-dark:#093129; --cream:#EDFFE1; --tint:#F3F8ED;
+          --green:#00AFF7; --green-dark:#0170ED; --cream:#E6F2FD; --tint:#F0F7FE;
           --ink:#1B2B22; --muted:#5B6B60; --line:#E3EADD; --white:#fff;
           background:var(--white); color:var(--ink);
           font-family:'DM Sans', Arial, sans-serif;
@@ -636,22 +636,22 @@ export default function TraumaMentalHealthTrainingPage() {
           text-decoration:none; transition:opacity .2s ease, background .2s ease;
           border:none; cursor:pointer;
         }
-        .tmh2-btn-primary{ background:var(--green); color:var(--green-dark); border-radius:8px; }
-        .tmh2-btn-primary:hover{ background:#7ab234; }
+        .tmh2-btn-primary{ background:linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%); color:#fff; border-radius:8px; }
+        .tmh2-btn-primary:hover{ filter:brightness(1.08); }
         .tmh2-btn-outline{ background:transparent; color:var(--green-dark); border:1.5px solid #c9d6c5; border-radius:8px; }
-        .tmh2-btn-outline:hover{ background:var(--tint); border-color:#8DC540; }
+        .tmh2-btn-outline:hover{ background:var(--tint); border-color:var(--green); }
         .tmh2-btn-dark{ background:var(--green-dark); color:var(--cream); }
         .tmh2-btn-dark:hover{ opacity:.9; }
-        .tmh2-btn-accent{ background:var(--green); color:var(--green-dark); }
+        .tmh2-btn-accent{ background:linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%); color:#fff; }
         .tmh2-link{ color:var(--green-dark); font-weight:700; font-size:14px; border-bottom:1.5px solid var(--green); }
 
         /* HERO — full width */
         .tmh2-hero{ padding:80px 0;   min-height: calc(100vh - 84px);}
         .tmh2-hero-inner{ display:grid; grid-template-columns:1fr 0.95fr; gap:56px; align-items:center; max-width:100%; width:100%; padding:0 4vw; }
-        .tmh2-pill{ display:inline-flex; align-items:center; gap:8px; background:var(--tint); color:#4c8a1f; border:1px solid rgba(141,197,64,.35); font-size:13px; font-weight:700; padding:8px 16px 8px 14px; border-radius:30px; margin-bottom:20px; width:fit-content; align-self:flex-start; }
+        .tmh2-pill{ display:inline-flex; align-items:center; gap:8px; background:var(--tint); color:var(--green-dark); border:1px solid rgba(1,112,237,.35); font-size:13px; font-weight:700; padding:8px 16px 8px 14px; border-radius:30px; margin-bottom:20px; width:fit-content; align-self:flex-start; }
         .tmh2-hero-h1{ font-size:clamp(2.2rem, 3.6vw, 3.2rem); line-height:1.12; margin-bottom:14px; }
         .tmh2-hero-h1-accent{ color:var(--green); }
-        .tmh2-hero-tagline{ font-size:16px; font-weight:700; color:var(--green-dark); margin:0 0 10px; }
+        .tmh2-hero-tagline{ font-size:16px; font-weight:700; color:#5B6B60; margin:0 0 10px; }
         .tmh2-hero-desc{ font-size:15px; color:var(--muted); line-height:1.7; max-width:90%; margin-bottom:24px; }
         .tmh2-desc-short{ display:none; }
         .tmh2-desc-full{ display:inline; }
@@ -664,12 +664,12 @@ export default function TraumaMentalHealthTrainingPage() {
         .tmh2-copy-dots-tl{ position:absolute; top:-90px; left:-10px; width:100px; height:80px; z-index:0; pointer-events:none; }
 
         .tmh2-hero-features{ display:flex; flex-wrap:wrap; gap:22px; margin-bottom:26px; }
-        .tmh2-hero-feature{ display:flex; align-items:center; gap:8px; font-size:13.5px; font-weight:700; color:var(--green-dark); }
-        .tmh2-hero-feature-icon{ color:var(--green); display:flex; }
+        .tmh2-hero-feature{ display:flex; align-items:center; gap:8px; font-size:13.5px; font-weight:700; color:#5B6B60; }
+        .tmh2-hero-feature-icon{ color:#5B6B60; display:flex; }
 
         .tmh2-hero-ctas{ display:flex; gap:14px; flex-wrap:wrap; margin-bottom:30px; }
 
-        .tmh2-hero-stats{ display:flex; gap:0; background:var(--tint); border:1px solid rgba(141,197,64,.25); border-radius:16px; padding:20px 24px; flex-wrap:wrap; }
+        .tmh2-hero-stats{ display:flex; gap:0; background:var(--tint); border:1px solid rgba(1,112,237,.25); border-radius:16px; padding:20px 24px; flex-wrap:wrap; }
         .tmh2-stat{ flex:1; min-width:150px; display:flex; align-items:center; gap:10px; font-size:13px; color:var(--muted); }
         .tmh2-stat strong{ color:var(--green-dark); font-size:15px; }
         .tmh2-stat-icon{ color:var(--green); display:flex; flex-shrink:0; }
@@ -695,7 +695,7 @@ export default function TraumaMentalHealthTrainingPage() {
         }
 
         .tmh2-hero-form{ display:flex; flex-direction:column; gap:13px; }
-        .tmh2-form-label{ font-size:13px; font-weight:700; color:var(--green-dark); margin-bottom:-7px; }
+        .tmh2-form-label{ font-size:13px; font-weight:700; color:#5B6B60; margin-bottom:-7px; }
         .tmh2-form-input-wrap{ display:flex; align-items:center; gap:10px; border:1.5px solid var(--line); border-radius:9px; padding:10px 13px; color:var(--muted); }
         .tmh2-form-input-wrap:focus-within{ border-color:var(--green); }
         .tmh2-form-input-wrap svg{ flex-shrink:0; }
@@ -741,7 +741,7 @@ export default function TraumaMentalHealthTrainingPage() {
           box-shadow:0 4px 18px rgba(9,49,41,0.05);
           transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
         }
-        .tmh2-who-card:hover{ transform:translateY(-5px); box-shadow:0 14px 32px rgba(9,49,41,0.12); border-color:rgba(141,197,64,.45); }
+        .tmh2-who-card:hover{ transform:translateY(-5px); box-shadow:0 14px 32px rgba(9,49,41,0.12); border-color:rgba(1,112,237,.45); }
         .tmh2-who-card-accent{ position:absolute; left:0; top:0; bottom:0; width:4px; background:var(--green); transform:scaleY(0); transform-origin:top; transition:transform .25s ease; }
         .tmh2-who-card:hover .tmh2-who-card-accent{ transform:scaleY(1); }
         .tmh2-who-icon{
@@ -773,7 +773,7 @@ export default function TraumaMentalHealthTrainingPage() {
         .tmh2-flagship-body{ flex:1; }
         .tmh2-flagship-eyebrow{ color:var(--green); font-weight:700; font-size:12px; letter-spacing:.1em; text-transform:uppercase; margin-bottom:6px; }
         .tmh2-flagship h3{ color:var(--white); font-size:22px; margin-bottom:8px; }
-        .tmh2-flagship p{ color:#c9dcc3; font-size:14.5px; line-height:1.6; margin:0; }
+        .tmh2-flagship p{ color:#cfe8fc; font-size:14.5px; line-height:1.6; margin:0; }
         .tmh2-flagship-cta{ flex-shrink:0; }
 
         /* PROGRAMS */
@@ -808,7 +808,7 @@ export default function TraumaMentalHealthTrainingPage() {
         .tmh2-jamie-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
         .tmh2-jamie-content{ padding:34px 40px; color:var(--cream); }
         .tmh2-jamie-content h3{ color:var(--white); font-size:24px; margin-bottom:12px; }
-        .tmh2-jamie-content > p{ color:#c9dcc3; font-size:14.5px; line-height:1.7; margin-bottom:18px; max-width:600px; }
+        .tmh2-jamie-content > p{ color:#cfe8fc; font-size:14.5px; line-height:1.7; margin-bottom:18px; max-width:600px; }
         .tmh2-jamie-tags{ display:flex; flex-wrap:wrap; gap:22px; margin-bottom:20px; }
         .tmh2-jamie-tag{ display:flex; align-items:center; gap:8px; font-size:14px; font-weight:600; color:var(--white); }
         .tmh2-jamie-tag span{ width:28px; height:28px; border-radius:50%; background:rgba(255,255,255,.12); display:flex; align-items:center; justify-content:center; }
@@ -816,17 +816,17 @@ export default function TraumaMentalHealthTrainingPage() {
         .tmh2-jamie-video img{ width:120px; height:80px; border-radius:8px; object-fit:cover; flex-shrink:0; }
         .tmh2-jamie-video-play{ position:absolute; left:60px; top:50%; transform:translate(-50%,-50%); width:32px; height:32px; border-radius:50%; background:var(--green); display:flex; align-items:center; justify-content:center; }
         .tmh2-jamie-video-title{ color:var(--white); font-size:14px; font-weight:700; margin:0 0 4px; }
-        .tmh2-jamie-video-sub{ color:#a8c99a; font-size:12.5px; margin:0; }
+        .tmh2-jamie-video-sub{ color:#9fc9f5; font-size:12.5px; margin:0; }
 
         /* FORMATS — elegant dark "journey" band */
         .tmh2-formats-section{ position:relative; overflow:hidden; isolation:isolate; background:var(--green-dark); padding:70px 0; }
-        .tmh2-formats-glow{ position:absolute; top:-140px; right:-100px; width:420px; height:420px; border-radius:50%; background:radial-gradient(circle, rgba(141,197,64,0.18) 0%, transparent 70%); pointer-events:none; }
+        .tmh2-formats-glow{ position:absolute; top:-140px; right:-100px; width:420px; height:420px; border-radius:50%; background:radial-gradient(circle, rgba(0,175,247,0.18) 0%, transparent 70%); pointer-events:none; }
         .tmh2-formats-header{ text-align:center; max-width:620px; margin:0 auto 50px; }
-        .tmh2-formats-eyebrow{ display:inline-block; font-size:12.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--green); background:rgba(141,197,64,0.12); border:1px solid rgba(141,197,64,0.3); padding:6px 16px; border-radius:20px; margin-bottom:16px; }
+        .tmh2-formats-eyebrow{ display:inline-block; font-size:12.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--green); background:rgba(0,175,247,0.12); border:1px solid rgba(0,175,247,0.3); padding:6px 16px; border-radius:20px; margin-bottom:16px; }
         .tmh2-formats-title{ color:#ffffff; font-size:30px; margin-bottom:12px; }
-        .tmh2-formats-sub{ color:#d4e8d4; font-size:14.5px; line-height:1.65; margin:0; }
+        .tmh2-formats-sub{ color:#cfe8fc; font-size:14.5px; line-height:1.65; margin:0; }
         .tmh2-formats-track{ position:relative; display:grid; grid-template-columns:repeat(6,1fr); gap:12px; }
-        .tmh2-formats-line{ position:absolute; top:29px; left:8%; right:8%; height:1.5px; background:repeating-linear-gradient(90deg, rgba(141,197,64,0.4) 0 8px, transparent 8px 16px); z-index:0; }
+        .tmh2-formats-line{ position:absolute; top:29px; left:8%; right:8%; height:1.5px; background:repeating-linear-gradient(90deg, rgba(0,175,247,0.4) 0 8px, transparent 8px 16px); z-index:0; }
         .tmh2-format-node{ position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; gap:14px; text-align:center; }
         .tmh2-format-circle{ width:58px; height:58px; border-radius:50%; background:var(--white); color:var(--green-dark); display:flex; align-items:center; justify-content:center; box-shadow:0 8px 20px rgba(0,0,0,0.25); transition:transform .22s ease, background .22s ease, color .22s ease; }
         .tmh2-format-node:hover .tmh2-format-circle{ transform:translateY(-4px); background:var(--green); color:var(--white); }
@@ -842,7 +842,7 @@ export default function TraumaMentalHealthTrainingPage() {
           padding:30px 26px; background:var(--white); display:flex; flex-direction:column; justify-content:center;
           transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
         }
-        .tmh2-why-tile:hover{ transform:translateY(-4px); box-shadow:0 16px 34px rgba(9,49,41,0.1); border-color:rgba(141,197,64,.4); }
+        .tmh2-why-tile:hover{ transform:translateY(-4px); box-shadow:0 16px 34px rgba(9,49,41,0.1); border-color:rgba(1,112,237,.4); }
         .tmh2-why-tile-num{ position:absolute; top:14px; right:20px; font-size:42px; font-weight:800; color:var(--tint); line-height:1; user-select:none; }
         .tmh2-why-tile-icon{ width:56px; height:56px; border-radius:14px; background:var(--tint); color:var(--green); display:flex; align-items:center; justify-content:center; margin-bottom:18px; position:relative; z-index:1; }
         .tmh2-why-tile h4{ font-size:16px; margin-bottom:8px; position:relative; z-index:1; }
@@ -855,19 +855,19 @@ export default function TraumaMentalHealthTrainingPage() {
           display:flex; flex-direction:column; justify-content:center; align-self:stretch;
         }
         .tmh2-why-tile--feature .tmh2-why-tile-num{ color:rgba(255,255,255,0.08); font-size:64px; }
-        .tmh2-why-tile--feature .tmh2-why-tile-icon{ background:rgba(141,197,64,0.15); color:var(--green); width:64px; height:64px; }
+        .tmh2-why-tile--feature .tmh2-why-tile-icon{ background:rgba(0,175,247,0.15); color:var(--green); width:64px; height:64px; }
         .tmh2-why-tile--feature h4{ color:var(--white); font-size:20px; }
-        .tmh2-why-tile--feature p{ color:#c9dcc3; font-size:14.5px; }
+        .tmh2-why-tile--feature p{ color:#cfe8fc; font-size:14.5px; }
         .tmh2-why-tile--feature:hover{ transform:translateY(-4px); box-shadow:0 20px 40px rgba(9,49,41,0.3); border-color:var(--green); }
 
 /* FINAL CTA */
         .tmh2-final-cta{ background:var(--green-dark); padding:56px 0; }
         .tmh2-final-cta-inner{ display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; }
         .tmh2-final-cta-inner h2{ color:var(--white); font-size:28px; margin-bottom:8px; }
-        .tmh2-final-cta-inner p{ color:#a8d890; font-size:15px; margin:0; max-width:460px; }
+        .tmh2-final-cta-inner p{ color:#9fc9f5; font-size:15px; margin:0; max-width:460px; }
 
         /* STICKY */
-        .tmh2-sticky-bar{ display:none; position:fixed; bottom:0; left:0; right:0; z-index:200; padding:.85rem 1.25rem calc(.85rem + env(safe-area-inset-bottom,0px)); background:rgba(9,49,41,.97); backdrop-filter:blur(8px); transform:translateY(100%); transition:transform .3s cubic-bezier(.22,1,.36,1); }
+        .tmh2-sticky-bar{ display:none; position:fixed; bottom:0; left:0; right:0; z-index:200; padding:.85rem 1.25rem calc(.85rem + env(safe-area-inset-bottom,0px)); background:rgba(7,43,58,.97); backdrop-filter:blur(8px); transform:translateY(100%); transition:transform .3s cubic-bezier(.22,1,.36,1); }
         .tmh2-sticky-bar--visible{ transform:translateY(0); }
         .tmh2-sticky-btn{ width:100%; justify-content:center; }
 

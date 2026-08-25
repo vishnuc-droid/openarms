@@ -5,6 +5,19 @@ import Link from 'next/link';
 
 function Arrow() { return <span aria-hidden="true">→</span>; }
 
+const PHONE_PATTERN = /\+1 \(\d{3}\) \d{3}-\d{4}/g;
+
+function linkifyPhoneNumbers(text) {
+  const parts = text.split(PHONE_PATTERN);
+  const matches = text.match(PHONE_PATTERN) || [];
+  return parts.flatMap((part, index) => {
+    const match = matches[index];
+    if (!match) return [part];
+    const tel = `tel:${match.replace(/[^\d+]/g, '')}`;
+    return [part, <a key={index} href={tel}>{match}</a>];
+  });
+}
+
 const faqCategories = [
   {
     category: 'Counseling & Therapy',
@@ -57,7 +70,7 @@ const faqCategories = [
       },
       {
         q: 'How do I book my first counseling appointment?',
-        a: 'You can submit an appointment request through our Contact page or call our office directly at (405) 555-0199.',
+        a: 'You can submit an appointment request through our Contact page or call our office directly at +1 (405) 920-8934.',
       },
     ],
   },
@@ -90,7 +103,7 @@ export default function FAQPage() {
     <main style={{ maxWidth: '1100px', margin: '0 auto', padding: '8rem 1.5rem 3rem' }}>
       <section className="section-intro" style={{ textAlign: 'center', marginBottom: '3rem' }}>
         <span className="services-kicker">Help Center</span>
-        <h1 style={{ fontSize: '3rem', margin: '0.5rem 0 1rem', color: '#052E26' }}>
+        <h1 style={{ fontSize: '3rem', margin: '0.5rem 0 1rem', color: '#0170ED' }}>
           Frequently Asked Questions
         </h1>
         <p style={{ fontSize: '1.2rem', color: '#4a5568', maxWidth: '700px', margin: '0 auto 2rem' }}>
@@ -107,7 +120,7 @@ export default function FAQPage() {
               width: '100%',
               padding: '1rem 1.25rem',
               borderRadius: '30px',
-              border: '2px solid #8DC540',
+              border: '2px solid #00AFF7',
               fontSize: '1rem',
               outline: 'none',
             }}
@@ -122,9 +135,9 @@ export default function FAQPage() {
               style={{
                 padding: '0.6rem 1.25rem',
                 borderRadius: '20px',
-                border: '1px solid #052E26',
-                background: activeCategory === catName ? '#052E26' : '#fff',
-                color: activeCategory === catName ? '#fff' : '#052E26',
+                border: '1px solid #0170ED',
+                background: activeCategory === catName ? '#0170ED' : '#fff',
+                color: activeCategory === catName ? '#fff' : '#0170ED',
                 cursor: 'pointer',
                 fontWeight: '500',
               }}
@@ -142,7 +155,7 @@ export default function FAQPage() {
       ) : (
         filteredCategories.map((cat, catIndex) => (
           <div key={cat.category} style={{ marginBottom: '3rem' }}>
-            <h2 style={{ fontSize: '1.6rem', color: '#052E26', marginBottom: '1.5rem', borderBottom: '2px solid #EDFFE1', paddingBottom: '0.5rem' }}>
+            <h2 style={{ fontSize: '1.6rem', color: '#0170ED', marginBottom: '1.5rem', borderBottom: '2px solid #E6F2FD', paddingBottom: '0.5rem' }}>
               {cat.category}
             </h2>
             <div className="accordion">
@@ -155,7 +168,7 @@ export default function FAQPage() {
                       {item.q}
                       <span>{isOpen ? '−' : '+'}</span>
                     </button>
-                    {isOpen && <p style={{ marginTop: '0.75rem', lineHeight: '1.6', color: '#334155' }}>{item.a}</p>}
+                    {isOpen && <p style={{ marginTop: '0.75rem', lineHeight: '1.6', color: '#334155' }}>{linkifyPhoneNumbers(item.a)}</p>}
                   </article>
                 );
               })}
@@ -164,8 +177,8 @@ export default function FAQPage() {
         ))
       )}
 
-      <section style={{ textAlign: 'center', background: '#EDFFE1', padding: '3rem', borderRadius: '16px', marginTop: '2rem' }}>
-        <h3 style={{ fontSize: '1.8rem', color: '#052E26', marginBottom: '0.5rem' }}>Have a question not listed here?</h3>
+      <section style={{ textAlign: 'center', background: '#E6F2FD', padding: '3rem', borderRadius: '16px', marginTop: '2rem' }}>
+        <h3 style={{ fontSize: '1.8rem', color: '#0170ED', marginBottom: '0.5rem' }}>Have a question not listed here?</h3>
         <p style={{ color: '#4a5568', marginBottom: '1.5rem' }}>Our intake specialists are available to guide you.</p>
         <Link className="button button-dark" href="/contact">
           Contact Our Team <Arrow />
