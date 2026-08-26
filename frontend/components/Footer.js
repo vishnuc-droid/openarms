@@ -53,6 +53,7 @@ export default function Footer() {
 
           <div className="footer-services-col">
             <h3>Services</h3>
+            <div className="footer-underline footer-underline-services" />
             <div className="footer-services-grid">
               {serviceColumns.map((col, i) => (
                 <div className="footer-services-column" key={i}>
