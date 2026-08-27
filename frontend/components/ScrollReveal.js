@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 
 export default function ScrollReveal() {
   useEffect(() => {
-    const revealEls = document.querySelectorAll('.reveal');
+    const revealEls = document.querySelectorAll('.reveal, .section-reveal');
     if (revealEls.length === 0) return;
     if (typeof IntersectionObserver === 'undefined') {
       revealEls.forEach((el) => el.classList.add('is-visible'));

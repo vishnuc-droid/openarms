@@ -77,6 +77,13 @@ const stepIcons = [
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M3 12h15.5" /><path d="m13.5 6 6 6-6 6" /></svg>,
 ];
 
+const teamMembers = [
+  { name: 'Jamie James, LPC', title: 'President & Founder', photo: '/Jamie James - LPC.jpg' },
+  { name: "D'Fawn Downs, LPC", title: 'Corporate Compliance Officer & Clinical Director', photo: "/D'Fawn Downs - LPC.jpg" },
+  { name: 'Brandon Martin', title: 'CFO', photo: '/Brandon Martin.jpg' },
+  { name: 'Stephanie Caldwell', title: 'Parent Relations Director', photo: '/Stephanie Caldwell.jpg' },
+];
+
 const faqs = [
   ['How do I know if my child may benefit from counseling?', 'Consider speaking with a mental health professional if you’ve noticed persistent changes in your child’s mood, behavior, relationships, school experience, communication, or ability to cope with everyday challenges. You can also seek counseling simply because your child is navigating a difficult transition and could benefit from additional support.'],
   ['What happens during child counseling?', 'The counseling process depends on your child’s age, needs, concerns, and treatment goals. A therapist may use developmentally appropriate conversations, activities, and therapeutic approaches to help your child communicate, explore emotions, and develop healthy coping skills.'],
@@ -98,6 +105,35 @@ export default function ChildCounselingPage() { return <main className="ca-page"
   <section id="approach" className="ca-section"><div className="ca-container"><div className="ca-more"><div className="ca-more-media reveal reveal-from-left"><img src="/chx.jpg" alt="Therapist listening attentively to a child during a counseling session" /></div><div className="reveal reveal-from-right"><p className="ca-kicker-label">SOMETIMES BEHAVIOR IS COMMUNICATION</p><h2>Behind the Behavior Is a Young Person Trying to Make Sense of What They Feel</h2><p>A child may not say, &ldquo;I&apos;m overwhelmed.&rdquo; They might become angry. They may not say, &ldquo;I&apos;m worried about what is happening at home.&rdquo; They might become quieter. A teenager may not say, &ldquo;I don&apos;t know who I can talk to.&rdquo; They may begin pulling away.</p><p>Behavior doesn&apos;t always tell us exactly what is happening, but it can tell us that something deserves attention. Counseling gives children and adolescents an age-appropriate environment to explore emotions, experiences, relationships, and concerns with professional support.</p><p><strong>Behind the behavior is a young person trying to make sense of what they feel.</strong></p></div></div></div></section>
   <section className="ca-statement"><div className="ca-container reveal reveal-scale-in"><div><h2>&ldquo;Your child doesn&rsquo;t need to have the right words. They need to know there is a safe place to find them.&rdquo;</h2><Link href="/contact" className="ca-btn ca-light">Request a Child Counseling Appointment</Link></div><img src="/ch7.jpg" alt="Parent and child sharing a calm, supportive moment together" /><aside>You don&apos;t have to know exactly what&apos;s happening before reaching out.<br /><br />And your child doesn&apos;t need to arrive ready to explain everything.<br /><br />We can start by creating a space where they feel safe enough to simply be themselves.</aside></div></section>
   <section className="ca-section ca-safe-section"><div className="ca-container"><h2 className="ca-center reveal reveal-from-bottom">A Space Designed to Help Children &amp; Teens Feel Safe</h2><i className="ca-line-center" /><div className="ca-safe reveal-stagger">{[['For Younger Children', 'Children may communicate differently from adults. Depending on the child’s needs and the clinician’s approach, counseling may use age-appropriate conversation, activities, and other methods to help children communicate and explore emotions.'], ['For Adolescents', 'Teenagers may need a place where they can speak honestly about emotions, relationships, school, family, identity, expectations, or other concerns without feeling judged.'], ['For Parents & Caregivers', 'Supporting the child can also involve supporting the adults who care for them. When appropriate, therapists can work with parents or caregivers to help them better understand concerns, reinforce healthy strategies, and support progress outside counseling.']].map(([h, p]) => <article className="reveal reveal-from-bottom" key={h}><h3>{h}</h3><p>{p}</p></article>)}</div></div></section>
+  <section id="about" className="team-connect-section">
+    <div className="team-connect-container section-reveal section-reveal-right">
+      <div className="team-connect-copy reveal reveal-from-left">
+        <span className="care-badge">Our Team</span>
+        <h2 className="team-connect-title">
+          Care Starts With People You Can Trust
+          <svg className="team-connect-underline" viewBox="0 0 220 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8c30-10 60-10 90 0s90 10 126-2" fill="none" stroke="#0170ED" strokeWidth="3" strokeLinecap="round"/></svg>
+        </h2>
+        <p>Behind every session is a real person who&apos;s chosen this work, not a call center, not an algorithm.</p>
+        <Link href="/about-us" className="team-connect-link">
+          Meet Our Team
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </Link>
+      </div>
+      <div className="team-photo-grid reveal-stagger">
+        {teamMembers.map((member) => (
+          <div className="team-photo-card reveal reveal-from-bottom" key={member.name}>
+            <div className="team-photo-media">
+              <img src={member.photo} alt={member.name} />
+            </div>
+            <div className="team-photo-caption">
+              <span className="team-photo-name">{member.name}</span>
+              <span className="team-photo-title">{member.title}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
   <section className="ca-section ca-support-section ca-support-section-a"><div className="ca-container"><div className="ca-support-block reveal reveal-from-bottom"><h2>Helping Your Child Build Skills They Can Carry Forward</h2><p>Counseling isn&apos;t about changing who your child is. It&apos;s about helping them better understand themselves and develop skills for navigating difficult experiences.</p><p>Depending on your child&apos;s individual needs and goals, counseling may support:</p><ul>{['Recognizing and expressing emotions', 'Developing healthy coping strategies', 'Improving communication', 'Building confidence and self-awareness', 'Navigating friendships and relationships', 'Adjusting to family or life changes', 'Developing problem-solving skills', 'Managing difficult feelings', 'Strengthening family communication', 'Building emotional resilience'].map(x => <li key={x}>{x}</li>)}</ul><p><strong>The goal is not a child who never struggles. It&apos;s helping your child develop healthier ways to understand and navigate those struggles.</strong></p></div></div></section>
   <section className="ca-section ca-support-section ca-support-section-b"><div className="ca-container"><div className="ca-support-block reveal reveal-from-bottom"><h2>You&rsquo;re Part of Their Support System</h2><p>Parents sometimes wonder: &ldquo;Will I be involved in my child&apos;s counseling?&rdquo;</p><p>The answer depends on factors such as your child&apos;s age, needs, treatment goals, and appropriate confidentiality considerations. Parents and caregivers can be important partners in supporting a child&apos;s emotional well-being.</p><p>Your therapist can explain what involvement may look like, what information can appropriately be shared, and how you can support your child outside sessions.</p><p>When the whole family is experiencing broader challenges, families may also benefit from our <Link href="/family-therapy-oklahoma-city/">Family Counseling</Link> services.</p></div></div></section>
   <section className="ca-section ca-steps-section"><div className="ca-container"><h2 className="ca-center reveal reveal-from-bottom">What to Expect</h2><i className="ca-line-center" /><div className="ca-steps reveal-stagger">{[['Connect', 'Reach out to Open Arms Initiative to discuss counseling and request an appointment.'], ['Understand', 'Your therapist works to learn more about your child’s experiences, concerns, strengths, and needs.'], ['Create a Supportive Plan', 'Counseling is tailored to your child’s age, circumstances, and therapeutic goals.'], ['Grow', 'Over time, counseling can help your child develop greater emotional awareness, communication skills, coping strategies, and confidence in navigating challenges.']].map(([h, p], i) => <article className="reveal reveal-from-bottom" key={h}><span className="ca-step-icon">{stepIcons[i]}</span><h3>{h}</h3><p>{p}</p></article>)}</div></div></section>

@@ -134,14 +134,17 @@ const clientReviews = [
   {
     quote: 'Open Arms has incredible vision with an amazing foundation for what their company represents. An amazing staff and people you want on your side and to just walk with through life!',
     author: 'Kamryn B.',
+    photo: '/kamyrn.png',
   },
   {
     quote: 'The owner & staff are caring, supportive, and dedicated to helping both the children and foster families succeed. You can tell they genuinely care and truly make a difference.',
     author: 'Jency M.',
+    photo: '/unnamed (1).png',
   },
   {
-    quote: 'Open Arms Initiative is a wonderful organization. The dedication and support you will receive from their team is unmatched. They are exactly who you want in your corner.',
-    author: 'Stephanie V.',
+    quote: 'If you are looking for mental health services, please look no further. Do your self a favor and contact this agency! The services they provide are second to none. Their hearts are rooted in helping people become their best selves regardless of any background.',
+    author: 'Amber Price',
+    photo: '/unnamed (2).png',
   },
   {
     quote: 'This was a great training for someone who recently moved to a new role which comes with a lot of stress. Recently had the conversation with my supervisor about this topic. This was a full circle moment for me!',
@@ -182,7 +185,7 @@ export default function HomePage() {
   useEffect(() => {
     const root = revealRootRef.current;
     if (!root) return;
-    const revealEls = root.querySelectorAll('.reveal');
+    const revealEls = root.querySelectorAll('.reveal, .section-reveal');
     if (revealEls.length === 0) return;
     if (typeof IntersectionObserver === 'undefined') {
       revealEls.forEach((el) => el.classList.add('is-visible'));
@@ -240,7 +243,7 @@ export default function HomePage() {
 
       {/* Insurance & Payment Trust Strip */}
       <section className="insurance-strip-section">
-        <div className="insurance-strip-inner">
+        <div className="insurance-strip-inner section-reveal section-reveal-left">
           <div className="insurance-strip-intro reveal reveal-from-bottom">
             <span className="insurance-strip-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3 4.5 5.5v5c0 4.8 3.2 8.9 7.5 10.5 4.3-1.6 7.5-5.7 7.5-10.5v-5L12 3Z"/><path d="m9 12 2 2 4-4"/></svg>
@@ -276,8 +279,8 @@ export default function HomePage() {
       </section>
 
       {/* How We Can Help Section */}
-      <section id="services" className="services-section">
-        <div className="services-inner">
+      <section id="services" className="services-section help-chapters-section">
+        <div className="services-inner section-reveal section-reveal-right">
           <div className="section-intro reveal reveal-from-bottom">
             <span className="services-kicker">How We Can Help</span>
             <h2>Support for Every Chapter of Life</h2>
@@ -305,7 +308,7 @@ export default function HomePage() {
 
       {/* What to Expect at Open Arms Section */}
       <section className="expect-section">
-        <div className="expect-inner">
+        <div className="expect-inner section-reveal section-reveal-left">
           <div className="expect-media reveal reveal-from-left">
             {expectVideoPlaying ? (
               <iframe
@@ -345,39 +348,69 @@ export default function HomePage() {
 
       {/* What Our Clients Say */}
       <section id="reviews" className="reviews-section">
-        <div className="reviews-inner">
+        <div className="reviews-inner section-reveal section-reveal-right">
           <div className="reviews-layout">
             <div className="reviews-heading-col reveal reveal-from-left">
               <h2 className="reviews-heading">What Our<br />Clients Say</h2>
               <span className="reviews-heading-divider" aria-hidden="true"></span>
               <div className="reviews-rating">
                 <span className="reviews-stars" aria-hidden="true">★★★★★</span>
-                <span className="reviews-rating-label">Google Reviews</span>
+                <span className="reviews-rating-label">
+                  <img src="/icons8-google-logo-48.png" alt="" className="reviews-google-icon" />
+                  Google Reviews
+                </span>
               </div>
               <a
                 href="https://www.google.com/search?q=Open+Arms+Initiative+Oklahoma+City+reviews"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="reviews-cta-link"
+                className="reviews-cta-link reviews-cta-link-desktop"
               >
                 Read More Reviews
                 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
               </a>
             </div>
             <div className="reviews-cards-col">
-              <div className="reviews-grid">
-                {clientReviews
-                  .slice(reviewsPage * REVIEWS_PER_PAGE, reviewsPage * REVIEWS_PER_PAGE + REVIEWS_PER_PAGE)
-                  .map((review) => (
-                    <article className="review-card" key={review.author}>
-                      <span className="review-quote-mark" aria-hidden="true">&ldquo;</span>
-                      <p>{review.quote}</p>
-                      <span className="review-author">{review.author}</span>
-                    </article>
-                  ))}
+              <div className="reviews-grid-row">
+                {totalReviewPages > 1 && (
+                  <button
+                    type="button"
+                    className="reviews-nav-btn reviews-nav-btn-side reviews-nav-btn-prev"
+                    onClick={() => setReviewsPage((p) => (p - 1 + totalReviewPages) % totalReviewPages)}
+                    aria-label="Previous reviews"
+                  >
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 6l-6 6 6 6"/></svg>
+                  </button>
+                )}
+                <div className="reviews-grid reveal-stagger">
+                  {clientReviews
+                    .slice(reviewsPage * REVIEWS_PER_PAGE, reviewsPage * REVIEWS_PER_PAGE + REVIEWS_PER_PAGE)
+                    .map((review) => (
+                      <article className="review-card reveal reveal-from-bottom" key={review.author}>
+                        <div className="review-author-row">
+                          {review.photo && (
+                            <img src={review.photo} alt={review.author} className="review-author-photo" />
+                          )}
+                          <span className="review-author">{review.author}</span>
+                        </div>
+                        <span className="review-quote-mark" aria-hidden="true">&ldquo;</span>
+                        <p>{review.quote}</p>
+                      </article>
+                    ))}
+                </div>
+                {totalReviewPages > 1 && (
+                  <button
+                    type="button"
+                    className="reviews-nav-btn reviews-nav-btn-side reviews-nav-btn-next"
+                    onClick={() => setReviewsPage((p) => (p + 1) % totalReviewPages)}
+                    aria-label="Next reviews"
+                  >
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+                  </button>
+                )}
               </div>
               {totalReviewPages > 1 && (
-                <div className="reviews-nav">
+                <div className="reviews-nav reviews-nav-mobile">
                   <button
                     type="button"
                     className="reviews-nav-btn"
@@ -396,6 +429,15 @@ export default function HomePage() {
                   </button>
                 </div>
               )}
+              <a
+                href="https://www.google.com/search?q=Open+Arms+Initiative+Oklahoma+City+reviews"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="reviews-cta-link reviews-cta-link-mobile"
+              >
+                Read More Reviews
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
             </div>
           </div>
         </div>
@@ -404,7 +446,7 @@ export default function HomePage() {
       {/* Why Choose Open Arms */}
       <section className="why-choose-section">
         <div className="why-choose-blob why-choose-blob-tr" aria-hidden="true"></div>
-        <div className="why-choose-container">
+        <div className="why-choose-container section-reveal section-reveal-left">
           <div className="why-choose-header">
             <div className="reveal reveal-from-left">
               <span className="care-badge">Why Open Arms</span>
@@ -418,8 +460,10 @@ export default function HomePage() {
             {whyChooseReasons.map((reason) => (
               <article className="why-choose-card reveal reveal-from-bottom" key={reason.title}>
                 <div className="icon-box">{reason.icon}</div>
-                <h3>{reason.title}</h3>
-                <p>{reason.text}</p>
+                <div className="why-choose-card-copy">
+                  <h3>{reason.title}</h3>
+                  <p>{reason.text}</p>
+                </div>
               </article>
             ))}
           </div>
@@ -428,7 +472,7 @@ export default function HomePage() {
 
       {/* Real Team / Human Connection */}
       <section id="about" className="team-connect-section">
-        <div className="team-connect-container">
+        <div className="team-connect-container section-reveal section-reveal-right">
           <div className="team-connect-copy reveal reveal-from-left">
             <span className="care-badge">Our Team</span>
             <h2 className="team-connect-title">
@@ -459,7 +503,7 @@ export default function HomePage() {
 
       {/* Location + Map */}
       <section id="location" className="location-band-section">
-        <div className="location-band-container">
+        <div className="location-band-container section-reveal section-reveal-left">
           <div className="location-band-copy reveal reveal-from-left">
             <span className="care-badge">Location</span>
             <h2>Counseling in Oklahoma City</h2>
@@ -509,7 +553,7 @@ export default function HomePage() {
 
       {/* Foster Care / Training / Pro Bono teasers */}
       <section className="teaser-row-section">
-        <div className="teaser-row-container reveal-stagger">
+        <div className="teaser-row-container reveal-stagger section-reveal section-reveal-right">
           <article className="teaser-card reveal reveal-from-bottom">
             <span className="teaser-card-icon foster">
               <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9h12v-9"/><path d="M10 19v-5h4v5"/></svg>
@@ -532,14 +576,14 @@ export default function HomePage() {
             </span>
             <h3>Pro Bono Counseling</h3>
             <p>For families without insurance or with limited income, we offer a limited number of pro bono counseling slots. Because demand is high, availability and response times vary.</p>
-            <Link href="/services/pro-bono-therapy" className="teaser-card-link">See If You Qualify &rsaquo;</Link>
+            <Link href="/pro-bono-counseling-okc/" className="teaser-card-link">See If You Qualify &rsaquo;</Link>
           </article>
         </div>
       </section>
 
       {/* Our Mission Section */}
       <section className="mission-section-outer">
-        <div className="mission-container">
+        <div className="mission-container section-reveal section-reveal-left">
           <div className="mission-card">
             <div className="mission-grid">
               <div className="mission-text-block reveal reveal-from-left">
@@ -571,7 +615,7 @@ export default function HomePage() {
 
       {/* Help Center / FAQ Section */}
       <section id="faq" className="faq-new-section">
-        <div className="faq-new-container reveal reveal-from-bottom">
+        <div className="faq-new-container section-reveal section-reveal-right">
           <div className="faq-new-left">
             <div className="faq-new-left-watermark" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.4 2 4.8 5.6 4.2c2.2-.4 4.2.6 6.4 3 2.2-2.4 4.2-3.4 6.4-3 3.6.6 5.2 4.2 3.6 7.5C19.5 16.4 12 21 12 21Z"/></svg>
@@ -609,7 +653,7 @@ export default function HomePage() {
 
       {/* Final Conversion Section */}
       <section id="contact" className="final-cta-section">
-        <div className="final-cta-inner reveal reveal-from-bottom">
+        <div className="final-cta-inner section-reveal section-reveal-left">
           <h2>You Don't Have to Figure This Out Alone</h2>
           <p>Whether you're just starting to look for support or you've been thinking about it for a while, reaching out is the hardest part, and we're glad to help with what comes next.</p>
           <div className="final-cta-buttons">

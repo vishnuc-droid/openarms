@@ -531,21 +531,20 @@ export default function TraumaMentalHealthTrainingPage() {
 
       {/* ══ FORMATS ══ */}
       <section className="tmh2-formats-section">
-        <div className="tmh2-formats-glow" aria-hidden="true" />
         <div className="tmh2-wrap">
           <div className="tmh2-formats-header reveal reveal-from-bottom">
             <span className="tmh2-formats-eyebrow">How We Deliver It</span>
-            <h2 className="tmh2-formats-title" style={{ color: '#ffffff' }}>Training &amp; Speaking Formats</h2>
+            <h2 className="tmh2-formats-title">Training &amp; Speaking Formats</h2>
+            <i className="tmh2-formats-underline" />
             <p className="tmh2-formats-sub">Every organization&apos;s situation is different, so reach out and we will figure out the right length, setting, and structure together.</p>
           </div>
-          <div className="tmh2-formats-track reveal-stagger">
-            <span className="tmh2-formats-line" aria-hidden="true" />
-            <div className="tmh2-format-node reveal reveal-from-bottom"><span className="tmh2-format-circle"><IconClock width="22" height="22" /></span><h5>Half-Day Workshops</h5></div>
-            <div className="tmh2-format-node reveal reveal-from-bottom"><span className="tmh2-format-circle"><IconCalendar width="22" height="22" /></span><h5>Full-Day Trainings</h5></div>
-            <div className="tmh2-format-node reveal reveal-from-bottom"><span className="tmh2-format-circle"><IconUtensils width="22" height="22" /></span><h5>Lunch &amp; Learns</h5></div>
-            <div className="tmh2-format-node reveal reveal-from-bottom"><span className="tmh2-format-circle"><IconBuilding width="22" height="22" /></span><h5>Conferences &amp; Retreats</h5></div>
-            <div className="tmh2-format-node reveal reveal-from-bottom"><span className="tmh2-format-circle"><IconCalendar width="22" height="22" /></span><h5>Staff Development Days</h5></div>
-            <div className="tmh2-format-node reveal reveal-from-bottom"><span className="tmh2-format-circle"><IconLaptop width="22" height="22" /></span><h5>Virtual or In-Person</h5></div>
+          <div className="tmh2-formats-grid reveal-stagger">
+            <article className="tmh2-format-card reveal reveal-from-bottom"><span className="tmh2-format-icon"><IconClock width="26" height="26" /></span><h5>Half-Day Workshops</h5></article>
+            <article className="tmh2-format-card reveal reveal-from-bottom"><span className="tmh2-format-icon"><IconCalendar width="26" height="26" /></span><h5>Full-Day Trainings</h5></article>
+            <article className="tmh2-format-card reveal reveal-from-bottom"><span className="tmh2-format-icon"><IconUtensils width="26" height="26" /></span><h5>Lunch &amp; Learns</h5></article>
+            <article className="tmh2-format-card reveal reveal-from-bottom"><span className="tmh2-format-icon"><IconBuilding width="26" height="26" /></span><h5>Conferences &amp; Retreats</h5></article>
+            <article className="tmh2-format-card reveal reveal-from-bottom"><span className="tmh2-format-icon"><IconCalendar width="26" height="26" /></span><h5>Staff Development Days</h5></article>
+            <article className="tmh2-format-card reveal reveal-from-bottom"><span className="tmh2-format-icon"><IconLaptop width="26" height="26" /></span><h5>Virtual or In-Person</h5></article>
           </div>
         </div>
       </section>
@@ -818,19 +817,18 @@ export default function TraumaMentalHealthTrainingPage() {
         .tmh2-jamie-video-title{ color:var(--white); font-size:14px; font-weight:700; margin:0 0 4px; }
         .tmh2-jamie-video-sub{ color:#9fc9f5; font-size:12.5px; margin:0; }
 
-        /* FORMATS — elegant dark "journey" band */
-        .tmh2-formats-section{ position:relative; overflow:hidden; isolation:isolate; background:radial-gradient(circle at 88% 12%, rgba(0,175,247,.28) 0%, rgba(0,175,247,0) 45%), linear-gradient(100deg, #072B3A 0%, #0170ED 100%); padding:70px 0; }
-        .tmh2-formats-glow{ position:absolute; top:-140px; right:-100px; width:420px; height:420px; border-radius:50%; background:radial-gradient(circle, rgba(0,175,247,0.18) 0%, transparent 70%); pointer-events:none; }
-        .tmh2-formats-header{ text-align:center; max-width:620px; margin:0 auto 50px; }
-        .tmh2-formats-eyebrow{ display:inline-block; font-size:12.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--green); background:rgba(0,175,247,0.12); border:1px solid rgba(0,175,247,0.3); padding:6px 16px; border-radius:20px; margin-bottom:16px; }
-        .tmh2-formats-title{ color:#ffffff; font-size:30px; margin-bottom:12px; }
-        .tmh2-formats-sub{ color:#cfe8fc; font-size:14.5px; line-height:1.65; margin:0; }
-        .tmh2-formats-track{ position:relative; display:grid; grid-template-columns:repeat(6,1fr); gap:12px; }
-        .tmh2-formats-line{ position:absolute; top:29px; left:8%; right:8%; height:1.5px; background:repeating-linear-gradient(90deg, rgba(0,175,247,0.4) 0 8px, transparent 8px 16px); z-index:0; }
-        .tmh2-format-node{ position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; gap:14px; text-align:center; }
-        .tmh2-format-circle{ width:58px; height:58px; border-radius:50%; background:var(--white); color:var(--green-dark); display:flex; align-items:center; justify-content:center; box-shadow:0 8px 20px rgba(0,0,0,0.25); transition:transform .22s ease, background .22s ease, color .22s ease; }
-        .tmh2-format-node:hover .tmh2-format-circle{ transform:translateY(-4px); background:var(--green); color:var(--white); }
-        .tmh2-format-node h5{ color:#ffffff; font-size:13.5px; font-weight:600; line-height:1.4; max-width:110px; }
+        /* FORMATS — light card grid */
+        .tmh2-formats-section{ background:var(--cream); padding:70px 0; }
+        .tmh2-formats-header{ text-align:center; max-width:620px; margin:0 auto 40px; }
+        .tmh2-formats-eyebrow{ display:inline-block; font-size:12.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--green-dark); background:var(--tint); border:1px solid rgba(1,112,237,.3); padding:6px 16px; border-radius:20px; margin-bottom:16px; }
+        .tmh2-formats-title{ color:var(--ink); font-size:clamp(1.9rem,3vw,2.6rem); margin:0 0 18px; }
+        .tmh2-formats-underline{ display:block; width:56px; border-top:3px solid var(--green); border-radius:2px; margin:0 auto 24px; }
+        .tmh2-formats-sub{ color:var(--muted); font-size:15px; line-height:1.65; margin:0; }
+        .tmh2-formats-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+        .tmh2-format-card{ position:relative; text-align:center; padding:26px 20px; background:var(--tint); border-radius:16px; box-shadow:0 10px 26px rgba(7,43,58,.08); transition:transform .25s ease, box-shadow .25s ease; }
+        .tmh2-format-card:hover{ transform:translateY(-4px); box-shadow:0 16px 34px rgba(7,43,58,.14); }
+        .tmh2-format-icon{ display:grid; place-items:center; width:60px; height:60px; margin:0 auto 16px; border-radius:50%; background:var(--white); color:var(--green-dark); }
+        .tmh2-format-card h5{ color:var(--ink); font-size:15px; font-weight:700; line-height:1.4; margin:0; }
 
         /* WHY ORGANIZATIONS — bento with numbered feature tile */
         .tmh2-why-section{ background:var(--white); }
@@ -881,8 +879,7 @@ export default function TraumaMentalHealthTrainingPage() {
           .tmh2-jamie{ grid-template-columns:1fr; }
           .tmh2-jamie-photo{ height:240px; }
           .tmh2-cred{ min-width:45%; border-right:none; border-bottom:1px solid var(--line); }
-          .tmh2-formats-track{ grid-template-columns:repeat(3,1fr); row-gap:32px; }
-          .tmh2-formats-line{ display:none; }
+          .tmh2-formats-grid{ grid-template-columns:repeat(3,1fr); }
           .tmh2-why-bento{ grid-template-columns:1fr 1fr; grid-template-rows:auto; }
           .tmh2-why-tile--mid{ grid-column:auto; grid-row:auto; }
           .tmh2-why-tile--feature{ grid-row:auto; grid-column:span 2; }
@@ -898,8 +895,7 @@ export default function TraumaMentalHealthTrainingPage() {
           .tmh2-who-grid{ grid-template-columns:repeat(2,1fr); }
           .tmh2-helps-grid{ grid-template-columns:repeat(2,1fr); }
           .tmh2-programs-grid{ grid-template-columns:repeat(3,1fr); }
-          .tmh2-formats-track{ grid-template-columns:repeat(3,1fr); row-gap:32px; }
-          .tmh2-formats-line{ display:none; }
+          .tmh2-formats-grid{ grid-template-columns:repeat(3,1fr); }
           .tmh2-why-bento{ grid-template-columns:1fr 1fr; grid-template-rows:auto; }
           .tmh2-why-tile--mid{ grid-column:auto; grid-row:auto; }
           .tmh2-why-tile--feature{ grid-row:auto; grid-column:span 2; }
@@ -924,7 +920,7 @@ export default function TraumaMentalHealthTrainingPage() {
           .tmh2-who-grid{ grid-template-columns:1fr; }
           .tmh2-helps-grid{ grid-template-columns:1fr; }
           .tmh2-programs-grid{ grid-template-columns:1fr; }
-          .tmh2-formats-track{ grid-template-columns:repeat(2,1fr); }
+          .tmh2-formats-grid{ grid-template-columns:repeat(2,1fr); }
           .tmh2-flagship{ grid-template-columns:1fr; text-align:center; }
           .tmh2-flagship-icon-col{ justify-content:center; }
           .tmh2-flagship-cta{ justify-self:center; }

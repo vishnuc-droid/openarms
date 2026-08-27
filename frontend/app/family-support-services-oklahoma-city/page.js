@@ -103,6 +103,13 @@ const kinds = [
   ['Support Through Change', 'Families change. Relationships change. Circumstances change. Support during periods of transition can help families better understand what they’re experiencing and identify constructive ways to move forward.'],
 ];
 
+const teamMembers = [
+  { name: 'Jamie James, LPC', title: 'President & Founder', photo: '/Jamie James - LPC.jpg' },
+  { name: "D'Fawn Downs, LPC", title: 'Corporate Compliance Officer & Clinical Director', photo: "/D'Fawn Downs - LPC.jpg" },
+  { name: 'Brandon Martin', title: 'CFO', photo: '/Brandon Martin.jpg' },
+  { name: 'Stephanie Caldwell', title: 'Parent Relations Director', photo: '/Stephanie Caldwell.jpg' },
+];
+
 const faqs = [
   ['What are family support services?', 'Family support services can include education, guidance, resources, referrals, and other forms of assistance designed to help families navigate challenges and strengthen family well-being. Available support depends on the organization, program, and family’s circumstances.'],
   ['How do I know what type of support my family needs?', 'You don’t necessarily need to know before reaching out. Start by explaining the challenges your family is experiencing. Open Arms Initiative can help you explore available services and determine what type of support may be appropriate.'],
@@ -169,6 +176,36 @@ export default function FamilySupportPage() { return <main className="fs-page">
 
   <section className="fs-statement"><div className="fs-container reveal reveal-scale-in"><div><h2>&ldquo;You&rsquo;ve been doing everything you can for your family. Asking for support can be part of caring for them, too.&rdquo;</h2><Link href="/contact" className="fs-btn fs-light">Connect With Open Arms</Link></div><img src="/nh4.jpg" alt="Hands offering comfort and support to a family member" /><aside>You don&apos;t need every answer today.<br /><br />You don&apos;t need to know which service you need before reaching out.<br /><br />Tell us what&apos;s happening. We can begin there.</aside></div></section>
 
+  <section id="about" className="team-connect-section">
+    <div className="team-connect-container section-reveal section-reveal-right">
+      <div className="team-connect-copy reveal reveal-from-left">
+        <span className="care-badge">Our Team</span>
+        <h2 className="team-connect-title">
+          Care Starts With People You Can Trust
+          <svg className="team-connect-underline" viewBox="0 0 220 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8c30-10 60-10 90 0s90 10 126-2" fill="none" stroke="#0170ED" strokeWidth="3" strokeLinecap="round"/></svg>
+        </h2>
+        <p>Behind every session is a real person who&apos;s chosen this work, not a call center, not an algorithm.</p>
+        <Link href="/about-us" className="team-connect-link">
+          Meet Our Team
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </Link>
+      </div>
+      <div className="team-photo-grid reveal-stagger">
+        {teamMembers.map((member) => (
+          <div className="team-photo-card reveal reveal-from-bottom" key={member.name}>
+            <div className="team-photo-media">
+              <img src={member.photo} alt={member.name} />
+            </div>
+            <div className="team-photo-caption">
+              <span className="team-photo-name">{member.name}</span>
+              <span className="team-photo-title">{member.title}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <section className="fs-section fs-kinds-section"><div className="fs-container">
     <h2 className="fs-center reveal reveal-from-bottom">More Than One Kind of Support</h2><i className="fs-line-center" />
     <div className="fs-kinds reveal-stagger">{kinds.map(([h, p], i) => <article className="reveal reveal-from-bottom" key={h}><span className="fs-kind-icon">{kindsIcons[i]}</span><h3>{h}</h3><p>{p}</p></article>)}</div>
@@ -200,6 +237,6 @@ export default function FamilySupportPage() { return <main className="fs-page">
       <h3>Your Family Deserves to Feel Supported.</h3>
       <p>Open Arms Initiative is here to help you explore the next step.</p>
     </div>
-    <Link href="/contact" className="fs-btn fs-light">Connect With Open Arms</Link>
+    <Link href="/contact" className="fs-btn fs-solid">Connect With Open Arms</Link>
   </div></section>
 </main>}

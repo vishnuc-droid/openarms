@@ -106,6 +106,13 @@ const steps = [
   ['Move Forward', 'You’ll work toward greater understanding and develop strategies, perspectives, and skills that can support meaningful change outside therapy.'],
 ];
 
+const teamMembers = [
+  { name: 'Jamie James, LPC', title: 'President & Founder', photo: '/Jamie James - LPC.jpg' },
+  { name: "D'Fawn Downs, LPC", title: 'Corporate Compliance Officer & Clinical Director', photo: "/D'Fawn Downs - LPC.jpg" },
+  { name: 'Brandon Martin', title: 'CFO', photo: '/Brandon Martin.jpg' },
+  { name: 'Stephanie Caldwell', title: 'Parent Relations Director', photo: '/Stephanie Caldwell.jpg' },
+];
+
 const faqs = [
   ['What is individual counseling?', 'Individual counseling is one-on-one therapy between you and a mental health professional. It provides a private environment to discuss emotions, experiences, relationships, behaviors, personal concerns, or goals.'],
   ['How do I know if I should see a therapist?', 'There isn’t one specific point when someone needs therapy. You may consider counseling if you’re feeling overwhelmed, experiencing recurring difficulties, navigating a major life change, struggling with relationships, feeling stuck, or simply wanting to understand yourself better.'],
@@ -162,6 +169,36 @@ export default function AdultCounselingPage() { return <main className="adult-pa
   </div></div></section>
 
   <section className="adult-statement"><div className="adult-container reveal reveal-scale-in"><div><h2>&ldquo;You&rsquo;re allowed to need support, even when you&rsquo;re the one everyone else relies on.&rdquo;</h2><Link href="/contact" className="adult-btn adult-light">Request an Individual Counseling Appointment</Link></div><img src="/gm-100kb.jpg" alt="Two people talking openly during a supportive conversation" /><aside>You spend a lot of time showing up for other people.<br /><br />Therapy creates room for someone to show up for you.<br /><br />Come as you are.<br />Bring what you&apos;re carrying.<br />We&apos;ll start there.</aside></div></section>
+
+  <section id="about" className="team-connect-section">
+    <div className="team-connect-container section-reveal section-reveal-right">
+      <div className="team-connect-copy reveal reveal-from-left">
+        <span className="care-badge">Our Team</span>
+        <h2 className="team-connect-title">
+          Care Starts With People You Can Trust
+          <svg className="team-connect-underline" viewBox="0 0 220 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8c30-10 60-10 90 0s90 10 126-2" fill="none" stroke="#0170ED" strokeWidth="3" strokeLinecap="round"/></svg>
+        </h2>
+        <p>Behind every session is a real person who&apos;s chosen this work, not a call center, not an algorithm.</p>
+        <Link href="/about-us" className="team-connect-link">
+          Meet Our Team
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </Link>
+      </div>
+      <div className="team-photo-grid reveal-stagger">
+        {teamMembers.map((member) => (
+          <div className="team-photo-card reveal reveal-from-bottom" key={member.name}>
+            <div className="team-photo-media">
+              <img src={member.photo} alt={member.name} />
+            </div>
+            <div className="team-photo-caption">
+              <span className="team-photo-name">{member.name}</span>
+              <span className="team-photo-title">{member.title}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
   <section className="adult-section adult-worktoward-section"><div className="adult-worktoward-bg" aria-hidden="true" /><div className="adult-worktoward-overlay" aria-hidden="true" /><div className="adult-container">
     <h2 className="adult-center reveal reveal-from-bottom">What Can Individual Therapy Help You Work Toward?</h2><i className="adult-line-center" />

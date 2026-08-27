@@ -5,11 +5,12 @@ export const serviceCategories = {
       { name: 'Child & Adolescent Counseling', slug: 'child-adolescent-counseling', href: '/child-counseling-services-oklahoma-city/' },
       { name: 'Adult & Individual Counseling', slug: 'adult-counseling', href: '/adult-counseling-oklahoma-city/' },
       { name: 'Marriage & Couples Therapy', slug: 'marriage-couples-therapy', href: '/marriage-counseling-oklahoma-city/' },
-      { name: 'Foster Care & Adoption Counseling', slug: 'foster-care-adoption-counseling' },
+      { name: 'Foster Care & Adoption Counseling', slug: 'foster-care-adoption-counseling', href: '/foster-care/' },
       { name: 'Grief and Loss Counseling', slug: 'grief-loss-counseling', href: '/grief-counseling-oklahoma-city/' },
       { name: 'Family Counseling', slug: 'family-counseling', href: '/family-therapy-oklahoma-city/' },
       { name: 'Depression & Anxiety Counseling', slug: 'depression-anxiety-counseling', href: '/depression-anxiety-counseling-oklahoma/' },
       { name: 'Family Support', slug: 'family-support', href: '/family-support-services-oklahoma-city/' },
+      { name: 'Parent Support', slug: 'parent-support', href: '/parenting-classes-okc/' },
     ],
     sideTitle: 'Trusted Team',
     sideLinks: [
@@ -34,7 +35,7 @@ export const serviceCategories = {
     heading: 'Non-Profit Services',
     links: [
       { name: 'Community Outreach & Support Programs', slug: 'community-outreach-support' },
-      { name: 'Pro Bono Therapy Services', slug: 'pro-bono-therapy' },
+      { name: 'Pro Bono Therapy Services', slug: 'pro-bono-therapy', href: '/pro-bono-counseling-okc/' },
     ],
     sideTitle: 'Connect',
     sideLinks: [

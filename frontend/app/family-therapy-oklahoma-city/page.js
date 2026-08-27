@@ -48,6 +48,13 @@ const challenges = [
   ['Life Transitions', 'Find support through separation, loss, relocation, changing roles, and other major family changes.'],
 ];
 
+const teamMembers = [
+  { name: 'Jamie James, LPC', title: 'President & Founder', photo: '/Jamie James - LPC.jpg' },
+  { name: "D'Fawn Downs, LPC", title: 'Corporate Compliance Officer & Clinical Director', photo: "/D'Fawn Downs - LPC.jpg" },
+  { name: 'Brandon Martin', title: 'CFO', photo: '/Brandon Martin.jpg' },
+  { name: 'Stephanie Caldwell', title: 'Parent Relations Director', photo: '/Stephanie Caldwell.jpg' },
+];
+
 const faqs = [
   ['How do I know if my family needs counseling?', 'Family counseling may help when communication feels difficult, arguments keep repeating, relationships feel strained, or your family is navigating a major life change. You do not need to wait for a crisis to seek support.'],
   ['What happens during family counseling?', 'Your therapist will take time to understand your family’s concerns, relationships, communication patterns, and goals. Sessions provide a supportive place to talk openly, identify recurring patterns, and develop healthier ways of relating to one another.'],
@@ -74,10 +81,39 @@ export default function FamilyTherapyPage() {
     <section id="approach" className="family-section"><div className="family-container family-container-wide family-approach"><img className="reveal reveal-from-left" src="/happy-family-with-dog-moving-new-home-100kb.jpg" alt="A peaceful, welcoming space" /><div className="family-approach-copy reveal reveal-from-right"><p className="family-kicker">COUNSELING FOR FAMILY ISSUES OKLAHOMA CITY</p><h2 className="family-title">Support That Brings Your Family Closer</h2><p><strong>Sometimes the hardest part is not knowing how to talk to the people you love most.</strong></p><p>At Open Arms Initiative, our Family Therapy Oklahoma City gives families a supportive place to slow down, understand what is happening beneath the conflict, and begin rebuilding connection. Our therapists also provide Relationship Counseling OKC for parents, couples, and family members working through strained or distant relationships.</p><p>Together, we can work toward:</p><ul>{['Stronger communication','Healing past hurts','Greater trust and connection','Healthier boundaries','More constructive conflict resolution','A calmer, more supportive home'].map(x => <li key={x}>{x}</li>)}</ul><p>Family counseling is not about deciding who is right or wrong. It is about helping your family understand one another and find a healthier way forward.</p></div></div></section>
 
     <section className="family-statement"><div className="family-container reveal reveal-from-bottom"><h2>“You don’t have to have it all figured out to take the first step.”</h2><p>We’re here to walk with your family through the difficult conversations, the uncertainty, and the changes that can feel overwhelming.</p><p>Sometimes the first step toward healing is simply knowing you do not have to handle everything alone.</p></div></section>
+    <section id="about" className="team-connect-section">
+      <div className="team-connect-container section-reveal section-reveal-right">
+        <div className="team-connect-copy reveal reveal-from-left">
+          <span className="care-badge">Our Team</span>
+          <h2 className="team-connect-title">
+            Care Starts With People You Can Trust
+            <svg className="team-connect-underline" viewBox="0 0 220 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8c30-10 60-10 90 0s90 10 126-2" fill="none" stroke="#0170ED" strokeWidth="3" strokeLinecap="round"/></svg>
+          </h2>
+          <p>Behind every session is a real person who&apos;s chosen this work, not a call center, not an algorithm.</p>
+          <Link href="/about-us" className="team-connect-link">
+            Meet Our Team
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </Link>
+        </div>
+        <div className="team-photo-grid reveal-stagger">
+          {teamMembers.map((member) => (
+            <div className="team-photo-card reveal reveal-from-bottom" key={member.name}>
+              <div className="team-photo-media">
+                <img src={member.photo} alt={member.name} />
+              </div>
+              <div className="team-photo-caption">
+                <span className="team-photo-name">{member.name}</span>
+                <span className="team-photo-title">{member.title}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
     <section className="family-section"><div className="family-container family-support-grid reveal-stagger">{[['A Safe Space for Every Voice','Every family member deserves to feel heard. We create a respectful, non-judgmental environment where family members can speak openly, understand each other more clearly, and begin rebuilding trust.'],['Evidence-Based Support','Our therapists use professional, evidence-informed approaches while tailoring counseling to your family’s relationships, experiences, and goals. There is no one-size-fits-all family.'],['Tools for Lasting Change','Counseling is not only about what happens during the session. We help families develop practical tools for healthier communication, stronger relationships, and more effective problem-solving at home.']].map(([title,text], i) => <article className="reveal reveal-from-bottom" key={title}><span>{supportIcons[i]}</span><h3>{title}</h3><p>{text}</p></article>)}</div></section>
     <section className="family-growth"><img className="family-growth-photo-mobile" src="/fam12.jpg" alt="Family healing together" /><div className="family-container reveal reveal-from-bottom"><div><h2>Healing happens together.<br />Growth lasts a lifetime.</h2><p>Your family may be going through a difficult chapter, but that chapter does not have to define what comes next.</p></div><Link href="/contact" className="family-btn family-btn-light">Book Your Appointment Today</Link></div></section>
     <section className="family-section family-expect"><div className="family-container reveal reveal-from-bottom"><h2 className="family-title center">What to Expect</h2><i className="family-line family-line-center" /><div className="family-steps">{[['1. Connect','Reach out to schedule an appointment that works for your family.'],['2. Understand','We listen, learn, and understand your family’s unique experiences and concerns.'],['3. Create a Plan','Together, we develop a personalized approach focused on healing, communication, and growth.'],['4. Grow Together','We support your family as you build healthier patterns, stronger connections, and greater understanding.']].map(([title,text], i) => { const [num, ...rest] = title.split('. '); return <article key={title}><span className="family-step-icon">{stepIcons[i]}</span><span className="family-step-num">{num}</span><h3>{rest.join('. ')}</h3><i className="family-step-line" /><p>{text}</p></article>; })}</div></div></section>
     <section className="family-section"><div className="family-container family-container-wide reveal reveal-from-bottom"><div className="family-faq-card"><div className="family-faq"><aside><h2>It’s okay to have questions before asking for help.</h2><p>We’re here to provide answers, guidance, and support so you can feel more comfortable taking the next step.</p></aside><div><h2>Questions Families Often Ask</h2>{faqs.map(([q,a]) => <details key={q} name="family-faq-group"><summary>{q}<b>+</b></summary><p>{a}</p></details>)}<p className="family-faq-more">Still have questions? We’re happy to help. <Link href="/contact">Contact Us</Link></p></div></div></div></div></section>
-    <section className="family-final"><div className="family-container reveal reveal-from-bottom"><div><h2>Hope. Healing. A Stronger Family.</h2><p>Your family does not need to be perfect to become stronger. With support, understanding, and the willingness to take one step forward, healthier relationships can begin to grow.</p></div><Link href="/contact" className="family-btn family-btn-light">Request an Appointment</Link></div></section>
+    <section className="family-final"><div className="family-container family-final-grid reveal reveal-scale-in"><div><h2>Hope. Healing. A Stronger Family.</h2><p>Your family does not need to be perfect to become stronger. With support, understanding, and the willingness to take one step forward, healthier relationships can begin to grow.</p></div><Link href="/contact" className="family-btn family-btn-solid">Request an Appointment</Link></div></section>
   </main>;
 }

@@ -34,6 +34,13 @@ const stepIcons = [
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M3 12h15.5" /><path d="m13.5 6 6 6-6 6" /></svg>,
 ];
 
+const teamMembers = [
+  { name: 'Jamie James, LPC', title: 'President & Founder', photo: '/Jamie James - LPC.jpg' },
+  { name: "D'Fawn Downs, LPC", title: 'Corporate Compliance Officer & Clinical Director', photo: "/D'Fawn Downs - LPC.jpg" },
+  { name: 'Brandon Martin', title: 'CFO', photo: '/Brandon Martin.jpg' },
+  { name: 'Stephanie Caldwell', title: 'Parent Relations Director', photo: '/Stephanie Caldwell.jpg' },
+];
+
 const faqs = [['How do I know if I should seek counseling for depression?', 'Consider speaking with a mental health professional if persistent sadness, low motivation, loss of interest, emotional exhaustion, or other changes are interfering with your relationships, responsibilities, or everyday life. You don’t need to wait until things become unbearable before seeking support.'],['Can counseling help with anxiety and overthinking?', 'Therapy can help you better understand patterns of worry and overthinking, recognize potential triggers, and develop strategies for responding to anxious thoughts and emotions in healthier ways.'],['Can I experience anxiety and depression at the same time?', 'Yes. Anxiety and depression can occur together. Because everyone’s experience is different, a mental health professional can help you explore what you’re experiencing and determine an appropriate approach to care.'],['What happens during anxiety therapy?', 'Your therapist will work to understand your experiences, concerns, triggers, thought patterns, and goals. Counseling may involve exploring patterns contributing to anxiety and developing practical strategies for managing worry, stress, and difficult emotions.'],['Do you provide depression counseling in Oklahoma?', <>Yes. Open Arms Initiative provides <strong>Depression Counseling in Oklahoma</strong> for individuals seeking professional support with emotional difficulties, low mood, stress, and related concerns.</>],['When should I consider counseling for stress?', 'You may consider counseling when stress feels persistent, difficult to manage, or begins affecting your mood, sleep, concentration, relationships, responsibilities, or overall quality of life.']];
 export default function DepressionAnxietyPage(){return <main className="da-page">
 <ScrollReveal />
@@ -43,6 +50,35 @@ export default function DepressionAnxietyPage(){return <main className="da-page"
 <section className="da-section da-feelings"><div className="da-container reveal reveal-from-left"><aside><h2>What Have Your Days Been<br/>Feeling <em>Like?</em></h2><i className="da-feelings-line" /><p>You are not alone in what you’re going through. And you don’t have to figure it out alone.</p></aside><div>{feelings.map(([h,p],i)=><article key={h}><span>{feelingIcons[i]}</span><h3>{h}</h3><i /><p>{p}</p></article>)}</div></div></section>
 <section id="approach" className="da-section"><div className="da-container"><div className="da-more"><img src="/mg9.jpg" alt="Support group having an open conversation together"/><div><p className="da-kicker">ANXIETY THERAPY OKC</p><h2>You Are More Than What You’re Feeling Right Now</h2><p>When depression or anxiety has been present for a while, it can begin to shape the way you see yourself and your future. Therapy creates space to look at what you&apos;re experiencing with support rather than judgment.</p><p>Through <strong>Anxiety Therapy in OKC</strong> and depression counseling, your therapist can help you explore your experiences, recognize patterns, develop coping strategies, and work toward goals that matter to you.</p><p>Counseling may help you work on:</p><ul>{['Understanding emotional patterns and triggers','Managing persistent worry','Developing healthier coping strategies','Responding differently to overwhelming thoughts','Managing stress more effectively','Improving communication and boundaries','Reconnecting with meaningful activities','Developing greater self-awareness','Building routines that support emotional well-being'].map(x=><li key={x}>{x}</li>)}</ul><p><strong>You don&apos;t have to solve everything at once. Progress can begin with one manageable step.</strong></p></div></div></div></section>
 <section className="da-statement"><div className="da-container reveal reveal-scale-in"><div><h2>“You’ve been surviving the days. Therapy can give you space to start experiencing them differently.”</h2><Link href="/contact" className="da-btn da-light">Request a Counseling Appointment</Link></div><img src="/black-white-analog-portrait-woman-posing-indoors-100kb.jpg" alt="Woman pausing quietly, eyes closed, in soft window light"/><aside>You don&apos;t have to pretend you&apos;re okay in the counseling room.<br/><br/>You can arrive tired.<br/>You can arrive uncertain.<br/>You can arrive without knowing exactly what to say.<br/><br/>We&apos;ll start where you are.</aside></div></section>
+<section id="about" className="team-connect-section">
+    <div className="team-connect-container section-reveal section-reveal-right">
+      <div className="team-connect-copy reveal reveal-from-left">
+        <span className="care-badge">Our Team</span>
+        <h2 className="team-connect-title">
+          Care Starts With People You Can Trust
+          <svg className="team-connect-underline" viewBox="0 0 220 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8c30-10 60-10 90 0s90 10 126-2" fill="none" stroke="#0170ED" strokeWidth="3" strokeLinecap="round"/></svg>
+        </h2>
+        <p>Behind every session is a real person who&apos;s chosen this work, not a call center, not an algorithm.</p>
+        <Link href="/about-us" className="team-connect-link">
+          Meet Our Team
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </Link>
+      </div>
+      <div className="team-photo-grid reveal-stagger">
+        {teamMembers.map((member) => (
+          <div className="team-photo-card reveal reveal-from-bottom" key={member.name}>
+            <div className="team-photo-media">
+              <img src={member.photo} alt={member.name} />
+            </div>
+            <div className="team-photo-caption">
+              <span className="team-photo-name">{member.name}</span>
+              <span className="team-photo-title">{member.title}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 <section className="da-section da-support-section"><div className="da-container da-support"><div className="reveal reveal-from-left"><h2>Support That Meets You Where You Are</h2>{[['A Place to Be Honest','You don’t need to minimize what you’re experiencing or worry about being a burden. Counseling provides confidential space to talk openly about what has been difficult.'],['Understanding What’s Happening','Your therapist works with you to explore thoughts, emotions, experiences, stressors, and patterns that may be affecting your well-being.'],['Practical Ways Forward','Understanding is important, but so are tools you can use outside therapy. Counseling can help you develop strategies for managing stress, responding to difficult thoughts and emotions, and navigating everyday challenges.']].map(([h,p],i)=><article key={h}><span>{supportIcons[i]}</span><div><h3>{h}</h3><p>{p}</p></div></article>)}</div><div className="da-stress reveal reveal-from-right"><h2>When Stress Starts Following You Everywhere</h2><p>Stress is part of life, but ongoing stress can become difficult to manage when there is little opportunity to recover.</p><ul className="da-stress-list">{['Work.','Finances.','Relationships.','Parenting.','Caregiving.','Major changes.'].map(x=><li key={x}>{x}</li>)}</ul><p>Sometimes it isn&apos;t one enormous problem, it is <strong>everything happening at the same time.</strong></p><p>Our <strong>Stress Management Counseling in Oklahoma</strong> provides space to identify sources of stress, understand how they affect you, and develop healthier ways to respond.</p><p>You may not be able to remove every stressful situation from your life. But you can learn different ways to navigate them.</p></div></div></section>
 <section className="da-section da-steps-section"><div className="da-container reveal reveal-from-right"><h2 className="da-center">What to Expect</h2><div className="da-steps">{[['Connect','Reach out to Open Arms Initiative to request an appointment.'],['Be Heard','Your therapist takes time to understand what you’ve been experiencing and how it has been affecting your everyday life.'],['Understand','Together, you’ll explore relevant patterns, stressors, concerns, and goals for counseling.'],['Move Forward','You’ll work on strategies and skills that can support healthier ways of navigating your thoughts, emotions, stress, and everyday experiences.']].map(([h,p],i)=><article key={h}><span>{stepIcons[i]}</span><h3>{h}</h3><p>{p}</p></article>)}</div></div></section>
 <section className="da-section"><div className="da-container"><div className="da-faq"><aside><h2>It&apos;s okay to have questions before asking for help.</h2><p>We&apos;re here to provide answers, guidance, and support so you can take the next step with confidence.</p></aside><div><h2>Questions About Depression &amp; Anxiety Counseling</h2>{faqs.map(([q,a])=><details key={q} name="da-faq-group"><summary>{q}<b>+</b></summary><p>{a}</p></details>)}</div></div></div></section>

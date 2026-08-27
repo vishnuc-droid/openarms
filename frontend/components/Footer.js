@@ -7,7 +7,7 @@ const serviceColumns = [
     { name: 'Depression & Anxiety Counseling', href: '/depression-anxiety-counseling-oklahoma/' },
     { name: 'School Staff & Educator Training', href: '/services/school-staff-educator-training' },
     { name: 'Parenting Skills Development', href: '/services/parenting-skills-development' },
-    { name: 'Pro Bono Therapy Services', href: '/services/pro-bono-therapy' },
+    { name: 'Pro Bono Therapy Services', href: '/pro-bono-counseling-okc/' },
   ],
   [
     { name: 'Adult & Individual Counseling', href: '/adult-counseling-oklahoma-city/' },

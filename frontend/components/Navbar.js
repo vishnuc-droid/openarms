@@ -63,9 +63,6 @@ export default function Navbar() {
               Training &amp; Speaking<span className="nav-arrow">▾</span>
             </button>
           </div>
-          <Link href="/foster-care" onClick={() => setMenuOpen(false)}>
-            Foster Care
-          </Link>
           <Link href="/blogs" onClick={() => setMenuOpen(false)}>
             Blog
           </Link>
@@ -148,7 +145,6 @@ export default function Navbar() {
             )}
           </div>
 
-          <Link href="/foster-care" className="mobile-nav-link" onClick={closeMobileNav}>Foster Care</Link>
           <Link href="/blogs" className="mobile-nav-link" onClick={closeMobileNav}>Blog</Link>
           <Link href="/contact" className="mobile-nav-link" onClick={closeMobileNav}>Contact Us</Link>
 
