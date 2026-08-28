@@ -5,22 +5,15 @@ const serviceColumns = [
     { name: 'Child & Adolescent Counseling', href: '/child-counseling-services-oklahoma-city/' },
     { name: 'Foster Care & Adoption Counseling', href: '/services/foster-care-adoption-counseling' },
     { name: 'Depression & Anxiety Counseling', href: '/depression-anxiety-counseling-oklahoma/' },
-    { name: 'School Staff & Educator Training', href: '/services/school-staff-educator-training' },
-    { name: 'Parenting Skills Development', href: '/services/parenting-skills-development' },
-    { name: 'Pro Bono Therapy Services', href: '/pro-bono-counseling-okc/' },
   ],
   [
     { name: 'Adult & Individual Counseling', href: '/adult-counseling-oklahoma-city/' },
     { name: 'Grief and Loss Counseling', href: '/grief-counseling-oklahoma-city/' },
-    { name: 'Churches & Faith-Based Training', href: '/services/churches-faith-based-training' },
-    { name: 'Trauma-Informed Care Training', href: '/services/trauma-informed-care-training' },
-    { name: 'Anxiety, Depression, and Stress Management', href: '/services/anxiety-depression-stress-management' },
+    { name: 'Pro Bono Therapy Services', href: '/pro-bono-counseling-okc/' },
   ],
   [
     { name: 'Marriage & Couples Therapy', href: '/marriage-counseling-oklahoma-city/' },
     { name: 'Family Counseling', href: '/family-therapy-oklahoma-city/' },
-    { name: 'Corporate & Business Training', href: '/corporate-business-training' },
-    { name: 'Mental Health Awareness & Human Development', href: '/services/mental-health-awareness' },
     { name: 'Community Outreach & Support Programs', href: '/services/community-outreach-support' },
   ],
 ];

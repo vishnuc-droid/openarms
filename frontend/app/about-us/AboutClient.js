@@ -357,7 +357,7 @@ export default function AboutClient() {
           <div className="oa-okc-map reveal reveal-from-right">
             <iframe
               title="Open Arms Initiative OKC Map"
-              src="https://maps.google.com/maps?q=1101%20Sovereign%20Row%20Oklahoma%20City%20OK%2073108&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?cid=11493076692460582253&hl=en-US&z=14&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}

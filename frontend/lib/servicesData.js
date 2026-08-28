@@ -19,18 +19,19 @@ export const serviceCategories = {
     ],
     image: '/images/first.png',
   },
-  'Clinical Training & Workshops': {
-    heading: 'Clinical Training & Workshops',
-    links: [
-      { name: 'Trauma-Informed Care Training', slug: 'trauma-informed-care-training' },
-      { name: 'Mental Health Awareness & Human Development', slug: 'mental-health-awareness' },
-      { name: 'Parenting Skills Development', slug: 'parenting-skills-development' },
-      { name: 'Anxiety, Depression, and Stress Management', slug: 'anxiety-depression-stress-management' },
-    ],
-    sideTitle: 'Locations',
-    sideLinks: [{ name: 'Oklahoma City', href: '/location' }],
-    image: '/images/third.png',
-  },
+  // Hidden for now — restore this entry to bring "Clinical Training & Workshops" back to the nav.
+  // 'Clinical Training & Workshops': {
+  //   heading: 'Clinical Training & Workshops',
+  //   links: [
+  //     { name: 'Trauma-Informed Care Training', slug: 'trauma-informed-care-training' },
+  //     { name: 'Mental Health Awareness & Human Development', slug: 'mental-health-awareness' },
+  //     { name: 'Parenting Skills Development', slug: 'parenting-skills-development' },
+  //     { name: 'Anxiety, Depression, and Stress Management', slug: 'anxiety-depression-stress-management' },
+  //   ],
+  //   sideTitle: 'Locations',
+  //   sideLinks: [{ name: 'Oklahoma City', href: '/location' }],
+  //   image: '/images/third.png',
+  // },
   'Non-Profit': {
     heading: 'Non-Profit Services',
     links: [

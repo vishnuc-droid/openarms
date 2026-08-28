@@ -184,7 +184,7 @@ export default function ContactPage() { return <main className="fs-page oa-conta
     <div className="oa-reach-map reveal reveal-from-bottom">
       <iframe
         title="Open Arms Initiative OKC Map"
-        src="https://maps.google.com/maps?q=1101%20Sovereign%20Row%20Oklahoma%20City%20OK%2073108&t=&z=14&ie=UTF8&iwloc=&output=embed"
+        src="https://maps.google.com/maps?cid=11493076692460582253&hl=en-US&z=14&output=embed"
         width="100%"
         height="100%"
         style={{ border: 0 }}
