@@ -98,6 +98,12 @@ const process = [
   ['Grow', 'Develop greater confidence while continuing to adjust your parenting approach as your child grows.'],
 ];
 
+const topicGroupIcons = [
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12a8 8 0 1 1 3 6.2L4 19l.9-3A7.9 7.9 0 0 1 4 12Z" /><path d="M8.5 10.5h7M8.5 14h4.5" /></svg>,
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20.5s-6.5-4-9-8.2C1.2 8.8 3 5.5 6.2 5.5c1.9 0 3.2 1 3.8 2.1.6-1.1 1.9-2.1 3.8-2.1 3.2 0 5 3.3 3.2 6.8-2.5 4.2-9 8.2-9 8.2Z" /></svg>,
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M20.5 12A8.5 8.5 0 1 1 12 3.5" /><path d="M20.5 12 17 8.5m3.5 3.5L17 15.5" /><path d="M12 8v4l2.5 1.5" strokeDasharray="1.4 2" /></svg>,
+];
+
 const topicGroups = [
   { label: 'Communication & Connection', topics: ['Parent-child communication', 'Building stronger family relationships', 'Strengthening caregiver confidence'] },
   { label: 'Understanding Behavior', topics: ['Understanding behavior', 'Emotional awareness', 'Age-appropriate expectations'] },
@@ -129,19 +135,19 @@ export default function ParentingClassesPage() { return <main className="fs-page
       <p>At Open Arms Initiative, our <strong>Effective Parenting Classes in OKC</strong> provide practical education, compassionate guidance, and supportive tools to help parents and caregivers feel more confident as they navigate the challenges of raising children.</p>
       <div className="fs-actions"><a href="#needs" className="fs-btn fs-solid">Explore Parenting Support</a><Link href="/contact" className="fs-btn fs-outline">Connect With Open Arms</Link></div>
     </div>
-    <div className="fs-hero-form-card reveal reveal-from-right"><div className="fs-hero-form-body"><h3>Request an Appointment</h3><span className="fs-hero-form-underline" /><p className="fs-hero-form-sub">Tell us a bit about your family and we&rsquo;ll help you find the right support.</p><ParentingSupportRequestForm /></div><div className="fs-hero-form-photo"><img src="/happy-family-with-dog-moving-new-home-100kb.jpg" alt="Parent spending warm, connected time with children at home" /></div></div>
+    <div className="fs-hero-form-card reveal reveal-from-right"><div className="fs-hero-form-body"><h3>Request an Appointment</h3><span className="fs-hero-form-underline" /><p className="fs-hero-form-sub">Tell us a bit about your family and we&rsquo;ll help you find the right support.</p><ParentingSupportRequestForm /></div><div className="fs-hero-form-photo"><img src="/gm.jpg" alt="Parent spending warm, connected time with children at home" /></div></div>
   </div></section>
 
   <section className="fs-trust-section"><div className="fs-container fs-trust">{['Practical Guidance', 'Family-Centered', 'Supportive Education', 'No Judgment'].map((x, i) => <div key={x}><span>{trustIcons[i]}</span><p>{x}</p></div>)}</div></section>
 
-  <section className="fs-section"><div className="fs-container"><div className="fs-alone fs-alone-parenting reveal reveal-from-bottom">
+  <section className="fs-section fs-alone-parenting"><div className="fs-alone reveal reveal-from-bottom">
     <h2>Good Parents Have Hard Days Too</h2>
     <i className="fs-alone-leaf"><span className="fs-alone-leaf-dot" /></i>
     <p>Some days you feel confident. Other days, nothing seems to work.</p>
     <p>Your child doesn&apos;t listen. Your teenager stops talking. A routine that worked last month suddenly creates arguments. You set a boundary and immediately wonder whether you were too strict, or not strict enough.</p>
     <p>Parenting can involve love, pride, worry, frustration, uncertainty, and exhaustion, sometimes all in the same day.</p>
     <p><strong>Needing support doesn&apos;t mean you&apos;re doing parenting wrong. It means you&apos;re willing to keep learning.</strong></p>
-  </div></div></section>
+  </div></section>
 
   <section id="needs" className="fs-section fs-needs-section"><div className="fs-container">
     <div className="fs-needs-head reveal reveal-from-bottom"><h2>What Are You <em>Navigating</em> Right Now?</h2><i className="fs-line" /></div>
@@ -150,7 +156,7 @@ export default function ParentingClassesPage() { return <main className="fs-page
 
   <section className="fs-section fs-understand-section"><div className="fs-container"><div className="fs-understand">
     <div className="reveal reveal-from-left"><h2>Parenting Support Isn&rsquo;t About Becoming a Perfect Parent</h2><p>There is no perfect parent. There is no single parenting strategy that works for every child. And there isn&apos;t a checklist that makes every difficult moment disappear.</p><p>Our <strong>Parent Support Training in Oklahoma City</strong> focuses on helping parents better understand their children, strengthen communication, establish appropriate boundaries, and develop practical approaches they can use at home.</p></div>
-    <div className="fs-understand-media reveal reveal-from-bottom"><img src="/ch2.jpg" alt="Family drawing and hands together on a table at home" /></div>
+    <div className="fs-understand-media reveal reveal-from-bottom"><img src="/par2.jpg" alt="Family drawing and hands together on a table at home" /></div>
     <div className="reveal reveal-from-right">
       <p className="fs-kicker-label">PARENTING SUPPORT MAY HELP YOU:</p>
       <div className="fs-check-grid">{supportList.map(x => <span key={x}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12.5 9 18 20 6" /></svg>{x}</span>)}</div>
@@ -159,7 +165,7 @@ export default function ParentingClassesPage() { return <main className="fs-page
   <p className="fs-understand-close reveal reveal-from-bottom"><strong>The goal isn&apos;t perfection. It&apos;s connection, understanding, and growth.</strong></p>
   </div></section>
 
-  <section className="fs-statement"><div className="fs-container reveal reveal-scale-in"><div><h2>&ldquo;You don&rsquo;t have to know everything to be the parent your child needs.&rdquo;</h2><Link href="/contact" className="fs-btn fs-light">Explore Parenting Support</Link></div><img src="/n1.jpg" alt="Parent and child sharing a supportive moment" /><aside>Parenting involves learning.<br /><br />Your child is growing. You&apos;re growing too.<br /><br />There is strength in being willing to ask questions, learn new approaches, and seek support when something isn&apos;t working.</aside></div></section>
+  <section className="fs-statement fs-statement-parenting"><div className="fs-container reveal reveal-scale-in"><div><h2>&ldquo;You don&rsquo;t have to know everything to be the parent your child needs.&rdquo;</h2><Link href="/contact" className="fs-btn fs-light">Explore Parenting Support</Link></div><img src="/parents-brushing-daughter-hair-100kb.jpg" alt="Parent and child sharing a supportive moment" /><aside>Parenting involves learning.<br /><br />Your child is growing. You&apos;re growing too.<br /><br />There is strength in being willing to ask questions, learn new approaches, and seek support when something isn&apos;t working.</aside></div></section>
 
   <section className="fs-section pc-process-section"><div className="fs-container">
     <h2 className="fs-center reveal reveal-from-bottom">Practical Tools for Real Family Life</h2><i className="fs-line-center" />
@@ -167,27 +173,40 @@ export default function ParentingClassesPage() { return <main className="fs-page
     <div className="pc-process-rows reveal-stagger">{process.map(([h, p], i) => <div className="pc-process-row reveal reveal-from-bottom" key={h}><span className="pc-process-row-icon">{processIcons[i]}</span><div><h3>{h}</h3><p>{p}</p></div></div>)}</div>
   </div></section>
 
-  <section className="fs-section fs-kinds-section"><div className="fs-container">
-    <h2 className="fs-center reveal reveal-from-bottom">Parenting Workshops in Oklahoma City</h2><i className="fs-line-center" />
-    <p className="pc-process-lead reveal reveal-from-bottom">Sometimes parents don&apos;t need individual therapy. They need information, practical tools, and an opportunity to learn and ask questions. Our Parenting Workshops in Oklahoma City can provide educational opportunities around topics relevant to parents, caregivers, and families. Workshop topics may vary depending on the program and audience and can include areas such as:</p>
-    <div className="pc-topic-groups reveal-stagger">{topicGroups.map((group) => <div className="pc-topic-group reveal reveal-from-bottom" key={group.label}><h3>{group.label}</h3><div className="pc-topic-chips">{group.topics.map((t) => <span className="pc-topic-chip" key={t}>{t}</span>)}</div></div>)}</div>
+  <section className="fs-section fs-kinds-section pc-workshops-section"><div className="fs-container">
+    <div className="pc-workshops-head reveal reveal-from-bottom">
+      <h2 className="fs-center">Parenting Workshops in Oklahoma City</h2><i className="fs-line-center" />
+      <p className="pc-process-lead">Sometimes parents don&apos;t need individual therapy. They need information. They need practical tools. They need an opportunity to learn and ask questions. Our <strong>Parenting Workshops in Oklahoma City</strong> can provide educational opportunities around topics relevant to parents, caregivers, and families. Workshop topics may vary depending on the program and audience and can include areas such as:</p>
+    </div>
+    <div className="pc-topic-groups reveal-stagger">{topicGroups.map((group, i) => <div className="pc-topic-group" key={group.label}><span className="pc-topic-group-icon">{topicGroupIcons[i]}</span><h3>{group.label}</h3><div className="pc-topic-chips">{group.topics.map((t) => <span className="pc-topic-chip" key={t}>{t}</span>)}</div></div>)}</div>
   </div></section>
 
-  <section className="fs-section"><div className="fs-container"><div className="fs-counseling reveal reveal-from-bottom">
-    <h2>Support for Parents Is Support for Children</h2>
-    <p>Children don&apos;t experience family life separately from their caregivers. When parents have more tools, greater confidence, and better ways to communicate, the entire household can benefit.</p>
-    <p>That&apos;s why parenting support isn&apos;t about pointing out what you&apos;re doing wrong. It&apos;s about recognizing what is already working and helping you develop additional tools for the areas that feel difficult.</p>
-    <div className="pc-quote"><p>Sometimes the most important change begins when a parent feels:</p><p className="pc-quote-line">&ldquo;I understand my child a little better now.&rdquo;</p></div>
+  <section className="pb-understand pc-support-understand"><div className="fs-container"><div className="pb-understand-inner">
+    <div className="pb-understand-copy reveal reveal-from-left">
+      <h2>Support for Parents Is Support for Children</h2>
+      <div className="pb-understand-rule" />
+      <p>Children don&apos;t experience family life separately from their caregivers. When parents have more tools, greater confidence, and better ways to communicate, the entire household can benefit.</p>
+      <p>That&apos;s why parenting support isn&apos;t about pointing out what you&apos;re doing wrong. It&apos;s about recognizing what is already working and helping you develop additional tools for the areas that feel difficult.</p>
+      <div className="pc-quote"><p>Sometimes the most important change begins when a parent feels:</p><p className="pc-quote-line">&ldquo;I understand my child a little better now.&rdquo;</p></div>
+    </div>
+    <div className="pb-understand-photo reveal reveal-from-right pc-no-fade">
+      <img src="/cc.jpg" alt="Parent and child sharing a supportive moment" />
+    </div>
   </div></div></section>
 
-  <section className="fs-section fs-understand-section fs-section-notavailable-parenting"><div className="fs-container"><div className="fs-counseling reveal reveal-from-bottom">
-    <h2>When Your Family May Need More Than Parenting Support</h2>
-    <p>Parent education and counseling serve different purposes.</p>
-    <p>If challenges involve ongoing conflict or broader family relationship concerns, our <Link href="/family-therapy-oklahoma-city/">Family Counseling</Link> service may be more appropriate.</p>
-    <p>If your child is experiencing emotional, behavioral, relational, or other concerns that may benefit from professional therapeutic support, explore our <Link href="/child-counseling-services-oklahoma-city/">Child &amp; Adolescent Counseling</Link> services.</p>
-    <p>Families looking for broader guidance and community resources can also explore <Link href="/family-support-services-oklahoma-city/">Family Support Services</Link>.</p>
-    <p><strong>Open Arms can help you understand which type of support may best fit your circumstances.</strong></p>
-  </div></div></section>
+  <section className="pc-more-support"><div className="fs-container">
+    <div className="pc-more-support-inner reveal reveal-from-bottom">
+      <span className="pc-more-support-badge">A NOTE ON FIT</span>
+      <h2>When Your Family May Need More Than Parenting Support</h2>
+      <p className="pc-more-support-lead">Parent education and counseling serve different purposes.</p>
+      <div className="pc-more-support-cards">
+        <Link href="/family-therapy-oklahoma-city/" className="pc-more-support-card"><span className="pc-more-support-card-label">Family Counseling</span><span className="pc-more-support-card-text">If challenges involve ongoing conflict or broader family relationship concerns, this service may be more appropriate.</span><span className="pc-more-support-card-arrow"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span></Link>
+        <Link href="/child-counseling-services-oklahoma-city/" className="pc-more-support-card"><span className="pc-more-support-card-label">Child &amp; Adolescent Counseling</span><span className="pc-more-support-card-text">If your child is experiencing emotional, behavioral, relational, or other concerns that may benefit from professional therapeutic support, explore these services.</span><span className="pc-more-support-card-arrow"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span></Link>
+        <Link href="/family-support-services-oklahoma-city/" className="pc-more-support-card"><span className="pc-more-support-card-label">Family Support Services</span><span className="pc-more-support-card-text">Families looking for broader guidance and community resources can also explore this option.</span><span className="pc-more-support-card-arrow"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span></Link>
+      </div>
+      <p className="pc-more-support-close"><strong>Open Arms can help you understand which type of support may best fit your circumstances.</strong></p>
+    </div>
+  </div></section>
 
   <section className="fs-section fs-steps-section"><div className="fs-container"><h2 className="fs-center reveal reveal-from-bottom">How Parenting Support Works</h2><i className="fs-line-center" /><div className="fs-steps reveal-stagger">{[['Connect', 'Reach out to Open Arms Initiative and tell us what kind of parenting support you’re looking for.'], ['Learn', 'Explore relevant information, perspectives, and practical strategies.'], ['Practice', 'Begin applying appropriate tools to communication, boundaries, routines, and everyday parenting challenges.'], ['Grow Together', 'Continue adapting what you learn as your child, your relationship, and your family’s needs evolve.']].map(([h, p], i) => <article className="reveal reveal-from-bottom" key={h}><span className="fs-step-icon">{stepIcons[i]}</span><h3>{h}</h3><p>{p}</p></article>)}</div></div></section>
 
