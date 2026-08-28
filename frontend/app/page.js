@@ -256,20 +256,24 @@ export default function HomePage() {
               <div className="insurance-strip-track">
                 {[0, 1].map((copy) => (
                   <div className="insurance-strip-payers" key={copy} aria-hidden={copy === 1}>
-                    <span className="insurance-strip-logo"><img src="/Logo 4.png" alt="Humana" /></span>
-                    <span className="insurance-strip-logo"><img src="/Logo 3.png" alt="Aetna" /></span>
-                    <span className="insurance-strip-logo"><img src="/Logo 2.png" alt="Oklahoma Complete Health" /></span>
-                    <span className="insurance-strip-logo"><img src="/Logo 5.png" alt="SoonerCare" /></span>
+                    <span className="insurance-strip-logo insurance-strip-logo--zoom"><img src="/Logo 4.png" alt="Humana" /></span>
+                    <span className="insurance-strip-logo insurance-strip-logo--zoom"><img src="/Logo 3.png" alt="Aetna" /></span>
+                    <span className="insurance-strip-logo insurance-strip-logo--zoom"><img src="/Logo 2.png" alt="Oklahoma Complete Health" /></span>
+                    <span className="insurance-strip-logo insurance-strip-logo--zoom"><img src="/Logo 5.png" alt="SoonerCare" /></span>
                   </div>
                 ))}
               </div>
             </div>
-            <span className="insurance-strip-pay">
+            <span className="insurance-strip-pay insurance-strip-pay-desktop">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c0-3.5 3.1-6 7-6s7 2.5 7 6"/></svg>
               Private Pay
             </span>
+            <Link href="/faq" className="insurance-strip-link insurance-strip-link-mobile">
+              View Insurance &amp; Payment Options
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </Link>
           </div>
-          <div className="insurance-strip-cta reveal reveal-from-bottom">
+          <div className="insurance-strip-cta insurance-strip-cta-desktop reveal reveal-from-bottom">
             <Link href="/faq" className="insurance-strip-link">
               View Insurance &amp; Payment Options
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>

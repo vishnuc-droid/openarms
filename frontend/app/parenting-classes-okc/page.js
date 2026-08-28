@@ -134,7 +134,7 @@ export default function ParentingClassesPage() { return <main className="fs-page
 
   <section className="fs-trust-section"><div className="fs-container fs-trust">{['Practical Guidance', 'Family-Centered', 'Supportive Education', 'No Judgment'].map((x, i) => <div key={x}><span>{trustIcons[i]}</span><p>{x}</p></div>)}</div></section>
 
-  <section className="fs-section"><div className="fs-container"><div className="fs-alone reveal reveal-from-bottom">
+  <section className="fs-section"><div className="fs-container"><div className="fs-alone fs-alone-parenting reveal reveal-from-bottom">
     <h2>Good Parents Have Hard Days Too</h2>
     <i className="fs-alone-leaf"><span className="fs-alone-leaf-dot" /></i>
     <p>Some days you feel confident. Other days, nothing seems to work.</p>
@@ -180,7 +180,7 @@ export default function ParentingClassesPage() { return <main className="fs-page
     <div className="pc-quote"><p>Sometimes the most important change begins when a parent feels:</p><p className="pc-quote-line">&ldquo;I understand my child a little better now.&rdquo;</p></div>
   </div></div></section>
 
-  <section className="fs-section fs-understand-section"><div className="fs-container"><div className="fs-counseling reveal reveal-from-bottom">
+  <section className="fs-section fs-understand-section fs-section-notavailable-parenting"><div className="fs-container"><div className="fs-counseling reveal reveal-from-bottom">
     <h2>When Your Family May Need More Than Parenting Support</h2>
     <p>Parent education and counseling serve different purposes.</p>
     <p>If challenges involve ongoing conflict or broader family relationship concerns, our <Link href="/family-therapy-oklahoma-city/">Family Counseling</Link> service may be more appropriate.</p>
