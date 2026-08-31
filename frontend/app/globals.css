@@ -7332,6 +7332,7 @@ footer a:hover {
 .fs-statement-parenting img{object-position:center 25%}
 @media(max-width:900px){.fs-statement-parenting .fs-container{min-height:0}}
 .fs-kinds-section{background:var(--oa-blue-light)}
+.fs-page .team-connect-section+.fs-kinds-section{border-top:1px solid rgba(7,43,58,.12)}
 
 
 
@@ -8924,6 +8925,7 @@ footer a:hover {
 .oa-about-hero-copy{text-align:left;max-width:560px}
 .oa-about-hero-copy .fs-kicker{align-self:flex-start}
 @media(max-width:900px){.oa-about-hero-copy{max-width:100%}}
+@media(max-width:640px){.oa-about-hero{background:none}}
 
 .oa-why-section.fs-alone-parenting{background:url(/np1.jpg) center/cover no-repeat}
 .oa-why-section .fs-alone{max-width:860px}
