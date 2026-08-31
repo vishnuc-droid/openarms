@@ -119,7 +119,16 @@ const faqs = [
   ['What if my child needs counseling too?', <>If your child is experiencing concerns that may benefit from therapeutic support, Open Arms Initiative also provides <Link href="/child-counseling-services-oklahoma-city/">Child &amp; Adolescent Counseling</Link>. Your family can explore the available services to determine an appropriate next step.</>],
 ];
 
-export default function ParentingClassesPage() { return <main className="fs-page pc-page">
+const teamMembers = [
+  { name: 'Breanna White, LPC', title: 'Therapist', photo: '/Breanna White - LPC.jpg' },
+  { name: 'Brenda Mitchell, LPC', title: 'Therapist', photo: '/Brenda Mitchell - LPC.jpg' },
+  { name: 'Rebekah Thomas, LPC-C', title: 'Therapist', photo: '/rebekah.jpg' },
+  { name: 'Henri Jo Ball, LPC', title: 'Therapist', photo: '/Henri.jpg' },
+  { name: 'Karli Burch, LPC', title: 'Therapist', photo: '/Karli Burch - LPC.jpg' },
+  { name: 'Emeka Nnaka, LPC', title: 'Therapist', photo: '/Emeka Nnaka - LPC.jpg' },
+];
+
+export default function ParentingClassesPage() { return <main className="fs-page pc-page team-boost">
   <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_BREADCRUMB) }} />
   <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_SERVICE) }} />
   <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_FAQ) }} />
@@ -180,6 +189,36 @@ export default function ParentingClassesPage() { return <main className="fs-page
     </div>
     <div className="pc-topic-groups reveal-stagger">{topicGroups.map((group, i) => <div className="pc-topic-group" key={group.label}><span className="pc-topic-group-icon">{topicGroupIcons[i]}</span><h3>{group.label}</h3><div className="pc-topic-chips">{group.topics.map((t) => <span className="pc-topic-chip" key={t}>{t}</span>)}</div></div>)}</div>
   </div></section>
+
+  <section id="about" className="team-connect-section">
+    <div className="team-connect-container section-reveal section-reveal-right">
+      <div className="team-connect-copy reveal reveal-from-left">
+        <span className="care-badge">Our Therapists</span>
+        <h2 className="team-connect-title">
+          Care Starts With People You Can Trust
+          <svg className="team-connect-underline" viewBox="0 0 220 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8c30-10 60-10 90 0s90 10 126-2" fill="none" stroke="#0170ED" strokeWidth="3" strokeLinecap="round"/></svg>
+        </h2>
+        <p>Behind every session is a real person who&apos;s chosen this work, not a call center, not an algorithm.</p>
+        <Link href="/about-us" className="team-connect-link">
+          Meet Our Team
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </Link>
+      </div>
+      <div className="team-photo-grid reveal-stagger">
+        {teamMembers.map((member) => (
+          <div className="team-photo-card reveal reveal-from-bottom" key={member.name}>
+            <div className="team-photo-media">
+              <img src={member.photo} alt={member.name} />
+            </div>
+            <div className="team-photo-caption">
+              <span className="team-photo-name">{member.name}</span>
+              <span className="team-photo-title">{member.title}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
   <section className="pb-understand pc-support-understand"><div className="fs-container"><div className="pb-understand-inner">
     <div className="pb-understand-copy reveal reveal-from-left">

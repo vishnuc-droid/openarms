@@ -104,10 +104,12 @@ const kinds = [
 ];
 
 const teamMembers = [
-  { name: 'Jamie James, LPC', title: 'President & Founder', photo: '/Jamie James - LPC.jpg' },
-  { name: "D'Fawn Downs, LPC", title: 'Corporate Compliance Officer & Clinical Director', photo: "/D'Fawn Downs - LPC.jpg" },
-  { name: 'Brandon Martin', title: 'CFO', photo: '/Brandon Martin.jpg' },
-  { name: 'Stephanie Caldwell', title: 'Parent Relations Director', photo: '/Stephanie Caldwell.jpg' },
+  { name: 'Henri Jo Ball, LPC', title: 'Therapist', photo: '/Henri.jpg' },
+  { name: 'Emeka Nnaka, LPC', title: 'Therapist', photo: '/Emeka Nnaka - LPC.jpg' },
+  { name: 'Brenda Mitchell, LPC', title: 'Therapist', photo: '/Brenda Mitchell - LPC.jpg' },
+  { name: 'Jamira Alexander', title: 'Therapist', photo: '/Jamira Alexander.jpg' },
+  { name: 'Victori Swinford', title: 'Therapist', photo: '/Victori.jpg' },
+  { name: 'Mattea Lear', title: 'Therapist', photo: '/Mattea.jpg' },
 ];
 
 const faqs = [
@@ -119,7 +121,7 @@ const faqs = [
   ['Can you help me find the right service for my child or family?', <>Open Arms Initiative can help you explore available services based on the concerns you share. Depending on your circumstances, appropriate options may include family support, counseling, <Link href="/child-counseling-services-oklahoma-city/">child and adolescent services</Link>, education, or connections to other resources.</>],
 ];
 
-export default function FamilySupportPage() { return <main className="fs-page">
+export default function FamilySupportPage() { return <main className="fs-page team-boost">
   <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_BREADCRUMB) }} />
   <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_SERVICE) }} />
   <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_FAQ) }} />
@@ -179,7 +181,7 @@ export default function FamilySupportPage() { return <main className="fs-page">
   <section id="about" className="team-connect-section">
     <div className="team-connect-container section-reveal section-reveal-right">
       <div className="team-connect-copy reveal reveal-from-left">
-        <span className="care-badge">Our Team</span>
+        <span className="care-badge">Our Therapists</span>
         <h2 className="team-connect-title">
           Care Starts With People You Can Trust
           <svg className="team-connect-underline" viewBox="0 0 220 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8c30-10 60-10 90 0s90 10 126-2" fill="none" stroke="#0170ED" strokeWidth="3" strokeLinecap="round"/></svg>

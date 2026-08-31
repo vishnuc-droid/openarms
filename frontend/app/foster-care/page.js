@@ -109,10 +109,12 @@ const stepIcons = [
 ];
 
 const teamMembers = [
-  { name: 'Jamie James, LPC', title: 'President & Founder', photo: '/Jamie James - LPC.jpg' },
-  { name: "D'Fawn Downs, LPC", title: 'Corporate Compliance Officer & Clinical Director', photo: "/D'Fawn Downs - LPC.jpg" },
-  { name: 'Brandon Martin', title: 'CFO', photo: '/Brandon Martin.jpg' },
-  { name: 'Stephanie Caldwell', title: 'Parent Relations Director', photo: '/Stephanie Caldwell.jpg' },
+  { name: 'Henri Jo Ball, LPC', title: 'Therapist', photo: '/Henri.jpg' },
+  { name: 'Emeka Nnaka, LPC', title: 'Therapist', photo: '/Emeka Nnaka - LPC.jpg' },
+  { name: 'Brenda Mitchell, LPC', title: 'Therapist', photo: '/Brenda Mitchell - LPC.jpg' },
+  { name: 'Victori Swinford', title: 'Therapist', photo: '/Victori.jpg' },
+  { name: 'Jamira Alexander', title: 'Therapist', photo: '/Jamira Alexander.jpg' },
+  { name: 'Mattea Lear', title: 'Therapist', photo: '/Mattea.jpg' },
 ];
 
 const faqs = [
@@ -124,7 +126,7 @@ const faqs = [
   ['How do we get started?', 'Contact Open Arms Initiative and explain what kind of foster, adoption, counseling, or family support you’re looking for. The organization can then guide you toward the appropriate available service.'],
 ];
 
-export default function FosterCarePage() { return <main className="grief-page">
+export default function FosterCarePage() { return <main className="grief-page foster-care-page team-boost">
   <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_BREADCRUMB) }} />
   <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_SERVICE) }} />
   <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_FAQ) }} />
@@ -147,7 +149,7 @@ export default function FosterCarePage() { return <main className="grief-page">
   <section id="about" className="team-connect-section">
     <div className="team-connect-container section-reveal section-reveal-right">
       <div className="team-connect-copy reveal reveal-from-left">
-        <span className="care-badge">Our Team</span>
+        <span className="care-badge">Our Therapists</span>
         <h2 className="team-connect-title">
           Care Starts With People You Can Trust
           <svg className="team-connect-underline" viewBox="0 0 220 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8c30-10 60-10 90 0s90 10 126-2" fill="none" stroke="#0170ED" strokeWidth="3" strokeLinecap="round"/></svg>

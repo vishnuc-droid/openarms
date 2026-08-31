@@ -69,16 +69,18 @@ const approachIcons = [
 ];
 
 const teamMembers = [
-  { name: 'Jamie James, LPC', title: 'President & Founder', photo: '/Jamie James - LPC.jpg' },
-  { name: "D'Fawn Downs, LPC", title: 'Corporate Compliance Officer & Clinical Director', photo: "/D'Fawn Downs - LPC.jpg" },
-  { name: 'Brandon Martin', title: 'CFO', photo: '/Brandon Martin.jpg' },
-  { name: 'Stephanie Caldwell', title: 'Parent Relations Director', photo: '/Stephanie Caldwell.jpg' },
+  { name: 'Henri Jo Ball, LPC', title: 'Therapist', photo: '/Henri.jpg' },
+  { name: 'Emeka Nnaka, LPC', title: 'Therapist', photo: '/Emeka Nnaka - LPC.jpg' },
+  { name: 'Brenda Mitchell, LPC', title: 'Therapist', photo: '/Brenda Mitchell - LPC.jpg' },
+  { name: 'Karli Burch, LPC', title: 'Therapist', photo: '/Karli Burch - LPC.jpg' },
+  { name: 'Rebekah Thomas, LPC-C', title: 'Therapist', photo: '/rebekah.jpg' },
+  { name: 'Breanna White, LPC', title: 'Therapist', photo: '/Breanna White - LPC.jpg' },
 ];
 
 const challenges = [['Communication Breakdowns','You talk, but neither person feels truly heard or understood.'],['Recurring Conflict','The subject may change, but somehow you keep having the same argument.'],['Emotional Distance','You may share a home and a life while feeling increasingly disconnected from each other.'],['Trust & Relationship Hurt','Past experiences or unresolved hurt may make it difficult to feel secure and connected.'],['Life Transitions','Parenthood, career changes, relocation, caregiving, financial stress, and other transitions can place pressure on a relationship.'],['Different Needs & Expectations','Differences around affection, responsibilities, priorities, boundaries, or the future can create frustration and resentment.']];
 const faqs = [['How do we know if we need couples counseling?', 'You don’t need to wait until your relationship reaches a breaking point. Couples may consider counseling when communication has become difficult, the same conflicts keep returning, emotional distance is growing, trust has been affected, or they want professional support navigating a major transition.'],['What happens during marriage counseling?', 'Your therapist will learn about your relationship, concerns, communication patterns, and goals. Counseling provides a structured environment where both partners can discuss difficult issues, understand each other’s perspectives, and work toward healthier ways of communicating and relating.'],['Will the therapist take one person’s side?', 'Couples counseling is not intended to determine a winner or assign blame. The therapist’s role is to support the therapeutic process and help both partners explore the patterns, concerns, and experiences affecting the relationship.'],['Can couples therapy help us communicate better?', 'Improving communication is a common focus of couples therapy. Counseling can help partners recognize communication patterns, express needs more clearly, listen more effectively, and approach disagreements in healthier ways.'],['Do you offer couples therapy in Oklahoma City?', <>Yes. Open Arms Initiative provides <strong>Couples Therapy in OKC</strong> for partners seeking support with communication, recurring conflict, emotional distance, trust concerns, relationship transitions, and other challenges.</>],['Should we consider counseling even if we aren’t married?', 'Yes. Couples counseling can be relevant to committed partners regardless of marital status. Your therapist can discuss your concerns and determine whether the service is appropriate for your circumstances.']];
 
-export default function MarriageCounselingPage() { return <main className="marriage-page">
+export default function MarriageCounselingPage() { return <main className="marriage-page team-boost">
   <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_BREADCRUMB) }} />
   <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_SERVICE) }} />
   <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_FAQ) }} />
@@ -92,7 +94,7 @@ export default function MarriageCounselingPage() { return <main className="marri
   <section id="about" className="team-connect-section">
     <div className="team-connect-container section-reveal section-reveal-right">
       <div className="team-connect-copy reveal reveal-from-left">
-        <span className="care-badge">Our Team</span>
+        <span className="care-badge">Our Therapists</span>
         <h2 className="team-connect-title">
           Care Starts With People You Can Trust
           <svg className="team-connect-underline" viewBox="0 0 220 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8c30-10 60-10 90 0s90 10 126-2" fill="none" stroke="#0170ED" strokeWidth="3" strokeLinecap="round"/></svg>

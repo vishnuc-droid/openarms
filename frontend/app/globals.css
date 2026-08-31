@@ -7325,6 +7325,7 @@ footer a:hover {
 .fs-statement{position:relative;padding:0;background:radial-gradient(circle at 88% 12%,rgba(0,175,247,.28) 0%,rgba(0,175,247,0) 45%),linear-gradient(100deg,#072B3A 0%,#0170ED 100%);color:#fff;overflow:hidden}
 .fs-statement .fs-container{position:relative;z-index:2;display:grid;grid-template-columns:1.3fr .85fr 1fr;align-items:stretch;padding:0;min-height:400px}
 .fs-statement img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;filter:grayscale(.3) brightness(.85);transition:transform .5s ease}.fs-statement:hover img{transform:scale(1.08)}
+.oa-statement img{filter:none}
 .fs-statement .fs-container>div,.fs-statement aside{padding:45px 33px;display:flex;flex-direction:column;justify-content:center}
 .fs-statement h2{font-size:clamp(1.9rem,2.8vw,2.6rem);line-height:1.15;margin:0 0 12px;color:#fff}
 .fs-statement aside{font-size:16px;line-height:1.6;border-left:1px solid rgba(255,255,255,.4);color:#dcebf0}
@@ -7333,6 +7334,7 @@ footer a:hover {
 @media(max-width:900px){.fs-statement-parenting .fs-container{min-height:0}}
 .fs-kinds-section{background:var(--oa-blue-light)}
 .fs-page .team-connect-section+.fs-kinds-section{border-top:1px solid rgba(7,43,58,.12)}
+.pro-bono-page .fs-pillars-section+.team-connect-section{border-top:1px solid rgba(7,43,58,.12)}
 
 
 
@@ -8485,6 +8487,9 @@ footer a:hover {
 
 .team-photo-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   text-align: center;
   border-radius: 14px;
   overflow: hidden;
@@ -8498,6 +8503,7 @@ footer a:hover {
   aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 14px 14px 0 0;
+  flex: none;
 }
 
 .team-photo-card img {
@@ -8508,6 +8514,10 @@ footer a:hover {
 }
 
 .team-photo-caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
   padding: 10px 10px 14px;
   background: #ffffff;
 }
@@ -8529,6 +8539,78 @@ footer a:hover {
   color: #7c8a92;
   margin-top: 3px;
   line-height: 1.4;
+}
+
+.team-boost .team-connect-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.team-boost .team-connect-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 8% 15%, rgba(1, 112, 237, 0.14) 0%, transparent 42%),
+    radial-gradient(circle at 92% 85%, rgba(1, 112, 237, 0.1) 0%, transparent 45%);
+  pointer-events: none;
+}
+
+.team-boost .team-connect-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: radial-gradient(rgba(7, 43, 58, 0.08) 1.4px, transparent 1.4px);
+  background-size: 20px 20px;
+  -webkit-mask-image: linear-gradient(115deg, #000 0%, transparent 40%);
+  mask-image: linear-gradient(115deg, #000 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.team-boost .team-connect-container {
+  position: relative;
+  z-index: 1;
+}
+
+.team-boost .team-connect-copy .care-badge {
+  font-size: 15.5px;
+  padding: 7px 16px;
+}
+
+.team-boost .team-connect-title {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+}
+
+.team-boost .team-connect-copy p {
+  font-size: 17.5px;
+}
+
+.team-boost .team-connect-link {
+  font-size: 16.5px;
+}
+
+.team-boost .team-photo-grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.team-boost .team-photo-caption {
+  background: linear-gradient(135deg, #071c3f 0%, #0a2a5e 40%, #0170ed 100%);
+}
+
+.team-boost .team-photo-name,
+.team-boost .team-photo-title {
+  color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+  .team-boost .team-photo-grid { grid-template-columns: repeat(3, 1fr); max-width: 560px; }
+}
+
+@media (max-width: 640px) {
+  .team-boost .team-photo-grid { grid-template-columns: repeat(2, 1fr); max-width: 420px; }
 }
 
 /* Location band */
@@ -9046,4 +9128,23 @@ footer a:hover {
   .oa-pillars-5{grid-template-columns:repeat(2,1fr)}
   .oa-team-grid-lg{grid-template-columns:1fr;max-width:420px}
   .oa-final .oa-final-ctas{flex-direction:column}
+}
+
+/* Child counseling page uses ca-hero-split (no full-bleed hero image), so the
+   trust bar should keep its normal gradient instead of the dark image-overlay
+   style meant for pages using ca-hero-bg. */
+@media(max-width:960px){
+  .ca-page .ca-hero-split + .ca-trust-section{
+    position:static;
+    margin-top:0;
+    padding:38px 0;
+    background:radial-gradient(circle at 88% 12%,rgba(0,175,247,.28) 0%,rgba(0,175,247,0) 45%),linear-gradient(100deg,#072B3A 0%,#0170ED 100%);
+  }
+  .ca-page .ca-hero-split + .ca-trust-section .ca-trust{
+    background:none;
+    -webkit-backdrop-filter:none;
+    backdrop-filter:none;
+    border-radius:0;
+    padding:0;
+  }
 }

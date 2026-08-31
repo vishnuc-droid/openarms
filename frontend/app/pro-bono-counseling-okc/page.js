@@ -120,7 +120,16 @@ const faqs = [
   ['What happens if there are no pro bono appointments available?', 'Availability may change based on program capacity and provider schedules. Open Arms Initiative can explain current availability and, when appropriate and possible, discuss other relevant support options or community resources.'],
 ];
 
-export default function ProBonoCounselingPage() { return <main className="fs-page">
+const teamMembers = [
+  { name: 'Rebekah Thomas, LPC-C', title: 'Therapist', photo: '/rebekah.jpg' },
+  { name: 'Brenda Mitchell, LPC', title: 'Therapist', photo: '/Brenda Mitchell - LPC.jpg' },
+  { name: 'Emeka Nnaka, LPC', title: 'Therapist', photo: '/Emeka Nnaka - LPC.jpg' },
+  { name: 'Breanna White, LPC', title: 'Therapist', photo: '/Breanna White - LPC.jpg' },
+  { name: 'Henri Jo Ball, LPC', title: 'Therapist', photo: '/Henri.jpg' },
+  { name: 'Karli Burch, LPC', title: 'Therapist', photo: '/Karli Burch - LPC.jpg' },
+];
+
+export default function ProBonoCounselingPage() { return <main className="fs-page pro-bono-page team-boost">
   <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_BREADCRUMB) }} />
   <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_SERVICE) }} />
   <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_FAQ) }} />
@@ -180,6 +189,36 @@ export default function ProBonoCounselingPage() { return <main className="fs-pag
     <p className="fs-pillars-lead reveal reveal-from-bottom">Receiving pro bono counseling shouldn&apos;t make someone feel like they&apos;re receiving lesser care. Our approach is grounded in respect for every person who reaches out.</p>
     <div className="fs-pillars reveal-stagger">{dignity.map(([h, p], i) => <article className="reveal reveal-from-bottom fs-pillar-probono" key={h}><span className="fs-pillar-icon">{dignityIcons[i]}</span><h3>{h}</h3><p>{p}</p></article>)}</div>
   </div></section>
+
+  <section id="about" className="team-connect-section">
+    <div className="team-connect-container section-reveal section-reveal-right">
+      <div className="team-connect-copy reveal reveal-from-left">
+        <span className="care-badge">Our Therapists</span>
+        <h2 className="team-connect-title">
+          Care Starts With People You Can Trust
+          <svg className="team-connect-underline" viewBox="0 0 220 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8c30-10 60-10 90 0s90 10 126-2" fill="none" stroke="#0170ED" strokeWidth="3" strokeLinecap="round"/></svg>
+        </h2>
+        <p>Behind every session is a real person who&apos;s chosen this work, not a call center, not an algorithm.</p>
+        <Link href="/about-us" className="team-connect-link">
+          Meet Our Team
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </Link>
+      </div>
+      <div className="team-photo-grid reveal-stagger">
+        {teamMembers.map((member) => (
+          <div className="team-photo-card reveal reveal-from-bottom" key={member.name}>
+            <div className="team-photo-media">
+              <img src={member.photo} alt={member.name} />
+            </div>
+            <div className="team-photo-caption">
+              <span className="team-photo-name">{member.name}</span>
+              <span className="team-photo-title">{member.title}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
   <section className="fs-section fs-steps-section"><div className="fs-container"><h2 className="fs-center reveal reveal-from-bottom">How Pro Bono Counseling Works</h2><i className="fs-line-center" /><div className="fs-steps reveal-stagger">{[['Reach Out', 'Contact Open Arms Initiative and let us know you’re interested in learning about pro bono counseling.'], ['Discuss Availability', 'Our team can explain current program availability and any applicable eligibility or intake requirements.'], ['Determine the Next Step', 'If appropriate services and availability align with your needs, we’ll explain what happens next.'], ['Begin Support', 'When placement is available and appropriate, you can begin the counseling process with greater clarity about your care.']].map(([h, p], i) => <article className="reveal reveal-from-bottom" key={h}><span className="fs-step-icon">{stepIcons[i]}</span><h3>{h}</h3><p>{p}</p></article>)}</div><p className="fs-understand-close reveal reveal-from-bottom"><strong>Important:</strong> Pro bono counseling may be subject to eligibility requirements, provider availability, program capacity, and the suitability of available services.</p></div></section>
 

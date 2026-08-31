@@ -79,10 +79,12 @@ const lossIcons = [
 ];
 
 const teamMembers = [
-  { name: 'Jamie James, LPC', title: 'President & Founder', photo: '/Jamie James - LPC.jpg' },
-  { name: "D'Fawn Downs, LPC", title: 'Corporate Compliance Officer & Clinical Director', photo: "/D'Fawn Downs - LPC.jpg" },
-  { name: 'Brandon Martin', title: 'CFO', photo: '/Brandon Martin.jpg' },
-  { name: 'Stephanie Caldwell', title: 'Parent Relations Director', photo: '/Stephanie Caldwell.jpg' },
+  { name: 'Henri Jo Ball, LPC', title: 'Therapist', photo: '/Henri.jpg' },
+  { name: 'Emeka Nnaka, LPC', title: 'Therapist', photo: '/Emeka Nnaka - LPC.jpg' },
+  { name: 'Brenda Mitchell, LPC', title: 'Therapist', photo: '/Brenda Mitchell - LPC.jpg' },
+  { name: 'Karli Burch, LPC', title: 'Therapist', photo: '/Karli Burch - LPC.jpg' },
+  { name: 'Lori Baker, LMFT-S', title: 'Therapist', photo: '/lori.jpg' },
+  { name: 'Breanna White, LPC', title: 'Therapist', photo: '/Breanna White - LPC.jpg' },
 ];
 
 const losses = [
@@ -109,7 +111,7 @@ const faqs = [
   ['Can I attend grief counseling individually?', 'Yes. Individual grief counseling can provide private, one-on-one support tailored to your experience and needs. You can also learn more about our Individual Counseling services if you’re seeking broader one-on-one therapeutic support.'],
 ];
 
-export default function GriefCounselingPage() { return <main className="grief-page">
+export default function GriefCounselingPage() { return <main className="grief-page team-boost">
   <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_BREADCRUMB) }} />
   <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_SERVICE) }} />
   <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_FAQ) }} />
@@ -123,7 +125,7 @@ export default function GriefCounselingPage() { return <main className="grief-pa
   <section id="about" className="team-connect-section">
     <div className="team-connect-container section-reveal section-reveal-right">
       <div className="team-connect-copy reveal reveal-from-left">
-        <span className="care-badge">Our Team</span>
+        <span className="care-badge">Our Therapists</span>
         <h2 className="team-connect-title">
           Care Starts With People You Can Trust
           <svg className="team-connect-underline" viewBox="0 0 220 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8c30-10 60-10 90 0s90 10 126-2" fill="none" stroke="#0170ED" strokeWidth="3" strokeLinecap="round"/></svg>

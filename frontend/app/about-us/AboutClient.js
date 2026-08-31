@@ -90,6 +90,9 @@ const clinicalTeam = [
   { name: 'Lori Baker LMFT-S', title: 'Therapist', photo: '/lori.jpg' },
   { name: 'Breanna White - LPC', title: 'Therapist', photo: '/Breanna White - LPC.jpg' },
   { name: 'Rebekah Thomas LPC-C', title: 'Therapist', photo: '/rebekah.jpg' },
+  { name: 'Jamira Alexander', title: 'Therapist', photo: '/Jamira Alexander.jpg' },
+  { name: 'Victori Swinford', title: 'Therapist', photo: '/Victori.jpg' },
+  { name: 'Mattea Lear', title: 'Therapist', photo: '/Mattea.jpg' },
 ];
 
 const fosterTeam = [
@@ -102,12 +105,6 @@ const adminTeam = [
   { name: 'Destinee Curry', title: 'Administrative Assistant', photo: '/Destinee Curry.jpg' },
   { name: 'Kamryn Bass', title: 'Administrative Assistant', photo: '/Kamryn-Bass.jpg' },
   { name: 'Stephanie Vaughn', title: 'Billing & Placement Specialist', photo: '/Stephanie Vaughn.jpg' },
-];
-
-const internTeam = [
-  { name: 'Jamira Alexander', title: 'Therapist Intern', photo: '/Jamira Alexander.jpg' },
-  { name: 'Victori Swinford', title: 'Therapist Intern', photo: '/Victori.jpg' },
-  { name: 'Mattea Lear', title: 'Therapist Intern', photo: '/Mattea.jpg' },
 ];
 
 function TeamGrid({ members, size = 'md' }) {
@@ -311,13 +308,6 @@ export default function AboutClient() {
         <h3 className="oa-team-cat-title reveal reveal-from-bottom">Administrative &amp; Community Support Team</h3>
         <p className="oa-team-cat-lead reveal reveal-from-bottom">The work of Open Arms also depends on the people helping programs, families, clinicians, and community initiatives stay connected.</p>
         <TeamGrid members={adminTeam} />
-      </div></section>
-
-      {/* Interns */}
-      <section className="oa-team-section"><div className="fs-container">
-        <h3 className="oa-team-cat-title reveal reveal-from-bottom">Interns &amp; Emerging Professionals</h3>
-        <p className="oa-team-cat-lead reveal reveal-from-bottom">Clearly labeled so you can easily distinguish licensed professionals, staff members, and interns as you get to know our team.</p>
-        <TeamGrid members={internTeam} />
       </div></section>
 
       {/* More than a team photo */}
