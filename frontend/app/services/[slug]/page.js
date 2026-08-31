@@ -38,79 +38,70 @@ export default async function ServiceDetailPage({ params }) {
     .slice(0, 3);
 
   return (
-    <main className="service-detail-main">
-      <nav style={{ marginBottom: '2rem', fontSize: '0.95rem', color: '#64748b' }}>
-        <Link href="/" style={{ color: '#052E26', textDecoration: 'none' }}>Home</Link>
-        {' / '}
-        <span style={{ color: '#8DC540', fontWeight: '500' }}>{service.category}</span>
-        {' / '}
-        <span>{service.title}</span>
-      </nav>
-
-      <section className="service-detail-grid">
-        <div>
+    <main className="sd-page">
+      <section className="sd-hero">
+        <div className="sd-hero-inner">
           <span className="services-kicker">{service.category}</span>
-          <h1 className="service-detail-title">
-            {service.title}
-          </h1>
-          <p style={{ fontSize: '1.2rem', color: '#4a5568', lineHeight: '1.7', marginBottom: '2rem' }}>
-            {service.summary}
-          </p>
-          <Link href="/contact" className="button button-dark" style={{ padding: '0.85rem 1.75rem' }}>
-            Book a Counseling Session <Arrow />
+          <h1 className="sd-hero-title">{service.title}</h1>
+          <div className="hero-divider" aria-hidden="true">
+            <span className="hero-divider-line"></span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#0170ED" strokeWidth="1.6"><path d="M12 21c-4-1-8-5-8-10a8 8 0 0 1 8-8c5 0 9 4 9 9 0 5-4.5 9-9 9Z"/><path d="M12 21c0-6 2-13 8-16"/></svg>
+            <span className="hero-divider-line"></span>
+          </div>
+          <p className="sd-hero-summary">{service.summary}</p>
+          <Link href="/contact" className="reference-hero-button">
+            Book a Counseling Session
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
           </Link>
         </div>
-
-        <div style={{ borderRadius: '16px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
-          <img src={service.image} alt={service.title} style={{ width: '100%', height: 'auto', display: 'block' }} />
-        </div>
       </section>
 
-      <section className="service-detail-overview">
-        <h2 style={{ fontSize: '2rem', color: '#052E26', marginBottom: '1.5rem' }}>Overview & Clinical Approach</h2>
-        <p style={{ fontSize: '1.1rem', color: '#334155', lineHeight: '1.8', marginBottom: '2.5rem' }}>
-          {service.details}
-        </p>
+      <section className="sd-section">
+        <div className="sd-container">
+          <h2>Overview &amp; Clinical Approach</h2>
+          <p className="sd-details">{service.details}</p>
 
-        <h3 style={{ fontSize: '1.5rem', color: '#052E26', marginBottom: '1rem' }}>Key Care Benefits</h3>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.5rem' }}>
-          {service.benefits.map((benefit, index) => (
-            <div key={index} style={{ background: '#fff', padding: '1.25rem 1.5rem', borderRadius: '10px', border: '1px solid #cbd5e1', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-              <span style={{ color: '#8DC540', fontWeight: 'bold', fontSize: '1.2rem' }}>✓</span>
-              <span style={{ color: '#1e293b', fontWeight: '500' }}>{benefit}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {relatedServices.length > 0 && (
-        <section style={{ marginBottom: '4rem' }}>
-          <h2 style={{ fontSize: '2rem', color: '#052E26', marginBottom: '1.5rem' }}>Related Services in {service.category}</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
-            {relatedServices.map((rel) => (
-              <article key={rel.slug} style={{ background: '#fff', borderRadius: '12px', overflow: 'hidden', border: '1px solid #e2e8f0', boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}>
-                <img src={rel.image} alt={rel.title} style={{ width: '100%', height: '180px', objectFit: 'cover' }} />
-                <div style={{ padding: '1.5rem' }}>
-                  <h3 style={{ fontSize: '1.25rem', color: '#052E26', marginBottom: '0.5rem' }}>{rel.title}</h3>
-                  <p style={{ fontSize: '0.95rem', color: '#64748b', marginBottom: '1rem', lineHeight: '1.5' }}>{rel.summary}</p>
-                  <Link href={`/services/${rel.slug}`} className="text-link olive">
-                    Read Details <Arrow />
-                  </Link>
+          <h3 className="sd-subheading">Key Care Benefits</h3>
+          <div className="why-choose-grid sd-benefits-grid">
+            {service.benefits.map((benefit, index) => (
+              <article className="why-choose-card" key={index}>
+                <div className="icon-box">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12.5 10 17 19 7" /></svg>
+                </div>
+                <div className="why-choose-card-copy">
+                  <p>{benefit}</p>
                 </div>
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      {relatedServices.length > 0 && (
+        <section className="sd-section sd-section-alt">
+          <div className="sd-container">
+            <h2>Related Services in {service.category}</h2>
+            <div className="help-grid sd-related-grid">
+              {relatedServices.map((rel) => (
+                <article className="help-card" key={rel.slug}>
+                  <h3><Link href={`/services/${rel.slug}`}>{rel.title}</Link></h3>
+                  <p>{rel.summary}</p>
+                  <Link href={`/services/${rel.slug}`} className="teaser-card-link">Read Details &rsaquo;</Link>
+                </article>
+              ))}
+            </div>
+          </div>
         </section>
       )}
 
-      <section className="service-detail-cta">
-        <h2 style={{ fontSize: '2.2rem', color: '#fff', marginBottom: '1rem' }}>Get Started with Open Arms</h2>
-        <p style={{ fontSize: '1.1rem', color: '#e2e8f0', maxWidth: '600px', margin: '0 auto 2rem' }}>
-          Take the first step toward compassionate, trauma-informed care for you and your family.
-        </p>
-        <Link href="/contact" className="button button-light">
-          Book an Appointment <Arrow />
-        </Link>
+      <section className="final-cta-section">
+        <div className="final-cta-inner">
+          <h2>Get Started with Open Arms</h2>
+          <p>Take the first step toward compassionate, trauma-informed care for you and your family.</p>
+          <div className="final-cta-buttons">
+            <Link href="/contact" className="final-cta-btn primary">Book an Appointment</Link>
+          </div>
+        </div>
       </section>
     </main>
   );

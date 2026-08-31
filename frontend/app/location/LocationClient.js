@@ -419,13 +419,15 @@ export default function LocationClient() {
       {/* Final CTA */}
       <section id="contact" className="final-cta-section">
         <div className="final-cta-inner">
-          <h2>Support May Be Closer Than You Think</h2>
-          <p>
-            You don't need the perfect words. You don't need to know exactly which service to choose. And you don't have to figure out every step before reaching out.
-            <br /><br />
-            Start Where You Are. We&rsquo;ll Help You Explore What Comes Next.
-          </p>
-          <p>Open Arms Initiative<br />1101 Sovereign Row, Unit A<br />Oklahoma City, OK 73108</p>
+          <div className="final-cta-text">
+            <h2>Support May Be Closer Than You Think</h2>
+            <p>
+              You don't need the perfect words. You don't need to know exactly which service to choose. And you don't have to figure out every step before reaching out.
+              <br /><br />
+              Start Where You Are. We&rsquo;ll Help You Explore What Comes Next.
+            </p>
+            <p className="final-cta-address">Open Arms Initiative &middot; 1101 Sovereign Row, Unit A &middot; Oklahoma City, OK 73108</p>
+          </div>
           <div className="final-cta-buttons">
             <Link href="/contact" className="final-cta-btn primary">Connect With Open Arms</Link>
             <a href="tel:+14059208934" className="final-cta-btn secondary">Call 405-920-8934</a>
