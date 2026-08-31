@@ -147,16 +147,19 @@ const clientReviews = [
     photo: '/unnamed (2).png',
   },
   {
+    quote: 'Open Arms Initiative truly lives up to its name. I’ve known the owner for many years, and her passion and genuine care for others shows in everything she does. That same care carries through the entire organization and its staff. The work they’re doing for the community is truly inspiring, and I highly recommend Open Arms Initiative to anyone looking to support or connect with a compassionate, people-centered organization.',
+    author: 'Shines Mathew',
+    photo: '/unnamed (3).png',
+  },
+  {
     quote: 'This was a great training for someone who recently moved to a new role which comes with a lot of stress. Recently had the conversation with my supervisor about this topic. This was a full circle moment for me!',
-    author: 'Benard K. B.',
+    author: 'Benard Kwame Bentum',
+    photo: '/unnamed (4).png',
   },
   {
-    quote: 'I loved the content! The way she dived deeper into the why, of how things happen and how burnout occurs. Giving solutions on how you can prevent, and on what steps you can take if you are already in that season.',
-    author: 'Kevin C.',
-  },
-  {
-    quote: 'Jamie was outstanding. Her insight, detail, and wisdom was refreshing! Would 100% love to go deeper and hear more!',
-    author: 'JM C.',
+    quote: 'Amazing!!!! Such thoughtful training.',
+    author: 'Kyle and Jordan',
+    photo: '/unnamed (5).png',
   },
 ];
 
@@ -185,10 +188,8 @@ export default function HomePage() {
   useEffect(() => {
     const root = revealRootRef.current;
     if (!root) return;
-    const revealEls = root.querySelectorAll('.reveal, .section-reveal');
-    if (revealEls.length === 0) return;
     if (typeof IntersectionObserver === 'undefined') {
-      revealEls.forEach((el) => el.classList.add('is-visible'));
+      root.querySelectorAll('.reveal, .section-reveal').forEach((el) => el.classList.add('is-visible'));
       return;
     }
     const observer = new IntersectionObserver(
@@ -202,8 +203,28 @@ export default function HomePage() {
       },
       { threshold: 0.12, rootMargin: '0px 0px -60px 0px' }
     );
-    revealEls.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
+
+    const observeAll = (node) => {
+      node.querySelectorAll('.reveal:not(.is-visible), .section-reveal:not(.is-visible)').forEach((el) => observer.observe(el));
+    };
+
+    observeAll(root);
+
+    const mutationObserver = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((node) => {
+          if (node.nodeType !== 1) return;
+          if (node.matches?.('.reveal, .section-reveal')) observer.observe(node);
+          observeAll(node);
+        });
+      });
+    });
+    mutationObserver.observe(root, { childList: true, subtree: true });
+
+    return () => {
+      observer.disconnect();
+      mutationObserver.disconnect();
+    };
   }, []);
 
   return (

@@ -504,7 +504,7 @@ Jamie James speaks from operating experience, not just clinical theory. She lead
             </div>
             <div className="jj-speaker-photo-col reveal reveal-from-right">
               <div className="jj-speaker-photo-wrap">
-                <img src="/Jamie/image (18).png" alt="Jamie James speaking" className="jj-speaker-photo" />
+                <img src="/8.jpg" alt="Jamie James speaking" className="jj-speaker-photo" />
               </div>
             </div>
           </div>
