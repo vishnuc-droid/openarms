@@ -320,6 +320,13 @@ export default function AboutClient() {
         </div>
       </div></section>
 
+      {/* Board Members */}
+      <section className="oa-board-section"><div className="fs-container">
+        <div className="oa-board-media reveal reveal-scale-in">
+          <img src="/WE copy.jpg" alt="Open Arms Initiative Board Members" />
+        </div>
+      </div></section>
+
       {/* Emotional Statement */}
       <section className="fs-statement oa-statement"><div className="fs-container reveal reveal-scale-in"><div>
         <h2>&ldquo;People may come to Open Arms for different reasons. What they should find here is the same: compassion, respect, and somewhere to begin.&rdquo;</h2>
