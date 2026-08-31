@@ -102,6 +102,10 @@ a {
   .section-reveal.section-reveal-right {
     transform: translateY(50px);
   }
+  .section-reveal.section-reveal-left.is-visible,
+  .section-reveal.section-reveal-right.is-visible {
+    transform: translateY(0);
+  }
 }
 
 /* Stagger children delays */
@@ -9052,7 +9056,7 @@ footer a:hover {
 .oa-video-card-lg .growth-video-playbtn{width:84px;height:60px;border-radius:16px}
 .oa-video-card-lg .growth-video-watch{font-size:15px;padding:11px 20px}
 .oa-video-card-lg .growth-video-stage{padding-bottom:0;height:78vh}
-@media(max-width:900px){.oa-video-section{min-height:0;padding:56px 0}.oa-video-frame{width:94%;margin-top:28px}.oa-video-card-lg .growth-video-stage{height:56.25vw;max-height:70vh}}
+@media(max-width:900px){.oa-video-section{min-height:0;padding:56px 0}.oa-video-frame{width:94%;margin-top:28px}.oa-video-card-lg .growth-video-stage{height:56.25vw;max-height:70vh}.oa-video-card-lg.growth-video-card{background:#072B3A;border-color:rgba(0,175,247,.35)}.oa-video-card-lg .growth-video-avatar{background:#0170ED}}
 
 .oa-grow-section{background:#fff}
 .oa-grow-head{max-width:760px;margin:0 auto 8px;text-align:center}
