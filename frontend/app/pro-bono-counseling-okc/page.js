@@ -182,7 +182,7 @@ export default function ProBonoCounselingPage() { return <main className="fs-pag
     <div className="fs-needs-grid reveal-stagger">{needs.map(([h, p], i) => <article className="reveal reveal-from-bottom fs-need-card" key={h}><span className="fs-need-icon">{needsIcons[i]}</span><h3>{h}</h3><p>{p}</p></article>)}</div>
   </div></section>
 
-  <section className="fs-statement"><div className="fs-container reveal reveal-scale-in"><div><h2>&ldquo;Needing help and needing financial support can exist in the same sentence. Neither should be a source of shame.&rdquo;</h2><Link href="/contact" className="fs-btn fs-light">Ask About Pro Bono Counseling</Link></div><img src="/pb2.jpg" alt="Hands offering comfort and support" /><aside>You don&apos;t need to justify why life has become difficult.<br /><br />And you don&apos;t need to feel embarrassed about asking what options are available.<br /><br />Start with a conversation.</aside></div></section>
+  <section className="fs-statement pb-statement"><div className="fs-container reveal reveal-scale-in"><div><h2>&ldquo;Needing help and needing financial support can exist in the same sentence. Neither should be a source of shame.&rdquo;</h2><Link href="/contact" className="fs-btn fs-light">Ask About Pro Bono Counseling</Link></div><img src="/pb2.jpg" alt="Hands offering comfort and support" /><aside>You don&apos;t need to justify why life has become difficult.<br /><br />And you don&apos;t need to feel embarrassed about asking what options are available.<br /><br />Start with a conversation.</aside></div></section>
 
   <section className="fs-section fs-pillars-section"><div className="fs-container">
     <h2 className="fs-center reveal reveal-from-bottom">Access With Dignity</h2><i className="fs-line-center" />

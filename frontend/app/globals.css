@@ -7343,6 +7343,7 @@ footer a:hover {
 .fs-statement .fs-container{position:relative;z-index:2;display:grid;grid-template-columns:1.3fr .85fr 1fr;align-items:stretch;padding:0;min-height:400px}
 .fs-statement img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;filter:grayscale(.3) brightness(.85);transition:transform .5s ease}.fs-statement:hover img{transform:scale(1.08)}
 .oa-statement img{filter:none}
+.pb-statement img{filter:none}
 .fs-statement .fs-container>div,.fs-statement aside{padding:45px 33px;display:flex;flex-direction:column;justify-content:center}
 .fs-statement h2{font-size:clamp(1.9rem,2.8vw,2.6rem);line-height:1.15;margin:0 0 12px;color:#fff}
 .fs-statement aside{font-size:16px;line-height:1.6;border-left:1px solid rgba(255,255,255,.4);color:#dcebf0}

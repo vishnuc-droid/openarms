@@ -259,7 +259,7 @@ export default function JamieJamesPage() {
                 </svg>
 
                 <img
-                  src="/Jamie/image (18).png"
+                  src="/Training/upscaled_portrait_4e.jpg"
                   alt="Jamie James, LPC"
                   className="jj-arch-photo"
                 />
@@ -356,7 +356,7 @@ That's the perspective she brings into every training, workshop, and speaking en
             {/* LEFT — photo */}
             <div className="jj-bio-photo-col reveal reveal-from-left">
               <div className="jj-bio-photo-wrap">
-                <img src="/Jamie/image (18).png" alt="Jamie James, LPC" className="jj-bio-photo" />
+                <img src="/Training/upscaled_portrait_4e.jpg" alt="Jamie James, LPC" className="jj-bio-photo" />
               </div>
             </div>
 
