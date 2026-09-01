@@ -4,6 +4,7 @@ import { Suspense, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
+import { submitForm } from '@/lib/api';
 
 const SERVICE_OPTIONS = [
   'Adult & Individual Counseling',
@@ -22,15 +23,19 @@ const SERVICE_OPTIONS = [
 const SERVICE_PARAM_MAP = {
   'adult-counseling': 'Adult & Individual Counseling',
   'family-therapy': 'Family Counseling',
-  marriage: 'Marriage & Couples Therapy',
-  'depression-anxiety': 'Depression & Anxiety Counseling',
-  grief: 'Grief & Loss Counseling',
+  'marriage-counseling': 'Marriage & Couples Therapy',
+  'depression-anxiety-counseling': 'Depression & Anxiety Counseling',
+  'grief-counseling': 'Grief & Loss Counseling',
   'child-counseling': 'Child & Adolescent Counseling',
   'family-support': 'Family Support Services',
   'parenting-classes': 'Parenting Support & Classes',
   'foster-care': 'Foster Care & Adoption Support',
-  'pro-bono': 'Pro Bono Counseling',
+  'pro-bono-counseling': 'Pro Bono Counseling',
 };
+
+const SERVICE_LABEL_TO_SLUG = Object.fromEntries(
+  Object.entries(SERVICE_PARAM_MAP).map(([slug, label]) => [label, slug])
+);
 
 const trustIcons = [
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20.5s-6.5-4-9-8.2C1.2 8.8 3 5.5 6.2 5.5c1.9 0 3.2 1 3.8 2.1.6-1.1 1.9-2.1 3.8-2.1 3.2 0 5 3.3 3.2 6.8-2.5 4.2-9 8.2-9 8.2Z" /></svg>,
@@ -87,12 +92,32 @@ function ContactForm() {
     message: searchParams.get('message') || '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    setError('');
+    try {
+      await submitForm({
+        service: SERVICE_LABEL_TO_SLUG[form.service] || 'general-contact',
+        firstName: form.firstName,
+        lastName: form.lastName,
+        name: `${form.firstName} ${form.lastName}`.trim(),
+        email: form.email,
+        phone: form.phone,
+        contactMethod: form.contactMethod,
+        message: form.message,
+      });
+      setSubmitted(true);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -131,7 +156,8 @@ function ContactForm() {
       </label>
       <label className="oa-contact-field"><span>Message / How can we help?*</span><textarea name="message" value={form.message} onChange={handleChange} rows={4} required /></label>
 
-      <button type="submit" className="fs-btn fs-req-btn-primary oa-contact-submit">Send My Request</button>
+      {error && <p className="oa-contact-form-note" style={{ color: '#c0392b' }}>{error}</p>}
+      <button type="submit" className="fs-btn fs-req-btn-primary oa-contact-submit" disabled={submitting}>{submitting ? 'Sending…' : 'Send My Request'}</button>
       <p className="oa-contact-form-note">Please avoid including highly sensitive or urgent information in this form. Submitting this form does not establish a therapeutic relationship or confirm an appointment.</p>
     </form>
   );

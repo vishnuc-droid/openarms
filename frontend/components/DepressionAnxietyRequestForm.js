@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { submitForm } from '@/lib/api';
 
 const IconUserCircle = (props) => (
   <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" {...props}><circle cx="12" cy="8" r="3.2" /><path d="M5 20c0-3.5 3.1-6 7-6s7 2.5 7 6" /></svg>
@@ -21,18 +21,33 @@ const IconSend = (props) => (
 const IconLock = (props) => (
   <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" {...props}><rect x="4" y="10.5" width="16" height="10" rx="2" /><path d="M7.5 10.5V7a4.5 4.5 0 0 1 9 0v3.5" /></svg>
 );
-
 export default function DepressionAnxietyRequestForm() {
-  const router = useRouter();
   const [form, setForm] = useState({ name: '', email: '', phone: '', date: '', message: '' });
+  const [status, setStatus] = useState('idle');
+  const [error, setError] = useState('');
 
   const handleChange = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const params = new URLSearchParams({ service: 'depression-anxiety-counseling', ...form }).toString();
-    router.push(`/contact?${params}`);
+    setStatus('submitting');
+    setError('');
+    try {
+      await submitForm({ service: 'depression-anxiety-counseling', ...form, preferredDate: form.date });
+      setStatus('success');
+    } catch (err) {
+      setError(err.message);
+      setStatus('idle');
+    }
   };
+
+  if (status === 'success') {
+    return (
+      <div className="da-req-success">
+        <p>Thank you! Your request has been received. Our team will be in touch with you soon.</p>
+      </div>
+    );
+  }
 
   return (
     <form className="da-req-form" onSubmit={handleSubmit}>
@@ -63,9 +78,11 @@ export default function DepressionAnxietyRequestForm() {
       <label className="da-req-label">Tell us more about your needs</label>
       <textarea name="message" value={form.message} onChange={handleChange} placeholder="Briefly describe what's going on and how we can help..." rows={3} />
 
-      <button type="submit" className="da-btn da-req-btn-primary da-req-submit">
+      {error && <p className="da-req-error">{error}</p>}
+
+      <button type="submit" className="da-btn da-req-btn-primary da-req-submit" disabled={status === 'submitting'}>
         <IconSend />
-        Request Appointment
+        {status === 'submitting' ? 'Sending…' : 'Request Appointment'}
       </button>
 
       <p className="da-req-privacy">

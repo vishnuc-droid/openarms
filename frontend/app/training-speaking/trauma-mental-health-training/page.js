@@ -1,9 +1,9 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
+import { submitForm } from '@/lib/api';
 
 /* ─── FAQ DATA (unchanged) ─────────────────────────────────────────────── */
 const FAQ_ITEMS = [
@@ -144,18 +144,35 @@ function FaqList() {
 
 /* ─── HERO REQUEST-TRAINING FORM (new) ──────────────────────────────────── */
 function TrainingRequestForm() {
-  const router = useRouter();
   const [form, setForm] = useState({
     name: '', email: '', phone: '', date: '', topic: '', message: '',
   });
+  const [status, setStatus] = useState('idle');
+  const [error, setError] = useState('');
 
   const handleChange = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const params = new URLSearchParams({ training: 'trauma-mental-health-training', ...form }).toString();
-    router.push(`/contact?${params}`);
+    setStatus('submitting');
+    setError('');
+    try {
+      await submitForm({ service: 'training-request', ...form, preferredDate: form.date });
+      setStatus('success');
+    } catch (err) {
+      setError(err.message);
+      setStatus('idle');
+    }
   };
+
+  if (status === 'success') {
+    return (
+      <div className="tmh2-hero-form tmh2-hero-form-success">
+        <IconCheckCircle width="40" height="40" />
+        <p>Thank you! Your training request has been received. Our team will be in touch with you soon.</p>
+      </div>
+    );
+  }
 
   return (
     <form className="tmh2-hero-form" onSubmit={handleSubmit}>
@@ -197,9 +214,11 @@ function TrainingRequestForm() {
       <label className="tmh2-form-label">Tell us more about your needs</label>
       <textarea name="message" value={form.message} onChange={handleChange} placeholder="Briefly describe your team and goals..." rows={3} />
 
-      <button type="submit" className="tmh2-btn tmh2-btn-accent tmh2-form-submit">
+      {error && <p className="tmh2-form-error">{error}</p>}
+
+      <button type="submit" className="tmh2-btn tmh2-btn-accent tmh2-form-submit" disabled={status === 'submitting'}>
         <IconSend width="16" height="16" />
-        Request Info Now
+        {status === 'submitting' ? 'Sending…' : 'Request Info Now'}
       </button>
     </form>
   );
@@ -683,6 +702,7 @@ export default function TraumaMentalHealthTrainingPage() {
         .tmh2-hero-form-body{
           padding:38px 36px; display:flex; flex-direction:column;
           border-radius:24px 0 0 24px; background:var(--white); overflow:hidden;
+          min-height:640px;
         }
         .tmh2-hero-form-body h3{ font-size:23px; line-height:1.25; margin-bottom:10px; }
         .tmh2-hero-form-underline{ display:block; width:44px; height:3px; background:var(--green); border-radius:2px; margin-bottom:14px; }
@@ -694,6 +714,12 @@ export default function TraumaMentalHealthTrainingPage() {
         }
 
         .tmh2-hero-form{ display:flex; flex-direction:column; gap:13px; }
+        .tmh2-hero-form-success{
+          flex:1; align-items:center; justify-content:center; text-align:center;
+          gap:16px; color:var(--ink); padding:20px 10px;
+        }
+        .tmh2-hero-form-success svg{ color:var(--green); }
+        .tmh2-hero-form-success p{ font-size:15px; line-height:1.6; color:var(--muted); max-width:320px; }
         .tmh2-form-label{ font-size:13px; font-weight:700; color:#5B6B60; margin-bottom:-7px; }
         .tmh2-form-input-wrap{ display:flex; align-items:center; gap:10px; border:1.5px solid var(--line); border-radius:9px; padding:10px 13px; color:var(--muted); }
         .tmh2-form-input-wrap:focus-within{ border-color:var(--green); }

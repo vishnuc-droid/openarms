@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { submitForm } from '@/lib/api';
 
 const IconUserCircle = (props) => (
   <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" {...props}><circle cx="12" cy="8" r="3.2" /><path d="M5 20c0-3.5 3.1-6 7-6s7 2.5 7 6" /></svg>
@@ -23,16 +23,32 @@ const IconLock = (props) => (
 );
 
 export default function FamilySupportRequestForm() {
-  const router = useRouter();
   const [form, setForm] = useState({ name: '', email: '', phone: '', date: '', message: '' });
+  const [status, setStatus] = useState('idle');
+  const [error, setError] = useState('');
 
   const handleChange = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const params = new URLSearchParams({ service: 'family-support', ...form }).toString();
-    router.push(`/contact?${params}`);
+    setStatus('submitting');
+    setError('');
+    try {
+      await submitForm({ service: 'family-support', ...form, preferredDate: form.date });
+      setStatus('success');
+    } catch (err) {
+      setError(err.message);
+      setStatus('idle');
+    }
   };
+
+  if (status === 'success') {
+    return (
+      <div className="fs-req-success">
+        <p>Thank you! Your request has been received. Our team will be in touch with you soon.</p>
+      </div>
+    );
+  }
 
   return (
     <form className="fs-req-form" onSubmit={handleSubmit}>
@@ -63,9 +79,11 @@ export default function FamilySupportRequestForm() {
       <label className="fs-req-label">Tell us more about your needs</label>
       <textarea name="message" value={form.message} onChange={handleChange} placeholder="Briefly describe what's going on and how we can help..." rows={3} />
 
-      <button type="submit" className="fs-btn fs-req-btn-primary fs-req-submit">
+      {error && <p className="fs-req-error">{error}</p>}
+
+      <button type="submit" className="fs-btn fs-req-btn-primary fs-req-submit" disabled={status === 'submitting'}>
         <IconSend />
-        Request Appointment
+        {status === 'submitting' ? 'Sending…' : 'Request Appointment'}
       </button>
 
       <p className="fs-req-privacy">

@@ -1,7 +1,6 @@
 import { DM_Sans, Playfair_Display, Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import SiteChrome from '@/components/SiteChrome';
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -34,9 +33,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${dmSans.variable} ${playfairDisplay.variable} ${plusJakartaSans.variable}`}>
       <body>
-        <Navbar />
-        {children}
-        <Footer />
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   );
