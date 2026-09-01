@@ -42,15 +42,27 @@ export default function MegaMenu({ menu, categories, activeCategory, onSelectCat
         <aside>
           <div>
             <h2>{menu.sideTitle}</h2>
-            {menu.sideLinks.map((link) => (
-              <Link
-                href={link.href}
-                key={link.name}
-                onClick={onClose}
-              >
-                {link.name} <span>→</span>
-              </Link>
-            ))}
+            {menu.sideLinks.map((link) =>
+              link.external ? (
+                <a
+                  href={link.href}
+                  key={link.name}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={onClose}
+                >
+                  {link.name} <span>→</span>
+                </a>
+              ) : (
+                <Link
+                  href={link.href}
+                  key={link.name}
+                  onClick={onClose}
+                >
+                  {link.name} <span>→</span>
+                </Link>
+              )
+            )}
           </div>
           {menu.image && <img src={menu.image} alt={menu.heading} />}
         </aside>

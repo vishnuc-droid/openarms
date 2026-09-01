@@ -38,10 +38,11 @@ export const serviceCategories = {
       { name: 'Community Outreach & Support Programs', slug: 'community-outreach-support' },
       { name: 'Pro Bono Therapy Services', slug: 'pro-bono-therapy', href: '/pro-bono-counseling-okc/' },
     ],
-    sideTitle: 'Connect',
+    sideTitle: 'Social',
     sideLinks: [
-      { name: 'Contact Us', href: '/contact' },
-      { name: 'Location', href: '/location' },
+      { name: 'Facebook', href: 'https://www.facebook.com/people/Open-Arms-Initiative/61570443695509/', external: true },
+      { name: 'Instagram', href: 'https://www.instagram.com/openarms_initiative/', external: true },
+      { name: 'Youtube', href: 'https://www.youtube.com/watch?v=IkwbPsOvdHU', external: true },
     ],
     image: '/images/4th.png',
   },
@@ -60,6 +61,7 @@ export const trainingSpeakingMenu = {
   sideLinks: [
     { name: 'About Us', href: '/about-us' },
     { name: 'Location', href: '/location' },
+    { name: 'Careers', href: '/careers' },
     { name: 'FAQ', href: '/faq' },
   ],
   image: '/images/second.png',

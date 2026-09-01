@@ -13,6 +13,7 @@ const SERVICE_VALUES = [
   'pro-bono-counseling',
   'general-contact',
   'training-request',
+  'careers',
 ];
 
 const submissionSchema = new mongoose.Schema(

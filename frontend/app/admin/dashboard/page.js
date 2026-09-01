@@ -18,6 +18,7 @@ const SERVICE_LABELS = {
   'pro-bono-counseling': 'Pro Bono Counseling',
   'general-contact': 'General Contact Form',
   'training-request': 'Training Request',
+  'careers': 'Careers Application',
 };
 
 const STATUS_META = {
