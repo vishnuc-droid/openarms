@@ -320,8 +320,8 @@ export const blogPosts = [
     "date": "March 18, 2025",
     "category": "Blog",
     "excerpt": "Understanding Trauma-Informed Care: How It’s Revolutionizing Mental Health Support in Oklahoma City Trauma touches millions of lives,...",
-    "image": "/Mental-Health-Support-Oklahoma-City.jpg",
-    "alt": "The Impact of Community Support on Foster Care in Oklahoma"
+    "image": "/Trauma-Informed-Care-Oklahoma-City.webp",
+    "alt": "Trauma-Informed Care Oklahoma City"
   },
   {
     "slug": "how-community-support-shapes-the-future",
