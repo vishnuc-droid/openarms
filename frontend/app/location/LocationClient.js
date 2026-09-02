@@ -160,7 +160,7 @@ export default function LocationClient() {
   return (
     <main>
       {/* Hero Section */}
-      <section id="home" className="reference-hero">
+      <section id="home" className="reference-hero location-hero">
         <div className="hero-banner-bg" aria-hidden="true"></div>
         <div className="reference-hero-overlay"></div>
         <div className="reference-hero-copy">

@@ -190,7 +190,7 @@ export const blogPosts = [
   },
   {
     "slug": "mental-health-first-aid-vs-de-escalation-training-which-does-your-team-need",
-    "title": "Mental Health First Aid vs De-Escalation Training: Which Does Your Team Need?",
+    "title": "The Modern Workplace Reality - Stress, Crisis, and the Need for Skills",
     "date": "October 31, 2025",
     "category": "Blog",
     "excerpt": "The Modern Workplace Reality – Stress, Crisis, and the Need for Skills It’s no secret that today’s...",
@@ -230,7 +230,7 @@ export const blogPosts = [
     "date": "August 19, 2025",
     "category": "Blog",
     "excerpt": "When James, a mid-level manager at a downtown Oklahoma City energy company, noticed his usually productive team...",
-    "image": "/Granex-Blog-pixel-size-1200-x-500-px.png",
+    "image": "/Granex-Blog-pixel-size-1200-x-500-px.webp",
     "alt": "How Oklahoma City is Training for Mental Health & Team Resilience"
   },
   {

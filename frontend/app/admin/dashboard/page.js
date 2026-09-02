@@ -16,6 +16,7 @@ const SERVICE_LABELS = {
   'parenting-classes': 'Parenting Support & Classes',
   'foster-care': 'Foster Care & Adoption Support',
   'pro-bono-counseling': 'Pro Bono Counseling',
+  'local-referrals': 'Local Referrals',
   'general-contact': 'General Contact Form',
   'training-request': 'Training Request',
   'careers': 'Careers Application',

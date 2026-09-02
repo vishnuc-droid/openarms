@@ -56,6 +56,25 @@ function ArticleBlock({ block, index }) {
           ))}
         </ol>
       );
+    case 'table':
+      return (
+        <div className="blog-post-table-wrap">
+          <table className="blog-post-table">
+            <thead>
+              <tr>
+                {block.headers.map((h, i) => <th key={i}>{h}</th>)}
+              </tr>
+            </thead>
+            <tbody>
+              {block.rows.map((row, i) => (
+                <tr key={i}>
+                  {row.map((cell, j) => <td key={j}>{cell}</td>)}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      );
     default:
       return null;
   }

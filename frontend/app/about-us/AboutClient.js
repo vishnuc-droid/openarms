@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 
-const ABOUT_VIDEO_ID = 'IkwbPsOvdHU';
+const ABOUT_VIDEO_ID = 'TAKbCOIbNF0';
 
 const trustIcons = [
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20.5s-6.5-4-9-8.2C1.2 8.8 3 5.5 6.2 5.5c1.9 0 3.2 1 3.8 2.1.6-1.1 1.9-2.1 3.8-2.1 3.2 0 5 3.3 3.2 6.8-2.5 4.2-9 8.2-9 8.2Z" /></svg>,
@@ -75,13 +75,16 @@ const pillars = [
   ['Built Around Human Connection', 'Programs and professional knowledge matter. But people also need to feel heard. Connection is at the center of what we do.'],
 ];
 
-const leadership = [
+const ourTeam = [
   { name: 'Jamie James - LPC', title: 'President & Founder', photo: '/Jamie James - LPC.jpg' },
   { name: "D'Fawn Downs - LPC", title: 'Corporate Compliance Officer & Clinical Director', photo: "/D'Fawn Downs - LPC.jpg" },
   { name: 'Brandon Martin', title: 'CFO', photo: '/Brandon Martin.jpg' },
-];
-
-const clinicalTeam = [
+  { name: 'Stephanie Caldwell', title: 'Parent Relations Director', photo: '/Stephanie Caldwell.jpg' },
+  { name: 'Amber Price', title: 'Director of Foster Care', photo: '/Amber Price.jpg' },
+  { name: 'Chloe Burke', title: 'Lead Admin', photo: '/Chloe Burke.jpg' },
+  { name: 'Destinee Curry', title: 'Administrative Assistant', photo: '/Destinee Curry.jpg' },
+  { name: 'Kamryn Bass', title: 'Administrative Assistant', photo: '/Kamryn-Bass.jpg' },
+  { name: 'Stephanie Vaughn', title: 'Billing & Placement Specialist', photo: '/Stephanie Vaughn.jpg' },
   { name: 'Jessena Varghese - LPC', title: 'Clinical Director', photo: '/Jessena Varghese - LPC.jpg' },
   { name: 'Henri Jo Ball - LPC', title: 'Therapist', photo: '/Henri.jpg' },
   { name: 'Emeka Nnaka - LPC', title: 'Therapist', photo: '/Emeka Nnaka - LPC.jpg' },
@@ -93,18 +96,6 @@ const clinicalTeam = [
   { name: 'Jamira Alexander', title: 'Therapist', photo: '/Jamira Alexander.jpg' },
   { name: 'Victori Swinford', title: 'Therapist', photo: '/Victori.jpg' },
   { name: 'Mattea Lear', title: 'Therapist', photo: '/Mattea.jpg' },
-];
-
-const fosterTeam = [
-  { name: 'Amber Price', title: 'Director of Foster Care', photo: '/Amber Price.jpg' },
-  { name: 'Stephanie Caldwell', title: 'Parent Relations Director', photo: '/Stephanie Caldwell.jpg' },
-];
-
-const adminTeam = [
-  { name: 'Chloe Burke', title: 'Lead Admin', photo: '/Chloe Burke.jpg' },
-  { name: 'Destinee Curry', title: 'Administrative Assistant', photo: '/Destinee Curry.jpg' },
-  { name: 'Kamryn Bass', title: 'Administrative Assistant', photo: '/Kamryn-Bass.jpg' },
-  { name: 'Stephanie Vaughn', title: 'Billing & Placement Specialist', photo: '/Stephanie Vaughn.jpg' },
 ];
 
 function TeamGrid({ members, size = 'md' }) {
@@ -283,31 +274,10 @@ export default function AboutClient() {
         </div>
       </div></section>
 
-      {/* Leadership */}
-      <section className="oa-team-section"><div className="fs-container">
-        <h3 className="oa-team-cat-title reveal reveal-from-bottom">Leadership Team</h3>
-        <TeamGrid members={leadership} size="lg" />
-      </div></section>
-
-      {/* Clinical Team */}
-      <section className="oa-team-section oa-team-section-alt"><div className="fs-container">
-        <h3 className="oa-team-cat-title reveal reveal-from-bottom">Clinical &amp; Counseling Team</h3>
-        <p className="oa-team-cat-lead reveal reveal-from-bottom">Meet the professionals providing compassionate mental health support to individuals, children, couples, and families.</p>
-        <TeamGrid members={clinicalTeam} />
-      </div></section>
-
-      {/* Foster Care Team */}
-      <section className="oa-team-section"><div className="fs-container">
-        <h3 className="oa-team-cat-title reveal reveal-from-bottom">Foster Care &amp; Family Support Team</h3>
-        <p className="oa-team-cat-lead reveal reveal-from-bottom">Meet the people supporting foster caregivers, children, adoptive families, parents, and families throughout their journeys.</p>
-        <TeamGrid members={fosterTeam} />
-      </div></section>
-
-      {/* Admin Team */}
-      <section className="oa-team-section oa-team-section-alt"><div className="fs-container">
-        <h3 className="oa-team-cat-title reveal reveal-from-bottom">Administrative &amp; Community Support Team</h3>
-        <p className="oa-team-cat-lead reveal reveal-from-bottom">The work of Open Arms also depends on the people helping programs, families, clinicians, and community initiatives stay connected.</p>
-        <TeamGrid members={adminTeam} />
+      {/* Our Team */}
+      <section className="oa-team-section oa-team-section-dark"><div className="fs-container">
+        <h3 className="oa-team-cat-title oa-team-heading-lg reveal reveal-from-bottom">Our Team</h3>
+        <TeamGrid members={ourTeam} />
       </div></section>
 
       {/* More than a team photo */}
