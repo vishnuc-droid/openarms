@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { videos } from './videoData';
 
 const PAGE_SIZE = 9;
@@ -10,6 +10,12 @@ export default function VideoGalleryClient() {
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const visibleVideos = videos.slice(0, visibleCount);
   const hasMore = visibleCount < videos.length;
+  const featuredRef = useRef(null);
+
+  const playVideo = (video) => {
+    setActiveVideo(video);
+    featuredRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
 
   return (
     <main className="video-gallery-page">
@@ -21,7 +27,7 @@ export default function VideoGalleryClient() {
       </section>
 
       <section className="video-gallery-section">
-        <div className="video-gallery-featured">
+        <div className="video-gallery-featured" ref={featuredRef}>
           <div className="video-gallery-featured-frame">
             <iframe
               key={activeVideo.id}
@@ -40,7 +46,7 @@ export default function VideoGalleryClient() {
               type="button"
               className={`video-gallery-card${video.id === activeVideo.id ? ' active' : ''}`}
               key={video.id}
-              onClick={() => setActiveVideo(video)}
+              onClick={() => playVideo(video)}
               aria-label={`Play video: ${video.title}`}
             >
               <span className="video-gallery-thumb">
