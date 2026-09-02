@@ -11,7 +11,6 @@ export const serviceCategories = {
       { name: 'Depression & Anxiety Counseling', slug: 'depression-anxiety-counseling', href: '/depression-anxiety-counseling-oklahoma/' },
       { name: 'Family Support', slug: 'family-support', href: '/family-support-services-oklahoma-city/' },
       { name: 'Parent Support', slug: 'parent-support', href: '/parenting-classes-okc/' },
-      { name: 'Local Referrals', slug: 'local-referrals', href: '/local-referrals/' },
     ],
     sideTitle: 'Trusted Team',
     sideLinks: [
