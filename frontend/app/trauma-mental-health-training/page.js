@@ -438,7 +438,7 @@ export default function TraumaMentalHealthTrainingPage() {
             <p>Our most in-depth offering for organizations ready to build a truly trauma-informed foundation. Learn more about our signature program.</p>
           </div>
           <div className="tmh2-flagship-cta">
-            <Link href="/training-speaking/trauma-informed-care-training/" className="tmh2-btn tmh2-btn-primary">
+            <Link href="/trauma-informed-care-training" className="tmh2-btn tmh2-btn-primary">
               Explore Trauma-Informed Care Training
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
             </Link>
