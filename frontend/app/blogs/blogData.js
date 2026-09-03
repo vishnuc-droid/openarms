@@ -347,7 +347,7 @@ export const blogPosts = [
     "date": "December 26, 2024",
     "category": "Blog",
     "excerpt": "How to Build Emotional Intelligence in Children, As the world...",
-    "image": "/Community-Training-Oklahoma-City.jpg",
-    "alt": "Community Training Oklahoma City"
+    "image": "/Training/fc_02.webp",
+    "alt": "How to Build Emotional Intelligence in Children"
   }
 ];

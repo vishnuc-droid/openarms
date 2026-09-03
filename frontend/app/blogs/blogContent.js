@@ -2303,7 +2303,7 @@ export const blogContent = {
     nextPost: {
       slug: 'how-to-build-emotional-intelligence-in-children',
       title: 'How to Build Emotional Intelligence in Children',
-      image: '/Community-Training-Oklahoma-City.jpg',
+      image: '/Training/fc_02.webp',
     },
     blocks: [
       { type: 'p', html: 'The <strong>Open Arms Initiative</strong> recognizes recovery from mental health issues as a journey demanding endurance, resilience, and, perhaps most importantly, support from family and friends. Therapy, medication, and self-care are indeed critical in the healing process. Yet, family support is absolutely essential for long-term recovery. For people living in Oklahoma City with mental health issues, vibrant family involvement can test and reshape their journey on the road toward healing.' },

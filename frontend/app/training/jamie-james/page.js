@@ -121,43 +121,43 @@ export default function JamieJamesPage() {
     {
       title: 'Leadership & Workplace Wellness',
       desc: 'Equipping leaders and teams with trauma-informed tools, healthy boundaries, and sustainable wellness practices.',
-      href: '/services/corporate-business-training',
+      href: '/corporate-business-training',
       icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="32" height="32"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>,
     },
     {
       title: 'Trauma & Mental Health',
       desc: 'Building organizational capacity to recognize, respond to, and support those affected by trauma.',
-      href: '/services/trauma-informed-care-training',
+      href: '/trauma-mental-health-training',
       icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="32" height="32"><path d="M12 20.5s-6.5-4-9-8.2C1.2 8.8 3 5.5 6.2 5.5c1.9 0 3.2 1 3.8 2.1.6-1.1 1.9-2.1 3.8-2.1 3.2 0 5 3.3 3.2 6.8-2.5 4.2-9 8.2-9 8.2Z"/></svg>,
     },
     {
       title: 'Foster Care, Adoption & Child Welfare',
       desc: 'Specialized training for agencies, foster parents, and child welfare professionals rooted in clinical and lived experience.',
-      href: '/services/trauma-informed-care-training',
+      href: '/foster-care',
       icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="32" height="32"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>,
     },
     {
       title: 'Parenting & Family',
       desc: 'Practical, compassionate guidance for parents navigating trauma, big emotions, and family dynamics.',
-      href: '/services/trauma-informed-care-training',
+      href: '/parenting-classes-okc',
       icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="32" height="32"><circle cx="9" cy="7" r="3"/><circle cx="15" cy="7" r="3"/><path d="M3 20c0-4 2.7-7 6-7h6c3.3 0 6 3 6 7"/></svg>,
     },
     {
       title: 'Schools & Youth Organizations',
       desc: 'Trauma-informed classroom strategies and youth mental health tools for teachers and school administrators.',
-      href: '/services/school-staff-educator-training',
+      href: '/contact',
       icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="32" height="32"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>,
     },
     {
       title: 'Faith, Ministry & Mental Health',
       desc: 'Equipping ministry leaders with trauma awareness, mental health literacy, and compassionate care practices.',
-      href: '/services/churches-faith-based-training',
+      href: '/contact',
       icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="32" height="32"><path d="M12 2v4M8 6l4-4 4 4M5 10h14M5 10v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V10M9 21v-6h6v6"/></svg>,
     },
     {
       title: 'Clinical Training & Professional Development',
       desc: 'Advanced training for counselors, social workers, and mental health professionals seeking continuing education.',
-      href: '/services/trauma-informed-care-training',
+      href: '/contact',
       icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="32" height="32"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>,
     },
   ];
@@ -165,32 +165,32 @@ export default function JamieJamesPage() {
   const popularTopics = [
     {
       label: 'Trauma-Informed Leadership',
-      href: '/services/trauma-informed-care-training',
+      href: '/trauma-mental-health-training',
       icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="28" height="28"><path d="M12 20.5s-6.5-4-9-8.2C1.2 8.8 3 5.5 6.2 5.5c1.9 0 3.2 1 3.8 2.1.6-1.1 1.9-2.1 3.8-2.1 3.2 0 5 3.3 3.2 6.8-2.5 4.2-9 8.2-9 8.2Z"/></svg>,
     },
     {
       label: 'Mental Health Awareness',
-      href: '/services/mental-health-awareness',
+      href: '/contact',
       icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="28" height="28"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>,
     },
     {
       label: 'Leadership Burnout & Boundaries',
-      href: '/services/corporate-business-training',
+      href: '/corporate-business-training',
       icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="28" height="28"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>,
     },
     {
       label: 'Compassion Fatigue',
-      href: '/services/trauma-informed-care-training',
+      href: '/trauma-mental-health-training',
       icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="28" height="28"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>,
     },
     {
       label: 'Supporting Students Under Stress',
-      href: '/services/school-staff-educator-training',
+      href: '/contact',
       icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="28" height="28"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>,
     },
     {
       label: 'Healthy Communication in Teams',
-      href: '/services/anxiety-depression-stress-management',
+      href: '/contact',
       icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" width="28" height="28"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>,
     },
   ];

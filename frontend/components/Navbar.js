@@ -83,7 +83,7 @@ export default function Navbar() {
             {mobileSubmenu === 'about' && (
               <div className="mobile-submenu">
                 <Link href="/about-us" onClick={closeMobileNav}>Our Team</Link>
-                <Link href="/about-us" onClick={closeMobileNav}>Testimonials</Link>
+                <Link href="/testimonials" onClick={closeMobileNav}>Testimonials</Link>
                 <Link href="/video-gallery" onClick={closeMobileNav}>Video Gallery</Link>
               </div>
             )}

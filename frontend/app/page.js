@@ -388,7 +388,7 @@ export default function HomePage() {
                 </span>
               </div>
               <a
-                href="https://www.google.com/search?q=Open+Arms+Initiative+Oklahoma+City+reviews"
+                href="https://www.google.com/search?q=Open+Arms+Initiative+Oklahoma+City+reviews#lrd=0x87b2115b2214b573:0x9f7f9c5bde6f356d,1,,,,"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="reviews-cta-link reviews-cta-link-desktop"
@@ -457,7 +457,7 @@ export default function HomePage() {
                 </div>
               )}
               <a
-                href="https://www.google.com/search?q=Open+Arms+Initiative+Oklahoma+City+reviews"
+                href="https://www.google.com/search?q=Open+Arms+Initiative+Oklahoma+City+reviews#lrd=0x87b2115b2214b573:0x9f7f9c5bde6f356d,1,,,,"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="reviews-cta-link reviews-cta-link-mobile"
