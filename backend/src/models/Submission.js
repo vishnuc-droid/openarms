@@ -25,6 +25,8 @@ const submissionSchema = new mongoose.Schema(
     email: { type: String, required: true, trim: true },
     phone: { type: String, trim: true },
     preferredDate: { type: String, trim: true },
+    insurance: { type: String, trim: true },
+    insuranceOther: { type: String, trim: true },
     contactMethod: { type: String, trim: true },
     topic: { type: String, trim: true },
     message: { type: String, trim: true },

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import FinalCtaForm from '@/components/FinalCtaForm';
 
 const GROWTH_VIDEO_ID = 'TAKbCOIbNF0';
 
@@ -70,6 +71,7 @@ const howWeCanHelp = [
   },
   {
     slug: 'foster-care-adoption-counseling',
+    href: '/foster-care/',
     title: 'Foster Care & Adoption Counseling',
     summary: 'Foster and adoptive families face a unique set of challenges. Our counselors understand the realities of placement, attachment, and transition, and offer support built around them.',
     icon: (
@@ -585,7 +587,7 @@ export default function HomePage() {
             </span>
             <h3>Foster Care Support</h3>
             <p>Foster care comes with its own set of challenges, and its own kind of support. We offer training, guidance, and placement support to help foster families build stable, loving homes.</p>
-            <Link href="/services/foster-care-adoption-counseling" className="teaser-card-link">Learn About Foster Care Support &rsaquo;</Link>
+            <Link href="/foster-care/" className="teaser-card-link">Learn About Foster Care Support &rsaquo;</Link>
           </article>
           <article className="teaser-card reveal reveal-from-bottom">
             <span className="teaser-card-icon training">
@@ -593,7 +595,7 @@ export default function HomePage() {
             </span>
             <h3>Training &amp; Speaking</h3>
             <p>We also train schools, churches, businesses, and organizations across Oklahoma on trauma-informed care, mental health awareness, and practical leadership skills, led by Jamie James, LPC.</p>
-            <Link href="/training-speaking/trauma-mental-health-training" className="teaser-card-link">Explore Training &amp; Speaking &rsaquo;</Link>
+            <Link href="/trauma-mental-health-training" className="teaser-card-link">Explore Training &amp; Speaking &rsaquo;</Link>
           </article>
           <article className="teaser-card reveal reveal-from-bottom">
             <span className="teaser-card-icon probono">
@@ -677,13 +679,18 @@ export default function HomePage() {
       </section>
 
       {/* Final Conversion Section */}
-      <section id="contact" className="final-cta-section">
-        <div className="final-cta-inner section-reveal section-reveal-left">
-          <h2>You Don't Have to Figure This Out Alone</h2>
-          <p>Whether you're just starting to look for support or you've been thinking about it for a while, reaching out is the hardest part, and we're glad to help with what comes next.</p>
-          <div className="final-cta-buttons">
-            <Link href="/contact" className="final-cta-btn primary">Book an Appointment</Link>
-            <a href="tel:+14059208934" className="final-cta-btn secondary">Call Us</a>
+      <section id="contact" className="final-cta-section home-final-cta-section">
+        <div className="final-cta-inner home-final-cta-inner section-reveal section-reveal-left">
+          <div className="final-cta-text">
+            <h2>You Don't Have to Figure This Out Alone</h2>
+            <p>Whether you're just starting to look for support or you've been thinking about it for a while, reaching out is the hardest part, and we're glad to help with what comes next.</p>
+            <div className="final-cta-buttons">
+              <Link href="/contact" className="final-cta-btn primary">Book an Appointment</Link>
+              <a href="tel:+14059208934" className="final-cta-btn secondary">Call Us</a>
+            </div>
+          </div>
+          <div className="home-final-cta-form-wrap reveal reveal-from-right">
+            <FinalCtaForm />
           </div>
         </div>
       </section>

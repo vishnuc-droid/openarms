@@ -3,7 +3,7 @@ import Link from 'next/link';
 const serviceColumns = [
   [
     { name: 'Child & Adolescent Counseling', href: '/child-counseling-services-oklahoma-city/' },
-    { name: 'Foster Care & Adoption Counseling', href: '/services/foster-care-adoption-counseling' },
+    { name: 'Foster Care & Adoption Counseling', href: '/foster-care/' },
     { name: 'Depression & Anxiety Counseling', href: '/depression-anxiety-counseling-oklahoma/' },
   ],
   [

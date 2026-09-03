@@ -128,7 +128,7 @@ export default function AdminDashboardPage() {
       if (endDate && new Date(it.createdAt) > new Date(`${endDate}T23:59:59`)) return false;
       if (search) {
         const q = search.toLowerCase();
-        const haystack = [it.name, it.firstName, it.lastName, it.email, it.phone, it.message]
+        const haystack = [it.name, it.firstName, it.lastName, it.email, it.phone, it.insurance, it.insuranceOther, it.message]
           .filter(Boolean)
           .join(' ')
           .toLowerCase();
@@ -139,13 +139,14 @@ export default function AdminDashboardPage() {
   }, [items, startDate, endDate, search]);
 
   const handleExport = () => {
-    const header = ['Date', 'Service', 'Name', 'Email', 'Phone', 'Message', 'Status'];
+    const header = ['Date', 'Service', 'Name', 'Email', 'Phone', 'Insurance', 'Message', 'Status'];
     const rows = visibleItems.map((it) => [
       new Date(it.createdAt).toLocaleString(),
       SERVICE_LABELS[it.service] || it.service,
       it.name || `${it.firstName || ''} ${it.lastName || ''}`.trim(),
       it.email,
       it.phone || '',
+      it.insurance === 'Other' ? (it.insuranceOther || 'Other') : (it.insurance || ''),
       it.message || '',
       it.status,
     ]);
@@ -246,6 +247,7 @@ export default function AdminDashboardPage() {
                     <th style={styles.th}>Name</th>
                     <th style={styles.th}>Email</th>
                     <th style={styles.th}>Phone</th>
+                    <th style={styles.th}>Insurance</th>
                     <th style={styles.th}>Message</th>
                     <th style={styles.th}>Status</th>
                     <th style={styles.th}>Actions</th>
@@ -270,6 +272,9 @@ export default function AdminDashboardPage() {
                         <td style={styles.td}>{it.name || `${it.firstName || ''} ${it.lastName || ''}`.trim() || '—'}</td>
                         <td style={styles.td}><a href={`mailto:${it.email}`} style={styles.link}>{it.email}</a></td>
                         <td style={styles.td}>{it.phone || '—'}</td>
+                        <td style={styles.td}>
+                          {it.insurance === 'Other' ? (it.insuranceOther || 'Other') : (it.insurance || '—')}
+                        </td>
                         <td style={{ ...styles.td, maxWidth: 240 }}>
                           {it.topic && <div style={styles.topicTag}>{it.topic}</div>}
                           <span style={styles.messageText}>{it.message || (it.topic ? '' : '—')}</span>

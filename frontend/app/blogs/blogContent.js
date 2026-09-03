@@ -79,7 +79,7 @@ export const blogContent = {
 
       { type: 'h2', text: 'Counseling for Caregivers and Foster Families' },
       { type: 'p', text: 'Caregivers often hesitate to seek help because they believe they should be able to manage independently. In foster care environments, this belief is particularly strong.' },
-      { type: 'p', html: 'Through <a href="/services/foster-care-adoption-counseling">foster care counseling services</a> at Open Arms Initiative, we frequently work with caregivers navigating secondary trauma, compassion fatigue, and chronic stress. These experiences are common and treatable.' },
+      { type: 'p', html: 'Through <a href="/foster-care/">foster care counseling services</a> at Open Arms Initiative, we frequently work with caregivers navigating secondary trauma, compassion fatigue, and chronic stress. These experiences are common and treatable.' },
       { type: 'p', text: 'Seeking support does not signal inadequacy. It signals insight.' },
       { type: 'p', text: 'When caregivers stabilize, children benefit. Family systems strengthen.' },
 
@@ -163,7 +163,7 @@ export const blogContent = {
       { type: 'p', text: 'Caregiver fatigue is not a character flaw. It is a predictable outcome of sustained emotional labor.' },
 
       { type: 'h3', text: 'Economic and Social Uncertainty' },
-      { type: 'p', html: 'Long-term uncertainty produces anticipatory stress. Even in the absence of immediate crisis, the mind remains vigilant. Clients seeking <a href="/training-speaking/trauma-mental-health-training">mental health support in Oklahoma City</a> frequently describe low-grade anxiety tied to financial pressure, housing instability, or professional unpredictability.' },
+      { type: 'p', html: 'Long-term uncertainty produces anticipatory stress. Even in the absence of immediate crisis, the mind remains vigilant. Clients seeking <a href="/trauma-mental-health-training">mental health support in Oklahoma City</a> frequently describe low-grade anxiety tied to financial pressure, housing instability, or professional unpredictability.' },
       { type: 'p', text: 'When vigilance becomes chronic, exhaustion follows.' },
 
       { type: 'h3', text: 'Productivity Culture' },

@@ -14,7 +14,7 @@ const submitLimiter = rateLimit({
 
 // Public: any of the 11 site forms posts here.
 router.post('/', submitLimiter, async (req, res) => {
-  const { service, firstName, lastName, name, email, phone, preferredDate, contactMethod, topic, message } = req.body || {};
+  const { service, firstName, lastName, name, email, phone, preferredDate, insurance, insuranceOther, contactMethod, topic, message } = req.body || {};
 
   if (!service || !email) {
     return res.status(400).json({ error: 'service and email are required' });
@@ -32,6 +32,8 @@ router.post('/', submitLimiter, async (req, res) => {
     email,
     phone,
     preferredDate,
+    insurance,
+    insuranceOther,
     contactMethod,
     topic,
     message,

@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { blogPosts } from './blogData';
+import BidirectionalReveal from '@/components/BidirectionalReveal';
 
 const POSTS_PER_PAGE = 10;
 const TOTAL_PAGES = Math.ceil(blogPosts.length / POSTS_PER_PAGE);
@@ -32,7 +33,7 @@ export default function BlogListClient({ page = 1 }) {
         <div className="blog-list-container">
           {posts.map((post) => (
             <article className="blog-list-card" key={post.slug}>
-              <div className="blog-list-content blog-list-content-top">
+              <div className="blog-list-content blog-list-content-top bi-reveal bi-reveal-from-right">
                 <div className="blog-list-cat">
                   <Link href="/blogs">{post.category}</Link>
                 </div>
@@ -41,15 +42,16 @@ export default function BlogListClient({ page = 1 }) {
                 </h2>
                 <div className="blog-list-date">{post.date}</div>
               </div>
-              <Link href={`/blogs/${post.slug}`} className="blog-list-thumb">
+              <Link href={`/blogs/${post.slug}`} className="blog-list-thumb bi-reveal bi-reveal-from-left">
                 <img src={post.image} alt={post.alt} loading="lazy" />
               </Link>
-              <div className="blog-list-content blog-list-content-bottom">
+              <div className="blog-list-content blog-list-content-bottom bi-reveal bi-reveal-from-right">
                 <p className="blog-list-excerpt">{post.excerpt}</p>
                 <Link href={`/blogs/${post.slug}`} className="blog-list-readmore">Continue reading...</Link>
               </div>
             </article>
           ))}
+          <BidirectionalReveal selector=".bi-reveal" />
 
           {/* Pagination */}
           {TOTAL_PAGES > 1 && (

@@ -52,7 +52,7 @@ export const serviceCategories = {
 export const trainingSpeakingMenu = {
   heading: 'Training & Speaking',
   links: [
-    { name: 'Trauma & Mental Health Training', slug: 'trauma-mental-health-training', href: '/training-speaking/trauma-mental-health-training' },
+    { name: 'Trauma & Mental Health Training', slug: 'trauma-mental-health-training', href: '/trauma-mental-health-training' },
     { name: 'Jamie James, LPC', slug: 'jamie-james', href: '/training/jamie-james' },
     { name: 'Churches & Faith-Based Training', slug: 'churches-faith-based-training', href: '/services/churches-faith-based-training' },
     { name: 'Corporate & Business Training', slug: 'corporate-business-training', href: '/corporate-business-training' },
@@ -110,20 +110,6 @@ export const allServices = [
     ],
     details: 'Couples therapy helps partners identify unhelpful relationship dynamics, express emotional needs constructively, and work together toward a shared vision for their partnership.',
     image: '/images/8th.jpg',
-  },
-  {
-    slug: 'foster-care-adoption-counseling',
-    title: 'Foster Care & Adoption Counseling',
-    category: 'Counseling & Therapy',
-    summary: 'Trauma-informed guidance and emotional support for foster youth, adoptive children, foster parents, and adoptive families.',
-    benefits: [
-      'Specialized adoption & foster trauma care',
-      'Support for attachment and bonding',
-      '24/7 foster parent support systems',
-      'Navigating placement transitions smoothly',
-    ],
-    details: 'Foster care and adoption bring unique emotional rewards and complex attachment dynamics. Our team provides specialized care to help families navigate transition phases, attachment security, and trauma recovery.',
-    image: '/images/5th.jpg',
   },
   {
     slug: 'grief-loss-counseling',

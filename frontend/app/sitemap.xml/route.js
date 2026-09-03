@@ -30,7 +30,7 @@ const staticRoutes = [
 
   // Training & Speaking
   { path: '/corporate-business-training', priority: 0.6, changeFrequency: 'monthly' },
-  { path: '/training-speaking/trauma-mental-health-training', priority: 0.6, changeFrequency: 'monthly' },
+  { path: '/trauma-mental-health-training', priority: 0.6, changeFrequency: 'monthly' },
   { path: '/training/jamie-james', priority: 0.5, changeFrequency: 'monthly' },
 ];
 

@@ -21,9 +21,12 @@ const IconSend = (props) => (
 const IconLock = (props) => (
   <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" {...props}><rect x="4" y="10.5" width="16" height="10" rx="2" /><path d="M7.5 10.5V7a4.5 4.5 0 0 1 9 0v3.5" /></svg>
 );
+const IconShield = (props) => (
+  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M12 3 4.5 6v6c0 4.5 3.2 7.7 7.5 9 4.3-1.3 7.5-4.5 7.5-9V6L12 3Z" /><path d="M9 12.2 11 14l4-4.2" /></svg>
+);
 
 export default function FamilyTherapyRequestForm() {
-  const [form, setForm] = useState({ name: '', email: '', phone: '', date: '', message: '' });
+  const [form, setForm] = useState({ name: '', email: '', phone: '', date: '', insurance: '', insuranceOther: '', message: '' });
   const [status, setStatus] = useState('idle');
   const [error, setError] = useState('');
 
@@ -75,6 +78,26 @@ export default function FamilyTherapyRequestForm() {
         <IconCalendar />
         <input name="date" type="date" value={form.date} onChange={handleChange} placeholder="mm/dd/yyyy" />
       </div>
+
+      <label className="family-req-label">Select Your Insurance Provider</label>
+      <div className="family-req-input-wrap">
+        <IconShield />
+        <select name="insurance" value={form.insurance} onChange={handleChange}>
+          <option value="" disabled>Select Your Insurance Provider</option>
+          <option value="SoonerCare">SoonerCare</option>
+          <option value="Humana">Humana</option>
+          <option value="Aetna">Aetna</option>
+          <option value="Oklahoma Complete Health">Oklahoma Complete Health</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      {form.insurance === 'Other' && (
+        <div className="family-req-input-wrap">
+          <IconShield />
+          <input name="insuranceOther" value={form.insuranceOther} onChange={handleChange} placeholder="Please tell us your insurance provider" />
+        </div>
+      )}
 
       <label className="family-req-label">Tell us more about your needs</label>
       <textarea name="message" value={form.message} onChange={handleChange} placeholder="Briefly describe what's going on and how we can help..." rows={3} />
