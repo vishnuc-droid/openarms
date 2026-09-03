@@ -3210,7 +3210,7 @@ footer a:hover {
     font-size: 15px;
     font-weight: 700;
     border-radius: 999px;
-    border: 1.5px solid #052E26;
+    border: 1.5px solid transparent;
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -3301,6 +3301,9 @@ footer a:hover {
   }
   .hero-banner-bg {
     background-position: left center;
+  }
+  #home .hero-banner-bg {
+    background-image: url('/Training/weqwwqe.png');
   }
   .reference-hero-overlay {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.55) 55%, rgba(255, 255, 255, 0.3) 100%);
