@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import MegaMenu from './MegaMenu';
 import { serviceCategories, trainingSpeakingMenu } from '@/lib/servicesData';
@@ -13,6 +13,7 @@ export default function Navbar() {
   const [trainingMenuOpen, setTrainingMenuOpen] = useState(false);
   const [mobileSubmenu, setMobileSubmenu] = useState(null);
   const [mobileServiceCategory, setMobileServiceCategory] = useState(null);
+  const headerRef = useRef(null);
   const closeMobileNav = () => {
     setMenuOpen(false);
     setMobileSubmenu(null);
@@ -24,8 +25,20 @@ export default function Navbar() {
     setTrainingMenuOpen(false);
   };
 
+  useEffect(() => {
+    if (!menuOpen) return;
+    const handleOutsideClick = (e) => {
+      if (headerRef.current && !headerRef.current.contains(e.target)) {
+        closeMobileNav();
+      }
+    };
+    document.addEventListener('pointerdown', handleOutsideClick);
+    return () => document.removeEventListener('pointerdown', handleOutsideClick);
+  }, [menuOpen]);
+
   return (
     <header
+      ref={headerRef}
       className="reference-header home-hero-header"
       onMouseLeave={closeServicesMenu}
     >
@@ -85,6 +98,7 @@ export default function Navbar() {
                 <Link href="/about-us" onClick={closeMobileNav}>Our Team</Link>
                 <Link href="/testimonials" onClick={closeMobileNav}>Testimonials</Link>
                 <Link href="/video-gallery" onClick={closeMobileNav}>Video Gallery</Link>
+                <Link href="/careers" onClick={closeMobileNav}>Careers</Link>
               </div>
             )}
           </div>
@@ -145,6 +159,7 @@ export default function Navbar() {
             )}
           </div>
 
+          <Link href="/location" className="mobile-nav-link" onClick={closeMobileNav}>Location</Link>
           <Link href="/blogs" className="mobile-nav-link" onClick={closeMobileNav}>Blog</Link>
           <Link href="/contact" className="mobile-nav-link" onClick={closeMobileNav}>Contact Us</Link>
 

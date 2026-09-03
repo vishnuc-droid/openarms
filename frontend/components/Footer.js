@@ -78,6 +78,7 @@ export default function Footer() {
           <div className="footer-bottom-links">
             <Link href="/blogs">Blog</Link>
             <Link href="/contact">Contact Us</Link>
+            <Link href="/video-gallery">Video Gallery</Link>
           </div>
           <p className="copyright">© Openarms Initiative 2026<br />Developed by <a href="https://www.echo5digital.com/" target="_blank" rel="noopener noreferrer">Echo5 Digital</a>.</p>
         </div>
