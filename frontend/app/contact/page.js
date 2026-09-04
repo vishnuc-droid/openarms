@@ -6,6 +6,10 @@ import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 import { submitForm } from '@/lib/api';
 
+const IconSend = (props) => (
+  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M22 2 11 13" /><path d="M22 2 15 22l-4-9-9-4 20-7Z" /></svg>
+);
+
 const SERVICE_OPTIONS = [
   'Adult & Individual Counseling',
   'Family Counseling',
@@ -16,7 +20,6 @@ const SERVICE_OPTIONS = [
   'Family Support Services',
   'Parenting Support & Classes',
   'Foster Care & Adoption Support',
-  'Pro Bono Counseling',
   'Other / I’m Not Sure',
 ];
 
@@ -88,6 +91,7 @@ function ContactForm() {
     email: searchParams.get('email') || '',
     phone: searchParams.get('phone') || '',
     service: SERVICE_PARAM_MAP[searchParams.get('service')] || '',
+    insurance: '',
     contactMethod: '',
     message: searchParams.get('message') || '',
   });
@@ -109,6 +113,7 @@ function ContactForm() {
         name: `${form.firstName} ${form.lastName}`.trim(),
         email: form.email,
         phone: form.phone,
+        insurance: form.insurance,
         contactMethod: form.contactMethod,
         message: form.message,
       });
@@ -146,6 +151,17 @@ function ContactForm() {
           {SERVICE_OPTIONS.map((s) => <option key={s} value={s}>{s}</option>)}
         </select>
       </label>
+      <label className="oa-contact-field"><span>How will you be paying for services?</span>
+        <select name="insurance" value={form.insurance} onChange={handleChange}>
+          <option value="" disabled>Select Your Insurance Provider</option>
+          <option value="SoonerCare">SoonerCare</option>
+          <option value="Humana">Humana</option>
+          <option value="Aetna">Aetna</option>
+          <option value="Oklahoma Complete Health">Oklahoma Complete Health</option>
+          <option value="Private Pay">Private Pay</option>
+          <option value="Not Sure">I&rsquo;m not sure / I need help verifying my coverage</option>
+        </select>
+      </label>
       <label className="oa-contact-field"><span>Preferred contact method</span>
         <select name="contactMethod" value={form.contactMethod} onChange={handleChange}>
           <option value="">No preference</option>
@@ -157,7 +173,7 @@ function ContactForm() {
       <label className="oa-contact-field"><span>Message / How can we help?*</span><textarea name="message" value={form.message} onChange={handleChange} rows={4} required /></label>
 
       {error && <p className="oa-contact-form-note" style={{ color: '#c0392b' }}>{error}</p>}
-      <button type="submit" className="fs-btn fs-req-btn-primary oa-contact-submit" disabled={submitting}>{submitting ? 'Sending…' : 'Send My Request'}</button>
+      <button type="submit" className="fs-btn fs-req-btn-primary oa-contact-submit" disabled={submitting}><IconSend />{submitting ? 'Sending…' : 'Continue to Eligibility'}</button>
       <p className="oa-contact-form-note">Please avoid including highly sensitive or urgent information in this form. Submitting this form does not establish a therapeutic relationship or confirm an appointment.</p>
     </form>
   );
