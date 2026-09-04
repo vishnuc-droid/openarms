@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import MegaMenu from './MegaMenu';
 import { serviceCategories, trainingSpeakingMenu } from '@/lib/servicesData';
 
@@ -44,7 +45,7 @@ export default function Navbar() {
     >
       <div className="top-nav">
         <Link className="reference-brand" href="/" aria-label="Open Arms Initiative home">
-          <img src="/images/logo-full.png" alt="Open Arms Initiative" />
+          <Image src="/images/logo-full.png" alt="Open Arms Initiative" width={210} height={56} priority />
         </Link>
 
         <button
