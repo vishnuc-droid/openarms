@@ -1,4 +1,4 @@
-import { DM_Sans, Playfair_Display, Plus_Jakarta_Sans } from 'next/font/google';
+import { DM_Sans, Playfair_Display, Plus_Jakarta_Sans, Alex_Brush } from 'next/font/google';
 import './globals.css';
 import SiteChrome from '@/components/SiteChrome';
 
@@ -6,6 +6,13 @@ const dmSans = DM_Sans({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-dm-sans',
+  display: 'swap',
+});
+
+const alexBrush = Alex_Brush({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-alex-brush',
   display: 'swap',
 });
 
@@ -31,7 +38,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${playfairDisplay.variable} ${plusJakartaSans.variable}`}>
+    <html lang="en" className={`${dmSans.variable} ${playfairDisplay.variable} ${plusJakartaSans.variable} ${alexBrush.variable}`}>
       <body>
         <SiteChrome>{children}</SiteChrome>
       </body>

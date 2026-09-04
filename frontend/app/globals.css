@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
 @import 'tailwindcss';
 
 :root {
@@ -10819,7 +10818,7 @@ footer a:hover {
 }
 
 .gala-hero-v2-script {
-  font-family: 'Alex Brush', cursive;
+  font-family: var(--font-alex-brush), cursive;
   font-size: clamp(1.5rem, 2.6vw, 2.1rem);
   line-height: 1.5;
   font-weight: 400;
@@ -10948,7 +10947,7 @@ footer a:hover {
   top: -0.28em;
   left: 50%;
   transform: translateX(-50%);
-  font-family: 'Alex Brush', cursive;
+  font-family: var(--font-alex-brush), cursive;
   font-size: clamp(8rem, 22vw, 16rem);
   color: rgba(0, 175, 247, 0.1);
   white-space: nowrap;
