@@ -242,6 +242,9 @@ export default function HomePage() {
             tabIndex={-1}
           />
         </div>
+        <div className="hero-banner-video-mobile" aria-hidden="true">
+          <video src="/9b32ee9136 (1).mp4" autoPlay muted loop playsInline />
+        </div>
         <div className="reference-hero-overlay"></div>
         <div className="reference-hero-copy reveal reveal-from-bottom">
           <h1 className="hero-accent-heading">Mental Health Counseling for Children, Adults &amp; Families <span className="hero-accent-heading-highlight">in Oklahoma City</span></h1>

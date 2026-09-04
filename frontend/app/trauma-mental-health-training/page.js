@@ -145,7 +145,7 @@ function FaqList() {
 /* ─── HERO REQUEST-TRAINING FORM (new) ──────────────────────────────────── */
 function TrainingRequestForm() {
   const [form, setForm] = useState({
-    name: '', email: '', phone: '', date: '', topic: '', message: '',
+    name: '', email: '', phone: '', topic: '', message: '',
   });
   const [status, setStatus] = useState('idle');
   const [error, setError] = useState('');
@@ -157,7 +157,7 @@ function TrainingRequestForm() {
     setStatus('submitting');
     setError('');
     try {
-      await submitForm({ service: 'training-request', ...form, preferredDate: form.date });
+      await submitForm({ service: 'training-request', ...form });
       setStatus('success');
     } catch (err) {
       setError(err.message);
@@ -192,12 +192,6 @@ function TrainingRequestForm() {
       <div className="tmh2-form-input-wrap">
         <IconPhone width="16" height="16" />
         <input name="phone" value={form.phone} onChange={handleChange} placeholder="(123) 456-7890" />
-      </div>
-
-      <label className="tmh2-form-label">Date</label>
-      <div className="tmh2-form-input-wrap">
-        <IconCalendar width="16" height="16" />
-        <input name="date" type="date" value={form.date} onChange={handleChange} placeholder="mm/dd/yyyy" />
       </div>
 
       <label className="tmh2-form-label">What type of training are you looking for?</label>

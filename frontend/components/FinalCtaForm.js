@@ -119,6 +119,7 @@ export default function FinalCtaForm() {
         <IconSend />
         {status === 'submitting' ? 'Sending…' : 'Continue to Eligibility'}
       </button>
+      <p className="final-cta-form-note">Open Arms Initiative is currently accepting new clients with Humana, Aetna, Oklahoma Complete Health, OHCA (SoonerCare), and private pay. Coverage and eligibility will be verified before services are scheduled.</p>
     </form>
   );
 }
