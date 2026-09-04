@@ -234,6 +234,14 @@ export default function HomePage() {
       {/* Hero Section */}
       <section id="home" className="reference-hero">
         <div className="hero-banner-bg" aria-hidden="true"></div>
+        <div className="hero-banner-video" aria-hidden="true">
+          <iframe
+            src="https://www.youtube.com/embed/m_YXms2Eu6o?autoplay=1&mute=1&loop=1&playlist=m_YXms2Eu6o&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+            title=""
+            allow="autoplay; encrypted-media"
+            tabIndex={-1}
+          />
+        </div>
         <div className="reference-hero-overlay"></div>
         <div className="reference-hero-copy reveal reveal-from-bottom">
           <h1 className="hero-accent-heading">Mental Health Counseling for Children, Adults &amp; Families <span className="hero-accent-heading-highlight">in Oklahoma City</span></h1>
