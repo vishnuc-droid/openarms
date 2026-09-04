@@ -329,7 +329,7 @@ export default function LocationClient() {
               <h2 className="why-choose-title">Why Oklahoma City Families<br />Turn to Open Arms</h2>
             </div>
           </div>
-          <div className="why-choose-grid">
+          <div className="why-choose-grid why-choose-grid-quad">
             {whyOpenArms.map((reason) => (
               <article className="why-choose-card" key={reason.title}>
                 <div className="icon-box">{reason.icon}</div>

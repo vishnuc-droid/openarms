@@ -4321,7 +4321,7 @@ footer a:hover {
 }
 
 .loc-statement-container .final-cta-btn {
-  margin-top: 12px;
+  margin-top: 32px;
 }
 
 .loc-who-section {
@@ -4370,7 +4370,7 @@ footer a:hover {
 
 .loc-online-section {
   padding: 80px 24px;
-  background: #F7F5EE;
+  background: var(--oa-blue-light, #E4F8FC);
 }
 
 .loc-online-container {
@@ -8731,6 +8731,12 @@ footer a:hover {
   z-index: 1;
 }
 
+@media (min-width: 1025px) {
+  .why-choose-grid-quad > .why-choose-card:nth-child(4) {
+    grid-column: 2;
+  }
+}
+
 .why-choose-card {
   position: relative;
   background: rgba(255, 255, 255, 0.08);
@@ -11775,18 +11781,23 @@ footer a:hover {
 }
 
 .home-final-cta-section .final-cta-inner h2 {
-  font-size: clamp(2rem, 2.8vw, 2.5rem);
+  font-size: clamp(2.4rem, 3.4vw, 3.1rem);
   max-width: 640px;
 }
 
 .home-final-cta-section .final-cta-inner p {
-  font-size: 17.5px;
+  font-size: 19.5px;
   max-width: 600px;
 }
 
 .home-final-cta-inner .final-cta-buttons {
   margin-top: 22px;
   gap: 22px;
+}
+
+.home-final-cta-section .final-cta-buttons .final-cta-btn {
+  font-size: 16.5px;
+  padding: 16px 34px;
 }
 
 .home-final-cta-form-wrap {
@@ -11825,6 +11836,7 @@ footer a:hover {
 }
 
 .final-cta-form input,
+.final-cta-form select,
 .final-cta-form textarea {
   width: 100%;
   background: rgba(4, 20, 30, 0.28);
@@ -11846,9 +11858,14 @@ footer a:hover {
 }
 
 .final-cta-form input:focus,
+.final-cta-form select:focus,
 .final-cta-form textarea:focus {
   border-color: #ffffff;
   background: rgba(4, 20, 30, 0.4);
+}
+
+.final-cta-form select option {
+  color: #072B3A;
 }
 
 .final-cta-form textarea {
@@ -11955,6 +11972,7 @@ footer a:hover {
   }
 
   .home-final-cta-section .final-cta-form input,
+  .home-final-cta-section .final-cta-form select,
   .home-final-cta-section .final-cta-form textarea {
     font-size: 16px;
     padding: 14px 15px;
