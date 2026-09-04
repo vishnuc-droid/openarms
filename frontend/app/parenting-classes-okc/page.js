@@ -144,7 +144,7 @@ export default function ParentingClassesPage() { return <main className="fs-page
       <p>At Open Arms Initiative, our <strong>Effective Parenting Classes in OKC</strong> provide practical education, compassionate guidance, and supportive tools to help parents and caregivers feel more confident as they navigate the challenges of raising children.</p>
       <div className="fs-actions"><a href="#needs" className="fs-btn fs-solid">Explore Parenting Support</a><Link href="/contact" className="fs-btn fs-outline">Connect With Open Arms</Link></div>
     </div>
-    <div className="fs-hero-form-card reveal reveal-from-right"><div className="fs-hero-form-body"><h3>Request an Appointment</h3><span className="fs-hero-form-underline" /><p className="fs-hero-form-sub">Tell us a bit about your family and we&rsquo;ll help you find the right support.</p><ParentingSupportRequestForm /></div><div className="fs-hero-form-photo"><img src="/gm.jpg" alt="Parent spending warm, connected time with children at home" /></div></div>
+    <div className="fs-hero-form-card reveal reveal-from-right"><div className="fs-hero-form-body"><h3>Request an Appointment</h3><span className="fs-hero-form-underline" /><p className="fs-hero-form-sub">Tell us a bit about your family and we&rsquo;ll help you find the right support.</p><ParentingSupportRequestForm /></div><div className="fs-hero-form-photo"><img src="/gm-100kb (1).jpg" alt="Parent spending warm, connected time with children at home" /></div></div>
   </div></section>
 
   <section className="fs-trust-section"><div className="fs-container fs-trust">{['Practical Guidance', 'Family-Centered', 'Supportive Education', 'No Judgment'].map((x, i) => <div key={x}><span>{trustIcons[i]}</span><p>{x}</p></div>)}</div></section>
