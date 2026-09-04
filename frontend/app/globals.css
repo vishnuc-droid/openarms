@@ -3307,28 +3307,11 @@ footer a:hover {
     background-position: left center;
   }
   .home-hero-video .hero-banner-bg {
-    display: none;
+    display: block;
+    background-image: url('/Training/1222.png');
   }
   .home-hero-video .hero-banner-video {
-    display: block;
-    position: absolute;
-    z-index: -3;
-    inset: 0;
-    overflow: hidden;
-    pointer-events: none;
-    container-type: size;
-  }
-  .home-hero-video .hero-banner-video iframe {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 177.78cqh;
-    height: 100cqh;
-    min-width: 100cqw;
-    min-height: 56.25cqw;
-    transform: translate(-50%, -50%);
-    border: 0;
-    pointer-events: none;
+    display: none;
   }
   .reference-hero-overlay {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.55) 55%, rgba(255, 255, 255, 0.3) 100%);
