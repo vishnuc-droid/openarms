@@ -287,10 +287,10 @@ export default function HomePage() {
               <div className="insurance-strip-track">
                 {[0, 1].map((copy) => (
                   <div className="insurance-strip-payers" key={copy} aria-hidden={copy === 1}>
-                    <span className="insurance-strip-logo insurance-strip-logo--zoom"><img src="/Logo 4.png" alt="Humana" /></span>
-                    <span className="insurance-strip-logo insurance-strip-logo--zoom"><img src="/Logo 3.png" alt="Aetna" /></span>
-                    <span className="insurance-strip-logo insurance-strip-logo--zoom"><img src="/Logo 2.png" alt="Oklahoma Complete Health" /></span>
-                    <span className="insurance-strip-logo insurance-strip-logo--zoom"><img src="/Logo 5.png" alt="SoonerCare" /></span>
+                    <span className="insurance-strip-logo insurance-strip-logo--zoom"><img src="/Logo 4.png" alt="Humana" loading="lazy" /></span>
+                    <span className="insurance-strip-logo insurance-strip-logo--zoom"><img src="/Logo 3.png" alt="Aetna" loading="lazy" /></span>
+                    <span className="insurance-strip-logo insurance-strip-logo--zoom"><img src="/Logo 2.png" alt="Oklahoma Complete Health" loading="lazy" /></span>
+                    <span className="insurance-strip-logo insurance-strip-logo--zoom"><img src="/Logo 5.png" alt="SoonerCare" loading="lazy" /></span>
                   </div>
                 ))}
               </div>
@@ -354,7 +354,7 @@ export default function HomePage() {
                 onClick={() => setExpectVideoPlaying(true)}
                 aria-label="Play video: What to Expect at Open Arms"
               >
-                <img src={`https://img.youtube.com/vi/${GROWTH_VIDEO_ID}/maxresdefault.jpg`} alt="" />
+                <img src={`https://img.youtube.com/vi/${GROWTH_VIDEO_ID}/maxresdefault.jpg`} alt="" loading="lazy" />
                 <span className="expect-video-play-btn">
                   <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5v14l11-7Z"/></svg>
                 </span>
@@ -385,7 +385,7 @@ export default function HomePage() {
               <div className="reviews-rating">
                 <span className="reviews-stars" aria-hidden="true">★★★★★</span>
                 <span className="reviews-rating-label">
-                  <img src="/icons8-google-logo-48.png" alt="" className="reviews-google-icon" />
+                  <img src="/icons8-google-logo-48.png" alt="" className="reviews-google-icon" loading="lazy" />
                   Google Reviews
                 </span>
               </div>
@@ -418,14 +418,14 @@ export default function HomePage() {
                       <article className="review-card reveal reveal-from-bottom" key={review.author}>
                         <div className="review-author-row">
                           {review.photo && (
-                            <img src={review.photo} alt={review.author} className="review-author-photo" />
+                            <img src={review.photo} alt={review.author} className="review-author-photo" loading="lazy" />
                           )}
                           <span className="review-author">{review.author}</span>
-                          <img src="/Training/icon.svg" alt="Google" className="review-google-icon" />
+                          <img src="/Training/icon.svg" alt="Google" className="review-google-icon" loading="lazy" />
                         </div>
                         <div className="review-stars" aria-hidden="true">
                           {Array.from({ length: 5 }).map((_, i) => (
-                            <img src="/Training/f.svg" alt="" key={i} />
+                            <img src="/Training/f.svg" alt="" key={i} loading="lazy" />
                           ))}
                         </div>
                         <span className="review-quote-mark" aria-hidden="true">&ldquo;</span>
@@ -524,7 +524,7 @@ export default function HomePage() {
             {teamMembers.map((member) => (
               <div className="team-photo-card reveal reveal-from-bottom" key={member.name}>
                 <div className="team-photo-media">
-                  <img src={member.photo} alt={member.name} />
+                  <img src={member.photo} alt={member.name} loading="lazy" />
                 </div>
                 <div className="team-photo-caption">
                   <span className="team-photo-name">{member.name}</span>
@@ -641,6 +641,7 @@ export default function HomePage() {
                 <img
                   src="/counseling-conversation.jpg"
                   alt="Open Arms Initiative team supporting families across Oklahoma City"
+                  loading="lazy"
                 />
               </div>
             </div>
