@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const serviceColumns = [
   [
@@ -25,7 +26,7 @@ export default function Footer() {
         <div className="footer-top">
           <div className="footer-brand-col">
             <Link className="footer-logo" href="/" aria-label="Open Arms Initiative home">
-              <img src="/images/logo-full.png" alt="Open Arms Initiative" />
+              <Image src="/images/logo-full.png" alt="Open Arms Initiative" width={200} height={58} loading="lazy" />
             </Link>
             <p className="footer-tagline">Compassionate care. Stronger communities. Brighter futures.</p>
             <div className="footer-contact-list">
