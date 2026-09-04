@@ -16,9 +16,6 @@ const IconPhone = (props) => (
 const IconSend = (props) => (
   <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M22 2 11 13" /><path d="M22 2 15 22l-4-9-9-4 20-7Z" /></svg>
 );
-const IconLock = (props) => (
-  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" {...props}><rect x="4" y="10.5" width="16" height="10" rx="2" /><path d="M7.5 10.5V7a4.5 4.5 0 0 1 9 0v3.5" /></svg>
-);
 const IconShield = (props) => (
   <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M12 3 4.5 6v6c0 4.5 3.2 7.7 7.5 9 4.3-1.3 7.5-4.5 7.5-9V6L12 3Z" /><path d="M9 12.2 11 14l4-4.2" /></svg>
 );
@@ -88,10 +85,7 @@ export default function FamilyTherapyRequestForm() {
         {status === 'submitting' ? 'Sending…' : 'Continue to Eligibility'}
       </button>
 
-      <p className="family-req-privacy">
-        <IconLock />
-        We respect your privacy. Your information is safe with us.
-      </p>
+      <p className="req-form-insurance-note">Open Arms Initiative is currently accepting new clients with Humana, Aetna, Oklahoma Complete Health, OHCA (SoonerCare), and private pay. Coverage and eligibility will be verified before services are scheduled.</p>
     </form>
   );
 }

@@ -174,7 +174,7 @@ function ContactForm() {
 
       {error && <p className="oa-contact-form-note" style={{ color: '#c0392b' }}>{error}</p>}
       <button type="submit" className="fs-btn fs-req-btn-primary oa-contact-submit" disabled={submitting}><IconSend />{submitting ? 'Sending…' : 'Continue to Eligibility'}</button>
-      <p className="oa-contact-form-note">Please avoid including highly sensitive or urgent information in this form. Submitting this form does not establish a therapeutic relationship or confirm an appointment.</p>
+      <p className="oa-contact-form-note">Open Arms Initiative is currently accepting new clients with Humana, Aetna, Oklahoma Complete Health, OHCA (SoonerCare), and private pay. Coverage and eligibility will be verified before services are scheduled.</p>
     </form>
   );
 }

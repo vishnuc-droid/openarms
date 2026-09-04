@@ -7440,6 +7440,7 @@ footer a:hover {
 .fs-req-submit{justify-content:center;align-items:center;gap:8px;margin-top:4px;padding:13px 22px;width:100%}
 .fs-req-btn-primary{background:linear-gradient(135deg,#00aff7,#0170ed);color:#fff;border:1.5px solid transparent;transition:transform .25s ease,box-shadow .25s ease,background .25s ease}
 .fs-req-privacy{display:flex;align-items:center;gap:6px;font-family:'DM Sans',Arial,sans-serif;font-size:12px;color:#5b6b70;margin:16px 0 0}
+.req-form-insurance-note{font-family:var(--font-dm-sans),'DM Sans',Arial,sans-serif;font-size:12px;line-height:1.6;color:#5b6b70;margin:10px 0 0}
 .fs-req-error{font-family:'DM Sans',Arial,sans-serif;font-size:13px;color:#c0392b;margin:0}
 .fs-req-success{background:#eaf9f1;border:1.5px solid #bfe8d2;border-radius:12px;padding:20px;text-align:center}
 .fs-req-success p{margin:0;font-family:'DM Sans',Arial,sans-serif;font-size:14px;color:#1f5c3d;line-height:1.6}
