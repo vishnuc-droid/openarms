@@ -232,7 +232,7 @@ export default function HomePage() {
   return (
     <main ref={revealRootRef}>
       {/* Hero Section */}
-      <section id="home" className="reference-hero">
+      <section id="home" className="reference-hero home-hero-video">
         <div className="hero-banner-bg" aria-hidden="true"></div>
         <div className="hero-banner-video" aria-hidden="true">
           <iframe

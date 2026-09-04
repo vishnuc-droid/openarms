@@ -3306,10 +3306,10 @@ footer a:hover {
   .hero-banner-bg {
     background-position: left center;
   }
-  #home .hero-banner-bg {
+  .home-hero-video .hero-banner-bg {
     display: none;
   }
-  #home .hero-banner-video {
+  .home-hero-video .hero-banner-video {
     display: block;
     position: absolute;
     z-index: -3;
@@ -3318,7 +3318,7 @@ footer a:hover {
     pointer-events: none;
     container-type: size;
   }
-  #home .hero-banner-video iframe {
+  .home-hero-video .hero-banner-video iframe {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -3332,6 +3332,9 @@ footer a:hover {
   }
   .reference-hero-overlay {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.55) 55%, rgba(255, 255, 255, 0.3) 100%);
+  }
+  .location-hero .hero-banner-bg {
+    background-image: url('/fff3.png');
   }
   .reference-hero-copy {
     padding: 110px 20px 60px;
