@@ -121,7 +121,7 @@ const faqs = [
   ['Can you help me find the right service for my child or family?', <>Open Arms Initiative can help you explore available services based on the concerns you share. Depending on your circumstances, appropriate options may include family support, counseling, <Link href="/child-counseling-services-oklahoma-city/">child and adolescent services</Link>, education, or connections to other resources.</>],
 ];
 
-export default function FamilySupportPage() { return <main className="fs-page team-boost">
+export default function FamilySupportPage() { return <main className="fs-page team-boost family-support-page">
   <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_BREADCRUMB) }} />
   <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_SERVICE) }} />
   <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_FAQ) }} />

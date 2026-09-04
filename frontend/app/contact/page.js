@@ -166,7 +166,7 @@ function ContactForm() {
 export default function ContactPage() { return <main className="fs-page oa-contact-page">
   <ScrollReveal />
 
-  <section className="fs-hero"><div className="fs-hero-split-inner oa-contact-hero-inner">
+  <section className="fs-hero"><div className="oa-contact-hero-overlay" aria-hidden="true" /><div className="fs-hero-split-inner oa-contact-hero-inner">
     <div className="fs-hero-copy reveal reveal-from-left">
       <p className="fs-kicker">WE&rsquo;RE HERE WHEN YOU&rsquo;RE READY.</p>
       <h1>You Don&rsquo;t Have to Know Exactly What to Say. Just Reach Out.</h1>

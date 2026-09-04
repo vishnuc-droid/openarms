@@ -413,6 +413,12 @@ export default function HomePage() {
                             <img src={review.photo} alt={review.author} className="review-author-photo" />
                           )}
                           <span className="review-author">{review.author}</span>
+                          <img src="/Training/icon.svg" alt="Google" className="review-google-icon" />
+                        </div>
+                        <div className="review-stars" aria-hidden="true">
+                          {Array.from({ length: 5 }).map((_, i) => (
+                            <img src="/Training/f.svg" alt="" key={i} />
+                          ))}
                         </div>
                         <span className="review-quote-mark" aria-hidden="true">&ldquo;</span>
                         <p>{review.quote}</p>

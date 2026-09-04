@@ -122,7 +122,7 @@ export default function AboutClient() {
       <ScrollReveal />
 
       {/* Hero */}
-      <section className="fs-hero oa-about-hero"><div className="fs-container oa-about-hero-inner">
+      <section className="fs-hero oa-about-hero"><div className="oa-about-hero-overlay" aria-hidden="true" /><div className="fs-container oa-about-hero-inner">
         <div className="fs-hero-copy reveal reveal-from-left oa-about-hero-copy">
           <p className="fs-kicker">COMPASSION. CONNECTION. GROWTH.</p>
           <h1>Open Arms for Every Story. Support for Every Step Forward.</h1>
