@@ -14,6 +14,10 @@ const SERVICE_VALUES = [
   'general-contact',
   'training-request',
   'careers',
+  'churches-faith-training',
+  'community-outreach',
+  'school-staff-training',
+  'local-referrals',
 ];
 
 const submissionSchema = new mongoose.Schema(
@@ -32,6 +36,18 @@ const submissionSchema = new mongoose.Schema(
     message: { type: String, trim: true },
     status: { type: String, enum: ['new', 'contacted', 'closed'], default: 'new' },
     source: { type: String, trim: true },
+
+    // Step 2 – Eligibility Information
+    dob: { type: String, trim: true },
+    servicesFor: { type: String, enum: ['Myself', 'My child', 'Another dependent'], trim: true },
+    parentGuardianName: { type: String, trim: true },
+    relationshipToClient: { type: String, trim: true },
+    address: { type: String, trim: true },
+    city: { type: String, trim: true },
+    state: { type: String, trim: true },
+    zip: { type: String, trim: true },
+    memberId: { type: String, trim: true },
+    eligibilityCompletedAt: { type: Date },
   },
   { timestamps: true }
 );

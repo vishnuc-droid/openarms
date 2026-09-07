@@ -7554,6 +7554,16 @@ footer a:hover {
 .oa-contact-submit{width:100%;justify-content:center;align-items:center;gap:8px;margin-top:4px;padding:14px 22px}
 .oa-contact-form-note{font-size:12px;line-height:1.55;color:#7c8a92;margin:2px 0 0}
 .oa-contact-success{text-align:center;padding:36px 12px}
+
+.oa-step-indicator{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 0 22px}
+.oa-step-indicator-badge{display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;font-size:13px;font-weight:700;background:#e8f1fd;color:#9aa5b1;flex-shrink:0}
+.oa-step-indicator-badge--active{background:#0170ED;color:#fff}
+.oa-step-indicator-label{font-size:13px;font-weight:700;color:var(--f-ink)}
+@media (max-width:520px){.oa-step-indicator{flex-wrap:wrap;text-align:center}}
+
+.oa-eligibility-intro{font-size:14.5px;line-height:1.6;color:#5b6b73;margin:0 0 20px}
+.oa-eligibility-upload-section{border-top:1px dashed #dfe9ee;margin-top:8px;padding-top:18px}
+.oa-eligibility-upload-note{font-size:12px;color:#9aa5b1;font-style:italic}
 .oa-contact-success-icon{display:grid;place-items:center;width:64px;height:64px;margin:0 auto 18px;border-radius:50%;background:linear-gradient(135deg,#00AFF7,#0170ED);color:#fff}
 .oa-contact-success h3{font-size:22px;margin:0 0 10px;color:var(--f-ink)}
 .oa-contact-success p{font-size:15px;line-height:1.6;color:#4a5c66;margin:0}

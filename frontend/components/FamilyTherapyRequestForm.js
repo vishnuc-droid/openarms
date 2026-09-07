@@ -33,8 +33,8 @@ export default function FamilyTherapyRequestForm() {
     setStatus('submitting');
     setError('');
     try {
-      await submitForm({ service: 'family-therapy', ...form });
-      router.push(`/eligibility?insurance=${encodeURIComponent(form.insurance)}`);
+      const { id } = await submitForm({ service: 'family-therapy', topic: 'Family Counseling', ...form });
+      router.push(`/eligibility?id=${id}&insurance=${encodeURIComponent(form.insurance)}`);
     } catch (err) {
       setError(err.message);
       setStatus('idle');

@@ -33,8 +33,8 @@ export default function AdultCounselingRequestForm() {
     setStatus('submitting');
     setError('');
     try {
-      await submitForm({ service: 'adult-counseling', ...form });
-      router.push(`/eligibility?insurance=${encodeURIComponent(form.insurance)}`);
+      const { id } = await submitForm({ service: 'adult-counseling', topic: 'Adult & Individual Counseling', ...form });
+      router.push(`/eligibility?id=${id}&insurance=${encodeURIComponent(form.insurance)}`);
     } catch (err) {
       setError(err.message);
       setStatus('idle');

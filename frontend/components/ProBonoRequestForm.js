@@ -33,8 +33,8 @@ export default function ProBonoRequestForm() {
     setStatus('submitting');
     setError('');
     try {
-      await submitForm({ service: 'pro-bono-counseling', ...form });
-      router.push(`/eligibility?insurance=${encodeURIComponent(form.insurance)}`);
+      const { id } = await submitForm({ service: 'pro-bono-counseling', topic: 'Pro Bono Counseling', ...form });
+      router.push(`/eligibility?id=${id}&insurance=${encodeURIComponent(form.insurance)}`);
     } catch (err) {
       setError(err.message);
       setStatus('idle');

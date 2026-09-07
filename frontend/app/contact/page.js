@@ -1,10 +1,11 @@
 'use client';
 
 import { Suspense, useState } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 import { submitForm } from '@/lib/api';
+import AppointmentStepIndicator from '@/components/AppointmentStepIndicator';
 
 const IconSend = (props) => (
   <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M22 2 11 13" /><path d="M22 2 15 22l-4-9-9-4 20-7Z" /></svg>
@@ -84,6 +85,7 @@ const faqs = [
 
 function ContactForm() {
   const searchParams = useSearchParams();
+  const router = useRouter();
 
   const [form, setForm] = useState({
     firstName: searchParams.get('name')?.split(' ')[0] || '',
@@ -95,7 +97,6 @@ function ContactForm() {
     contactMethod: '',
     message: searchParams.get('message') || '',
   });
-  const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState('');
 
@@ -106,7 +107,7 @@ function ContactForm() {
     setSubmitting(true);
     setError('');
     try {
-      await submitForm({
+      const { id } = await submitForm({
         service: SERVICE_LABEL_TO_SLUG[form.service] || 'general-contact',
         firstName: form.firstName,
         lastName: form.lastName,
@@ -117,26 +118,16 @@ function ContactForm() {
         contactMethod: form.contactMethod,
         message: form.message,
       });
-      setSubmitted(true);
+      router.push(`/eligibility?id=${id}&insurance=${encodeURIComponent(form.insurance)}`);
     } catch (err) {
       setError(err.message);
-    } finally {
       setSubmitting(false);
     }
   };
 
-  if (submitted) {
-    return (
-      <div className="oa-contact-success">
-        <span className="oa-contact-success-icon"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12.5 9 18 20 6" /></svg></span>
-        <h3>Thank You for Reaching Out</h3>
-        <p>Your request has been received. A member of our team will be in touch with you soon.</p>
-      </div>
-    );
-  }
-
   return (
     <form className="oa-contact-form" onSubmit={handleSubmit}>
+      <AppointmentStepIndicator step={1} />
       <div className="oa-contact-form-row">
         <label className="oa-contact-field"><span>First Name*</span><input name="firstName" value={form.firstName} onChange={handleChange} required /></label>
         <label className="oa-contact-field"><span>Last Name*</span><input name="lastName" value={form.lastName} onChange={handleChange} required /></label>
@@ -151,13 +142,13 @@ function ContactForm() {
           {SERVICE_OPTIONS.map((s) => <option key={s} value={s}>{s}</option>)}
         </select>
       </label>
-      <label className="oa-contact-field"><span>How will you be paying for services?</span>
-        <select name="insurance" value={form.insurance} onChange={handleChange}>
+      <label className="oa-contact-field"><span>How will you be paying for services?*</span>
+        <select name="insurance" value={form.insurance} onChange={handleChange} required>
           <option value="" disabled>Select Your Insurance Provider</option>
-          <option value="SoonerCare">SoonerCare</option>
           <option value="Humana">Humana</option>
           <option value="Aetna">Aetna</option>
           <option value="Oklahoma Complete Health">Oklahoma Complete Health</option>
+          <option value="SoonerCare">OHCA / SoonerCare</option>
           <option value="Private Pay">Private Pay</option>
           <option value="Not Sure">I&rsquo;m not sure / I need help verifying my coverage</option>
         </select>

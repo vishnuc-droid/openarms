@@ -20,6 +20,15 @@ const SERVICE_LABELS = {
   'general-contact': 'General Contact Form',
   'training-request': 'Training Request',
   'careers': 'Careers Application',
+  'churches-faith-training': 'Churches & Faith-Based Training',
+  'community-outreach': 'Community Outreach & Support',
+  'school-staff-training': 'School Staff & Educator Training',
+};
+
+const CONTACT_METHOD_LABELS = {
+  phone: 'Phone',
+  email: 'Email',
+  either: 'Either',
 };
 
 const STATUS_META = {
@@ -28,11 +37,6 @@ const STATUS_META = {
   closed: { label: 'Closed', color: '#3a7d4f', bg: '#e7f5ec' },
 };
 
-const IconPerson = (p) => (
-  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" {...p}>
-    <circle cx="12" cy="8" r="3.4" /><path d="M5 20c0-3.6 3.1-6.2 7-6.2s7 2.6 7 6.2" />
-  </svg>
-);
 const IconSearch = (p) => (
   <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" {...p}>
     <circle cx="11" cy="11" r="7" /><path d="m20 20-3.4-3.4" />
@@ -139,7 +143,7 @@ export default function AdminDashboardPage() {
   }, [items, startDate, endDate, search]);
 
   const handleExport = () => {
-    const header = ['Date', 'Service', 'Name', 'Email', 'Phone', 'Insurance', 'Message', 'Status'];
+    const header = ['Date', 'Service', 'Name', 'Email', 'Phone', 'Insurance', 'Contact Method', 'Topic', 'Message', 'Status'];
     const rows = visibleItems.map((it) => [
       new Date(it.createdAt).toLocaleString(),
       SERVICE_LABELS[it.service] || it.service,
@@ -147,6 +151,8 @@ export default function AdminDashboardPage() {
       it.email,
       it.phone || '',
       it.insurance === 'Other' ? (it.insuranceOther || 'Other') : (it.insurance || ''),
+      CONTACT_METHOD_LABELS[it.contactMethod] || '',
+      it.topic || '',
       it.message || '',
       it.status,
     ]);
@@ -248,7 +254,7 @@ export default function AdminDashboardPage() {
                     <th style={styles.th}>Email</th>
                     <th style={styles.th}>Phone</th>
                     <th style={styles.th}>Insurance</th>
-                    <th style={styles.th}>Message</th>
+                    <th style={styles.th}>Contact Method</th>
                     <th style={styles.th}>Status</th>
                     <th style={styles.th}>Actions</th>
                   </tr>
@@ -258,34 +264,32 @@ export default function AdminDashboardPage() {
                     const meta = STATUS_META[it.status] || STATUS_META.new;
                     const date = new Date(it.createdAt);
                     return (
-                      <tr key={it._id}>
+                      <tr
+                        key={it._id}
+                        style={styles.rowClickable}
+                        onClick={() => router.push(`/admin/dashboard/${it._id}`)}
+                      >
                         <td style={styles.td}>
                           <div style={{ fontWeight: 600 }}>{date.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}</div>
                           <div style={styles.tdSub}>{date.toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' })}</div>
                         </td>
                         <td style={styles.td}>
-                          <div style={styles.serviceCell}>
-                            <span style={styles.serviceIcon}><IconPerson /></span>
-                            <span>{SERVICE_LABELS[it.service] || it.service}</span>
-                          </div>
+                          <span style={styles.serviceCell}>{SERVICE_LABELS[it.service] || it.service}</span>
                         </td>
                         <td style={styles.td}>{it.name || `${it.firstName || ''} ${it.lastName || ''}`.trim() || '—'}</td>
-                        <td style={styles.td}><a href={`mailto:${it.email}`} style={styles.link}>{it.email}</a></td>
+                        <td style={styles.td}><a href={`mailto:${it.email}`} style={styles.link} onClick={(e) => e.stopPropagation()}>{it.email}</a></td>
                         <td style={styles.td}>{it.phone || '—'}</td>
                         <td style={styles.td}>
                           {it.insurance === 'Other' ? (it.insuranceOther || 'Other') : (it.insurance || '—')}
                         </td>
-                        <td style={{ ...styles.td, maxWidth: 240 }}>
-                          {it.topic && <div style={styles.topicTag}>{it.topic}</div>}
-                          <span style={styles.messageText}>{it.message || (it.topic ? '' : '—')}</span>
-                        </td>
+                        <td style={styles.td}>{CONTACT_METHOD_LABELS[it.contactMethod] || '—'}</td>
                         <td style={styles.td}>
                           <span style={{ ...styles.statusPill, color: meta.color, background: meta.bg }}>
                             <span style={{ ...styles.statusDot, background: meta.color }} />
                             {meta.label}
                           </span>
                         </td>
-                        <td style={{ ...styles.td, position: 'relative' }}>
+                        <td style={{ ...styles.td, position: 'relative' }} onClick={(e) => e.stopPropagation()}>
                           <button
                             onClick={() => setOpenMenuId(openMenuId === it._id ? null : it._id)}
                             style={styles.dotsBtn}
@@ -430,11 +434,11 @@ const styles = {
     overflow: 'hidden',
   },
   emptyState: { padding: '3rem', textAlign: 'center', color: '#8a90a0' },
-  tableWrap: { overflowX: 'auto' },
-  table: { width: '100%', borderCollapse: 'collapse', fontSize: '0.87rem' },
+  tableWrap: { overflowX: 'auto', maxWidth: '100%' },
+  table: { width: 'max-content', minWidth: '100%', borderCollapse: 'collapse', fontSize: '0.87rem' },
   th: {
     textAlign: 'left',
-    padding: '0.9rem 1.25rem',
+    padding: '0.9rem 0.85rem',
     borderBottom: '1px solid #e6e8ec',
     color: '#374151',
     fontWeight: 700,
@@ -442,24 +446,14 @@ const styles = {
     whiteSpace: 'nowrap',
   },
   td: {
-    padding: '1rem 1.25rem',
+    padding: '0.85rem 0.85rem',
     borderBottom: '1px solid #eef0f3',
     verticalAlign: 'top',
     color: '#20242e',
   },
   tdSub: { fontSize: '0.78rem', color: '#8a90a0', marginTop: 2 },
-  serviceCell: { display: 'flex', alignItems: 'center', gap: '0.6rem', maxWidth: 220 },
-  serviceIcon: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 30,
-    height: 30,
-    borderRadius: '50%',
-    background: '#eaf1fd',
-    color: '#1d6fd6',
-    flexShrink: 0,
-  },
+  rowClickable: { cursor: 'pointer' },
+  serviceCell: { display: 'inline-block', maxWidth: 170 },
   link: { color: '#1d6fd6', textDecoration: 'none' },
   topicTag: { fontSize: '0.75rem', fontWeight: 600, color: '#6b7280', marginBottom: '0.2rem' },
   messageText: { display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' },

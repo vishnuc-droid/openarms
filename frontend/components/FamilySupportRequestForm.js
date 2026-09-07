@@ -33,8 +33,8 @@ export default function FamilySupportRequestForm() {
     setStatus('submitting');
     setError('');
     try {
-      await submitForm({ service: 'family-support', ...form });
-      router.push(`/eligibility?insurance=${encodeURIComponent(form.insurance)}`);
+      const { id } = await submitForm({ service: 'family-support', topic: 'Family Support Services', ...form });
+      router.push(`/eligibility?id=${id}&insurance=${encodeURIComponent(form.insurance)}`);
     } catch (err) {
       setError(err.message);
       setStatus('idle');
