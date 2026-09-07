@@ -34,6 +34,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export const metadata = {
   title: 'Open Arms Initiative | Mental Health & Family Support in Oklahoma City',
   description: 'Open Arms Initiative offers expert mental health counseling, trauma-informed care, foster care support, and family therapy in Oklahoma City. Get compassionate care today!',
+  alternates: { canonical: 'https://www.openarmsinitiative.com/' },
 };
 
 export default function RootLayout({ children }) {
