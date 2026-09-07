@@ -40,7 +40,7 @@ export default function Footer() {
               </div>
               <div className="footer-contact-row footer-contact-row-inline">
                 <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m4 6.5 8 6 8-6" /></svg>
-                <a href="mailto:info@openarmsinitiative.org">info@openarmsinitiative.org</a>
+                <a href="mailto:info@openarmsinitiative.com">info@openarmsinitiative.com</a>
               </div>
             </div>
           </div>
