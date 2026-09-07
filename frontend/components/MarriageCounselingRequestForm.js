@@ -33,8 +33,8 @@ export default function MarriageCounselingRequestForm() {
     setStatus('submitting');
     setError('');
     try {
-      await submitForm({ service: 'marriage-counseling', ...form });
-      router.push(`/eligibility?insurance=${encodeURIComponent(form.insurance)}`);
+      const { id } = await submitForm({ service: 'marriage-counseling', topic: 'Marriage & Couples Therapy', ...form });
+      router.push(`/eligibility?id=${id}&insurance=${encodeURIComponent(form.insurance)}`);
     } catch (err) {
       setError(err.message);
       setStatus('idle');

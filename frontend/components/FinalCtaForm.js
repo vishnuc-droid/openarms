@@ -1,7 +1,9 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { submitForm } from '@/lib/api';
+import AppointmentStepIndicator from '@/components/AppointmentStepIndicator';
 
 const IconSend = (props) => (
   <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M22 2 11 13" /><path d="M22 2 15 22l-4-9-9-4 20-7Z" /></svg>
@@ -21,6 +23,7 @@ const SERVICE_OPTIONS = [
 ];
 
 export default function FinalCtaForm() {
+  const router = useRouter();
   const [form, setForm] = useState({ firstName: '', lastName: '', email: '', phone: '', service: '', insurance: '', contactMethod: '', message: '' });
   const [status, setStatus] = useState('idle');
   const [error, setError] = useState('');
@@ -32,7 +35,7 @@ export default function FinalCtaForm() {
     setStatus('submitting');
     setError('');
     try {
-      await submitForm({
+      const { id } = await submitForm({
         service: 'general-contact',
         firstName: form.firstName,
         lastName: form.lastName,
@@ -41,25 +44,19 @@ export default function FinalCtaForm() {
         phone: form.phone,
         insurance: form.insurance,
         contactMethod: form.contactMethod,
+        topic: form.service,
         message: form.message,
       });
-      setStatus('success');
+      router.push(`/eligibility?id=${id}&insurance=${encodeURIComponent(form.insurance)}`);
     } catch (err) {
       setError(err.message);
       setStatus('idle');
     }
   };
 
-  if (status === 'success') {
-    return (
-      <div className="final-cta-form-success">
-        <p>Thank you! Your message has been received. Our team will be in touch with you soon.</p>
-      </div>
-    );
-  }
-
   return (
     <form className="final-cta-form" onSubmit={handleSubmit}>
+      <AppointmentStepIndicator step={1} />
       <div className="final-cta-form-row">
         <label className="final-cta-field">
           <span>First Name*</span>
@@ -88,13 +85,13 @@ export default function FinalCtaForm() {
         </select>
       </label>
       <label className="final-cta-field">
-        <span>How will you be paying for services?</span>
-        <select name="insurance" value={form.insurance} onChange={handleChange}>
+        <span>How will you be paying for services?*</span>
+        <select name="insurance" value={form.insurance} onChange={handleChange} required>
           <option value="" disabled>Select Your Insurance Provider</option>
-          <option value="SoonerCare">SoonerCare</option>
           <option value="Humana">Humana</option>
           <option value="Aetna">Aetna</option>
           <option value="Oklahoma Complete Health">Oklahoma Complete Health</option>
+          <option value="SoonerCare">OHCA / SoonerCare</option>
           <option value="Private Pay">Private Pay</option>
           <option value="Not Sure">I&rsquo;m not sure / I need help verifying my coverage</option>
         </select>

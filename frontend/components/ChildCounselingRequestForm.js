@@ -33,8 +33,8 @@ export default function ChildCounselingRequestForm() {
     setStatus('submitting');
     setError('');
     try {
-      await submitForm({ service: 'child-counseling', ...form });
-      router.push(`/eligibility?insurance=${encodeURIComponent(form.insurance)}`);
+      const { id } = await submitForm({ service: 'child-counseling', topic: 'Child & Adolescent Counseling', ...form });
+      router.push(`/eligibility?id=${id}&insurance=${encodeURIComponent(form.insurance)}`);
     } catch (err) {
       setError(err.message);
       setStatus('idle');

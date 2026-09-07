@@ -2,6 +2,8 @@
 
 import { Suspense, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
+import { submitEligibility } from '@/lib/api';
+import AppointmentStepIndicator from '@/components/AppointmentStepIndicator';
 
 const IconCheck = (props) => (
   <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M4 12.5 9 18 20 6" /></svg>
@@ -12,6 +14,7 @@ const IconSend = (props) => (
 
 function EligibilityForm() {
   const searchParams = useSearchParams();
+  const leadId = searchParams.get('id') || '';
   const insurance = searchParams.get('insurance') || '';
   const isPrivatePay = insurance === 'Private Pay';
 
@@ -27,15 +30,40 @@ function EligibilityForm() {
     memberId: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
-
   const showDependentFields = form.servicesFor === 'My child' || form.servicesFor === 'Another dependent';
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!leadId) {
+      setError('We couldn’t find your appointment request. Please start again from the appointment request form.');
+      return;
+    }
+    setSubmitting(true);
+    setError('');
+    try {
+      await submitEligibility(leadId, {
+        dob: form.dob,
+        servicesFor: form.servicesFor,
+        parentGuardianName: showDependentFields ? form.parentGuardianName : undefined,
+        relationshipToClient: showDependentFields ? form.relationshipToClient : undefined,
+        address: form.address,
+        city: form.city,
+        state: form.state,
+        zip: form.zip,
+        memberId: isPrivatePay ? undefined : form.memberId,
+      });
+      setSubmitted(true);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   if (submitted) {
     return (
@@ -49,6 +77,11 @@ function EligibilityForm() {
 
   return (
     <form className="oa-contact-form" onSubmit={handleSubmit}>
+      <AppointmentStepIndicator step={2} />
+      <p className="oa-eligibility-intro">
+        Almost finished. Please provide a few additional details so our team can review your eligibility and contact you about next steps.
+      </p>
+
       <label className="oa-contact-field"><span>Date of Birth*</span><input type="date" name="dob" value={form.dob} onChange={handleChange} required /></label>
 
       <label className="oa-contact-field"><span>Who are services for?*</span>
@@ -80,9 +113,20 @@ function EligibilityForm() {
         <label className="oa-contact-field"><span>Insurance / Medicaid Member ID</span><input name="memberId" value={form.memberId} onChange={handleChange} /></label>
       )}
 
-      <button type="submit" className="fs-btn fs-req-btn-primary oa-contact-submit">
+      {/* Insurance card upload — scaffolded per client request, not yet active.
+          Uncomment and wire to the assets/upload flow once storage/security is confirmed.
+      <div className="oa-eligibility-upload-section">
+        <label className="oa-contact-field"><span>Upload Front of Insurance Card</span><input type="file" name="insuranceCardFront" accept="image/*,.pdf" disabled /></label>
+        <label className="oa-contact-field"><span>Upload Back of Insurance Card</span><input type="file" name="insuranceCardBack" accept="image/*,.pdf" disabled /></label>
+        <p className="oa-eligibility-upload-note">Insurance card upload is not yet available.</p>
+      </div>
+      */}
+
+      {error && <p className="oa-contact-form-note" style={{ color: '#c0392b' }}>{error}</p>}
+
+      <button type="submit" className="fs-btn fs-req-btn-primary oa-contact-submit" disabled={submitting}>
         <IconSend />
-        Submit
+        {submitting ? 'Submitting…' : 'Submit Eligibility Information'}
       </button>
     </form>
   );

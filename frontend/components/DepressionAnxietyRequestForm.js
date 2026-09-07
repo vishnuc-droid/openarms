@@ -32,8 +32,8 @@ export default function DepressionAnxietyRequestForm() {
     setStatus('submitting');
     setError('');
     try {
-      await submitForm({ service: 'depression-anxiety-counseling', ...form });
-      router.push(`/eligibility?insurance=${encodeURIComponent(form.insurance)}`);
+      const { id } = await submitForm({ service: 'depression-anxiety-counseling', topic: 'Depression & Anxiety Counseling', ...form });
+      router.push(`/eligibility?id=${id}&insurance=${encodeURIComponent(form.insurance)}`);
     } catch (err) {
       setError(err.message);
       setStatus('idle');

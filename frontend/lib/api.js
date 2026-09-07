@@ -53,4 +53,47 @@ export async function updateSubmissionStatus(token, id, status) {
   return res.json();
 }
 
+export async function fetchSubmission(token, id) {
+  const res = await fetch(`${API_URL}/api/submissions/${id}`, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+  if (res.status === 401) throw new Error('UNAUTHORIZED');
+  if (!res.ok) throw new Error('Failed to load submission.');
+  return res.json();
+}
+
+export async function updateSubmission(token, id, fields) {
+  const res = await fetch(`${API_URL}/api/submissions/${id}`, {
+    method: 'PATCH',
+    headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
+    body: JSON.stringify(fields),
+  });
+  if (!res.ok) {
+    const body = await res.json().catch(() => ({}));
+    throw new Error(body.error || 'Failed to update submission.');
+  }
+  return res.json();
+}
+
+export async function submitEligibility(id, payload) {
+  const res = await fetch(`${API_URL}/api/submissions/${id}/eligibility`, {
+    method: 'PATCH',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  });
+  if (!res.ok) {
+    const body = await res.json().catch(() => ({}));
+    throw new Error(body.error || 'Something went wrong. Please try again.');
+  }
+  return res.json();
+}
+
+export async function deleteSubmission(token, id) {
+  const res = await fetch(`${API_URL}/api/submissions/${id}`, {
+    method: 'DELETE',
+    headers: { Authorization: `Bearer ${token}` },
+  });
+  if (!res.ok) throw new Error('Failed to delete submission.');
+}
+
 export { API_URL };

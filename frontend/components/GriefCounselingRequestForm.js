@@ -33,8 +33,8 @@ export default function GriefCounselingRequestForm() {
     setStatus('submitting');
     setError('');
     try {
-      await submitForm({ service: 'grief-counseling', ...form });
-      router.push(`/eligibility?insurance=${encodeURIComponent(form.insurance)}`);
+      const { id } = await submitForm({ service: 'grief-counseling', topic: 'Grief & Loss Counseling', ...form });
+      router.push(`/eligibility?id=${id}&insurance=${encodeURIComponent(form.insurance)}`);
     } catch (err) {
       setError(err.message);
       setStatus('idle');

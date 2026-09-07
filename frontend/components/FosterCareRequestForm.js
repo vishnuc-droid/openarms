@@ -33,8 +33,8 @@ export default function FosterCareRequestForm() {
     setStatus('submitting');
     setError('');
     try {
-      await submitForm({ service: 'foster-care', ...form });
-      router.push(`/eligibility?insurance=${encodeURIComponent(form.insurance)}`);
+      const { id } = await submitForm({ service: 'foster-care', topic: 'Foster Care & Adoption Support', ...form });
+      router.push(`/eligibility?id=${id}&insurance=${encodeURIComponent(form.insurance)}`);
     } catch (err) {
       setError(err.message);
       setStatus('idle');
