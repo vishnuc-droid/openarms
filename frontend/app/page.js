@@ -135,12 +135,12 @@ const teamMembers = [
 const clientReviews = [
   {
     quote: 'Open Arms has incredible vision with an amazing foundation for what their company represents. An amazing staff and people you want on your side and to just walk with through life!',
-    author: 'Kamryn B.',
+    author: 'Kamryn Bass',
     photo: '/kamyrn.png',
   },
   {
     quote: 'The owner & staff are caring, supportive, and dedicated to helping both the children and foster families succeed. You can tell they genuinely care and truly make a difference.',
-    author: 'Jency M.',
+    author: 'Jency Mathew',
     photo: '/unnamed (1).png',
   },
   {

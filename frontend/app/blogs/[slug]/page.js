@@ -4,6 +4,8 @@ import { blogPosts } from '../blogData';
 import { blogContent } from '../blogContent';
 import FaqAccordion from '../FaqAccordion';
 
+const SITE_URL = 'https://www.openarmsinitiative.com';
+
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const post = blogPosts.find((p) => p.slug === slug);
@@ -13,6 +15,7 @@ export async function generateMetadata({ params }) {
   return {
     title: `${post.title} | Open Arms Initiative`,
     description: post.excerpt,
+    alternates: { canonical: `${SITE_URL}/blogs/${post.slug}/` },
   };
 }
 
@@ -123,8 +126,51 @@ export default async function BlogPostPage({ params }) {
     notFound();
   }
 
+  const isoDate = new Date(post.date).toISOString();
+  const postUrl = `${SITE_URL}/blogs/${post.slug}/`;
+
+  const schemaBreadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blogs/` },
+      { '@type': 'ListItem', position: 3, name: post.title, item: postUrl },
+    ],
+  };
+
+  const schemaBlogPosting = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt,
+    image: `${SITE_URL}${encodeURI(post.image)}`,
+    datePublished: isoDate,
+    dateModified: isoDate,
+    author: {
+      '@type': 'Organization',
+      name: 'Open Arms Initiative',
+      url: SITE_URL,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Open Arms Initiative',
+      url: SITE_URL,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/images/logo-full.png`,
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': postUrl,
+    },
+  };
+
   return (
     <main className="blog-post-page">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBlogPosting) }} />
       {/* Hero */}
       <section className="blog-post-hero">
         <h1 className="blog-post-title">{post.title}</h1>
