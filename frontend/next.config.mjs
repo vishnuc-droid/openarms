@@ -8,6 +8,8 @@ const nextConfig = {
       { source: '/adult-counseling', destination: '/adult-counseling-oklahoma-city', permanent: true },
       { source: '/individual-counseling', destination: '/adult-counseling-oklahoma-city', permanent: true },
       { source: '/our-team', destination: '/about-us', permanent: true },
+      { source: '/licensed-therapist-oklahoma-city', destination: '/about-us', permanent: true },
+      { source: '/gala-zelle-payment-form', destination: '/gala-montell-jordan', permanent: true },
       { source: '/child-adolescent-counseling', destination: '/child-counseling-services-oklahoma-city', permanent: true },
       { source: '/family-counseling', destination: '/family-therapy-oklahoma-city', permanent: true },
       { source: '/marriage-couples-therapy', destination: '/marriage-counseling-oklahoma-city', permanent: true },
