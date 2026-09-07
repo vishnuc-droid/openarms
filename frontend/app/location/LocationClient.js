@@ -350,11 +350,17 @@ export default function LocationClient() {
             <h2>In-Person &amp; Online Support</h2>
           </div>
           <div className="loc-online-grid">
-            <div className="loc-online-card">
+            <div className="loc-online-card loc-online-card-inperson">
+              <span className="loc-online-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21V10.5L12 4l9 6.5V21" /><path d="M9 21v-7h6v7" /><path d="M9 12h.01M15 12h.01" /></svg>
+              </span>
               <h3>Prefer Meeting in Person?</h3>
               <p>Visit our Oklahoma City location for available in-person services in a professional, supportive environment.</p>
             </div>
-            <div className="loc-online-card">
+            <div className="loc-online-card loc-online-card-online">
+              <span className="loc-online-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="2.5" y="4.5" width="19" height="13" rx="2" /><path d="M8 21h8M12 17.5V21" /><path d="m9.5 8.5 3 3 3-3" strokeDasharray="1.4 1.8" /></svg>
+              </span>
               <h3>Prefer Online Support?</h3>
               <p>Online service options may provide additional flexibility for eligible services and circumstances. Contact our team to learn about current availability and determine which option may be appropriate for you.</p>
             </div>

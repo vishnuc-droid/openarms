@@ -1,4 +1,5 @@
 import AboutClient from './AboutClient';
+import { ourTeam } from './teamData';
 
 export const metadata = {
   title: 'About Open Arms Initiative | Oklahoma City',
@@ -22,6 +23,12 @@ const SCHEMA_ORG = {
   url: 'https://www.openarmsinitiative.com/',
   description: 'Open Arms Initiative is an Oklahoma City nonprofit providing trauma-informed counseling, foster family support, parenting education, and compassionate community care.',
   areaServed: 'Oklahoma City, OK',
+  employee: ourTeam.map((member) => ({
+    '@type': 'Person',
+    name: member.name,
+    jobTitle: member.title,
+    image: `https://www.openarmsinitiative.com${encodeURI(member.photo)}`,
+  })),
 };
 
 export default function AboutPage() {

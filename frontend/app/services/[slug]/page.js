@@ -37,8 +37,35 @@ export default async function ServiceDetailPage({ params }) {
     .filter((s) => s.slug !== service.slug && s.category === service.category)
     .slice(0, 3);
 
+  const canonicalUrl = `https://www.openarmsinitiative.com/services/${service.slug}/`;
+
+  const schemaBreadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
+      { '@type': 'ListItem', position: 2, name: service.category, item: canonicalUrl },
+      { '@type': 'ListItem', position: 3, name: service.title, item: canonicalUrl },
+    ],
+  };
+
+  const schemaService = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: service.title,
+    provider: {
+      '@type': 'Organization',
+      name: 'Open Arms Initiative',
+      url: 'https://www.openarmsinitiative.com/',
+    },
+    areaServed: 'Oklahoma City, OK',
+    description: service.summary,
+  };
+
   return (
     <main className="sd-page">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaService) }} />
       <section className="sd-hero">
         <div className="sd-hero-inner">
           <span className="services-kicker">{service.category}</span>

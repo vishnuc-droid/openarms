@@ -10,6 +10,28 @@ export const metadata = {
   },
 };
 
+const SCHEMA_BREADCRUMB = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Family Counseling', item: 'https://www.openarmsinitiative.com/family-therapy-oklahoma-city/' },
+  ],
+};
+
+const SCHEMA_SERVICE = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Family Counseling',
+  provider: {
+    '@type': 'Organization',
+    name: 'Open Arms Initiative',
+    url: 'https://www.openarmsinitiative.com/',
+  },
+  areaServed: 'Oklahoma City, OK',
+  description: 'Compassionate family therapy in Oklahoma City helping families improve communication, navigate conflict, and build stronger relationships.',
+};
+
 const stepIcons = [
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 4.5h3.2l1.6 4-2 1.6a11 11 0 0 0 5.6 5.6l1.6-2 4 1.6v3.2a1.6 1.6 0 0 1-1.7 1.6A15.5 15.5 0 0 1 3 6.2a1.6 1.6 0 0 1 1.5-1.7Z" /></svg>,
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12a8 8 0 1 1 3 6.2L4 19l.9-3A7.9 7.9 0 0 1 4 12Z" /><path d="M8.5 10.5h7M8.5 14h4.5" /></svg>,
@@ -66,8 +88,21 @@ const faqs = [
   ['Is family counseling only for serious family problems?', 'No. Families seek counseling for many reasons. Some are facing significant challenges, while others simply want to communicate better, strengthen their relationships, or address concerns before they become more difficult.'],
 ];
 
+const SCHEMA_FAQ = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(([question, answer]) => ({
+    '@type': 'Question',
+    name: question,
+    acceptedAnswer: { '@type': 'Answer', text: answer },
+  })),
+};
+
 export default function FamilyTherapyPage() {
   return <main className="family-page team-boost">
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_BREADCRUMB) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_SERVICE) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_FAQ) }} />
     <ScrollReveal />
     <section className="family-hero-split"><div className="family-hero-split-inner"><div className="family-hero-split-copy reveal reveal-from-left">
       <p className="family-kicker">HEAL TOGETHER. GROW TOGETHER.</p>

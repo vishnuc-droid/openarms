@@ -4,6 +4,41 @@ import DepressionAnxietyRequestForm from '@/components/DepressionAnxietyRequestF
 
 export const metadata = { title: 'Depression Counseling Oklahoma | Open Arms Initiative', description: 'Find compassionate depression counseling in Oklahoma. Open Arms Initiative provides support for depression, anxiety, stress, and emotional well-being.', alternates: { canonical: 'https://www.openarmsinitiative.com/depression-anxiety-counseling-oklahoma/' } };
 
+const SCHEMA_BREADCRUMB = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.openarmsinitiative.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Depression & Anxiety Counseling', item: 'https://www.openarmsinitiative.com/depression-anxiety-counseling-oklahoma/' },
+  ],
+};
+
+const SCHEMA_SERVICE = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Depression & Anxiety Counseling',
+  provider: {
+    '@type': 'Organization',
+    name: 'Open Arms Initiative',
+    url: 'https://www.openarmsinitiative.com/',
+  },
+  areaServed: 'Oklahoma City, OK',
+  description: 'Compassionate depression and anxiety counseling in Oklahoma, helping individuals manage worry, stress, low mood, and emotional well-being.',
+};
+
+const SCHEMA_FAQ = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'How do I know if I should seek counseling for depression?', acceptedAnswer: { '@type': 'Answer', text: 'Consider speaking with a mental health professional if persistent sadness, low motivation, loss of interest, emotional exhaustion, or other changes are interfering with your relationships, responsibilities, or everyday life. You don’t need to wait until things become unbearable before seeking support.' } },
+    { '@type': 'Question', name: 'Can counseling help with anxiety and overthinking?', acceptedAnswer: { '@type': 'Answer', text: 'Therapy can help you better understand patterns of worry and overthinking, recognize potential triggers, and develop strategies for responding to anxious thoughts and emotions in healthier ways.' } },
+    { '@type': 'Question', name: 'Can I experience anxiety and depression at the same time?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Anxiety and depression can occur together. Because everyone’s experience is different, a mental health professional can help you explore what you’re experiencing and determine an appropriate approach to care.' } },
+    { '@type': 'Question', name: 'What happens during anxiety therapy?', acceptedAnswer: { '@type': 'Answer', text: 'Your therapist will work to understand your experiences, concerns, triggers, thought patterns, and goals. Counseling may involve exploring patterns contributing to anxiety and developing practical strategies for managing worry, stress, and difficult emotions.' } },
+    { '@type': 'Question', name: 'Do you provide depression counseling in Oklahoma?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Open Arms Initiative provides Depression Counseling in Oklahoma for individuals seeking professional support with emotional difficulties, low mood, stress, and related concerns.' } },
+    { '@type': 'Question', name: 'When should I consider counseling for stress?', acceptedAnswer: { '@type': 'Answer', text: 'You may consider counseling when stress feels persistent, difficult to manage, or begins affecting your mood, sleep, concentration, relationships, responsibilities, or overall quality of life.' } },
+  ],
+};
+
 const trustIcons = [
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20.5s-6.5-4-9-8.2C1.2 8.8 3 5.5 6.2 5.5c1.9 0 3.2 1 3.8 2.1.6-1.1 1.9-2.1 3.8-2.1 3.2 0 5 3.3 3.2 6.8-2.5 4.2-9 8.2-9 8.2Z" /></svg>,
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3.5 19 6v6c0 4.5-3 7.5-7 8.5-4-1-7-4-7-8.5V6l7-2.5Z" /><path d="m9.3 12 1.9 1.9 3.6-3.9" /></svg>,
@@ -45,6 +80,9 @@ const teamMembers = [
 
 const faqs = [['How do I know if I should seek counseling for depression?', 'Consider speaking with a mental health professional if persistent sadness, low motivation, loss of interest, emotional exhaustion, or other changes are interfering with your relationships, responsibilities, or everyday life. You don’t need to wait until things become unbearable before seeking support.'],['Can counseling help with anxiety and overthinking?', 'Therapy can help you better understand patterns of worry and overthinking, recognize potential triggers, and develop strategies for responding to anxious thoughts and emotions in healthier ways.'],['Can I experience anxiety and depression at the same time?', 'Yes. Anxiety and depression can occur together. Because everyone’s experience is different, a mental health professional can help you explore what you’re experiencing and determine an appropriate approach to care.'],['What happens during anxiety therapy?', 'Your therapist will work to understand your experiences, concerns, triggers, thought patterns, and goals. Counseling may involve exploring patterns contributing to anxiety and developing practical strategies for managing worry, stress, and difficult emotions.'],['Do you provide depression counseling in Oklahoma?', <>Yes. Open Arms Initiative provides <strong>Depression Counseling in Oklahoma</strong> for individuals seeking professional support with emotional difficulties, low mood, stress, and related concerns.</>],['When should I consider counseling for stress?', 'You may consider counseling when stress feels persistent, difficult to manage, or begins affecting your mood, sleep, concentration, relationships, responsibilities, or overall quality of life.']];
 export default function DepressionAnxietyPage(){return <main className="da-page team-boost">
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_BREADCRUMB) }} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_SERVICE) }} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_FAQ) }} />
 <ScrollReveal />
 <section className="da-hero-split"><div className="da-hero-split-inner"><div className="da-hero-split-copy reveal reveal-from-left"><p className="da-kicker">YOU DON’T HAVE TO CARRY THIS ALONE.</p><h1>Depression &amp; Anxiety<br/>Counseling in<br className="da-okc-break"/> Oklahoma</h1><i/><p className="da-lead">When Your Mind Won’t Slow Down, or Life Feels Too Heavy</p><p>Some days, anxiety can make it difficult to quiet your thoughts. Other days, depression can make even ordinary things feel exhausting.</p><p>And sometimes, you experience both, the constant worry of anxiety alongside the heaviness, exhaustion, or disconnection that can come with depression.</p><p>At Open Arms Initiative, we provide compassionate <strong>Depression Counseling in Oklahoma</strong> and anxiety support to help you better understand what you&apos;re experiencing, develop healthier ways to cope, and move forward with professional support.</p><div className="da-actions"><Link href="/contact" className="da-btn da-req-btn-primary">Request an Appointment</Link><a href="#approach" className="da-btn da-req-btn-outline">Explore Our Approach</a></div></div><div className="da-hero-form-card reveal reveal-from-right"><div className="da-hero-form-body"><h3>Request an Appointment</h3><span className="da-hero-form-underline" /><p className="da-hero-form-sub">Tell us a bit about what you&rsquo;re going through and we&rsquo;ll help you find the right support.</p><DepressionAnxietyRequestForm /></div><div className="da-hero-form-photo"><img src="/nh9.jpg" alt="Woman finding support during a depression and anxiety counseling session"/></div></div></div></section>
 <section className="da-trust-section"><div className="da-container da-trust reveal reveal-from-bottom">{['Compassionate Care','Confidential Support','Personalized Therapy','In-Person & Online'].map((x,i)=><div key={x}><span>{trustIcons[i]}</span>{x}</div>)}</div></section>

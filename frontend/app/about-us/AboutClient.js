@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
+import { ourTeam } from './teamData';
 
 const ABOUT_VIDEO_ID = 'XRdf7spY1SE';
 
@@ -73,29 +74,6 @@ const pillars = [
   ['Family-Centered', 'Children don’t exist separately from their caregivers. Adults don’t exist separately from their relationships. Where appropriate, we consider the people and environments surrounding an individual.'],
   ['Rooted in Community', 'Our work extends beyond the counseling room through foster support, education, family resources, outreach, and accessible care.'],
   ['Built Around Human Connection', 'Programs and professional knowledge matter. But people also need to feel heard. Connection is at the center of what we do.'],
-];
-
-const ourTeam = [
-  { name: 'Jamie James - LPC', title: 'President & Founder', photo: '/Jamie James - LPC.jpg' },
-  { name: "D'Fawn Downs - LPC", title: 'Corporate Compliance Officer & Clinical Director', photo: "/D'Fawn Downs - LPC.jpg" },
-  { name: 'Brandon Martin', title: 'CFO', photo: '/Brandon Martin.jpg' },
-  { name: 'Stephanie Caldwell', title: 'Parent Relations Director', photo: '/Stephanie Caldwell.jpg' },
-  { name: 'Amber Price', title: 'Director of Foster Care', photo: '/Amber Price.jpg' },
-  { name: 'Chloe Burke', title: 'Lead Admin', photo: '/Chloe Burke.jpg' },
-  { name: 'Destinee Curry', title: 'Administrative Assistant', photo: '/Destinee Curry.jpg' },
-  { name: 'Kamryn Bass', title: 'Administrative Assistant', photo: '/Kamryn-Bass.jpg' },
-  { name: 'Stephanie Vaughn', title: 'Billing & Placement Specialist', photo: '/Stephanie Vaughn.jpg' },
-  { name: 'Jessena Varghese - LPC', title: 'Clinical Director', photo: '/Jessena Varghese - LPC.jpg' },
-  { name: 'Henri Jo Ball - LPC', title: 'Therapist', photo: '/Henri.jpg' },
-  { name: 'Emeka Nnaka - LPC', title: 'Therapist', photo: '/Emeka Nnaka - LPC.jpg' },
-  { name: 'Brenda Mitchell - LPC', title: 'Therapist', photo: '/Brenda Mitchell - LPC.jpg' },
-  { name: 'Karli Burch - LPC', title: 'Therapist', photo: '/Karli Burch - LPC.jpg' },
-  { name: 'Lori Baker LMFT-S', title: 'Therapist', photo: '/lori.jpg' },
-  { name: 'Breanna White - LPC', title: 'Therapist', photo: '/Breanna White - LPC.jpg' },
-  { name: 'Rebekah Thomas LPC-C', title: 'Therapist', photo: '/rebekah.jpg' },
-  { name: 'Jamira Alexander', title: 'Therapist', photo: '/Jamira Alexander.jpg' },
-  { name: 'Victori Swinford', title: 'Therapist', photo: '/Victori.jpg' },
-  { name: 'Mattea Lear', title: 'Therapist', photo: '/Mattea.jpg' },
 ];
 
 function TeamGrid({ members, size = 'md' }) {
