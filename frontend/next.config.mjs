@@ -22,6 +22,7 @@ const nextConfig = {
       { source: '/mental-health-awareness-human-development', destination: '/trauma-mental-health-training', permanent: true },
       { source: '/churches-faith-based-training', destination: '/services/churches-faith-based-training', permanent: true },
       { source: '/referrals', destination: '/local-referrals', permanent: true },
+      { source: '/donate', destination: '/donate-to-support-counseling-education-emotional-healing', permanent: true },
 
       // Legacy blog post URLs (previously at site root, now under /blogs/)
       { source: '/the-let-them-theory-a-therapist-s-perspective-on-when-it-helps-and-when-it-doesn-t', destination: '/blogs/the-let-them-theory-a-therapist-s-perspective-on-when-it-helps-and-when-it-doesn-t', permanent: true },

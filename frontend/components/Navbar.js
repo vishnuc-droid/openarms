@@ -47,10 +47,12 @@ export default function Navbar() {
     return () => document.removeEventListener('pointerdown', handleOutsideClick);
   }, [menuOpen]);
 
+  const isDonatePage = pathname === '/donate-to-support-counseling-education-emotional-healing';
+
   return (
     <header
       ref={headerRef}
-      className="reference-header home-hero-header"
+      className={`reference-header home-hero-header${isDonatePage ? ' home-hero-header--solid' : ''}`}
       onMouseLeave={closeServicesMenu}
     >
       <div className="top-nav">
@@ -178,7 +180,7 @@ export default function Navbar() {
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .7 3a2 2 0 0 1-.4 2.1L8 10.3a16 16 0 0 0 6 6l1.5-1.4a2 2 0 0 1 2.1-.4c1 .4 2 .6 3 .7a2 2 0 0 1 1.7 2z"/></svg>
             (405) 920-8934
           </a>
-          <Link href="/contact" className="mobile-nav-link" onClick={closeMobileNav}>Donate</Link>
+          <Link href="/donate-to-support-counseling-education-emotional-healing" className="mobile-nav-link" onClick={closeMobileNav}>Donate</Link>
         </nav>
 
         <a href="tel:+14059208934" className="header-phone" aria-label="Call our office">
@@ -188,7 +190,7 @@ export default function Navbar() {
         <Link className="reference-cta" href="/contact">
           Book an Appointment
         </Link>
-        <Link className="reference-cta-donate-small" href="/contact" aria-label="Donate">
+        <Link className="reference-cta-donate-small" href="/donate-to-support-counseling-education-emotional-healing" aria-label="Donate">
           Donate
         </Link>
       </div>
