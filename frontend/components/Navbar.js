@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import MegaMenu from './MegaMenu';
@@ -9,6 +10,7 @@ import { serviceCategories, trainingSpeakingMenu } from '@/lib/servicesData';
 const serviceCategoryNames = Object.keys(serviceCategories);
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
   const [trainingMenuOpen, setTrainingMenuOpen] = useState(false);
@@ -19,6 +21,14 @@ export default function Navbar() {
     setMenuOpen(false);
     setMobileSubmenu(null);
     setMobileServiceCategory(null);
+  };
+
+  const handleLogoClick = (e) => {
+    if (pathname === '/') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    closeMobileNav();
   };
 
   const closeServicesMenu = () => {
@@ -44,7 +54,7 @@ export default function Navbar() {
       onMouseLeave={closeServicesMenu}
     >
       <div className="top-nav">
-        <Link className="reference-brand" href="/" aria-label="Open Arms Initiative home">
+        <Link className="reference-brand" href="/" aria-label="Open Arms Initiative home" onClick={handleLogoClick}>
           <Image src="/images/logo-full.png" alt="Open Arms Initiative" width={210} height={56} priority />
         </Link>
 
