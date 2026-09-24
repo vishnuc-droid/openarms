@@ -18,6 +18,7 @@ const nextConfig = {
       { source: '/foster-care-adoption-counseling', destination: '/foster-care', permanent: true },
       { source: '/services/foster-care-adoption-counseling', destination: '/foster-care', permanent: true },
       { source: '/pro-bono-therapy-services', destination: '/pro-bono-counseling-okc', permanent: true },
+      { source: '/pro-bo-no-therapy-services', destination: '/pro-bono-counseling-okc', permanent: true },
       { source: '/community-outreach-support-programs', destination: '/services/community-outreach-support', permanent: true },
       { source: '/trauma-informed-care-training', destination: '/trauma-mental-health-training', permanent: true },
       { source: '/training-speaking/trauma-mental-health-training', destination: '/trauma-mental-health-training', permanent: true },
